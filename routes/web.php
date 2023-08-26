@@ -19,3 +19,8 @@ use App\Http\Controllers\IndexController;
 // });
 
 Route::get('/', [IndexController::class, 'index']);
+Route::post('/save_enquiry', [IndexController::class, 'save_enquiry'])->name('home.save_enquiry');
+Route::get('/current_openings', [IndexController::class, 'current_openings'])->name('home.current_openings');
+Route::get('/job_application/{id}', [IndexController::class, 'job_application'])->name('home.job_application');
+Route::post('/save_job', [IndexController::class, 'save_job'])->name('home.save_job');
+
