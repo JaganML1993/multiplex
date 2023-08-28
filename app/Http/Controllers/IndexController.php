@@ -37,7 +37,8 @@ class IndexController extends Controller
 
     public function save_job(Request $request){
 
-        $image_path = $request->file('resumeFile')->store('resume', 'public');
+        $folder = 'uploads/resume';
+        $image_path = $this->saveFile($folder,$request->resumeFile);
 
         $insert_array = array(
             'opening_id' => $request->id,
@@ -50,6 +51,18 @@ class IndexController extends Controller
 
         JobApplication::create($insert_array);
         return redirect('current_openings')->with('status','Job Application submitted successfully');
+    }
+
+    public function saveFile($folder,$request_image)
+    {
+        $path = public_path($folder);
+        if(!File::isDirectory($path)){
+            File::makeDirectory($path, 0777, true, true);
+        }
+
+        $fileName = time().'_'.random_int(100000, 999999).'.'.$request_image->extension();  
+        $request_image->move($path, $fileName);
+        return $folder.'/'.$fileName;
     }
 
 }
