@@ -65,4 +65,93 @@ class IndexController extends Controller
         return $folder.'/'.$fileName;
     }
 
+    public function vision_and_misssion(){
+        return view('client.vision-and-misssion');
+    }
+
+    public function founder_and_management(){
+        return view('client.founder-and-management');
+    }
+
+    public function group_of_companies(){
+        return view('client.group-of-companies');
+    }
+
+    public function awards_and_accreditations(){
+        return view('client.awards-and-accreditations');
+    }
+
+    public function team(){
+        return view('client.team');
+    }
+
+    public function timeline(){
+        return view('client.timeline');
+    }
+
+    public function domestic(){
+        return view('client.domestic');
+    }
+
+    public function global_connect(){
+        return view('client.global-connect');
+    }
+
+    public function r_and_d(){
+        return view('client.r-and-d');
+    }
+
+    public function infrastructure(){
+        return view('client.infrastructure');
+    }
+
+    public function fertilizers(){
+        return view('client.fertilizers');
+    }
+
+    public function multi_pk(){
+        return view('client.multi-pk');
+    }
+
+    public function soil_analysis_laboratory(){
+        return view('client.soil-analysis-laboratory');
+    }
+
+    public function water_analysis_laboratory(){
+        return view('client.water-analysis-laboratory');
+    }
+
+    public function leaf_analysis_laboratory(){
+        return view('client.leaf-analysis-laboratory');
+    }
+
+    public function microbial_analysis_laboratory(){
+        return view('client.microbial-analysis-laboratory');
+    }
+
+    public function drone_services(){
+        return view('client.drone-services');
+    }
+
+    public function bull_work_services(){
+        return view('client.bull-work-services');
+    }
+
+    public function farmer_club(){
+        return view('client.farmer-club');
+    }
+
+    public function dealers_meet(){
+        return view('client.dealers-meet');
+    }
+
+    public function multiplex_vahini(){
+        return view('client.multiplex-vahini');
+    }
+
+    public function contact(){
+        return view('client.contact');
+    }
+
+
 }

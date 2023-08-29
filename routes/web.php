@@ -26,6 +26,40 @@ Route::get('/current_openings', [IndexController::class, 'current_openings'])->n
 Route::get('/job_application/{id}', [IndexController::class, 'job_application'])->name('home.job_application');
 Route::post('/save_job', [IndexController::class, 'save_job'])->name('home.save_job');
 
+/** about us */
+Route::get('/vision-and-misssion', [IndexController::class, 'vision_and_misssion'])->name('vision-and-misssion');
+Route::get('/founder-and-management', [IndexController::class, 'founder_and_management'])->name('founder-and-management');
+Route::get('/group-of-companies', [IndexController::class, 'group_of_companies'])->name('group-of-companies');
+Route::get('/awards-and-accreditations', [IndexController::class, 'awards_and_accreditations'])->name('awards-and-accreditations');
+Route::get('/team', [IndexController::class, 'team'])->name('team');
+Route::get('/timeline', [IndexController::class, 'timeline'])->name('timeline');
+
+/** corporate */
+Route::get('/domestic', [IndexController::class, 'domestic'])->name('domestic');
+Route::get('/global-connect', [IndexController::class, 'global_connect'])->name('global-connect');
+Route::get('/r-and-d', [IndexController::class, 'r_and_d'])->name('r-and-d');
+Route::get('/infrastructure', [IndexController::class, 'infrastructure'])->name('infrastructure');
+
+/** products */
+Route::get('/fertilizers', [IndexController::class, 'fertilizers'])->name('fertilizers');
+Route::get('/multi-pk', [IndexController::class, 'multi_pk'])->name('multi-pk');
+
+/** services */
+Route::get('/soil-analysis-laboratory', [IndexController::class, 'soil_analysis_laboratory'])->name('soil-analysis-laboratory');
+Route::get('/water-analysis-laboratory', [IndexController::class, 'water_analysis_laboratory'])->name('water-analysis-laboratory');
+Route::get('/leaf-analysis-laboratory', [IndexController::class, 'leaf_analysis_laboratory'])->name('leaf-analysis-laboratory');
+Route::get('/microbial-analysis-laboratory', [IndexController::class, 'microbial_analysis_laboratory'])->name('microbial-analysis-laboratory');
+Route::get('/drone-services', [IndexController::class, 'drone_services'])->name('drone-services');
+Route::get('/bull-work-services', [IndexController::class, 'bull_work_services'])->name('bull-work-services');
+
+/** community */
+Route::get('/farmer-club', [IndexController::class, 'farmer_club'])->name('farmer-club');
+Route::get('/dealers-meet', [IndexController::class, 'dealers_meet'])->name('dealers-meet');
+Route::get('/multiplex-vahini', [IndexController::class, 'multiplex_vahini'])->name('multiplex-vahini');
+
+/** contact us */
+Route::get('/contact', [IndexController::class, 'contact'])->name('contact');
+
 /** admin routes */
 Route::prefix('admin')->group(function () {
     Route::get('/', [AuthController::class, 'dashboard'])->name('dashboard');

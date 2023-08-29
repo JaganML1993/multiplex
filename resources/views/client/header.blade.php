@@ -10,32 +10,38 @@
     <!--====== Title ======-->
     <title>Multiplex Group</title>
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{{asset('images/favicon.png') }}" type="image/png">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/png">
     <!--====== Google Fonts ======-->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <!--====== Flaticon css ======-->
-    <link rel="stylesheet" href="{{asset('fonts/flaticon/flaticon_gadden.css') }}">
+    <link rel="stylesheet" href="{{ asset('fonts/flaticon/flaticon_gadden.css') }}">
     <!--====== FontAwesome css ======-->
-    <link rel="stylesheet" href="{{asset('fonts/fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('fonts/fontawesome/css/all.min.css') }}">
     <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="{{asset('vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
     <!--====== magnific-popup css ======-->
-    <link rel="stylesheet" href="{{asset('vendor/magnific-popup/dist/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/magnific-popup/dist/magnific-popup.css') }}">
     <!--====== Slick-popup css ======-->
-    <link rel="stylesheet" href="{{asset('vendor/slick/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/slick/slick.css') }}">
     <!--====== Jquery UI css ======-->
-    <link rel="stylesheet" href="{{asset('vendor/jquery-ui/jquery-ui.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/jquery-ui/jquery-ui.min.css') }}">
     <!--====== Nice Select css ======-->
-    <link rel="stylesheet" href="{{asset('vendor/nice-select/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/nice-select/css/nice-select.css') }}">
     <!--====== Animate css ======-->
-    <link rel="stylesheet" href="{{asset('vendor/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/animate.css') }}">
     <!--====== Default css ======-->
-    <link rel="stylesheet" href="{{asset('css/default.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/default.css') }}">
     <!--====== Style css ======-->
-    <link rel="stylesheet" href="{{asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <style>
+        .page-title-area {
+            margin-top: 0 !important;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -80,7 +86,8 @@
                                     <p style="color:#000;">Our team will get back to you shortly.</p>
                                     <!--=== Review Form ===-->
                                     <div class="review-form-area wow fadeInUp mt-10 mb-10">
-                                        <form class="review-form" method="post" action="{{ route('home.save_enquiry') }}">
+                                        <form class="review-form" method="post"
+                                            action="{{ route('home.save_enquiry') }}">
                                             @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
@@ -91,8 +98,9 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form_group">
-                                                        <input type="text" class="form_control" onkeypress="num_validate(event)"
-                                                            placeholder="Phone Number" name="phone" required>
+                                                        <input type="text" class="form_control"
+                                                            onkeypress="num_validate(event)" placeholder="Phone Number"
+                                                            name="phone" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -115,7 +123,8 @@
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="form_group">
-                                                        <button type="submit" class="main-btn primary-btn">Submit</button>
+                                                        <button type="submit"
+                                                            class="main-btn primary-btn">Submit</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -133,13 +142,13 @@
 
     <!--====== Header Area ======-->
     <header class="header-area header-one transparent-header1">
-        @if (session('status'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin: 10px;">
-            {{ session('status') }}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
+        @if(session('status'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin: 10px;">
+                {{ session('status') }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
         @endif
         <div class="container-fluid">
             <!--====== Header Top Bar ======-->
@@ -176,14 +185,16 @@
                 <div class="primary-menu">
                     <!--====== Site Branding ======-->
                     <div class="site-branding">
-                        <a href="{{url('/')}}" class="brand-logo"><img src="{{ asset('/images/logo/multiplex-logo1.png') }}"
+                        <a href="{{ url('/') }}" class="brand-logo"><img
+                                src="{{ asset('/images/logo/multiplex-logo1.png') }}"
                                 alt="Site Logo"></a>
                     </div>
                     <!--====== Nav Menu ======-->
                     <div class="nav-menu">
                         <!--====== Site Branding ======-->
                         <div class="mobile-logo mb-30 d-block d-xl-none">
-                            <a href="{{url('/')}}" class="brand-logo"><img src="{{ asset('/images/logo/multiplex-logo.png') }}"
+                            <a href="{{ url('/') }}" class="brand-logo"><img
+                                    src="{{ asset('/images/logo/multiplex-logo.png') }}"
                                     alt="Site Logo"></a>
                         </div>
                         <!--=== Nav Search ===-->
@@ -199,55 +210,70 @@
                         <!--====== main Menu ======-->
                         <nav class="main-menu">
                             <ul>
-                                <li class="menu-item"><a href="{{url('/')}}">Home</a>
+                                <li class="menu-item"><a href="{{ url('/') }}">Home</a>
                                 </li>
                                 <li class="menu-item has-children"><a href="#">About Us</a>
                                     <ul class="sub-menu">
-                                        <li><a href="vision-and-misssion.html">Vision & Mission</a></li>
-                                        <li><a href="founder-and-management.html">Founder & Management </a></li>
-                                        <li><a href="group-of-companies.html">Group of Companies </a></li>
-                                        <li><a href="awards-and-accreditations.html">Awards & Accreditations</a></li>
-                                        <li><a href="team.html">Team </a></li>
-                                        <li><a href="timeline.html">Our 50 Years Journey </a></li>
+                                        <li><a href="{{ route('vision-and-misssion') }}">Vision &
+                                                Mission</a></li>
+                                        <li><a href="{{ route('founder-and-management') }}">Founder &
+                                                Management </a></li>
+                                        <li><a href="{{ route('group-of-companies') }}">Group of
+                                                Companies </a></li>
+                                        <li><a href="{{ route('awards-and-accreditations') }}">Awards
+                                                & Accreditations</a></li>
+                                        <li><a href="#">Team </a></li>
+                                        <li><a href="{{ route('timeline') }}">Our 50 Years Journey
+                                            </a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item has-children"><a href="#">Corporate</a>
                                     <ul class="sub-menu">
-                                        <li><a href="domestic.html">Domestic/PAN </a></li>
-                                        <li><a href="global-connect.html">Global/International Connect</a></li>
-                                        <li><a href="r-and-d.html">R & D</a></li>
-                                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                                        <li><a href="#">Domestic/PAN </a></li>
+                                        <li><a href="{{ route('global-connect') }}">Global/International
+                                                Connect</a></li>
+                                        <li><a href="#">R & D</a></li>
+                                        <li><a href="{{ route('infrastructure') }}">Infrastructure</a>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li class="menu-item has-children"><a href="products.html">Products</a>
                                     <ul class="sub-menu">
-                                        <li><a href="fertilizers.html">Fertilizers</a></li>
-                                        <li><a href="plant-growth-regulatotors.html">Plant Growth Regulators</a></li>
-                                        <li><a href="adjuvants-and-ph-balancer.html">Adjuvants & PH Balancer</a></li>
-                                        <li><a href="bio-products.html">Bio Products</a></li>
-                                        <li><a href="pesticides.html">Pesticides</a></li>
-                                        <li><a href="pheromones.html">Pheromones</a></li>
-                                        <li><a href="seeds.html">Seeds</a></li>
-                                        <li><a href="sprayers.html">Sprayers</a></li>
+                                        <li><a href="{{ route('fertilizers') }}">Fertilizers</a></li>
+                                        <li><a href="#">Plant Growth Regulators</a></li>
+                                        <li><a href="#">Adjuvants & PH Balancer</a></li>
+                                        <li><a href="#">Bio Products</a></li>
+                                        <li><a href="#">Pesticides</a></li>
+                                        <li><a href="#">Pheromones</a></li>
+                                        <li><a href="#">Seeds</a></li>
+                                        <li><a href="#">Sprayers</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item has-children"><a href="#">Services</a>
                                     <ul class="sub-menu">
-                                        <li><a href="soil-analysis-laboratory.html">Soil Analysis Laboratory</a></li>
-                                        <li><a href="water-analysis-laboratory.html">Water Analysis Laboratory</a></li>
-                                        <li><a href="leaf-analysis-laboratory.html">Leaf Analysis Laboratory</a></li>
-                                        <li><a href="microbial-analysis-laboratory.html">Microbial Analysis
+                                        <li><a href="{{ route('soil-analysis-laboratory') }}">Soil
+                                                Analysis Laboratory</a></li>
+                                        <li><a href="{{ route('water-analysis-laboratory') }}">Water
+                                                Analysis Laboratory</a></li>
+                                        <li><a href="{{ route('leaf-analysis-laboratory') }}">Leaf
+                                                Analysis Laboratory</a></li>
+                                        <li><a href="{{ route('microbial-analysis-laboratory') }}">Microbial
+                                                Analysis
                                                 Laboratory</a></li>
-                                        <li><a href="drone-services.html">Drone Services</a></li>
-                                        <li><a href="bull-work-services.html">Bull Work Services</a></li>
+                                        <li><a href="{{ route('drone-services') }}">Drone Services</a>
+                                        </li>
+                                        <li><a href="{{ route('bull-work-services') }}">Bull Work
+                                                Services</a></li>
 
                                     </ul>
                                 </li>
                                 <li class="menu-item has-children"><a href="#">Community</a>
                                     <ul class="sub-menu">
-                                        <li><a href="farmer-club.html">Farmer Club</a></li>
-                                        <li><a href="dealers-meet.html">Dealer's Meet</a></li>
-                                        <li><a href="multiplex-vahini.html">Multiplex Vahini</a></li>
+                                        <li><a href="{{ route('farmer-club') }}">Farmer Club</a></li>
+                                        <li><a href="{{ route('dealers-meet') }}">Dealer's Meet</a>
+                                        </li>
+                                        <li><a href="{{ route('multiplex-vahini') }}">Multiplex
+                                                Vahini</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item">
@@ -259,15 +285,15 @@
                         <!--====== Menu Button ======-->
                         <!-- mobile button -->
                         <div class="menu-button mt-40 d-xl-none">
-                            <a href="contact.html" data-toggle="modal" data-target="#sidebar-modal"
-                                class="main-btn secondary-btn">Quick Enquiry</a>
+                            <a href="{{ route('contact') }}" data-toggle="modal"
+                                data-target="#sidebar-modal" class="main-btn secondary-btn">Quick Enquiry</a>
                         </div>
                     </div>
                     <!--====== Nav Right Item ======-->
                     <div class="nav-right-item">
                         <div class="menu-button d-xl-block d-none">
-                            <a href="contact.html" data-toggle="modal" data-target="#sidebar-modal"
-                                class="main-btn primary-btn">Quick Enquiry</a>
+                            <a href="{{ route('contact') }}" data-toggle="modal"
+                                data-target="#sidebar-modal" class="main-btn primary-btn">Quick Enquiry</a>
                         </div>
                         <div class="navbar-toggler">
                             <span></span>
@@ -332,7 +358,8 @@
                                     <li><a href="#">Life @ Multiplex</a></li>
                                     <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
                                         <!-- <a href="about.html" class="main-btn golden-btn mb-10">Explore More</a> -->
-                                        <a href="{{route('home.current_openings')}}" class="main-btn golden-btn mb-10">Current
+                                        <a href="{{ route('home.current_openings') }}"
+                                            class="main-btn golden-btn mb-10">Current
                                             Openings</a>
                                     </div>
                                 </ul>
@@ -373,31 +400,32 @@
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
     <!--====== Jquery js ======-->
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="{{asset('/vendor/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('/vendor/jquery-3.6.0.min.js') }}"></script>
     <!--====== Bootstrap js ======-->
-    <script src="{{asset('/vendor/popper/popper.min.js') }}"></script>
+    <script src="{{ asset('/vendor/popper/popper.min.js') }}"></script>
     <!--====== Bootstrap js ======-->
-    <script src="{{asset('/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
     <!--====== Slick js ======-->
-    <script src="{{asset('/vendor/slick/slick.min.js') }}"></script>
+    <script src="{{ asset('/vendor/slick/slick.min.js') }}"></script>
     <!--====== Magnific js ======-->
-    <script src="{{asset('/vendor/magnific-popup/dist/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('/vendor/magnific-popup/dist/jquery.magnific-popup.min.js') }}">
+    </script>
     <!--====== Isotope js ======-->
-    <script src="{{asset('/vendor/isotope.min.js') }}"></script>
+    <script src="{{ asset('/vendor/isotope.min.js') }}"></script>
     <!--====== Imagesloaded js ======-->
-    <script src="{{asset('/vendor/imagesloaded.min.js') }}"></script>
+    <script src="{{ asset('/vendor/imagesloaded.min.js') }}"></script>
     <!--====== Counterup js ======-->
-    <script src="{{asset('/vendor/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('/vendor/jquery.counterup.min.js') }}"></script>
     <!--====== Waypoints js ======-->
-    <script src="{{asset('/vendor/jquery.waypoints.js') }}"></script>
+    <script src="{{ asset('/vendor/jquery.waypoints.js') }}"></script>
     <!--====== Nice-select js ======-->
-    <script src="{{asset('/vendor/nice-select/js/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ asset('/vendor/nice-select/js/jquery.nice-select.min.js') }}"></script>
     <!--====== jquery UI js ======-->
-    <script src="{{asset('/vendor/jquery-ui/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('/vendor/jquery-ui/jquery-ui.min.js') }}"></script>
     <!--====== WOW js ======-->
-    <script src="{{asset('/vendor/wow.min.js') }}"></script>
+    <script src="{{ asset('/vendor/wow.min.js') }}"></script>
     <!--====== Main js ======-->
-    <script src="{{asset('/js/theme.js') }}"></script>
+    <script src="{{ asset('/js/theme.js') }}"></script>
     <script>
         function num_validate(evt) {
             var theEvent = evt || window.event;
@@ -416,6 +444,7 @@
                 if (theEvent.preventDefault) theEvent.preventDefault();
             }
         }
+
     </script>
 
 </body>
