@@ -8,7 +8,7 @@
         <div class="page-title-inner text-center">
             <h1 class="page-title">Job Application </h1>
             <div class="gd-breadcrumb">
-                <span class="breadcrumb-entry"><a href="index.html">Home</a></span>
+                <span class="breadcrumb-entry"><a href="{{url('/')}}">Home</a></span>
                 <span class="separator"></span>
                 <span class="breadcrumb-entry active">Job Application </span>
             </div>
@@ -134,7 +134,7 @@
                                     <div class="col-lg-6">
                                         <div class="form_group">
                                             <input type="text" class="form_control" placeholder="Job Location"
-                                                value="{{ $openings->location }}" name="jobloc" required disabled>
+                                                value="{{ $location->location }}" name="jobloc" required disabled>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">

@@ -9,7 +9,7 @@
         <div class="page-title-inner text-center">
             <h1 class="page-title">Current Openings </h1>
             <div class="gd-breadcrumb">
-                <span class="breadcrumb-entry"><a href="index.html">Home</a></span>
+                <span class="breadcrumb-entry"><a href="{{url('/')}}">Home</a></span>
                 <span class="separator"></span>
                 <span class="breadcrumb-entry active">Current Openings </span>
             </div>
@@ -61,7 +61,7 @@
                         <div class="shape shape-one"><span><img src="assets/images/info-shape-2.png" alt="shape"></span>
                         </div>
                         <div class="info">
-                            <span><i class="fa-solid fa-location-dot"></i> {{$item->location}}</span>
+                            <span><i class="fa-solid fa-location-dot"></i> {{$item->job_location}}</span>
                             <h4 class="title">{{$item->position}}</h4>
                             <span>Vacancies: {{$item->vacancies}}</span>
                             <br />

@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Index;
 use App\Models\Openings;
 use App\Models\JobApplication;
+use App\Models\Location;
 use Illuminate\Http\Request;
 use File;
+use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
 {
@@ -27,13 +29,17 @@ class IndexController extends Controller
 
     public function current_openings()
     {
-        $openings = Openings::get();
+        $openings = DB::table('openings')
+            ->select('openings.*','locations.location as job_location')
+            ->join('locations','openings.location','=','locations.id')
+            ->get();
         return view('client.current-openings')->with('openings',$openings);
     }
 
     public function job_application($id) {
         $openings = Openings::where('id',$id)->first();
-        return view('client.job-application')->with('openings',$openings);
+        $location = Location::where('id',$openings->location)->first();
+        return view('client.job-application')->with('openings',$openings)->with('location',$location);
     }
 
     public function save_job(Request $request){
