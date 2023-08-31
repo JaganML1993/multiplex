@@ -11,5 +11,5 @@ class JobApplication extends Model
 
     protected $table = 'job_application';
 
-    protected $fillable = ['opening_id', 'first_name', 'last_name', 'email', 'phone', 'resume'];
+    protected $fillable = ['opening_id', 'first_name', 'last_name', 'email', 'phone', 'resume', 'qualification', 'experience'];
 }

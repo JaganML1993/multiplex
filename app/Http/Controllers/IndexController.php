@@ -6,6 +6,7 @@ use App\Models\Index;
 use App\Models\Openings;
 use App\Models\JobApplication;
 use Illuminate\Http\Request;
+use File;
 
 class IndexController extends Controller
 {
@@ -46,6 +47,8 @@ class IndexController extends Controller
             'last_name' => $request->lname,
             'email' => $request->email,
             'phone' => $request->phone,
+            'qualification' => $request->qualification,
+            'experience' => $request->experience,
             'resume' => $image_path,
         );
 

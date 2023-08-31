@@ -22,7 +22,7 @@
         <div class="accordion" id="accordionOne">
             <div class="row">
                 <div class="col-lg-10">
-                    <h3 class="title">{{$openings->position}}</h3>
+                    <h3 class="title">{{ $openings->position }}</h3>
                     <div class="faq-content-box wow fadeInLeft">
                         <div class="accordion-card mb-15">
                             <div class="accordion-header">
@@ -84,9 +84,10 @@
                         <p>All fields are mandatory</p>
                         <!--=== Review Form ===-->
                         <div class="review-form-area wow fadeInUp mt-10 mb-10">
-                            <form class="review-form" method="post" action="{{ route('home.save_job') }}" enctype="multipart/form-data">
+                            <form class="review-form" method="post"
+                                action="{{ route('home.save_job') }}" enctype="multipart/form-data">
                                 @csrf
-                                <input type="hidden" name="id" value="{{$openings->id}}">
+                                <input type="hidden" name="id" value="{{ $openings->id }}">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form_group">
@@ -108,32 +109,46 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form_group">
-                                            <input type="text" class="form_control" placeholder="Phone Number" onkeypress="num_validate(event)"
-                                                name="phone" required>
+                                            <input type="text" class="form_control" placeholder="Phone Number"
+                                                onkeypress="num_validate(event)" name="phone" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form_group">
-                                            <input type="text" class="form_control" placeholder="Position Applying" value="{{$openings->position}}"
-                                                name="job" required disabled>
+                                            <input type="text" class="form_control" placeholder="Qualification"
+                                                name="qualification" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form_group">
-                                            <input type="text" class="form_control" placeholder="Job Location" value="{{$openings->location}}"
-                                                name="jobloc" required disabled>
+                                            <input type="text" class="form_control" placeholder="Experience"
+                                                name="experience" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form_group">
+                                            <input type="text" class="form_control" placeholder="Position Applying"
+                                                value="{{ $openings->position }}" name="job" required disabled>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form_group">
+                                            <input type="text" class="form_control" placeholder="Job Location"
+                                                value="{{ $openings->location }}" name="jobloc" required disabled>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form_group">
                                             <!-- <label for="resumeFile">Upload Resume</label> -->
-                                            <input type="file" id="resumeFile" class="form_control" accept="application/msword, application/pdf"
-                                                placeholder="Job Location" name="resumeFile" required>
+                                            <input type="file" id="resumeFile" class="form_control"
+                                                accept="application/msword, application/pdf" placeholder="Job Location"
+                                                name="resumeFile" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form_group">
-                                            <button type="submit" class="main-btn primary-btn">Submit Application</button>
+                                            <button type="submit" class="main-btn primary-btn">Submit
+                                                Application</button>
                                         </div>
                                     </div>
                                 </div>
