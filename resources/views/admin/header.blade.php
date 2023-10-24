@@ -137,7 +137,7 @@ if(isset($title)){
             </li>
 
             <li class="menu-item @if ($page == 'products') active open @endif">
-              <a href="{{ route('admin.products') }}" class="menu-link">
+              <a href="{{ route('products') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Products</div>
               </a>

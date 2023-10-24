@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
-use App\Http\Controllers\admin\AuthController;
-use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,30 +75,32 @@ Route::get('/contact', [IndexController::class, 'contact'])->name('contact');
 Route::prefix('admin')->group(function () {
     Route::get('/', [AuthController::class, 'dashboard'])->name('dashboard');
     Route::get('login', [AuthController::class, 'index'])->name('login');
-    Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post'); 
+    Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
     Route::get('registration', [AuthController::class, 'registration'])->name('register');
-    Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post'); 
-    Route::get('dashboard', [AuthController::class, 'dashboard']); 
+    Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post');
+    Route::get('dashboard', [AuthController::class, 'dashboard']);
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
-    Route::get('category', [DashboardController::class, 'category'])->name('admin.category'); 
-    Route::get('create_category', [DashboardController::class, 'create_category'])->name('admin.create.category'); 
-    Route::post('save_category', [DashboardController::class, 'save_category'])->name('admin.save.category'); 
-    Route::get('edit_category/{id}', [DashboardController::class, 'edit_category'])->name('admin.edit.category'); 
-    Route::get('delete_category/{id}', [DashboardController::class, 'delete_category'])->name('admin.delete.category'); 
-    Route::post('update_category', [DashboardController::class, 'update_category'])->name('admin.update.category'); 
+    Route::get('category', [DashboardController::class, 'category'])->name('admin.category');
+    Route::get('create_category', [DashboardController::class, 'create_category'])->name('admin.create.category');
+    Route::post('save_category', [DashboardController::class, 'save_category'])->name('admin.save.category');
+    Route::get('edit_category/{id}', [DashboardController::class, 'edit_category'])->name('admin.edit.category');
+    Route::get('delete_category/{id}', [DashboardController::class, 'delete_category'])->name('admin.delete.category');
+    Route::post('update_category', [DashboardController::class, 'update_category'])->name('admin.update.category');
 
-    Route::get('sub_category', [DashboardController::class, 'sub_category'])->name('admin.sub_category'); 
-    Route::get('create_sub_category', [DashboardController::class, 'create_sub_category'])->name('admin.create.sub_category'); 
-    Route::post('save_sub_category', [DashboardController::class, 'save_sub_category'])->name('admin.save.sub_category'); 
-    Route::get('edit_sub_category/{id}', [DashboardController::class, 'edit_sub_category'])->name('admin.edit.sub_category'); 
-    Route::get('delete_sub_category/{id}', [DashboardController::class, 'delete_sub_category'])->name('admin.delete.sub_category'); 
-    Route::post('update_sub_category', [DashboardController::class, 'update_sub_category'])->name('admin.update.sub_category'); 
+    Route::get('sub_category', [DashboardController::class, 'sub_category'])->name('admin.sub_category');
+    Route::get('create_sub_category', [DashboardController::class, 'create_sub_category'])->name('admin.create.sub_category');
+    Route::post('save_sub_category', [DashboardController::class, 'save_sub_category'])->name('admin.save.sub_category');
+    Route::get('edit_sub_category/{id}', [DashboardController::class, 'edit_sub_category'])->name('admin.edit.sub_category');
+    Route::get('delete_sub_category/{id}', [DashboardController::class, 'delete_sub_category'])->name('admin.delete.sub_category');
+    Route::post('update_sub_category', [DashboardController::class, 'update_sub_category'])->name('admin.update.sub_category');
 
-    Route::get('products', [DashboardController::class, 'products'])->name('admin.products'); 
-    Route::get('create_products', [DashboardController::class, 'create_products'])->name('admin.create.products'); 
-    Route::post('save_products', [DashboardController::class, 'save_products'])->name('admin.save.products'); 
-    Route::get('edit_products/{id}', [DashboardController::class, 'edit_products'])->name('admin.edit.products'); 
-    Route::get('delete_products/{id}', [DashboardController::class, 'delete_products'])->name('admin.delete.products'); 
-    Route::post('update_products', [DashboardController::class, 'update_products'])->name('admin.update.products'); 
+    Route::get('products', [ProductController::class, 'index'])->name('products');
+    Route::get('product-create', [ProductController::class, 'create'])->name('product.create');
+    Route::post('product-store', [ProductController::class, 'store'])->name('product.store');
+    Route::post('ajax-subcat', [ProductController::class, 'ajaxSubcategory'])->name('ajax.subcat');
+    Route::get('product-edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
+    Route::post('product-update', [ProductController::class, 'update'])->name('product.update');
+    Route::get('product-delete/{id}', [ProductController::class, 'destroy'])->name('product.delete');
+
 });
