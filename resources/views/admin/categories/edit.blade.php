@@ -26,6 +26,11 @@
                                 <label class="col-form-label" for="basic-default-name">Category<span class="required_star">*</span></label>
                                 <input type="text" class="form-control" value="{{ $data->name }}" required name="name" />
                             </div>
+
+                            <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-name">Description<span class="required_star">*</span></label>
+                                <textarea class="form-control" name="description" rows="4" required>{{ $data->description }}</textarea>
+                            </div>
       
                             <div class="col-md-4">
                                 <label class="col-form-label" for="basic-default-name">Status<span class="required_star">*</span></label>
@@ -34,6 +39,22 @@
                                     <option value="0" @if ($data->status == 0) selected @endif>Inactive</option>
                                 </select>
                             </div>
+
+                            @php
+                            if ($data->image){
+                                $required = '';
+                            }else{
+                                $required = 'required';
+                            }
+                            @endphp
+                            <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-name">Thumbnail<span class="required_star">*</span></label>
+                                <input type="file" class="form-control" {{ $required }} name="image" accept="image/png, image/jpeg">
+                                @if ($data->image)
+                                <a href="{{ url('').'/'.$data->image }}" target="_blank"><img src="{{ url('').'/'.$data->image }}" style="width:40%; margin-top: 10px;"></a>
+                                @endif
+                            </div>
+
                         </div>
 
                         <br>

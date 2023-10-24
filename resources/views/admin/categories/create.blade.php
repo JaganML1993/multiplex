@@ -25,6 +25,16 @@
                                 <label class="col-form-label" for="basic-default-name">Category<span class="required_star">*</span></label>
                                 <input type="text" class="form-control" required name="name" />
                             </div>
+
+                            <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-name">Description<span class="required_star">*</span></label>
+                                <textarea class="form-control" name="description" rows="4" required></textarea>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-name">Image<span class="required_star">*</span></label>
+                                <input type="file" class="form-control" required name="image" accept="image/png, image/jpeg">
+                            </div>
                       
                             <div class="col-md-4">
                                 <label class="col-form-label" for="basic-default-name">Status<span class="required_star">*</span></label>

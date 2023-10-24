@@ -11,7 +11,7 @@
             <div class="gd-breadcrumb">
                 <span class="breadcrumb-entry"><a href="{{url('')}}">Home</a></span>
                 <span class="separator"></span>
-                <span class="breadcrumb-entry"><a href="javascript:void(0);">Products</a></span>
+                <span class="breadcrumb-entry"><a href="{{route('products.index')}}">Products</a></span>
                 <span class="separator"></span>
                 <span class="breadcrumb-entry active">{{$category->name}}</span>
             </div>

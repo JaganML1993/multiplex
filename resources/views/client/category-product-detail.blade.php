@@ -10,7 +10,7 @@
                 <div class="cta-content-box text-white mb-50 wow fadeInLeft">
                     <!--====== Section-title ======-->
                     <div class="section-title mb-20">
-                        <h2>Multi PK</h2>
+                        <h2>{{$product->name}}</h2>
                     </div>
 
                 </div>

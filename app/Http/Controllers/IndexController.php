@@ -186,7 +186,9 @@ class IndexController extends Controller
     }
 
     public function products(){
-        return view('client.products');
+        $categories = Category::where('status',1)->get();
+
+        return view('client.products')->with('categories',$categories);
     }
 
 

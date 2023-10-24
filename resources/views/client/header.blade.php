@@ -283,7 +283,7 @@ $categories = CategoryAct::run();
                                         <li><a href="{{ route('global-connect') }}">Global/International Connect</a></li>
                                     </ul>
                                 </li>
-                                <li class="menu-item has-children"><a href="{{ route('products') }}">Products</a>
+                                <li class="menu-item has-children"><a href="{{ route('products.index') }}">Products</a>
                                     <ul class="sub-menu">
                                         @foreach($categories as $category)
                                         <li><a href="{{ route('category.products',['id' => $category->id, 'sub_id' => 0]) }}">{{ $category->name}}</a></li>

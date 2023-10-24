@@ -24,7 +24,10 @@ class DashboardController extends Controller
 
     public function save_category(Request $request)
     {
-        Category::create(['name' => $request->name, 'status' => $request->status]);
+        $folder = 'uploads/category';
+        $file_name = UploadImageAct::run($folder, $request->image);
+
+        Category::create(['name' => $request->name, 'status' => $request->status, 'image' => $file_name, 'description' => $request->description]);
         return redirect('admin/category')->with('status', 'Category saved successfully');
     }
 
@@ -36,7 +39,16 @@ class DashboardController extends Controller
 
     public function update_category(Request $request)
     {
-        Category::where('id', $request->id)->update(['name' => $request->name, 'status' => $request->status, 'updated_at' => date('Y-m-d H:i:s')]);
+        $data = ['name' => $request->name, 'status' => $request->status, 'updated_at' => date('Y-m-d H:i:s'), 'description' => $request->description];
+
+        if(isset($request->image)){
+            $folder = 'uploads/category';
+            $file_name = UploadImageAct::run($folder, $request->image);
+            $data['image'] = $file_name;
+        }
+
+        Category::where('id', $request->id)->update($data);
+
         return redirect('admin/category')->with('status', 'Category updated successfully');
     }
 
