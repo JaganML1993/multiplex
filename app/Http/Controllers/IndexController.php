@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\admin\Category;
 use App\Models\Index;
 use App\Models\Openings;
 use App\Models\JobApplication;
@@ -19,7 +20,8 @@ class IndexController extends Controller
      */
     public function index()
     {
-        return view('client.index');
+        $categories = Category::all();
+        return view('client.index')->with('categories', $categories);
     }
 
     public function save_enquiry(Request $request){

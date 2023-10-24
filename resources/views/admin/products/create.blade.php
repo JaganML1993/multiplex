@@ -152,28 +152,35 @@
 @parent
 <script type="text/javascript">
     $(document).ready(function() {
+        getSubCategory($("#category option:selected").val());
+
         $('#category').on('change', function(e) {
             var cat_id = e.target.value;
-            var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-            $.ajax({
-                url: "{!! route('ajax.subcat','') !!}",
-                type: 'post',
-                dataType: 'json',
-                data: {
-                    _token: CSRF_TOKEN,
-                    id: cat_id,
-                },
-                success: function(response) {
-
-                    var subCategory = '<option value="">Please Select</option>';
-                    for (var i in response) {
-                        subCategory += '<option value="' + response[i].id + '">' + response[i].name + '</option>';
-                    }
-                    $('#subcategory').html(subCategory);
-                }
-            });
+            getSubCategory(cat_id);
         });
     });
+
+    function getSubCategory(cat_id) {
+        var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+        $.ajax({
+            url: "{!! route('ajax.subcat','') !!}",
+            type: 'post',
+            dataType: 'json',
+            data: {
+                _token: CSRF_TOKEN,
+                id: cat_id,
+            },
+            success: function(response) {
+
+                var subCategory = '<option value="">Please Select</option>';
+                for (var i in response) {
+                    subCategory += '<option value="' + response[i].id + '">' + response[i].name + '</option>';
+                }
+                $('#subcategory').html(subCategory);
+
+            }
+        });
+    }
 </script>
 
 <script>

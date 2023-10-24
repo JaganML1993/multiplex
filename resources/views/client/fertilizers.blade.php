@@ -28,7 +28,6 @@
             <div class="col-xl-6 col-lg-8">
                 <!--====== Section Title ======-->
                 <div class="section-title mb-40">
-
                     <h2>Fertilizers</h2>
                 </div>
             </div>

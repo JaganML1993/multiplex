@@ -28,6 +28,8 @@ class CreateProductReq extends FormRequest
             'front_image' => ['required', 'mimes:jpeg,png,jpg', 'max:2048'],
             'back_image' => ['nullable', 'mimes:jpeg,png,jpg', 'max:2048'],
             'benefits' => ['required'],
+            'category' => ['required'],
+            'subcategory' => ['nullable'],
             'status' => ['required'],
             'video_link' => ['nullable', 'string'],
             'catelog_link' => ['nullable', 'string'],

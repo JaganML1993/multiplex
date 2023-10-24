@@ -5,6 +5,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\ProductCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,10 @@ Route::get('/infrastructure', [IndexController::class, 'infrastructure'])->name(
 Route::get('/products', [IndexController::class, 'products'])->name('products');
 Route::get('/fertilizers', [IndexController::class, 'fertilizers'])->name('fertilizers');
 Route::get('/multi-pk', [IndexController::class, 'multi_pk'])->name('multi-pk');
+
+Route::get('/category-products/{id}/{sub_id}', [ProductCategoryController::class, 'categoryProducts'])->name('category.products');
+Route::get('/category-product-detail/{id}', [ProductCategoryController::class, 'categoryProductDetail'])->name('category.product.detail');
+
 
 /** services */
 Route::get('/soil-analysis-laboratory', [IndexController::class, 'soil_analysis_laboratory'])->name('soil-analysis-laboratory');

@@ -1,3 +1,7 @@
+@php
+use App\Actions\CategoryAct;
+$categories = CategoryAct::run();
+@endphp
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -281,14 +285,9 @@
                                 </li>
                                 <li class="menu-item has-children"><a href="{{ route('products') }}">Products</a>
                                     <ul class="sub-menu">
-                                        <li><a href="{{ route('fertilizers') }}">Fertilizers</a></li>
-                                        <li><a href="#">Plant Growth Regulators</a></li>
-                                        <li><a href="#">Adjuvants & PH Balancer</a></li>
-                                        <li><a href="#">Bio Products</a></li>
-                                        <li><a href="#">Pesticides</a></li>
-                                        <li><a href="#">Pheromones</a></li>
-                                        <li><a href="#">Seeds</a></li>
-                                        <!--<li><a href="#">Sprayers</a></li>-->
+                                        @foreach($categories as $category)
+                                        <li><a href="{{ route('category.products',['id' => $category->id, 'sub_id' => 0]) }}">{{ $category->name}}</a></li>
+                                        @endforeach
                                     </ul>
                                 </li>
                                 <li class="menu-item has-children"><a href="#">Services</a>

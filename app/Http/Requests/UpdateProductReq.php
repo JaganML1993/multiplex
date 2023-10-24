@@ -28,6 +28,8 @@ class UpdateProductReq extends FormRequest
             'front_image' => ['filled', 'mimes:jpeg,png,jpg', 'max:2048'],
             'back_image' => ['filled', 'mimes:jpeg,png,jpg', 'max:2048'],
             'benefits' => ['filled'],
+            'category' => ['filled'],
+            'subcategory' => ['filled'],
             'status' => ['filled'],
             'video_link' => ['filled', 'string'],
             'catelog_link' => ['filled', 'string'],
