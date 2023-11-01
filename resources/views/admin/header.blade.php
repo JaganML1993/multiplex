@@ -157,6 +157,13 @@ if(isset($title)){
               </a>
             </li>
 
+            <li class="menu-item @if ($page == 'job') active open @endif">
+              <a href="{{ route('job') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Job Applications</div>
+              </a>
+            </li>
+
           </ul>
         </aside>
         <!-- / Menu -->

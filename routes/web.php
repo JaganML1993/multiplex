@@ -118,4 +118,6 @@ Route::prefix('admin')->group(function () {
     Route::post('opening-update', [OpeningController::class, 'update'])->name('opening.update');
     Route::get('opening-delete/{id}', [OpeningController::class, 'destroy'])->name('opening.delete');
 
+    Route::get('job', [OpeningController::class, 'job'])->name('job');
+
 });

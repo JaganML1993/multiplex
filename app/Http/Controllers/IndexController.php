@@ -34,13 +34,16 @@ class IndexController extends Controller
         $openings = DB::table('openings')
             ->select('openings.*','locations.location as job_location')
             ->join('locations','openings.location','=','locations.id')
+            ->where('openings.deleted_at', NULL)
             ->get();
+        
         return view('client.current-openings')->with('openings',$openings);
     }
 
     public function job_application($id) {
-        $openings = Openings::where('id',$id)->first();
+        $openings = Openings::find($id) ?? [];
         $location = Location::where('id',$openings->location)->first();
+        
         return view('client.job-application')->with('openings',$openings)->with('location',$location);
     }
 
