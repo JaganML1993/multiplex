@@ -15,10 +15,14 @@ return new class extends Migration
     {
         Schema::create('openings', function (Blueprint $table) {
             $table->id();
-            $table->string('location', 100);
-            $table->string('position', 100);
-            $table->integer('vacancies');
+            $table->string('location')->nullable();
+            $table->string('position')->nullable();
+            $table->integer('vacancies')->nullable();
+            $table->text('description')->nullable();
+            $table->text('roles')->nullable();
+            $table->text('qualification')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

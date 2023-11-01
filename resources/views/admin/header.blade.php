@@ -143,6 +143,20 @@ if(isset($title)){
               </a>
             </li>
 
+            <li class="menu-item @if ($page == 'enquiry') active open @endif">
+              <a href="{{ route('enquiry.list') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Enquiries</div>
+              </a>
+            </li>
+
+            <li class="menu-item @if ($page == 'openings') active open @endif">
+              <a href="{{ route('openings') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Openings</div>
+              </a>
+            </li>
+
           </ul>
         </aside>
         <!-- / Menu -->

@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\admin\Category;
 use App\Models\admin\SubCategory;
+use App\Models\Index;
 use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
@@ -115,5 +116,11 @@ class DashboardController extends Controller
     {
         SubCategory::where('id', $id)->delete();
         return redirect('admin/sub_category')->with('status', 'Sub Category deleted successfully');
+    }
+
+    public function enquiryList(){
+        $enquiries = Index::get();
+        
+        return view('admin.enquiry.index')->with('page', 'enquiry')->with('enquiries', $enquiries);
     }
 }

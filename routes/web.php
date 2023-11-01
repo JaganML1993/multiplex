@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\OpeningController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\ProductCategoryController;
 
@@ -107,5 +108,14 @@ Route::prefix('admin')->group(function () {
     Route::get('product-edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
     Route::post('product-update', [ProductController::class, 'update'])->name('product.update');
     Route::get('product-delete/{id}', [ProductController::class, 'destroy'])->name('product.delete');
+
+    Route::get('enquiry-list', [DashboardController::class, 'enquiryList'])->name('enquiry.list');
+
+    Route::get('openings', [OpeningController::class, 'index'])->name('openings');
+    Route::get('opening-create', [OpeningController::class, 'create'])->name('opening.create');
+    Route::post('opening-store', [OpeningController::class, 'store'])->name('opening.store');
+    Route::get('opening-edit/{id}', [OpeningController::class, 'edit'])->name('opening.edit');
+    Route::post('opening-update', [OpeningController::class, 'update'])->name('opening.update');
+    Route::get('opening-delete/{id}', [OpeningController::class, 'destroy'])->name('opening.delete');
 
 });
