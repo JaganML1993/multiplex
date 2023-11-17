@@ -1,5 +1,16 @@
 @extends('client.header')
 @section('content')
+<style>
+
+
+     @media (max-width:567px){
+
+         .text-a{
+             font-size:17px !important;
+         }
+     }
+
+</style>
     <!--====== Start Page-title-area section ======-->
     <section class="page-title-area text-white bg_cover"
         style="background-image: url(assets/images/fc-header-img1.jpg);">
@@ -22,7 +33,7 @@
             <div class="product-details-wrapper">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12">
-                        <h3 class="title" style="font-size:25px;font-weight:700;">Multiplex Farmers Club: Empowering Indian Agriculture</h3>
+                        <h3 class="title text-a" style="font-size:25px;font-weight:700;">Multiplex Farmers Club: Empowering Indian Agriculture</h3>
                         <div class="description-wrapper mt-30">
                             <div class="tab-content wow fadeInUp">
                                 <div class="tab-pane fade show active">
@@ -31,7 +42,7 @@
                                         </p>
                                         <p>Empowering Farmers: The Multiplex Farmers Club is dedicated to empowering farmers. We understand that farmers are the backbone of our nation, and their success is crucial for our food security and economic prosperity.</p>
                                         
-                                        <h3 class="mb-20 pt-30">Benefits for Members</h3>
+                                        <h3 class="mb-20 pt-30 text-a">Benefits for Members</h3>
                                         <ul class="check-style-one">
                                             <li><i class="fa fa-check"></i>Priority Service: Members receive priority delivery for their farming requirements, ensuring they get what they need when they need it.</li>
                                             <li><i class="fa fa-check"></i>Expert Guidance: Our experienced executives provide precise technical information, helping farmers make informed decisions.</li>

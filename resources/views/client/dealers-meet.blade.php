@@ -1,5 +1,17 @@
 @extends('client.header')
 @section('content')
+<style>
+
+
+     @media (max-width:567px){
+
+         .block-image{
+            margin-bottom:1rem !important;
+         }
+     }
+
+</style>
+
 
 <!--====== Start Page-title-area section ======-->
 <section class="page-title-area text-white bg_cover"

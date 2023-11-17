@@ -22,12 +22,67 @@
     .slick-dots li{
     display: none;
 }
+
+    .testimonial-slider-one .slick-arrow {
+        position: absolute;
+        top: 40%;
+        -webkit-transform: translateY(-42%);
+        transform: translateY(-42%);
+        cursor: pointer;
+        z-index: 1;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 20px;
+        /* border: 1px solid rgba(0, 0, 0, 0.1); */
+        -webkit-transition: all 0.3s ease-out 0s;
+        transition: all 0.3s ease-out 0s;
+        background-color: #ffffff;
+    }
+      @media (max-width:567px){
+  
+    .testimonial-slider-one .slick-arrow.prev {
+    left: 20px;
+}
+.testimonial-slider-one .slick-arrow.next {
+    right: 20px;
+}
+.testimonial-slider-one .slick-arrow {
+    width: 35px;
+    height: 35px;}
+}
+
 </style>
 
-
+<section class="gallery-section-minus1 pt-50 pb-20 bg-dark-infra">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                    <div class="section-title mb-15">
+                        <h2>Multiplex Group: Five Decades of Transforming Agriculture and Nurturing Sustainability</h2>
+                    </div>
+                <div class="project-content-box mb-50 wow fadeInRight">
+                    <p class="mb-30">For fifty years, Multiplex Group has been a trailblazer in balanced crop nutrition management, sustainable agriculture, and food production. Our steadfast dedication to these ideals has not only gained recognition but has also inspired widespread adoption by government authorities, agricultural organizations, and universities, establishing us as a leading force in advanced agricultural manufacturing.</p>
+                    
+                 <div class="section-title mb-15">
+                        <h2>Soil Health</h2>
+                 </div>
+                    <p class="mb-15">Our journey commenced in 1974 with a visionary approach to soil health. This spirit catalyzed state and union governments to launch vital soil health missions, transforming agricultural practices and promoting eco-friendly methods.</p>
+                    <p class="mb-30">Our mission revolves around enhancing soil organic carbon content and introducing biological products for sustainable and eco-friendly farming. This commitment led to pioneering innovations, including Bio-pesticides, Bio-fungicides, Bio-organic plant growth promoters, Bio-stimulants, Root growth promoters, and solutions enhancing seed germination rates. These innovations have significantly reduced chemical dependency in agriculture, fostering safer and more sustainable practices.</p>
+                
+                 <div class="section-title mb-15">
+                        <h2>Holistic Agricultural Involvement</h2>
+                 </div>
+                    <p class="mb-15">With five decades of experience, Multiplex has played a pivotal role in all aspects of agriculture, from education and research to extension services, input production, and marketing. We are dedicated to developing region-specific solutions tailored to diverse geographies and agro-climatic conditions, ensuring farmers have access to effective solutions.</p>
+                    <p class="mb-15">Today, we are recognized as "Total Solution Providers" in agriculture, trusted partners for sustainable, eco-conscious agricultural excellence. Our commitment to sustainable practices, soil health, and farmer well-being solidifies our position.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!--====== Start timeline Section  ======-->
-<section class="testimonial-section pt-90 pb-20">
+<section class="testimonial-section pt-50 pb-10">
     <div class="container-fluid">
         <!--<div class="row justify-content-center">-->
         <!--    <div class="col-xl-6 col-lg-12">-->
@@ -42,115 +97,123 @@
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
                 <img src="assets/images/journey/1974.jpg" alt="Gallery Image">
-                <h2 class="tl-year"> 1974</h2>
-                <p>We initially established our presence in the agricultural sector under the name "Karnataka Agro Chemicals," where we introduced our brand "Multiplex."</p>
+                
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
                 <img src="assets/images/journey/1975.png" alt="Gallery Image">
-                <h2 class="tl-year"> 1975</h2>
-                <p>Over time, our company has evolved, expanding into various regions continuing to build on our agricultural roots. Multiplex brand was registered in other states and Andhra Pradesh was the first to market our products.</p>
+                
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
                 <img src="assets/images/journey/1982.jpg" alt="Gallery Image">
-                <h2 class="tl-year"> 1982</h2>
-                <p>Multiplex Products extended its operation in Tamil Nadu. This geographical expansion enables the company to tap new markets in the southern region enhancing its presence in one of India's key states.</p>
+                 
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
                 <img src="assets/images/journey/1996.jpg" alt="Gallery Image">
-                <h2 class="tl-year"> 1986</h2>
-                <p>Understanding the need in the market, we focused on research, exclusive formulation, mass production, and marketing of pesticides. Different varieties of seeds were introduced to the market under the Multiplex Brand.</p>
+                
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
                 <img src="assets/images/journey/1999.jpg" alt="Gallery Image">
-                <h2 class="tl-year"> 1999</h2>
-                <p>As Multiplex reaches its silver jubilee milestone, it reflects on a quarter-century of dedicated service to the farming community. The company remains steadfast in its commitment to support and uplift the agricultural sector.</p>
+                
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
                 <img src="assets/images/journey/2000.jpg" alt="Gallery Image">
-                <h2 class="tl-year">2000</h2>
-                <p>We established a dedicated manufacturing facility for Zinc Sulphate in Peenya, Bangalore, alongside a specialized production unit for organic manure, Biofertilizers, Bio activators, and Biopesticides.</p>
+                
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
                 <img src="assets/images/journey/2003.jpg" alt="Gallery Image">
-                <h2 class="tl-year"> 2003</h2>
-                <p>Multiplex achieved a significant milestone by earning a prestigious organic certification from IMO, a reputable certification body in Switzerland. This certification encompasses and validates the entire production process of the company's Bioproducts.</p>
+                
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
                 <img src="assets/images/journey/2004.jpg" alt="Gallery Image">
-                <h2 class="tl-year"> 2004</h2>
-                <p>Karnataka Agro Chemicals, Multiplex Biotech Pvt Ltd, and Multiplex Agricare Pvt Ltd obtained ISO 9001 and ISO 14001 certifications for their manufacturing facilities. This year, we introduced our biofertilizers and biopesticides in liquid form, expanding our product range.</p>
+                
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
                 <img src="assets/images/journey/2006.jpg" alt="Gallery Image">
-                <h2 class="tl-year"> 2006</h2>
-                <p>Multiplex Biotech Pvt Ltd was acknowledged by the Department of Scientific and Industrial Research (DSIR) for its pioneering work in advancing Agri-Biotechnology production methods.</p>
+                
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
                 <img src="assets/images/journey/2012.jpg" alt="Gallery Image">
-                <h2 class="tl-year"> 2012</h2>
-                <p>We collaborated with a prestigious organization to open a new venture in the field of mechanized paddy sowing and transplantation. The outcome of this project gave farmers substantial growth in paddy cultivation based on improved yield both in quality and quantity.</p>
+                
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
                 <img src="assets/images/journey/2013.jpg" alt="Gallery Image">
-                <h2 class="tl-year"> 2013</h2>
-                <p>In response to the urban organic farming trend, Multiplex Urban Green (MUG) introduced Krushi Garden kits for home vegetable cultivation on terraces, balconies, and backyards. These kits include all essential agriculture components and services.</p>
+                
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
                 <img src="assets/images/journey/2015.jpg" alt="Gallery Image">
-                <h2 class="tl-year"> 2015</h2>
-                <p>The Multiplex Group introduced Multiplex Farming, a collaborative agricultural initiative that transforms barren and semi-cultivated land. It also includes scientific analysis to manage soil and crops comprehensively and farm management.</p>
+                
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
                 <img src="assets/images/journey/2016.jpg" alt="Gallery Image">
-                <h2 class="tl-year"> 2016</h2>
-                <p>GPS Institute of Agricultural Management was established under the guidance and initiative of Dr. G. P. Shetty's Agri Research and Educational Trust. This prestigious institute offers courses in Post Graduate Diploma in Agricultural Management and Diploma in Agricultural Management (GPSIOAM). </p>
+                
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
                 <img src="assets/images/journey/2017.jpg" alt="Gallery Image">
-                <h2 class="tl-year"> 2017</h2>
-                <p>In response to rising demand, Multiplex inaugurated a dedicated manufacturing facility in Ghaziabad. This facility produces Micronutrients, Specialized fertilizers, Soil conditioners, and Biofertilizers to cater to Northern India's agricultural needs.</p>
+                
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
                 <img src="assets/images/journey/2019.jpg" alt="Gallery Image">
-                <h2 class="tl-year"> 2019</h2>
-                <p>Multiplex Drone Pvt Ltd was founded with the primary mission of offering cutting-edge drone technology tailored for agricultural applications. The company specializes in providing services such as aerial crop health monitoring and precision spraying using drones.</p>
+                
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
                 <img src="assets/images/journey/2021.jpg" alt="Gallery Image">
-                <h2 class="tl-year"> 2021</h2>
-                <p>Multiplex Biotech Pvt Ltd, in Tumkur is a state-of-the-art pharma-grade manufacturing unit with a daily production capacity of 50,000 liters per day. This facility is dedicated to producing high-quality biotech products, underlining the company's commitment to advanced and efficient manufacturing.</p>
+                
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
                 <img src="assets/images/journey/2022.jpg" alt="Gallery Image">
-                <h2 class="tl-year"> 2022</h2>
-                <p>The inauguration marked the establishment of a dedicated Research and Development laboratory in Peenya, Bangalore, demonstrating a significant investment in innovative research and technology. This facility will play a pivotal role in fostering scientific breakthroughs and product development.</p>
+                
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
                 <img src="assets/images/journey/2023.jpg" alt="Gallery Image">
-                <h2 class="tl-year"> 2023</h2>
-                <p>The inauguration signifies the commencement of in-house production of cocopeat and coir pith products at Hiriyur by Devi Biotech Pvt Ltd, showcasing the company's commitment to self-sufficiency and product quality control in the cocopeat and coir pith sector.</p>
+               
             </div>
         </div>
     </div>
 </section>
 <!--====== End timeline Section  ======-->
+
+<section class="gallery-section-minus1 pt-50 pb-20 bg-dark-infra">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                    <div class="section-title mb-15">
+                        <h2>Leading in Advanced Agricultural Manufacturing</h2>
+                    </div>
+                <div class="project-content-box mb-50 wow fadeInRight">
+                    <p class="mb-15">Multiplex Group takes immense pride in its strategically located manufacturing units in Bengaluru, Tumkur, Hubli, and Ghaziabad, unwavering in its commitment to producing top-quality agricultural inputs.</p>
+                    <p class="mb-15">Our state-of-the-art infrastructure is meticulously designed, equipped with advanced technology, and adheres to stringent quality assurance protocols. We aim to innovate exceptional crop nutrition and plant protection solutions, meeting modern agriculture's evolving needs.</p>
+                    <p class="mb-30">Our production units span vast acres, boasting pharmaceutical-grade equipment, ensuring optimal production while maintaining the highest quality standards.</p>
+                 
+                 <div class="section-title mb-15">
+                        <h2>A Glimpse into the Future</h2>
+                 </div>
+                    <p class="mb-15">In a recent milestone, we inaugurated a fully automated, world-class biotech unit in September 2021. This cutting-edge facility utilizes new technologies, producing several lakh litres of bio-fertilizers, bio-pesticides, and bio-decomposers in a single cycle. Commercial walk-in cold rooms preserve product integrity, ensuring viability for extended periods. Automated packing for liquid products guarantees precision and purity, delivering accurate results in fields.</p>
+                    <p class="mb-15">Our recent expansions have incorporated pharmaceutical-grade equipment, emphasizing our unwavering commitment to quality assurance, setting us apart from competitors.</p>
+                    <p class="mb-15">We look forward to empowering rural agriculture through technology and bridging the gap between urban migration and rural farming. With our innovative solutions, we aim to make farming more profitable, sustainable, and appealing to the youth, ultimately securing the future of agriculture in rural India. We're transforming the landscape of rural India, ensuring that the agriculture industry remains vibrant and sustainable.</p>
+                    <p class="mb-30">As we celebrate our 50th anniversary, Multiplex Group reaffirms its dedication to innovation, sustainability, and agricultural prosperity. We eagerly anticipate the next fifty years of pioneering excellence in agriculture, contributing to a greener, more sustainable future for all.</p>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 

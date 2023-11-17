@@ -1,6 +1,11 @@
 @extends('client.header')
 @section('content')
-
+<style>
+     @media (max-width:567px){
+.menu-button-1{
+   margin-top:-1rem !important;
+}}
+</style>
 <!--====== Start Page-title-area section ======-->
 <section class="page-title-area text-white bg_cover"
     style="background-image: url(assets/images/microbial-lab-header-img.jpg);">
@@ -74,7 +79,7 @@
             <div class="col-xl-12 col-lg-12 text-center">
                 <div class="menu-button d-xl-block">
                     <a href="{{ route('contact') }}" data-toggle="modal"
-                                data-target="#sidebar-modal" class="main-btn primary-btn">Enquire Now</a>
+                                data-target="#sidebar-modal" class="main-btn primary-btn menu-button-1">Enquire Now</a>
                 </div>
             </div>
         </div>

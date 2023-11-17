@@ -1,9 +1,20 @@
 @extends('client.header')
 @section('content')
 
+<style>
+
+
+     @media (max-width:567px){
+
+         .text-a{
+             font-size:17px !important;
+         }
+     }
+
+</style>
 <!--====== Start Page-title-area section ======-->
 <section class="page-title-area text-white bg_cover"
-    style="background-image: url(assets/images/hand-holding-small-tree-planting.png);">
+    style="background-image: url(assets/images/vaahini-banner1140x406.webp);">
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
@@ -25,7 +36,7 @@
                 <div class="col-xl-12 col-lg-12">
                      <!--====== Section-title ======-->
                     <div class="section-title mb-25">
-                        <h2>Multiplex Vaahini: Cultivating Agriculture wisdom</h2>
+                        <h2>Multiplex Vaahini: Cultivating Agriculture Wisdom</h2>
                     </div>
                     <div class="description-wrapper mt-30">
                         <div class="tab-content wow fadeInUp">
@@ -42,26 +53,27 @@
             
             <div class="row">
                 <div class="col-xl-7 col-lg-7">
+                    <h6 style="text-transform:uppercase;margin-top: 28px;" class="text-a">Current Edition</h6>
                     <div class="sidebar-widget-area mt-30">
-                        <img src="assets/images/vahini.jpg" alt="Banner Image">
+                        <img src="assets/images/magazine-main-cover.jpg" alt="Banner Image">
                     </div>
                     <div class="hero-button mb-30 mt-15 wow fadeInUp text-center" data-wow-delay=".7s">
                         <a href="#" class="main-btn filled-btn mb-10">Download Magazine </a>
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-5">
-                    <h6>Sepetember Issue</h6>
+                    <h6 style="text-transform:uppercase;margin-top: 28px;"class="text-a" >Previous Edition</h6>
                     <div class="sidebar-widget-area mt-30">
-                        <img src="assets/images/drone-1.jpg" alt="Banner Image">
+                        <img src="assets/images/magazine-470x211-01.jpg" style="border:1px solid #00844e26;" alt="Banner Image">
                     </div>
-                    <div class="hero-button mb-30 mt-15 wow fadeInUp" data-wow-delay=".7s">
+                    <div class="hero-button mb-30 mt-10 wow fadeInUp" data-wow-delay=".7s">
                         <a href="#" class="main-btn filled-btn mb-10">Download </a>
                     </div>
-                    <h6>August Issue</h6>
+                     <h6 style="text-transform:uppercase;margin-top: 28px;"class="text-a" >October Edition</h6>
                      <div class="sidebar-widget-area mt-30">
-                        <img src="assets/images/drone-2.jpg" alt="Banner Image">
+                        <img src="assets/images/magazine-470x211-02.jpg"  style="border:1px solid #00844e26;" alt="Banner Image">
                     </div>
-                    <div class="hero-button mb-30 mt-15 wow fadeInUp" data-wow-delay=".7s">
+                    <div class="hero-button mb-30 mt-10 wow fadeInUp" data-wow-delay=".7s">
                         <a href="#" class="main-btn filled-btn mb-10">Download </a>
                     </div>
                 </div>
@@ -77,7 +89,7 @@
         <div class="product-details-wrapper">
             <div class="row justify-content-center">
                 <div class="col-lg-12 col-md-12 col-sm-12">
-                    <h3 class="mb-10">Benefits of Multiplex Vaahini Magazine</h3>
+                    <h3 class="mb-10 text-a">Benefits of Multiplex Vaahini Magazine</h3>
                     <p class="mb-15">This bi-monthly agricultural magazine is a testament to Multiplex Group's commitment to extending our reach through meaningful initiatives. Vaahini serves as a beacon of scientific knowledge, offering valuable insights into sustainable farming practices, crop-specific guidelines, and well-researched articles. Farmers across the region rely on our technical journals to adopt cutting-edge crop management techniques.</p>
                     <p class="mb-15">Multiplex Vaahini is your gateway to a wealth of scientific insights into sustainable farming. It's designed to provide unwavering support to farmers throughout the crop cycle, helping them effectively manage pests, diseases, and nutrients to enhance both the quality and quantity of their yields.</p>
                     <p class="mb-15">Furthermore, our magazine dedicates a special section to share updates from the Department of Agriculture, Government of Karnataka. This invaluable resource keeps you abreast of policy changes and the latest trends in agricultural technology, ensuring you remain at the forefront of the farming industry.</p>

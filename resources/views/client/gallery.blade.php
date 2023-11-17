@@ -251,58 +251,33 @@
         </div>
     </section><!--====== End Page-title-area section ======-->
 
+    @php
+
+    $galleries = App\Models\Gallery::get();
+
+    @endphp
+
     <div class="section-padding gallery-section" id="gallery">
         <div class="container-fluid">
             <div id="btncontainer" class="filter">
                 <a class="btn btn-active" href="#all">All</a>
                 <a class="btn" href="#Events">Events</a>
                 <a class="btn" href="#Celebrations">Celebrations</a>
+                <!-- Add more hardcoded categories as needed -->
             </div>
-
+    
             <!-- Gallery Section Start -->
-
+    
             <div class="gallery sets">
-                <a class="all Events"><img class="imgs" src="assets/images/gallery/event_1.jpg" /></a>
-
-                <a class="all Events"><img class="imgs" src="assets/images/gallery/event_2.jpg" /></a>
-
-                <a class="all Events"><img class="imgs" src="assets/images/gallery/event_3.jpg" /></a>
-
-                <a class="all Events"><img class="imgs" src="assets/images/gallery/event_4.jpg" /></a>
-
-                <a class="all Celebrations"><img  class="imgs" src="assets/images/gallery/celebration_1.jpg" /></a>
-
-                <a class="all Celebrations"><img class="imgs" src="assets/images/gallery/celebration_2.jpg" /></a>
-
-                <a class="all Celebrations"><img  class="imgs" src="assets/images/gallery/celebration_3.jpg" /></a>
-
-                <a class="all Celebrations"><img class="imgs" src="assets/images/gallery/celebration_4.jpeg" /></a>
-
-                <a class="all Celebrations"><img class="imgs" src="assets/images/gallery/celebration_5.png" /></a>
-
-                <a class="all Celebrations"><img  class="imgs" src="assets/images/gallery/celebration_6.png" /></a>
-
-                <a class="all Celebrations"><img class="imgs" src="assets/images/gallery/celebration_7.jpeg" /></a>
-
-                <a class="all Celebrations"><img class="imgs" src="assets/images/gallery/celebration_8.jpeg" /></a>
-
-                <a class="all Celebrations"><img class="imgs" src="assets/images/gallery/celebration_9.png" /></a>
-
-                <a class="all Celebrations"><img class="imgs" src="assets/images/gallery/celebration_10.png" /></a>
-
-                <a class="all Celebrations"><img class="imgs" src="assets/images/gallery/celebration_11.jpg" /></a>
-
-                <a class="all Celebrations"><img class="imgs" src="assets/images/gallery/celebration_12.jpg" /></a>
-
-                <a class="all Celebrations"><img class="imgs" src="assets/images/gallery/celebration_13.jpg" /></a>
-
-                <a class="all Celebrations"><img class="imgs" src="assets/images/gallery/celebration_14.jpeg" /></a>
-
-                <a class="all Celebrations"><img class="imgs" src="assets/images/gallery/celebration_15.jpeg" /></a>
-
+                @foreach($galleries as $gallery)
+                    <a class="all {{ $gallery->category }}">
+                        <img class="imgs" src="{{ asset('images/' . $gallery->image) }}" alt="{{ $gallery->category }}" />
+                    </a>
+                @endforeach
             </div>
         </div>
     </div>
+    
 
 
 

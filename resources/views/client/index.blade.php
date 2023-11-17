@@ -2,7 +2,7 @@
 @section('content')
 <!--====== Start Banner Section ======-->
 <section class="banner-section" style="background-image: url(assets/images/hero-new-1309.jpg);background-repeat: no-repeat; background-size: cover; background-position: center;
-    min-height: 400px;">
+    min-height: 565px;">
     <!--=== Hero Wrapper ===-->
     <div class="hero-wrapper-one gray-bg1">
         <div class="container">
@@ -11,10 +11,10 @@
                     <!--=== Hero Content ===-->
                     <div class="hero-content">
                         <!--<p class="wow fadeInDown" data-wow-delay=".6s">Integrity, Quality and Trust, Transparency, <br/>Commitment, Relationship, Innovation.</p>-->
-                        <h1 class="wow fadeInUp" data-wow-delay=".4s" style="color:#fff;">Pioneers in Agriculture Sector.</h1>
-                        <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
-                            <a href="vision-and-misssion.html" class="main-btn golden-btn mb-10">Know More</a>
-                        </div>
+                        <h1 class="wow fadeInUp" data-wow-delay=".4s" style="color:#fff;">Innovators in Agricultural Solutions</h1>
+                        <!--<div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">-->
+                        <!--    <a href="{{ route('vision-and-misssion') }}" class="main-btn golden-btn mb-10">Know More</a>-->
+                        <!--</div>-->
                     </div>
                 </div>
                 
@@ -36,20 +36,17 @@
                         <span class="sub-title"><img src="assets/images/leaf-svgrepo-com-new.svg" height="35" width="35" alt=""></span>
                         <h2>About <span style="color:#ee282a;">Multiplex</span></h2>
                     </div>
-                    <p class="mb-20">The Multiplex Group of Companies has been at the forefront of the agricultural sector since its inception in 1974. We proudly stand as industry leaders, specializing in the manufacturing and distribution of a comprehensive range of agricultural inputs. Our portfolio encompasses fertilizers, pesticides, nutrients (both major and minor), organic manure, bio-fertilizers, bio-pesticides, and bio-stimulants. The reach of Multiplex products extends to more than 17 countries, including Japan, Korea, Ethiopia, Djibouti, Sri Lanka, and various Arab nations.
-                        </p>
+                    <p class="mb-20">The Multiplex Group of Companies has been at the forefront of the agricultural sector since its inception in 1974. As industry leaders, 
+                    we specialize in manufacturing and distribution of a comprehensive range of agricultural inputs. Our portfolio encompasses fertilizers, pesticides, nutrients 
+                    (both major and minor), organic manure, bio-fertilizers, bio-pesticides, and bio-stimulants. The reach of Multiplex products extend to more than 17 countries,
+                    including Japan, Korea, Ethiopia, Djibouti, Sri Lanka, and various Arab nations.
+                    </p>
 
                     <p class="mb-20">
-                        Dedicated to the pursuit of the highest quality in agricultural yields, our devoted team of scientists diligently leverages cutting-edge technologies 
-                        to develop innovative crop nutrition and plant protection solutions. 
+                        Dedicated to the pursuit of the highest quality in agricultural yields, our devoted team of scientists leverage cutting-edge technologies to develop innovative 
+                        crop nutrition and plant protection solutions at our facility. To know more about our advanced manufacturing facilities, 
+                        <a class="link_a" href="{{ route('infrastructure') }}" target="_blank">click here.</a> 
                     </p>
-                    <!--<p class="mb-20">-->
-                    <!--    Our product offerings span not only agriculture and horticulture but -->
-                    <!--    also extend into the realms of animal husbandry and FMCG (Cleaning & Disinfection), aligning with the global shift towards organic practices.-->
-                    <!--</p>-->
-                </div>
-                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
-                    <a href="{{url('/')}}" class="main-btn filled-btn mb-10">Download Brochure </a>
                 </div>
             </div>
             <div class="col-xl-5 col-lg-12">
@@ -211,6 +208,29 @@
 .fchoice-bg {
     background:#faead7;
 }
+  @media (max-width:567px){
+    .counter-area .col-sm-6{
+        width:50% !important;
+        padding-left:7px !important ;
+        padding-right:7px !important;
+        
+    }
+    .counter-area .col-sm-6 .inner-counter h2 {
+    font-size: 18px !important;
+}
+    .features-wrapper-two {
+    padding: 50px 20px !important;}
+    .testimonial-slider-one .slick-arrow.prev {
+    left: 20px;
+}
+.testimonial-slider-one .slick-arrow.next {
+    right: 20px;
+}
+.testimonial-slider-one .slick-arrow {
+    width: 35px;
+    height: 35px;}
+}
+
 </style>
 
 
@@ -224,17 +244,20 @@
                 </div>
             </div>
           <div class="customer-logos slider">
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-logo-1.png" alt="karnatak-agro-chemicals"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-logo-2.png" alt="multiplex-fertilizers-pvt-ltd"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-logo-3.png" alt="mystique-apparels-india"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-logo-4.png" alt="multiplex-agricare"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-logo-5.png" alt="multiplex-movers"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-logo-6.png" alt="multiplex-bio-tech"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-logo-7.png" alt="multiplex-urban-green"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-logo-8.png" alt="multiplex-farming"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-logo-9.png" alt="gps"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-logo-10.png" alt="multiplex-safe-and-farm-fresh"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-logo-11.png" alt="multiplex-m-drone"></a></div>
+            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-one.png" alt="Karnataka Agro Chemicals"></a></div>
+            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-two.png" alt="Multiplex Fertlizer's Pvt. Ltd"></a></div>
+            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-three.png" alt="Mystique Apparels India Pvt. Ltd"></a></div>
+            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-four.png" alt="Multiplex Agricare Pvt. Ltd"></a></div>
+            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-five.png" alt="Multiplex Movers"></a></div>
+            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-six.png" alt="Multiplex Bio-Tech Pvt. Ltd"></a></div>
+            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-seven.png" alt="Anshul Agro Chemicals"></a></div>
+            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-eight.png" alt="Multiplex Urban Green India Pvt. Ltd"></a></div>
+            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-nine.png" alt="Multiplex Farming"></a></div>
+            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-ten.png" alt="GPS Institute of Agricultural Management"></a></div>
+            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-eleven.png" alt="Multiplex Safe & Farm Fresh"></a></div>
+            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-twelve.png" alt="Agriplex Private Limited"></a></div>
+            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-thirteen.png" alt="Multiplex Drone Pvt. Ltd"></a></div>
+            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-fourteen.png" alt="Multiplex Forest Factree"></a></div>
           </div>
        </section>
 
@@ -259,23 +282,22 @@
             </div>
             <div class="col-xl-6 col-lg-12">
                 <!--====== About Content Box ======-->
-                <div class="skill-content-box mb-35 mr-lg-50 wow fadeInLeft">
+                <div class="skill-content-box mb-30 mr-lg-50 wow fadeInLeft">
                     <!--====== Section-title ======-->
                     <div class="section-title mb-25">
                         <span class="sub-title"><img src="assets/images/leaf-svgrepo-com-new.svg" height="35" width="35" alt=""></span>
                         <h2>Farmers First Choice <br />Since 1974</h2>
                     </div>
-                    <p class="mb-20">Multiplex is the leading household brand name for farmers across
-                        pan India. We manufacture and export Micro Nutrients, Organic
-                        Manure, Bio-Fertilizers, Bio-Activators, Bio-Pesticides & Pesticides</p>
-                    <p class="mb-20">With over 49 years of experience in the field of agronomics, we are
-                        the pioneers of green farming and providing complete solutions for
-                        agriculture and horticulture to increase yield by quantity & quality.</p>
-                    <p class="mb-20">We are India's leading manufacturer and exporter of agriculture
-                        inputs and provide exceptional solutions for crop nutrition and
-                        plant protection. To know more about our world class facilities, <a class="link_a"
-                            href="#">click here.</a></p>
-
+                    <p class="mb-20">Multiplex is the leading household brand name for farmers across pan India. We manufacture and export Micro Nutrients, Organic Manure, 
+                    Bio-Fertilizers, Bio-Activators, Bio-Pesticides & Pesticides</p>
+                    
+                    <p class="mb-20">With over 49 years of experience in the field of agronomics, we are the pioneers in green farming and providing complete solutions for 
+                    agriculture and horticulture to increase yield by quantity & quality.</p>
+                    
+                    <p class="mb-20">We are India's leading manufacturer and exporter of agriculture inputs and provide exceptional solutions for crop nutrition and plant protection.</p>
+                </div>
+                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
+                    <a href="{{url('/')}}" class="main-btn filled-btn mb-10">Download Brochure </a>
                 </div>
             </div>
 
@@ -375,14 +397,13 @@
                         <div class="about-three_content-box wow fadeInRight">
                             <!--=== Section Title ===-->
                             <div class="section-title mb-25 wow fadeInUp years-size">
-                                <span class="sub-title"><img src="assets/images/leaf-svgrepo-com-new.svg" height="35" width="35" alt=""> We are fast
-                                    approaching the milestone of</span>
+                                <span class="sub-title"><img src="assets/images/leaf-svgrepo-com-new.svg" height="35" width="35" alt=""> We are fast approaching the milestone of</span>
                                 <h2 style="font-size: 50px;">Multiplex <br />Golden Jubilee <br />Celebration.</h2>
                             </div>
                             <!--  <p class="mb-40 wow fadeInDown">Sed ut perspiciatis unde omnis iste natus voluptatem accusan inventore</p> -->
                             <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
                                 <!-- <a href="about.html" class="main-btn golden-btn mb-10">Explore More</a> -->
-                                <a href="{{url('/')}}" class="main-btn filled-btn mb-10">Know More</a>
+                                <a href="{{ route('timeline') }}" class="main-btn filled-btn mb-10">Know More</a>
                             </div>
                         </div>
                     </div>
@@ -632,7 +653,7 @@
                                 of making a strong & valuable relationship with our esteemed retailers &
                                 farmers, Multiplex is presenting the Sambrama App.
                                 <br/>
-                                A fast & convenient way for Authorised retailers & farmers to earn reward points and redeem exciting gifts! 
+                                A fast & convenient way for authorised retailers & farmers to earn reward points and redeem exciting gifts! 
                             </p>
                         </div>
                     </div>
@@ -660,10 +681,10 @@
 
   $(document).ready(function(){
     $('.customer-logos').slick({
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     arrows: false,
     dots: false,
     pauseOnHover: false,
@@ -677,7 +698,7 @@
     }, {
       breakpoint: 520,
       settings: {
-        slidesToShow: 2
+        slidesToShow: 1
       }
     }]
     });

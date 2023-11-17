@@ -5,6 +5,12 @@
     .project-details-wrapper p {
     margin-bottom: 15px;
 }
+
+     @media (max-width:567px){
+.menu-button-1{
+   margin-top:-1rem !important;
+}}
+
 </style>
 
 <!--====== Start Page-title-area section ======-->
@@ -33,8 +39,14 @@
                     <div class="project-info mb-30 wow fadeInLeft">
                         <h3 class="title">Drone Spray Services</h3>
                         <!--<h3 class="mb-10"></h3>-->
-                        <p>Agricultural spraying drone takes 8 to 10 min to spray inputs for an acre. Ten liters of agricultural input will be sprayed for field crops and Twenty liters will be sprayed for plantation crops. By taking spray through drones, farmers can save agricultural input consumption by 30 to 35% and water consumption by 90 to 95%.</p>
-                        <p>We have experience in spraying over 20,000 acres on 56 crops in 8 states.</p>
+                        <!--<p>Agricultural spraying drone takes 8 to 10 min to spray inputs for an acre. Ten liters of agricultural input will be sprayed for field crops and Twenty liters will be sprayed for plantation crops. By taking spray through drones, farmers can save agricultural input consumption by 30 to 35% and water consumption by 90 to 95%.</p>-->
+                        <!--<p>We have experience in spraying over 20,000 acres on 56 crops in 8 states.</p>-->
+                        <p>Multiplex Drone Services offer a cutting-edge range of over 8 agricultural drone models meticulously crafted with high-strength carbon fibers and aerospace-grade aluminum. 
+                        These drones, equipped with advanced flight controllers and GPS modules, efficiently cover one acre in 8 to 10 minutes, using 10 liters of inputs for field crops and 20 liters 
+                        for plantation crops. Harnessing drone technology, farmers benefit from significant reductions: 30-35% in input consumption, 90-95% in water usage, and a remarkable 90% in time
+                        savings. Operator safety sees a substantial boost to 99% compared to traditional methods. These versatile drones handle crops from cauliflower to towering Areca trees, showcasing 
+                        their effectiveness over 20,000 acres across 8 Indian states. Multiplex Drone Services delivers a complete "Total Solution" for agricultural spraying, ensuring heightened efficiency 
+                        and productivity in farming.</p>
                         <!--<ul class="check-style-one mb-60">-->
                         <!--    <li><i class="fa fa-check"></i>We’re Experience Gardening</li>-->
                         <!--    <li><i class="fa fa-check"></i>Awards Winning & Professional Team Member</li>-->
@@ -76,7 +88,7 @@
             <div class="col-xl-12 col-lg-12 text-center">
                 <div class="menu-button d-xl-block">
                    <a href="{{ route('contact') }}" data-toggle="modal"
-                                data-target="#sidebar-modal" class="main-btn primary-btn">Enquire Now</a>
+                                data-target="#sidebar-modal" class="main-btn primary-btn menu-button-1">Enquire Now</a>
                 </div>
             </div>
         </div>

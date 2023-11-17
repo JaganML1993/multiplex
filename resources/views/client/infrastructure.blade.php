@@ -52,11 +52,24 @@
 }
 @media only screen and (max-width: 600px) {
  .slick-arrow {
-     display:none !important;
+     display:block !important;
  } 
  .project-img img {
      width:280px;
  }
+    .projects-slider-one .slick-arrow.prev {
+    left:70px;
+}
+.projects-slider-one .slick-arrow.next {
+    right: 70px;
+}
+.projects-slider-one .slick-arrow {
+    width: 35px;
+    height: 35px;
+    line-height:1.8 !important;
+}
+}
+ 
 }
 </style>
 

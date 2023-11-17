@@ -1,5 +1,6 @@
 @extends('client.header')
 @section('content')
+@include('client.service-enquiry')
 
 <!--====== Start Page-title-area section ======-->
 <section class="page-title-area text-white bg_cover"
@@ -10,6 +11,8 @@
             <h1 class="page-title">Soil Analysis Laboratory </h1>
             <div class="gd-breadcrumb">
                 <span class="breadcrumb-entry"><a href="index.html">Home</a></span>
+                <span class="separator"></span>
+                <span class="breadcrumb-entry active">Quality Testing </span>
                 <span class="separator"></span>
                 <span class="breadcrumb-entry active">Soil Analysis Laboratory </span>
             </div>
@@ -25,7 +28,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="project-info mb-30 wow fadeInLeft">
-                        <h3 class="title">Soil Sampling & Its Importance</h3>
+                        <h3 class="mb-20 pt-10">Soil Sampling & Its Importance</h3>
                          <!--<h3 class="mb-10"></h3>-->
                         <p>Soil is important for plant growth and development and helps to increase the food production and productivity of crops. Hence maintainance of soil health is an important task in the field of agriculture because soils are heterogeneous in nature. Soil has to be studied and analyzed for the various Physical, Chemical and biological properties that help to maintain the fertility of the soil. The best method to study the soil is soil sampling and nutrient analysis.</p>
                         <!--<ul class="check-style-one mb-60">-->
@@ -38,7 +41,7 @@
                 <!--    <img src="assets/images/gl-3.jpg" alt="Project Image">-->
                 <!--</div>-->
             </div>
-            <hr />
+            
             <div class="row">
                 <div class="col-md-4">
                     <div class="block-image wow fadeInDown">
@@ -68,7 +71,7 @@
             <div class="col-xl-12 col-lg-12 text-center">
                 <div class="menu-button d-xl-block">
                     <a href="{{ route('contact') }}" data-toggle="modal"
-                                data-target="#sidebar-modal" class="main-btn primary-btn">Enquire Now</a>
+                                data-target="#service-modal" class="main-btn primary-btn">Enquire Now</a>
                 </div>
             </div>
         </div>

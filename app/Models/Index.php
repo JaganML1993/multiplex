@@ -11,5 +11,5 @@ class Index extends Model
 
     protected $table = 'enquiry';
 
-    protected $fillable = ['name', 'phone', 'email', 'location', 'message'];
+    protected $fillable = ['name', 'phone', 'email', 'location', 'message','department','serial_id','type'];
 }

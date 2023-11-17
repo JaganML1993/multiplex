@@ -16,6 +16,21 @@
         </div>
     </div>
 </section>
+<section class="page-title-area text-white bg_cover"
+    style="background-image: url(assets/images/r-and-d-header-img.jpg);">
+    <div class="container">
+        <!--======  Page-title-Inner ======-->
+        <div class="page-title-inner text-center">
+            <h1 class="page-title">Research and Development </h1>
+           
+        </div>
+    </div>
+</section>
+ <div class="gd-breadcrumb">
+                <span class="breadcrumb-entry"><a href="index.html">Home</a></span>
+                <span class="separator"></span>
+                <span class="breadcrumb-entry active">Research and Development </span>
+            </div>
 <!--====== End Page-title-area section ======-->
 
 <!--====== Start Project-Details section ======-->
@@ -62,11 +77,11 @@
                             <li><i class="fa fa-check"></i>Formulation Lab: Developing innovative agricultural formulations.</li>
                             <li><i class="fa fa-check"></i>Quality Control Lab: Ensuring the highest product standards.</li>
                             <li><i class="fa fa-check"></i>Isolated Microbial Culture Handling Lab: Featuring bio-safety cabinets for microbial studies.</li>
-                            <li><i class="fa fa-check"></i>In addition to biology-focused labs, our unit houses.</li>
-                            <li><i class="fa fa-check"></i>Chemical Synthesis Lab: For chemical research.</li>
-                            <li><i class="fa fa-check"></i>Analytical Lab: Providing precise analytical capabilities.</li>
-                            <li><i class="fa fa-check"></i>Quality Control Lab: Ensuring product quality.</li>
-                            <li><i class="fa fa-check"></i>Fume Hood and Air-Exhaust Facility: Ensuring safe chemical handling.</li>
+                            <!--<li><i class="fa fa-check"></i>In addition to biology-focused labs, our unit houses.</li>-->
+                            <!--<li><i class="fa fa-check"></i>Chemical Synthesis Lab: For chemical research.</li>-->
+                            <!--<li><i class="fa fa-check"></i>Analytical Lab: Providing precise analytical capabilities.</li>-->
+                            <!--<li><i class="fa fa-check"></i>Quality Control Lab: Ensuring product quality.</li>-->
+                            <!--<li><i class="fa fa-check"></i>Fume Hood and Air-Exhaust Facility: Ensuring safe chemical handling.</li>-->
                     </ul>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">

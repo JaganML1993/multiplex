@@ -143,6 +143,20 @@ if(isset($title)){
               </a>
             </li>
 
+            <li class="menu-item @if ($page == 'productenquiry') active open @endif">
+              <a href="{{ route('product-enquiry.list') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Product Enquiries</div>
+              </a>
+            </li>
+
+            <li class="menu-item @if ($page == 'serviceenquiry') active open @endif">
+              <a href="{{ route('service-enquiry.list') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Service Enquiries</div>
+              </a>
+            </li>
+
             <li class="menu-item @if ($page == 'enquiry') active open @endif">
               <a href="{{ route('enquiry.list') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
@@ -160,7 +174,20 @@ if(isset($title)){
             <li class="menu-item @if ($page == 'job') active open @endif">
               <a href="{{ route('job') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Job Applications</div>
+                <div data-i18n="Analytics">Jobs Applied</div>
+              </a>
+            </li>
+
+            <li class="menu-item @if ($page == 'departments') active open @endif">
+              <a href="{{ url('admin/departments') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Departments</div>
+              </a>
+            </li>
+            <li class="menu-item @if ($page == 'galleries') active open @endif">
+              <a href="{{ url('admin/galleries') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Gallery</div>
               </a>
             </li>
 

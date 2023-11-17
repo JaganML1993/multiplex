@@ -119,8 +119,62 @@ class DashboardController extends Controller
     }
 
     public function enquiryList(){
-        $enquiries = Index::get();
+        $enquiries = Index::where('type',1)->get();
         
         return view('admin.enquiry.index')->with('page', 'enquiry')->with('enquiries', $enquiries);
     }
+
+    public function productenquiryList(){
+        $enquiries = Index::where('type',2)->get();
+        
+        return view('admin.enquiry.productindex')->with('page', 'productenquiry')->with('enquiries', $enquiries);
+    }
+
+    public function serviceenquiryList(){
+        $enquiries = Index::where('type',3)->get();
+        
+        return view('admin.enquiry.serviceindex')->with('page', 'serviceenquiry')->with('enquiries', $enquiries);
+    }
+
+    public function updateRemark($id, Request $request)
+    {
+        // Validate the request as needed
+
+        $enquiry = Index::find($id);
+        return view('admin.enquiry.remark')->with('page', 'enquiry')->with('enquiry', $enquiry);
+
+    }
+    public function updateRemarkStore($id, Request $request)
+    {
+        // Validate the request as needed
+
+        $enquiry = Index::find($id);
+        $enquiry->remarks = $request->input('remarks');
+        $enquiry->status = $request->input('status'); // Update the status to "1"
+        $enquiry->save();
+
+        if($enquiry->type == 1){
+
+        $enquiries = Index::where('type',1)->get();
+        
+        return view('admin.enquiry.index')->with('page', 'enquiry')->with('enquiries', $enquiries);
+
+        }elseif($enquiry->type == 2){
+
+            $enquiries = Index::where('type',2)->get();
+        
+            return view('admin.enquiry.productindex')->with('page', 'productenquiry')->with('enquiries', $enquiries);
+            
+        }elseif($enquiry->type == 3){
+
+            $enquiries = Index::where('type',3)->get();
+        
+        return view('admin.enquiry.serviceindex')->with('page', 'serviceenquiry')->with('enquiries', $enquiries);
+            
+        }
+
+
+
+    }
+
 }

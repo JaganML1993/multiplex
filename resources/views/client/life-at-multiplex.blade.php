@@ -61,67 +61,43 @@
 </style>
 
 <!--====== Start Gallery Section ======-->
-<section class="gallery-section-minus1 pt-100 pb-50 bg-dark-infra">
+<section class="gallery-section-minus1 pt-60 pb-50 bg-dark-infra">
     <div class="container">
+        
         <div class="row">
-            <div class="col-lg-12">
-                <!--====== Project Content Box ======-->
-                <div class="project-content-box mb-50 wow fadeInRight">
-                    <p class="mb-20">Multiplex believes to represent innovation in Agri-Technology and thrives to create a healthy ecosystem to achieve the same. Our employees are spread nationwide with different backgrounds and varied culture with a positive attitude to accomplish our vision.</p>
-                    <p class="mb-20">Multiplex is delighted to have more than 1500 employees with varied designations, skills, and experience working to provide the quality products timely to maintain a long-term customer relationship.</p>
-                    <p class="mb-20">Our employees are entitled for wide benefits from health Insurance and Bonus to retirement benefits to appreciate their dedication towards work. Besides, we look forward to create a platform to bring out the best of an individual in terms of their performance and proficiency.</p>
+                    <div class="col-xl-12 col-lg-12">
+                        <h3 class="title" style="font-size:25px;font-weight:700;">Glimpses of life at Multiplex</h3>
+                        <div class="description-wrapper mt-30">
+                            <div class="tab-content wow fadeInUp">
+                                <div class="tab-pane fade show active">
+                                    <div class="content-box">
+                                        <p class="mb-20">Multiplex believes to represent innovation in Agri-Technology and thrives to create a healthy ecosystem to achieve the same. Our employees are spread nationwide with different backgrounds and varied culture with a positive attitude to accomplish our vision.</p>
+                                        <p class="mb-20">Multiplex is delighted to have more than 1500 employees with varied designations, skills, and experience working to provide the quality products timely to maintain a long-term customer relationship.</p>
+                                        <p class="mb-20">Our employees are entitled for wide benefits from health Insurance and Bonus to retirement benefits to appreciate their dedication towards work. Besides, we look forward to create a platform to bring out the best of an individual in terms of their performance and proficiency.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-        </div>
     </div>
+    <br/>
     <div class="projects-slider-one wow fadeInDown">
-        <!--====== Single Gallery Item ======-->
-        <!--<div class="single-project-item">-->
-        <!--    <div class="project-img">-->
-        <!--        <img src="assets/images/life/life-at-multiplex-1.jpg" alt="Gallery Image">-->
-                <!-- <div class="hover-content"> -->
-                <!-- <div class="text text-white"> -->
-                <!-- <h3 class="title">Manufacturing Unit Name</h3> -->
-                <!-- <p>Location</p> -->
-                <!-- </div> -->
-                <!-- </div> -->
-        <!--    </div>-->
-        <!--</div>-->
-        <!--====== Single Gallery Item ======-->
         <div class="single-project-item">
             <div class="project-img">
                 <img src="assets/images/life/life-at-multiplex-2.jpg" alt="Gallery Image">
-                <!-- <div class="hover-content"> -->
-                <!-- <div class="text text-white"> -->
-                <!-- <h3 class="title">Manufacturing Unit Name</h3> -->
-                <!-- <p>Location</p> -->
-                <!-- </div> -->
-                <!-- </div> -->
             </div>
         </div>
         <!--====== Single Gallery Item ======-->
         <div class="single-project-item">
             <div class="project-img">
                 <img src="assets/images/life/life-at-multiplex-3.jpg" alt="Gallery Image">
-                <!-- <div class="hover-content"> -->
-                <!-- <div class="text text-white"> -->
-                <!-- <h3 class="title"><a href="project-details.html">Take Care Garden Trees</a></h3> -->
-                <!-- <a href="#">Gardening & Landscape</a> -->
-                <!-- </div> -->
-                <!-- </div> -->
             </div>
         </div>
         <!--====== Single Gallery Item ======-->
         <div class="single-project-item">
             <div class="project-img">
                 <img src="assets/images/life/life-at-multiplex-4.jpg" alt="Gallery Image">
-                <!-- <div class="hover-content"> -->
-                <!-- <div class="text text-white"> -->
-                <!-- <h3 class="title">Manufacturing Unit Name</h3> -->
-                <!-- <p>Location</p> -->
-                <!-- </div> -->
-                <!-- </div> -->
             </div>
         </div>
 
@@ -129,12 +105,6 @@
         <div class="single-project-item">
             <div class="project-img">
                 <img src="assets/images/life/life-at-multiplex-5.jpg" alt="Gallery Image">
-                <!-- <div class="hover-content"> -->
-                <!-- <div class="text text-white"> -->
-                <!-- <h3 class="title">Manufacturing Unit Name</h3> -->
-                <!-- <p>Location</p> -->
-                <!-- </div> -->
-                <!-- </div> -->
             </div>
         </div>
     </div>

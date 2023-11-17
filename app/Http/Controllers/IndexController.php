@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\admin\Category;
+use App\Models\Department;
 use App\Models\Index;
 use App\Models\Openings;
 use App\Models\JobApplication;
@@ -10,6 +11,8 @@ use App\Models\Location;
 use Illuminate\Http\Request;
 use File;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+
 
 class IndexController extends Controller
 {
@@ -25,8 +28,71 @@ class IndexController extends Controller
     }
 
     public function save_enquiry(Request $request){
-        Index::create(['name' => $request->name,'phone' => $request->phone,'email' => $request->email,'location' => $request->loc,'message' => $request->message]);
-        return redirect()->back()->with('status','Enquiry submitted successfully');
+
+        $department = Department::where('id', $request->input('department'))->first();
+        // dd($department);
+
+       
+        $enquiry =  Index::create(
+            [
+                'name' => $request->name,
+                'phone' => $request->phone,
+                'email' => $request->email,
+                'location' => $request->loc,
+                'message' => $request->message,
+                'type' => $request->type,
+                'department' => $department->name??''
+            ]);
+
+                // Generate serial ID and update the record
+           
+
+            $departmentEmail = $department->email??'';
+
+
+          // Send email
+        $data = [
+            'id' => $enquiry->id,
+            'name' => $request->input('name')??'',
+            'phone' => $request->input('phone')??'',
+            'email' => $request->input('email')??'',
+            'loc' => $request->input('loc')??'',
+            'message' => $request->input('message')??'',
+            'department' => $department->name??'',
+            'type' => $request->type,
+        ];
+
+        if($request->type == 1){
+
+            $serialId = "DEPT" . str_pad($enquiry->id, 4, '0', STR_PAD_LEFT);
+
+            Mail::to($departmentEmail)
+            ->cc('admin@gmail.com')
+            ->send(new \App\Mail\Enquiry($data));
+
+        }elseif($request->type == 2){
+
+            $serialId = "PROD" . str_pad($enquiry->id, 4, '0', STR_PAD_LEFT);
+
+
+            Mail::to('product@gmail.com')
+            ->cc('admin@gmail.com')
+            ->send(new \App\Mail\Enquiry($data));
+
+        }elseif($request->type == 3){
+
+            $serialId = "SERV" . str_pad($enquiry->id, 4, '0', STR_PAD_LEFT);
+
+            Mail::to('service@gmail.com')
+            ->cc('admin@gmail.com')            
+            ->send(new \App\Mail\Enquiry($data));
+
+        }
+
+        $enquiry->update(['serial_id' => $serialId]);
+
+        // Return a response or redirect as needed
+        return redirect()->back()->with('status', 'Enquiry submitted successfully');
     }
 
     public function current_openings()
@@ -38,6 +104,62 @@ class IndexController extends Controller
             ->get();
         
         return view('client.current-openings')->with('openings',$openings);
+    }
+
+    public function careers(Request $request)
+    {
+        $openings = DB::table('openings')
+        ->select('openings.*','locations.location as job_location')
+        ->join('locations','openings.location','=','locations.id')
+        ->where('openings.deleted_at', NULL)->paginate(5);
+
+
+        if ($request->ajax()) {
+
+            $openings = DB::table('openings')
+            ->select('openings.*','locations.location as job_location')
+            ->join('locations','openings.location','=','locations.id')
+            ->where('openings.deleted_at', NULL)->paginate(5);
+
+            $view = view('client.opening-result',compact('openings'))->render();
+            return response()->json(['html'=>$view]);
+        }
+
+        return view('client.current-openings',compact('openings'));
+    }
+
+
+
+    public function searchOpenings(Request $request)
+    {
+        //dd($request->all());
+
+        $careers = DB::table('openings')
+            ->select('openings.*', 'locations.location as job_location')
+            ->join('locations', 'openings.location', '=', 'locations.id')
+            ->where('openings.deleted_at', NULL);
+
+        if(isset($request->department) && !empty($request->department))
+        {
+            $careers = $careers->where('openings.department', 'LIKE', '%' . $request->department . '%');
+        }
+
+        if(isset($request->location) && !empty($request->location))
+        {
+            $careers = $careers->where('locations.location', 'LIKE', '%' . $request->location . '%');
+        }
+
+        if(isset($request->position) && !empty($request->position))
+        {
+            $careers = $careers->where('openings.position', 'LIKE', '%' . $request->position . '%');
+        }
+
+        $openings = $careers->get();
+
+        $view = view('client.opening-result',compact('openings'))->render();
+
+        return response()->json(['html'=>$view]);
+
     }
 
     public function job_application($id) {
@@ -64,7 +186,33 @@ class IndexController extends Controller
         );
 
         JobApplication::create($insert_array);
-        return redirect('current_openings')->with('status','Job Application submitted successfully');
+
+        $job = Openings::where('id',$request->id)->first();
+
+        $location = Location::where('id',$job->location)->first();
+      
+
+            // Send email
+        $data = [
+            'fname' => $request->input('fname'),
+            'lname' => $request->input('lname'),
+            'email' => $request->input('email'),
+            'phone' => $request->input('phone'),
+            'qualification' => $request->input('qualification'),
+            'experience' => $request->input('experience'),
+            'job' => $job->position, // Assuming you have this value available
+            'jobloc' => $location->location, // Assuming you have this value available
+        ];
+
+        $attachmentPath = $image_path; // Use the saved file path as attachment
+        $attachmentName = basename($image_path);
+
+        Mail::to('xx@gmail.com')
+            ->cc('admin@gmail.com')
+            ->send(new \App\Mail\JobApplication($data, $attachmentPath, $attachmentName));
+
+        // Return a response or redirect as needed
+        return redirect('current_openings')->with('status', 'Job Application submitted successfully');
     }
 
     public function saveFile($folder,$request_image)
@@ -103,12 +251,16 @@ class IndexController extends Controller
         return view('client.timeline');
     }
 
-    public function domestic(){
-        return view('client.domestic');
+    public function branches(){
+        return view('client.branches');
     }
 
     public function global_connect(){
         return view('client.global-connect');
+    }
+
+    public function quality_testing(){
+        return view('client.quality-testing');
     }
 
     public function r_and_d(){

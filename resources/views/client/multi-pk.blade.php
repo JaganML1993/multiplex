@@ -1,5 +1,6 @@
 @extends('client.header')
 @section('content')
+@include('client.product-enquiry')
 
 <!--====== Start CTA Section  ======-->
 <section class="cta-bg-section bg_cover pt-100 p-r z-1" style="background-image: url(assets/images/bg33.jpg);">
@@ -205,7 +206,8 @@
                 </div>
                 <br />
                 <div class="menu-button d-xl-block">
-                    <a href="#" class="main-btn filled-btn" style="padding: 17px 60px;">Enquire Now</a>
+                    <!--<a href="#" class="main-btn filled-btn" style="padding: 17px 60px;">Enquire Now</a>-->
+                    <a href="{{ route('contact') }}" data-toggle="modal" data-target="#product-modal" class="main-btn filled-btn" style="padding: 17px 56px;">Enquire Now</a>
                 </div>
             </div>
         </div>

@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('openings', function (Blueprint $table) {
-            $table->text('description');
-            $table->text('roles');
-            $table->text('qualification');
-        });
+        // Schema::table('openings', function (Blueprint $table) {
+        //   //  $table->text('description');
+        //     $table->text('roles');
+        //     $table->text('qualification');
+        // });
     }
 
     /**

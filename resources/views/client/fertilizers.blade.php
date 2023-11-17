@@ -3,7 +3,7 @@
 
 <!--====== Start Page-title-area section ======-->
 <section class="page-title-area text-white bg_cover"
-    style="background-image: url(assets/images/fertilizer-header-img.jpg);">
+    style="background-image: url(assets/images/fertilizers-header-banner1140x406.webp);">
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
@@ -28,6 +28,7 @@
             <div class="col-xl-6 col-lg-8">
                 <!--====== Section Title ======-->
                 <div class="section-title mb-40">
+
                     <h2>Fertilizers</h2>
                 </div>
             </div>

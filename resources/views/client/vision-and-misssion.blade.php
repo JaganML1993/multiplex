@@ -1,6 +1,20 @@
 @extends('client.header')
 @section('content')
 
+<style>
+    @media (max-width:567px){
+        .vm-text h2, .vm-text p, .hero-image-box {
+            text-align:center;
+        }
+        .hero-image-box {
+            margin-bottom:0.5rem;
+        }
+        .vision-row{
+            flex-direction: column-reverse !important;
+        }
+    }
+</style>
+
 <!--====== Start Page-title-area section ======-->
 <section class="page-title-area text-white bg_cover"
     style="background-image: url(assets/images/vision-mission-header-three.jpg);">
@@ -19,163 +33,144 @@
 <!--====== End Page-title-area section ======-->
 
 
-<style>
-    .gre-bg {
-        background-color:#fdefe0;
-    }
-    
-    .mt-minus-110 {
-        margin-top: -75px;
-    }
-    
-</style>
 
-<section class="about-section pt-95 pb-60">
-            <div class="container">
-                <!--<div class="row">-->
-                <!--    <div class="col-lg-3">-->
-                        <!--====== Section-title ======-->
-                <!--        <div class="section-title mb-50 wow fadeInLeft">-->
-                <!--            <h2>Who We Are</h2>-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--    <div class="col-lg-9">-->
-                        <!--====== About Content Box ======-->
-                <!--        <div class="about-content-box mb-50 wow fadeInRight">-->
-                <!--            <p class="mb-30">We are an ISO 9001 and ISO 14001 certified company known for their quality standards. Both our Bio-Fertilizers and Bio-Pesticides are certified by IMO Switzerland for use in organic farming.</p>-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-                <!--    <div class="col-lg-3">-->
-                        <!--====== Section-title ======-->
-                <!--        <div class="section-title mb-50 wow fadeInLeft">-->
-                <!--            <h2>What We Do</h2>-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--    <div class="col-lg-9">-->
-                        <!--====== About Content Box ======-->
-                <!--        <div class="about-content-box mb-50 wow fadeInRight">-->
-                <!--            <p class="mb-30">We are one of the leading manufacturers, marketers and exporters of Micro Nutrients, Organic Manure, Bio-Fertilizers, Bio-Pesticides, and Bio-activators in India.</p>-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--</div>-->
-                <!--<div class="row justify-content-center">-->
-                <!--    <div class="col-lg-4 col-md-6 col-sm-6">-->
-                        <!--====== About Image Item ======-->
-                <!--        <div class="about-img-item mb-30 wow fadeInUp">-->
-                <!--            <img src="assets/images/vm-new3.jpg" alt="About Image">-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--    <div class="col-lg-4 col-md-6 col-sm-6">-->
-                        <!--====== About Image Item ======-->
-                <!--        <div class="about-img-item mb-30 wow fadeInDown">-->
-                <!--            <img src="assets/images/vm-new2.jpg" alt="About Image">-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--    <div class="col-lg-4 col-md-6 col-sm-6">-->
-                        <!--====== About Image Item ======-->
-                <!--        <div class="about-img-item mb-30 wow fadeInUp">-->
-                <!--            <img src="assets/images/vm-new1.jpg" alt="About Image">-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--</div>-->
-                <div class="row justify-content-center">
-                    <div class="col-lg-10">
-                        <!--====== About Wrapper ======-->
-                        <div class="about-wrapper-two gre-bg mt-minus-110 p-r wow fadeInDown">
-                            <div class="row no-gutters justify-content-center">
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <!--====== About features Item ======-->
-                                    <div class="about-features-item text-center">
-                                        <div class="hover-bg bg_cover" style="background-image: url(assets/images/about/hover-bg.jpg);"></div>
-                                        <div class="icon">
-                                            <img src="assets/images/agriculture.png" alt="About Image">
-                                        </div>
-                                        <div class="text">
-                                            <h3 class="title">Who We Are</h3>
-                                            <p>We are an ISO 9001 and ISO 14001 certified company known for their quality standards. Both our Bio-Fertilizers and Bio-Pesticides are certified by IMO Switzerland for use in organic farming.</p>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <!--====== About features Item ======-->
-                                    <div class="about-features-item text-center">
-                                        <div class="hover-bg bg_cover" style="background-image: url(assets/images/about/hover-bg.jpg);"></div>
-                                        <div class="icon">
-                                            <img src="assets/images/natural-product.png" alt="About Image">
-                                        </div>
-                                        <div class="text">
-                                            <h3 class="title">What We Do</h3>
-                                            <p>We are one of the leading manufacturers, marketers and exporters of Micro Nutrients, Organic Manure, Bio-Fertilizers, Bio-Pesticides, and Bio-activators in India.</p>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <!--====== About features Item ======-->
-                                    <div class="about-features-item text-center">
-                                        <div class="hover-bg bg_cover" style="background-image: url(assets/images/about/hover-bg.jpg);"></div>
-                                        <div class="icon">
-                                            <img src="assets/images/vision2.png" alt="About Image">
-                                        </div>
-                                        <div class="text">
-                                            <h3 class="title">Our Vision</h3>
-                                            <p>To progressively research and develop innovative products and services to the farming community.</p>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <!--====== About features Item ======-->
-                                    <div class="about-features-item text-center">
-                                        <div class="hover-bg bg_cover" style="background-image: url(assets/images/about/hover-bg.jpg);"></div>
-                                        <div class="icon">
-                                             <img src="assets/images/target2.png" alt="About Image">
-                                        </div>
-                                        <div class="text">
-                                            <h3 class="title">Our Mission</h3>
-                                            <p>To be the most preferred quality Agri Input manufacturer and supplier to achieve “Total Solution provider” in improving overall soil health, crop productivity and quality of the produce.</p>
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <!--====== About features Item ======-->
-                                    <div class="about-features-item text-center">
-                                        <div class="hover-bg bg_cover" style="background-image: url(assets/images/about/hover-bg.jpg);"></div>
-                                        <div class="icon">
-                                             <img src="assets/images/values2.png" alt="About Image">
-                                        </div>
-                                        <div class="text">
-                                            <h3 class="title">Our Values</h3>
-                                            <p>Integrity, Quality, Trust, Transparency, <br/>Commitment, Relationship, and Innovation.</p>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <!--====== About features Item ======-->
-                                    <div class="about-features-item text-center">
-                                        <div class="hover-bg bg_cover" style="background-image: url(assets/images/about/hover-bg.jpg);"></div>
-                                        <div class="icon">
-                                            <img src="assets/images/motto2.png" alt="About Image">
-                                        </div>
-                                        <div class="text">
-                                            <h3 class="title">Our Motto</h3>
-                                            <p>Multiplex Farmer, <br/>Happy Farmer.</p>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<!--====== Start Features Section ======-->
+<section class="features-section" style="background-color:#f6d0a259; padding:18px;margin:20px;">
+    <div class="container">
+        <div class="row align-items-xl-center">
+            <div class="col-xl-8 col-lg-12">
+                <!--=== Hero Content ===-->
+                <div class="vm-text">
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Who We Are</h2>
+                    <p class="wow fadeInDown" data-wow-delay=".6s">We're a leading manufacturer and supplier of a wide range of Agriculture inputs, including fertilizers, pesticides, nutrients,
+                    organic manure, bio-fertilizers, bio-pesticides, and bio-stimulants. Our dedicated team of scientists employ cutting-edge Agri technology to develop innovative solutions 
+                    for crop nutrition and plant protection, emphasizing high quality farm produce. Our product line extends to Agriculture, Horticulture, and FMCG (Cleaning & Disinfection), 
+                    aligning with the ongoing shift towards an organic era.</p>
                 </div>
             </div>
-        </section><!--====== End About Section ======-->
+            <div class="col-xl-4 col-lg-12">
+                <!--=== Hero Image Box ===-->
+                <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">
+                    <img src="assets/images/who-we-are-1.png" alt="Hero Image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--<section class="features-section" style="margin:20px;">-->
+<!--    <div class="container">-->
+<!--        <div class="row align-items-xl-center vm-bg-color">-->
+<!--            <div class="col-xl-4 col-lg-12">-->
+                <!--=== Hero Image Box ===-->
+<!--                <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">-->
+<!--                    <img src="assets/images/what-we-do-new-img.png" alt="Hero Image">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-xl-8 col-lg-12">-->
+                <!--=== Hero Content ===-->
+<!--                <div class="vm-text">-->
+<!--                    <h2 class="wow fadeInUp" data-wow-delay=".4s">What We Do</h2>-->
+<!--                    <p class="wow fadeInDown" data-wow-delay=".6s">We are one of the leading manufacturers, marketers-->
+<!--                        and exporters of Micro-->
+<!--                        Nutrients, Organic Manure, Bio-Fertilizers, Bio-Pesticides, and Bio-activators in India.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!--<section class="features-section" style="background-color:#f6d0a259; padding:18px;margin:20px;">-->
+<!--    <div class="container">-->
+<!--        <div class="row align-items-xl-center">-->
+<!--            <div class="col-xl-8 col-lg-12">-->
+                <!--=== Hero Content ===-->
+<!--                <div class="vm-text">-->
+<!--                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Our Vision</h2>-->
+<!--                    <p class="wow fadeInDown" data-wow-delay=".6s">To progressively research and develop innovative-->
+<!--                        products and services to the farming community.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-xl-4 col-lg-12">-->
+                <!--=== Hero Image Box ===-->
+<!--                <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">-->
+<!--                    <img src="assets/images/vision-new-img.png" alt="Hero Image">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+
+<section class="features-section" style="margin:20px;">
+    <div class="container">
+        <div class="row align-items-xl-center vision-row">
+            <div class="col-xl-4 col-lg-12">
+                <!--=== Hero Image Box ===-->
+                <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">
+                    <img src="assets/images/mission-new-img.png" alt="Hero Image">
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-12">
+                <!--=== Hero Content ===-->
+                <div class="vm-text">
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Our Vision and Mission</h2>
+                    <p class="wow fadeInDown" data-wow-delay=".6s">To progressively research and develop innovative
+                        products and services to the farming community.</p>
+                    <p class="wow fadeInDown" data-wow-delay=".6s">To be the most preferred quality Agri Input
+                        manufacturer and supplier to achieve “Total Solution provider” in improving overall soil health,
+                        crop productivity and quality of the produce.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section" style="background-color:#f6d0a259; padding:18px;margin:20px;">
+    <div class="container">
+        <div class="row align-items-xl-center">
+            <div class="col-xl-8 col-lg-12">
+                <!--=== Hero Content ===-->
+                <div class="vm-text">
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Our Values</h2>
+                    <p class="wow fadeInDown" data-wow-delay=".6s">Integrity, Quality, Trust, Transparency, Commitment,
+                        Relationship, and Innovation.</p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-12">
+                <!--=== Hero Image Box ===-->
+                <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">
+                    <img src="assets/images/values-new-img.png" alt="Hero Image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="features-section" style="margin:20px;">
+    <div class="container">
+        <div class="row align-items-xl-center  vision-row">
+            <div class="col-xl-4 col-lg-12">
+                <!--=== Hero Image Box ===-->
+                <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">
+                    <img src="assets/images/motto-new-img.png" alt="Hero Image">
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-12">
+                <!--=== Hero Content ===-->
+                <div class="vm-text">
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Our Motto</h2>
+                    <p class="wow fadeInDown" data-wow-delay=".6s">Multiplex Farmer, Happy Farmer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== End Features Section ======-->
+<br/>
+
+
         
 
 

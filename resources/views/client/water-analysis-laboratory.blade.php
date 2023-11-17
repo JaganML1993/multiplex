@@ -11,6 +11,8 @@
             <div class="gd-breadcrumb">
                 <span class="breadcrumb-entry"><a href="index.html">Home</a></span>
                 <span class="separator"></span>
+                <span class="breadcrumb-entry active">Quality Testing </span>
+                <span class="separator"></span>
                 <span class="breadcrumb-entry active">Water Analysis Laboratory </span>
             </div>
         </div>
@@ -37,7 +39,7 @@
                 <!--    <img src="assets/images/water-lab1.jpg" alt="Project Image">-->
                 <!--</div>-->
             </div>
-            <hr />
+            
             <div class="row">
                 <div class="col-md-4">
                     <div class="block-image wow fadeInDown">

@@ -92,6 +92,7 @@ $categories = CategoryAct::run();
                                         <form class="review-form" method="post"
                                             action="{{ route('home.save_enquiry') }}">
                                             @csrf
+                                            <input type="hidden" name="type" value="1">
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form_group">
@@ -106,18 +107,34 @@ $categories = CategoryAct::run();
                                                             name="phone" required>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6">
+                                                <div class="col-lg-4">
                                                     <div class="form_group">
                                                         <input type="email" class="form_control"
                                                             placeholder="Email Address" name="email" required>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6">
+                                                <div class="col-lg-4">
                                                     <div class="form_group">
                                                         <input type="text" class="form_control" placeholder="Location"
                                                             name="loc" required>
                                                     </div>
                                                 </div>
+                                                @php
+
+                                                $departments = \App\Models\Department::get();
+
+                                                @endphp
+                                                <div class="col-lg-4">
+                                                    <div class="form_group">
+                                                        <select class="form_control " name="department">
+                                                            <option selected disabled>Select Department</option>
+                                                            @foreach($departments as $department)
+                                                            <option value="{{ $department->id }}">{{ $department->name }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                        
+                                                    </div>
+                                                    </div>
                                                 <div class="col-lg-12">
                                                     <div class="form_group">
                                                         <textarea name="message" class="form_control"
@@ -279,7 +296,7 @@ $categories = CategoryAct::run();
                                     <ul class="sub-menu">
                                         <li><a href="{{ route('r-and-d') }}">R & D</a></li>
                                         <li><a href="{{ route('infrastructure') }}">Infrastructure</a></li>
-                                        <li><a href="#">Branches </a></li>
+                                        <li><a href="{{ route('branches') }}">Branches </a></li>
                                         <li><a href="{{ route('global-connect') }}">Global/International Connect</a></li>
                                     </ul>
                                 </li>
@@ -288,23 +305,14 @@ $categories = CategoryAct::run();
                                         @foreach($categories as $category)
                                         <li><a href="{{ route('category.products',['id' => $category->id, 'sub_id' => 0]) }}">{{ $category->name}}</a></li>
                                         @endforeach
-                                    </ul>
+                                     </ul>
                                 </li>
                                 <li class="menu-item has-children"><a href="#">Services</a>
                                     <ul class="sub-menu">
-                                        <li><a href="{{ route('soil-analysis-laboratory') }}">Soil
-                                                Analysis Laboratory</a></li>
-                                        <li><a href="{{ route('water-analysis-laboratory') }}">Water
-                                                Analysis Laboratory</a></li>
-                                        <li><a href="{{ route('leaf-analysis-laboratory') }}">Leaf
-                                                Analysis Laboratory</a></li>
-                                        <li><a href="{{ route('microbial-analysis-laboratory') }}">Microbial
-                                                Analysis
-                                                Laboratory</a></li>
-                                        <li><a href="{{ route('drone-services') }}">Drone Services</a>
-                                        </li>
-                                        <li><a href="{{ route('gardening-services') }}">Gardening
-                                                Services</a></li>
+                                        <li><a href="{{ route('quality-testing') }}">Quality Testing</a></li>
+                                        <li><a href="{{ route('microbial-analysis-laboratory') }}">Microbial Analysis Laboratory</a></li>
+                                        <li><a href="{{ route('drone-services') }}">Drone Services</a></li>
+                                        <li><a href="{{ route('gardening-services') }}">Gardening Services</a></li>
 
                                     </ul>
                                 </li>
@@ -433,6 +441,10 @@ $categories = CategoryAct::run();
             </div>
         </div>
     </footer>
+    <style>.nice-select:after {
+  display:none !important;}
+  .nice-select .list{
+  width:100% !important;}</style>
     <!--====== End Footer ======-->
     <!--====== Back To Top  ======-->
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>

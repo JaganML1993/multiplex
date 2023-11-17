@@ -1,6 +1,10 @@
 @extends('client.header')
 @section('content')
-
+<style>
+     @media (max-width:567px){
+.skill-img-one{
+margin-bottom:20px !important;}}
+</style>
 <!--====== Start Page-title-area section ======-->
 <section class="page-title-area text-white bg_cover"
     style="background-image: url(assets/images/global-header-img2.jpg);">

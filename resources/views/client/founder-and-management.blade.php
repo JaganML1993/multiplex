@@ -1,5 +1,22 @@
 @extends('client.header')
 @section('content')
+<style>
+    @media (max-width:567px){
+.pt-100{
+padding-top: 40px !important;}
+.pad-top-150 {
+    padding-top: 0px !important;
+
+}
+.mangmnt-name h2 {
+    font-size: 18px;
+    text-align: center;
+}
+.sub-title {
+    font-size: 18px;}
+}
+</style>
+
 
 <!--====== Start Page-title-area section ======-->
 <section class="page-title-area text-white bg_cover"
@@ -37,21 +54,14 @@
                     <h2 class="wow fadeInUp" data-wow-delay=".4s">Dr. Gopalakrishna Pommaiah Shetty</h2>
                     <span class="sub-title">Founder & Chairman</span>
                     <hr />
-                    <p class="wow fadeInDown" data-wow-delay=".6s">Early Days: Dr. G. P. Shetty studied his primary and
-                        secondary education in Udupi and
-                        graduation at the famous Willington College, Sangli. After obtaining B.Sc. (Hons) from Pune
-                        University, he joined Shivaji
-                        University Kolhapur for his Post - Graduation. While doing M.Sc. in Plant Physiology, he got
-                        the opportunity to associate
-                        himself with Dr. G. V. Joshi, winner of the prestigious Bhatnagar Award. Impressed by Dr. G. P. Shetty's
-                        devotion to the subject,
-                        Dr. G. V. Joshi persuaded him to do Doctorate. Under his guidance, Dr. G. P. Shetty obtained Ph.D. in Plant
-                        Physiology and Plant nutrients.</p>
+                    <p class="mb-15 wow fadeInDown" data-wow-delay=".6s">Dr. Gopalakrishna Pommaiah Shetty, Founder and Chairman, had his early education in Udupi and graduated from Willingdon College, Sangli. He pursued his post-graduate degree from Shivaji University, Kolhapur and earned a Ph.D. in Plant Physiology and Plant Nutrients under Dr. G. V. Joshi's mentorship.</p>
+                    <p class="mb-15 wow fadeInDown" data-wow-delay=".6s">Being a farmer himself, Dr. G.P. Shetty felt that his knowledge should not be confined to academic corridors but taken to the fields where it could be of practical use to the farmers. With this ambition, he started Karnataka Agro Chemicals in 1974. To ensure soil health and crop quality, agri input products were introduced under the brand name of Multiplex and have proven to be effective in diverse agro-climatic conditions globally.</p>
+                    <p class="mb-15 wow fadeInDown" data-wow-delay=".6s">Today, Multiplex Group of Companies, nurtured by Dr. G.P. Shetty's dedication, employs over 1500 staff members and collaborates with 5000+ dealers and distributors. His pioneering contributions to sustainable Indian agriculture have earned him the prestigious "Rajyotsava Award" from the Karnataka Government, reflecting his lasting impact on the sector.</p>
                     <br />
-                    <h4 class="font-italic">A visionary entrepreneur</h4>
-                    <p class="wow fadeInDown" data-wow-delay=".6s">Being a farmer himself, Dr. G. P. Shetty felt that his
-                        knowledge should not be confined to academic corridors
-                        but taken to the fields where it could be of practical use to the farmers.</p>
+                    <!--<h4 class="font-italic">A visionary entrepreneur</h4>-->
+                    <!--<p class="wow fadeInDown" data-wow-delay=".6s">Being a farmer himself, Dr. G. P. Shetty felt that his-->
+                    <!--    knowledge should not be confined to academic corridors-->
+                    <!--    but taken to the fields where it could be of practical use to the farmers.</p>-->
                 </div>
             </div>
 
@@ -59,7 +69,7 @@
     </div>
 
     <div class="container pad-top-150">
-        <div class="row align-items-xl-center vm-bg-color">
+        <div class="row align-items-xl-center vm-bg-color vision-row">
 
             <div class="col-xl-6 col-lg-12">
                 <!--=== Hero Content ===-->
@@ -67,9 +77,9 @@
                     <h2 class="wow fadeInUp" data-wow-delay=".4s">Mr. Mahesh G Shetty</h2>
                     <span class="sub-title">Managing Director </span>
                     <hr />
-                    <p class="wow fadeInDown" data-wow-delay=".6s">In the footsteps of his esteemed father, Dr. G. P. Shetty, Mr. Mahesh G. Shetty has continued and expanded upon the visionary legacy set forth by his predecessor. The journey toward succeeding his father commenced at a tender age, fuelled by an innate passion that blossomed during his academic years. He actively collaborated with his father, a pivotal step that afforded him invaluable insights into the intricacies of agricultural input production and marketing.</p>
-                    <br />
-                    <p class="wow fadeInDown" data-wow-delay=".6s">Today, armed with over two and a half decades of profound experience in the agricultural industry, Mr. Mahesh G. Shetty stands as a formidable force. Under the unwavering guidance of his father, he has played an instrumental role in elevating Multiplex Group into an esteemed organization, deeply entrenched in the production and marketing of micronutrients, specialty fertilizers, organic manure, bio-fertilizers, bio-pesticides, bio-activators, and pesticides throughout India.</p>
+                    <p class="mb-15 wow fadeInDown" data-wow-delay=".6s">Mr. Mahesh G Shetty, following in his father Dr. G.P. Shetty's visionary footsteps, has spearheaded the expansion of Multiplex Group's agricultural legacy. With over 25 years of experience in the agricultural industry, he has elevated the organization's status by actively engaging in the production and marketing of various agricultural products in India and international markets.</p>
+                    <p class="mb-15 wow fadeInDown" data-wow-delay=".6s">Since 2009, under his astute leadership, Multiplex Group has ventured into international markets, forging robust relations with Djibouti and Ethiopia. Mr. Mahesh G Shetty holds the title of Honorary Consultant of the Republic of Djibouti, a testament to his international influence. </p>
+                    <p class="mb-15 wow fadeInDown" data-wow-delay=".6s">Recognized as a "Young Industrial Entrepreneur" by the "International Competence Centre for Organic Agriculture (ICCOA)," he has also earned awards and prestigious roles in the fertilizer industry, further cementing his remarkable leadership and influence.</p>
                 </div>
             </div>
 
@@ -107,9 +117,10 @@
         </div>
     </div>
 </section>
+
 <!--====== End Features Section ======-->
 <br /><br /><br />
-
+ 
 @endsection
 @section('scripts')
 @parent

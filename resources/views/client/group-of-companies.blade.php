@@ -1,6 +1,10 @@
 @extends('client.header')
 @section('content')
-
+<style>
+     @media (max-width:567px){
+.pt-100{
+padding-top: 40px !important;}}
+</style>
 <!--====== Start Page-title-area section ======-->
 <section class="page-title-area text-white bg_cover"
     style="background-image: url(assets/images/goc-header-img1.jpg);">
@@ -50,7 +54,7 @@
 
 <section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
-        <div class="row">
+        <div class="row vision-row">
            
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
@@ -109,7 +113,7 @@
 
 <section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
-        <div class="row">
+        <div class="row vision-row">
             
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
@@ -165,7 +169,7 @@
 
 <section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
-        <div class="row">
+        <div class="row vision-row">
            
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
@@ -202,15 +206,18 @@
             </div>
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
-                <div class="features-content-box mb-50 wow fadeInRight">
+                <div class="features-content-box mb-10 wow fadeInRight">
                     <div class="section-title">
                         <h2>Anshul Agro Chemicals</h2>
                     </div>
                      <div class="goc-sub mb-20">
                         <p>Empowering Agriculture, Nurturing Growth</p>
                     </div>
-                    <p class="mb-35"> Anshul Agro Chemicals (AAC), founded in 2005, is a dynamic player in the agricultural sector. Based in Bengaluru, we offer a comprehensive range of agri-input solutions for a variety of crops. As a proud member of the Multiplex Group of Companies, with over 40 years of rich agricultural experience, we place farmers and their success at the heart of our mission. With operations spanning across India, our commitment to meeting the unique needs of farming communities remains unwavering. At AAC, we empower agriculture and nurture growth for a sustainable future.</p>
+                    <p class="mb-15"> Anshul Agro Chemicals (AAC), founded in 2005, is a dynamic player in the agricultural sector. Based in Bengaluru, we offer a comprehensive range of agri-input solutions for a variety of crops. As a proud member of the Multiplex Group of Companies, with over 40 years of rich agricultural experience, we place farmers and their success at the heart of our mission. With operations spanning across India, our commitment to meeting the unique needs of farming communities remains unwavering. At AAC, we empower agriculture and nurture growth for a sustainable future.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
+                </div>
+                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
+                    <a href="https://www.anshulagro.com/" target="_blank" class="main-btn filled-btn mb-10">Know More </a>
                 </div>
             </div>
             
@@ -221,7 +228,7 @@
 
 <section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
-        <div class="row">
+        <div class="row vision-row">
            
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
@@ -286,7 +293,7 @@
 
 <section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
-        <div class="row">
+        <div class="row vision-row">
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
                 <div class="features-content-box mb-10 wow fadeInRight">
@@ -319,7 +326,7 @@
 
 <section class="features-seciton pt-100 pb-20 goc">
     <div class="container">
-        <div class="row">
+        <div class="row ">
              <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
@@ -347,7 +354,7 @@
 
 <section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
-        <div class="row">
+        <div class="row vision-row">
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
                 <div class="features-content-box mb-10 wow fadeInRight">
@@ -380,11 +387,11 @@
 
 <section class="features-seciton pt-100 pb-20 goc">
     <div class="container">
-        <div class="row">
+        <div class="row ">
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="assets/images/group/mdrone.png" alt="Group of companies">
+                    <img src="assets/images/group/m-drone-twelve.jpg" alt="Group of companies">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -413,7 +420,7 @@
 
 <section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
-        <div class="row">
+        <div class="row vision-row">
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
                 <div class="features-content-box mb-50 wow fadeInRight">

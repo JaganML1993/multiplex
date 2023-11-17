@@ -1,6 +1,22 @@
 @extends('client.header')
 @section('content')
+<style>
 
+
+     @media (max-width:567px){
+.menu-button-1{
+   margin-top:-1rem !important;
+}
+         .row-serve{
+             padding-left:15px !important;
+              padding-right:15px !important;
+         }
+         .text-a{
+             font-size:17px !important;
+         }
+     }
+
+</style>
 <!--====== Start Page-title-area section ======-->
 <section class="page-title-area text-white bg_cover"
     style="background-image: url(assets/images/gardening-header-img.jpg);">
@@ -39,12 +55,12 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-12 col-md-12 col-sm-12">
-                    <h3 class="mb-10">Exclusive Outlet and Nursery</h3>
+                    <h3 class="mb-10 text-a">Exclusive Outlet and Nursery</h3>
                     <p>As part of our growth strategy, we are planning to establish an exclusive outlet that not only showcases our wide range of gardening products but also features a nursery. This dedicated space will serve as a hub for gardening enthusiasts, where they can explore a diverse selection of plants, tools, and accessories while receiving expert guidance from our team. The integration of a nursery into our outlet will enable customers to find everything they need for their gardening projects in one convenient location.</p>
                 </div
             </div>
             <hr />
-            <div class="row">
+            <div class="row row-serve">
                 <div class="col-md-4">
                     <div class="block-image wow fadeInDown">
                         <img src="assets/images/garden2.jpg" alt="Project Image">
@@ -63,9 +79,9 @@
 
             </div>
             
-            <div class="row justify-content-center">
+            <div class="row justify-content-center row-serve">
                 <div class="col-lg-12 col-md-12 col-sm-12">
-                    <h3  class="mb-10">Community Workshops for All Ages</h3>
+                    <h3  class="mb-10 text-a">Community Workshops for All Ages</h3>
                     <p>Promoting greener urban living is at the core of our mission. To further this objective, we are developing plans to conduct workshops for individuals of all age groups. These workshops will be designed to impart scientific growing practices, gardening techniques, and sustainability principles. By providing education and hands-on learning experiences, we aim to empower a broader community of passionate gardeners who can contribute to creating greener and more environmentally conscious urban environments. Our commitment to education extends to all age groups, from young children learning the basics of gardening to adults seeking to enhance their horticultural skills.</p>
                     <p>In summary, our vision for the future is characterized by a commitment to growth, inclusivity, and education. We aspire to bring the joys of gardening to metropolitan areas, create a one-stop destination for gardening enthusiasts, and foster a community of gardeners who are dedicated to promoting greener urban living through sustainable practices.</p>
                 </div>
@@ -82,7 +98,7 @@
             <div class="col-xl-12 col-lg-12 text-center">
                 <div class="menu-button d-xl-block">
                     <a href="{{ route('contact') }}" data-toggle="modal"
-                                data-target="#sidebar-modal" class="main-btn primary-btn">Enquire Now</a>
+                                data-target="#sidebar-modal" class=".menu-button-1 main-btn primary-btn">Enquire Now</a>
                 </div>
             </div>
         </div>
