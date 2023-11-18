@@ -7,7 +7,7 @@ padding-top: 40px !important;}}
 </style>
 <!--====== Start Page-title-area section ======-->
 <section class="page-title-area text-white bg_cover"
-    style="background-image: url(assets/images/goc-header-img1.jpg);">
+    style="background-image: url({{ asset('images/goc-header-img1.jpg') }});">
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
@@ -28,7 +28,7 @@ padding-top: 40px !important;}}
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="assets/images/group/kac1.png" alt="Group of companies">
+                    <img src="{{ asset('images/group/kac1.png') }}" alt="Group of companies">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -75,7 +75,7 @@ padding-top: 40px !important;}}
              <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="assets/images/group/mfpl-two.jpg" alt="Group of companies">
+                    <img src="{{ asset('images/group/mfpl-two.jpg') }}" alt="Group of companies">
                 </div>
             </div>
         </div>
@@ -89,7 +89,7 @@ padding-top: 40px !important;}}
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="assets/images/group/maipl-three.jpg" alt="Group of companies">
+                    <img src="{{ asset('images/group/maipl-three.jpg') }}" alt="Group of companies">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -131,7 +131,7 @@ padding-top: 40px !important;}}
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="assets/images/group/mapl-four.jpg" alt="Group of companies">
+                    <img src="{{ asset('images/group/mapl-four.jpg') }}" alt="Group of companies">
                 </div>
             </div>
         </div>
@@ -145,7 +145,7 @@ padding-top: 40px !important;}}
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="assets/images/group/mnovers-five.jpg" alt="Group of companies">
+                    <img src="{{ asset('images/group/mnovers-five.jpg') }}" alt="Group of companies">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -187,7 +187,7 @@ padding-top: 40px !important;}}
              <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="assets/images/group/bio-tech-new.jpg" alt="Group of companies">
+                    <img src="{{ asset('images/group/bio-tech-new.jpg') }}" alt="Group of companies">
                 </div>
             </div>
         </div>
@@ -201,7 +201,7 @@ padding-top: 40px !important;}}
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="assets/images/group/anshul-new.jpg" alt="Group of companies">
+                    <img src="{{ asset('images/group/anshul-new.jpg') }}" alt="Group of companies">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -252,7 +252,7 @@ padding-top: 40px !important;}}
              <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="assets/images/group/mug-new.jpg" alt="Group of companies">
+                    <img src="{{ asset('images/group/mug-new.jpg') }}" alt="Group of companies">
                 </div>
             </div>
         </div>
@@ -266,7 +266,7 @@ padding-top: 40px !important;}}
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="assets/images/group/m-farming-new.jpg" alt="Group of companies">
+                    <img src="{{ asset('images/group/m-farming-new.jpg') }}" alt="Group of companies">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -316,7 +316,7 @@ padding-top: 40px !important;}}
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="assets/images/group/gps1.png" alt="Group of companies">
+                    <img src="{{ asset('images/group/gps1.png') }}" alt="Group of companies">
                 </div>
             </div>
         </div>
@@ -330,7 +330,7 @@ padding-top: 40px !important;}}
              <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="assets/images/group/safe-farm-fresh-new.jpg" alt="Group of companies">
+                    <img src="{{ asset('images/group/safe-farm-fresh-new.jpg') }}" alt="Group of companies">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -377,7 +377,7 @@ padding-top: 40px !important;}}
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="assets/images/group/agriplex-new.jpg" alt="Group of companies">
+                    <img src="{{ asset('images/group/agriplex-new.jpg') }}" alt="Group of companies">
                 </div>
             </div>
         </div>
@@ -391,7 +391,7 @@ padding-top: 40px !important;}}
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="assets/images/group/m-drone-twelve.jpg" alt="Group of companies">
+                    <img src="{{ asset('images/group/m-drone-twelve.jpg') }}" alt="Group of companies">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -440,7 +440,7 @@ padding-top: 40px !important;}}
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="assets/images/group/forest-factree.jpg" alt="Group of companies">
+                    <img src="{{ asset('images/group/forest-factree.jpg') }}" alt="Group of companies">
                 </div>
             </div>
         </div>

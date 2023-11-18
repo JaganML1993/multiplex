@@ -1,5 +1,6 @@
 @extends('client.header')
 @section('content')
+
 <style>
      @media (max-width:567px){
 .features-thumb-item-two{

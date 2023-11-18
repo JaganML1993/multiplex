@@ -1,7 +1,7 @@
 @extends('client.header')
 @section('content')
 <!--====== Start Banner Section ======-->
-<section class="banner-section" style="background-image: url(assets/images/hero-new-1309.jpg);background-repeat: no-repeat; background-size: cover; background-position: center;
+<section class="banner-section" style="background-image: url({{ asset('images/hero-new-1309.jpg') }});background-repeat: no-repeat; background-size: cover; background-position: center;
     min-height: 565px;">
     <!--=== Hero Wrapper ===-->
     <div class="hero-wrapper-one gray-bg1">
@@ -33,7 +33,7 @@
                 <div class="skill-content-box mb-35 mr-lg-50 wow fadeInLeft">
                     <!--====== Section-title ======-->
                     <div class="section-title mb-25">
-                        <span class="sub-title"><img src="assets/images/leaf-svgrepo-com-new.svg" height="35" width="35" alt=""></span>
+                        <span class="sub-title"><img src="{{ asset('images/leaf-svgrepo-com-new.svg') }}" height="35" width="35" alt=""></span>
                         <h2>About <span style="color:#ee282a;">Multiplex</span></h2>
                     </div>
                     <p class="mb-20">The Multiplex Group of Companies has been at the forefront of the agricultural sector since its inception in 1974. As industry leaders, 
@@ -52,7 +52,7 @@
             <div class="col-xl-5 col-lg-12">
                 <!--====== About Image Box ======-->
                 <div class="skill-two_image-box mb-20 p-r z-1 wow fadeInRight motto-image-style">
-                    <img src="assets/images/multiplex-building-img.jpg" class="" alt="Skill Image">
+                    <img src="{{ asset('images/multiplex-building-img.jpg') }}" class="" alt="Skill Image">
                 </div>
             </div>
         </div>
@@ -238,26 +238,26 @@
            <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-12">
                     <div class="section-title text-center mb-50 wow fadeInDown">
-                        <span class="sub-title"><img src="assets/images/leaf-svgrepo-com-new.svg" height="35" width="35" alt=""></span>
+                        <span class="sub-title"><img src="{{ asset('images/leaf-svgrepo-com-new.svg') }}" height="35" width="35" alt=""></span>
                         <h2>Group of Companies</h2>
                     </div>
                 </div>
             </div>
           <div class="customer-logos slider">
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-one.png" alt="Karnataka Agro Chemicals"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-two.png" alt="Multiplex Fertlizer's Pvt. Ltd"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-three.png" alt="Mystique Apparels India Pvt. Ltd"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-four.png" alt="Multiplex Agricare Pvt. Ltd"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-five.png" alt="Multiplex Movers"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-six.png" alt="Multiplex Bio-Tech Pvt. Ltd"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-seven.png" alt="Anshul Agro Chemicals"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-eight.png" alt="Multiplex Urban Green India Pvt. Ltd"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-nine.png" alt="Multiplex Farming"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-ten.png" alt="GPS Institute of Agricultural Management"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-eleven.png" alt="Multiplex Safe & Farm Fresh"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-twelve.png" alt="Agriplex Private Limited"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-thirteen.png" alt="Multiplex Drone Pvt. Ltd"></a></div>
-            <div class="slide-in-right slide"><img src="assets/images/goc/goc-new-fourteen.png" alt="Multiplex Forest Factree"></a></div>
+            <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-one.png') }}" alt="Karnataka Agro Chemicals"></a></div>
+            <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-two.png') }}" alt="Multiplex Fertlizer's Pvt. Ltd"></a></div>
+            <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-three.png') }}" alt="Mystique Apparels India Pvt. Ltd"></a></div>
+            <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-four.png') }}" alt="Multiplex Agricare Pvt. Ltd"></a></div>
+            <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-five.png') }}" alt="Multiplex Movers"></a></div>
+            <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-six.png') }}" alt="Multiplex Bio-Tech Pvt. Ltd"></a></div>
+            <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-seven.png') }}" alt="Anshul Agro Chemicals"></a></div>
+            <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-eight.png') }}" alt="Multiplex Urban Green India Pvt. Ltd"></a></div>
+            <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-nine.png') }}" alt="Multiplex Farming"></a></div>
+            <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-ten.png') }}" alt="GPS Institute of Agricultural Management"></a></div>
+            <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-eleven.png') }}" alt="Multiplex Safe & Farm Fresh"></a></div>
+            <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-twelve.png') }}" alt="Agriplex Private Limited"></a></div>
+            <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-thirteen.png') }}" alt="Multiplex Drone Pvt. Ltd"></a></div>
+            <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-fourteen.png') }}" alt="Multiplex Forest Factree"></a></div>
           </div>
        </section>
 
@@ -277,7 +277,7 @@
             <div class="col-xl-6 col-lg-12">
                 <!--====== About Image Box ======-->
                 <div class="skill-two_image-box mb-20 p-r z-1 wow fadeInRight">
-                    <img src="assets/images/about-bg-2.jpg" class="" alt="Skill Image">
+                    <img src="{{ asset('images/about-bg-2.jpg') }}" class="" alt="Skill Image">
                 </div>
             </div>
             <div class="col-xl-6 col-lg-12">
@@ -285,7 +285,7 @@
                 <div class="skill-content-box mb-30 mr-lg-50 wow fadeInLeft">
                     <!--====== Section-title ======-->
                     <div class="section-title mb-25">
-                        <span class="sub-title"><img src="assets/images/leaf-svgrepo-com-new.svg" height="35" width="35" alt=""></span>
+                        <span class="sub-title"><img src="{{ asset('images/leaf-svgrepo-com-new.svg') }}" height="35" width="35" alt=""></span>
                         <h2>Farmers First Choice <br />Since 1974</h2>
                     </div>
                     <p class="mb-20">Multiplex is the leading household brand name for farmers across pan India. We manufacture and export Micro Nutrients, Organic Manure, 
@@ -319,7 +319,7 @@
                     <!--=== Counter Item ===-->
                     <div class="single-counter-item-two mb-30 wow fadeInUp">
                         <div class="inner-counter text-center">
-                            <img src="assets/images/br1.svg" height="120" width="120" alt="">
+                            <img src="{{ asset('images/br1.svg') }}" height="120" width="120" alt="">
                             <h2 class="number"><span class="count">28</span></h2>
                             <p><strong>Branches</strong></p>
                         </div>
@@ -329,7 +329,7 @@
                     <!--=== Counter Item ===-->
                     <div class="single-counter-item-two mb-30 wow fadeInUp">
                         <div class="inner-counter text-center">
-                            <img src="assets/images/emp1.svg" height="120" width="120" alt="">
+                            <img src="{{ asset('images/emp1.svg') }}" height="120" width="120" alt="">
                             <h2 class="number"><span class="count">1500</span>+</h2>
                             <p><strong>Employees</strong></p>
                         </div>
@@ -339,7 +339,7 @@
                     <!--=== Counter Item ===-->
                     <div class="single-counter-item-two mb-30 wow fadeInDown">
                         <div class="inner-counter text-center">
-                            <img src="assets/images/ad1.svg" height="120" width="120" alt="">
+                            <img src="{{ asset('images/ad1.svg') }}" height="120" width="120" alt="">
                             <h2 class="number"><span class="count">10</span>K+</h2>
                             <p><strong>Authorized Dealers</strong></p>
                         </div>
@@ -349,7 +349,7 @@
                     <!--=== Counter Item ===-->
                     <div class="single-counter-item-two mb-30 wow fadeInUp">
                         <div class="inner-counter text-center">
-                            <img src="assets/images/pro1.svg" height="120" width="120" alt="">
+                            <img src="{{ asset('images/pro1.svg') }}" height="120" width="120" alt="">
                             <h2 class="number"><span class="count">250</span>+</h2>
                             <p><strong>Products</strong></p>
                         </div>
@@ -359,7 +359,7 @@
                     <!--=== Counter Item ===-->
                     <div class="single-counter-item-two mb-30 wow fadeInUp">
                         <div class="inner-counter text-center">
-                            <img src="assets/images/manu1.svg" height="120" width="120" alt="">
+                            <img src="{{ asset('images/manu1.svg') }}" height="120" width="120" alt="">
                             <h2 class="number"><span class="count">13</span></h2>
                             <p><strong>Manufacturing Units</strong></p>
                         </div>
@@ -369,7 +369,7 @@
                     <!--=== Counter Item ===-->
                     <div class="single-counter-item-two mb-30 wow fadeInUp">
                         <div class="inner-counter text-center">
-                            <img src="assets/images/club1.svg" height="120" width="120" alt="">
+                            <img src="{{ asset('images/club1.svg') }}" height="120" width="120" alt="">
                             <h2 class="number"><span class="count">3.6</span>M+</h2>
                             <p><strong>Farmer Club Members</strong></p>
                         </div>
@@ -397,7 +397,7 @@
                         <div class="about-three_content-box wow fadeInRight">
                             <!--=== Section Title ===-->
                             <div class="section-title mb-25 wow fadeInUp years-size">
-                                <span class="sub-title"><img src="assets/images/leaf-svgrepo-com-new.svg" height="35" width="35" alt=""> We are fast approaching the milestone of</span>
+                                <span class="sub-title"><img src="{{ asset('images/leaf-svgrepo-com-new.svg') }}" height="35" width="35" alt=""> We are fast approaching the milestone of</span>
                                 <h2 style="font-size: 50px;">Multiplex <br />Golden Jubilee <br />Celebration.</h2>
                             </div>
                             <!--  <p class="mb-40 wow fadeInDown">Sed ut perspiciatis unde omnis iste natus voluptatem accusan inventore</p> -->
@@ -410,7 +410,7 @@
                     <div class="col-xl-5 col-lg-12">
                         <!--=== About Image Box ===-->
                         <div class="about-two_image-box wow fadeInLeft">
-                            <img src="assets/images/silver-jubilee-one.svg" alt="">
+                            <img src="{{ asset('images/silver-jubilee-one.svg') }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -442,7 +442,7 @@
         <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-12">
                 <div class="section-title text-center mb-30 wow fadeInDown">
-                    <span class="sub-title"><img src="assets/images/leaf-svgrepo-com-new.svg" height="35" width="35" alt=""></span>
+                    <span class="sub-title"><img src="{{ asset('images/leaf-svgrepo-com-new.svg') }}" height="35" width="35" alt=""></span>
                     <h2>Our 50 Years Journey</h2>
                 </div>
             </div>
@@ -451,109 +451,109 @@
         <div class="testimonial-slider-one wow fadeInUp">
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
-                <img src="assets/images/journey/1974.jpg" alt="Gallery Image">
+                <img src="{{ asset('images/journey/1974.jpg') }}" alt="Gallery Image">
                 <h2 class="tl-year"> 1974</h2>
                 <p>We initially established our presence in the agricultural sector under the name "Karnataka Agro Chemicals," where we introduced our brand "Multiplex."</p>
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
-                <img src="assets/images/journey/1975.png" alt="Gallery Image">
+                <img src="{{ asset('images/journey/1975.png') }}" alt="Gallery Image">
                 <h2 class="tl-year"> 1975</h2>
                 <p>Over time, our company has evolved, expanding into various regions continuing to build on our agricultural roots. Multiplex brand was registered in other states and Andhra Pradesh was the first to market our products.</p>
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
-                <img src="assets/images/journey/1982.jpg" alt="Gallery Image">
+                <img src="{{ asset('images/journey/1982.jpg') }}" alt="Gallery Image">
                 <h2 class="tl-year"> 1982</h2>
                 <p>Multiplex Products extended its operation in Tamil Nadu. This geographical expansion enables the company to tap new markets in the southern region enhancing its presence in one of India's key states.</p>
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
-                <img src="assets/images/journey/1996.jpg" alt="Gallery Image">
+                <img src="{{ asset('images/journey/1996.jpg') }}" alt="Gallery Image">
                 <h2 class="tl-year"> 1986</h2>
                 <p>Understanding the need in the market, we focused on research, exclusive formulation, mass production, and marketing of pesticides. Different varieties of seeds were introduced to the market under the Multiplex Brand.</p>
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
-                <img src="assets/images/journey/1999.jpg" alt="Gallery Image">
+                <img src="{{ asset('images/journey/1999.jpg') }}" alt="Gallery Image">
                 <h2 class="tl-year"> 1999</h2>
                 <p>As Multiplex reaches its silver jubilee milestone, it reflects on a quarter-century of dedicated service to the farming community. The company remains steadfast in its commitment to support and uplift the agricultural sector.</p>
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
-                <img src="assets/images/journey/2000.jpg" alt="Gallery Image">
+                <img src="{{ asset('images/journey/2000.jpg') }}" alt="Gallery Image">
                 <h2 class="tl-year">2000</h2>
                 <p>We established a dedicated manufacturing facility for Zinc Sulphate in Peenya, Bangalore, alongside a specialized production unit for organic manure, Biofertilizers, Bio activators, and Biopesticides.</p>
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
-                <img src="assets/images/journey/2003.jpg" alt="Gallery Image">
+                <img src="{{ asset('images/journey/2003.jpg') }}" alt="Gallery Image">
                 <h2 class="tl-year"> 2003</h2>
                 <p>Multiplex achieved a significant milestone by earning a prestigious organic certification from IMO, a reputable certification body in Switzerland. This certification encompasses and validates the entire production process of the company's Bioproducts.</p>
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
-                <img src="assets/images/journey/2004.jpg" alt="Gallery Image">
+                <img src="{{ asset('images/journey/2004.jpg') }}" alt="Gallery Image">
                 <h2 class="tl-year"> 2004</h2>
                 <p>Karnataka Agro Chemicals, Multiplex Biotech Pvt Ltd, and Multiplex Agricare Pvt Ltd obtained ISO 9001 and ISO 14001 certifications for their manufacturing facilities. This year, we introduced our biofertilizers and biopesticides in liquid form, expanding our product range.</p>
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
-                <img src="assets/images/journey/2006.jpg" alt="Gallery Image">
+                <img src="{{ asset('images/journey/2006.jpg') }}" alt="Gallery Image">
                 <h2 class="tl-year"> 2006</h2>
                 <p>Multiplex Biotech Pvt Ltd was acknowledged by the Department of Scientific and Industrial Research (DSIR) for its pioneering work in advancing Agri-Biotechnology production methods.</p>
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
-                <img src="assets/images/journey/2012.jpg" alt="Gallery Image">
+                <img src="{{ asset('images/journey/2012.jpg') }}" alt="Gallery Image">
                 <h2 class="tl-year"> 2012</h2>
                 <p>We collaborated with a prestigious organization to open a new venture in the field of mechanized paddy sowing and transplantation. The outcome of this project gave farmers substantial growth in paddy cultivation based on improved yield both in quality and quantity.</p>
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
-                <img src="assets/images/journey/2013.jpg" alt="Gallery Image">
+                <img src="{{ asset('images/journey/2013.jpg') }}" alt="Gallery Image">
                 <h2 class="tl-year"> 2013</h2>
                 <p>In response to the urban organic farming trend, Multiplex Urban Green (MUG) introduced Krushi Garden kits for home vegetable cultivation on terraces, balconies, and backyards. These kits include all essential agriculture components and services.</p>
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
-                <img src="assets/images/journey/2015.jpg" alt="Gallery Image">
+                <img src="{{ asset('images/journey/2015.jpg') }}" alt="Gallery Image">
                 <h2 class="tl-year"> 2015</h2>
                 <p>The Multiplex Group introduced Multiplex Farming, a collaborative agricultural initiative that transforms barren and semi-cultivated land. It also includes scientific analysis to manage soil and crops comprehensively and farm management.</p>
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
-                <img src="assets/images/journey/2016.jpg" alt="Gallery Image">
+                <img src="{{ asset('images/journey/2016.jpg') }}" alt="Gallery Image">
                 <h2 class="tl-year"> 2016</h2>
                 <p>GPS Institute of Agricultural Management was established under the guidance and initiative of Dr. G. P. Shetty's Agri Research and Educational Trust. This prestigious institute offers courses in Post Graduate Diploma in Agricultural Management and Diploma in Agricultural Management (GPSIOAM). </p>
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
-                <img src="assets/images/journey/2017.jpg" alt="Gallery Image">
+                <img src="{{ asset('images/journey/2017.jpg') }}" alt="Gallery Image">
                 <h2 class="tl-year"> 2017</h2>
                 <p>In response to rising demand, Multiplex inaugurated a dedicated manufacturing facility in Ghaziabad. This facility produces Micronutrients, Specialized fertilizers, Soil conditioners, and Biofertilizers to cater to Northern India's agricultural needs.</p>
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
-                <img src="assets/images/journey/2019.jpg" alt="Gallery Image">
+                <img src="{{ asset('images/journey/2019.jpg') }}" alt="Gallery Image">
                 <h2 class="tl-year"> 2019</h2>
                 <p>Multiplex Drone Pvt Ltd was founded with the primary mission of offering cutting-edge drone technology tailored for agricultural applications. The company specializes in providing services such as aerial crop health monitoring and precision spraying using drones.</p>
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
-                <img src="assets/images/journey/2021.jpg" alt="Gallery Image">
+                <img src="{{ asset('images/journey/2021.jpg') }}" alt="Gallery Image">
                 <h2 class="tl-year"> 2021</h2>
                 <p>Multiplex Biotech Pvt Ltd, in Tumkur is a state-of-the-art pharma-grade manufacturing unit with a daily production capacity of 50,000 liters per day. This facility is dedicated to producing high-quality biotech products, underlining the company's commitment to advanced and efficient manufacturing.</p>
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
-                <img src="assets/images/journey/2022.jpg" alt="Gallery Image">
+                <img src="{{ asset('images/journey/2022.jpg') }}" alt="Gallery Image">
                 <h2 class="tl-year"> 2022</h2>
                 <p>The inauguration marked the establishment of a dedicated Research and Development laboratory in Peenya, Bangalore, demonstrating a significant investment in innovative research and technology. This facility will play a pivotal role in fostering scientific breakthroughs and product development.</p>
             </div>
             <!--====== timeline Item  ======-->
             <div class="single-testimonial-item">
-                <img src="assets/images/journey/2023.jpg" alt="Gallery Image">
+                <img src="{{ asset('images/journey/2023.jpg') }}" alt="Gallery Image">
                 <h2 class="tl-year"> 2023</h2>
                 <p>The inauguration signifies the commencement of in-house production of cocopeat and coir pith products at Hiriyur by Devi Biotech Pvt Ltd, showcasing the company's commitment to self-sufficiency and product quality control in the cocopeat and coir pith sector.</p>
             </div>
@@ -570,7 +570,7 @@
         <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-12">
                 <div class="section-title text-center mb-50 wow fadeInDown">
-                    <span class="sub-title"><img src="assets/images/leaf-svgrepo-com-new.svg" height="35" width="35" alt=""></span>
+                    <span class="sub-title"><img src="{{ asset('images/leaf-svgrepo-com-new.svg') }}" height="35" width="35" alt=""></span>
                     <h2>Blog Articles</h2>
                 </div>
             </div>
@@ -580,7 +580,7 @@
                 <!--====== Single Blog Post  ======-->
                 <div class="single-blog-post mb-40 wow fadeInUp" data-wow-delay=".2s">
                     <div class="post-thumbnail">
-                        <img src="assets/images/blog-1.jpg" alt="Post Thumbnail">
+                        <img src="{{ asset('images/blog-1.jpg') }}" alt="Post Thumbnail">
                     </div>
                     <div class="entry-content">
                         <a href="javascript:void(0);" class="cat-link"></a>
@@ -596,7 +596,7 @@
                 <!--====== Single Blog Post  ======-->
                 <div class="single-blog-post mb-40 wow fadeInUp" data-wow-delay=".2s">
                     <div class="post-thumbnail">
-                        <img src="assets/images/blog-three.jpg" alt="Post Thumbnail">
+                        <img src="{{ asset('images/blog-three.jpg') }}" alt="Post Thumbnail">
                     </div>
                     <div class="entry-content">
                         <a href="javascript:void(0);" class="cat-link"></a>
@@ -612,7 +612,7 @@
                 <!--====== Single Blog Post  ======-->
                 <div class="single-blog-post mb-40 wow fadeInUp" data-wow-delay=".2s">
                     <div class="post-thumbnail">
-                        <img src="assets/images/blog-two.jpg" alt="Post Thumbnail">
+                        <img src="{{ asset('images/blog-two.jpg') }}" alt="Post Thumbnail">
                     </div>
                     <div class="entry-content">
                         <a href="javascript:void(0);" class="cat-link"></a>
@@ -639,7 +639,7 @@
                     <div class="col-xl-2 col-lg-12">
                         <!--=== About Image Box ===-->
                         <div class="about-two_image-box wow fadeInLeft sambrama-app">
-                            <img src="assets/images/sambrama-app-logo.png" alt="">
+                            <img src="{{ asset('images/sambrama-app-logo.png') }}" alt="">
                         </div>
                     </div>
                     <div class="col-xl-7 col-lg-12">
@@ -664,7 +664,7 @@
                         <br />
                         <div class="about-two_image-box wow fadeInLeft">
                             <a href="https://play.google.com/store/apps/details?id=com.elevatozloyalty.sambrama&pli=1"
-                                target="_blank"><img src="assets/images/playstore-logo.png" alt=""></a>
+                                target="_blank"><img src="{{ asset('images/playstore-logo.png') }}" alt=""></a>
                         </div>
                     </div>
                 </div>

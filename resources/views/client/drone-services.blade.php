@@ -1,5 +1,7 @@
 @extends('client.header')
 @section('content')
+@include('client.service-enquiry')
+
 
 <style>
     .project-details-wrapper p {
@@ -88,7 +90,7 @@
             <div class="col-xl-12 col-lg-12 text-center">
                 <div class="menu-button d-xl-block">
                    <a href="{{ route('contact') }}" data-toggle="modal"
-                                data-target="#sidebar-modal" class="main-btn primary-btn menu-button-1">Enquire Now</a>
+                                data-target="#service-modal" class="main-btn primary-btn menu-button-1">Enquire Now</a>
                 </div>
             </div>
         </div>

@@ -17,7 +17,7 @@
 
 <!--====== Start Page-title-area section ======-->
 <section class="page-title-area text-white bg_cover"
-    style="background-image: url(assets/images/vision-mission-header-three.jpg);">
+    style="background-image: url({{ asset('images/vision-mission-header-three.jpg') }});">
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
@@ -51,7 +51,7 @@
             <div class="col-xl-4 col-lg-12">
                 <!--=== Hero Image Box ===-->
                 <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">
-                    <img src="assets/images/who-we-are-1.png" alt="Hero Image">
+                    <img src="{{ asset('images/who-we-are-1.png') }}" alt="Hero Image">
                 </div>
             </div>
         </div>
@@ -64,7 +64,7 @@
 <!--            <div class="col-xl-4 col-lg-12">-->
                 <!--=== Hero Image Box ===-->
 <!--                <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">-->
-<!--                    <img src="assets/images/what-we-do-new-img.png" alt="Hero Image">-->
+<!--                    <img src="{{ asset('images/what-we-do-new-img.png') }}" alt="Hero Image">-->
 <!--                </div>-->
 <!--            </div>-->
 <!--            <div class="col-xl-8 col-lg-12">-->
@@ -94,7 +94,7 @@
 <!--            <div class="col-xl-4 col-lg-12">-->
                 <!--=== Hero Image Box ===-->
 <!--                <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">-->
-<!--                    <img src="assets/images/vision-new-img.png" alt="Hero Image">-->
+<!--                    <img src="{{ asset('images/vision-new-img.png') }}" alt="Hero Image">-->
 <!--                </div>-->
 <!--            </div>-->
 <!--        </div>-->
@@ -108,7 +108,7 @@
             <div class="col-xl-4 col-lg-12">
                 <!--=== Hero Image Box ===-->
                 <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">
-                    <img src="assets/images/mission-new-img.png" alt="Hero Image">
+                    <img src="{{ asset('images/mission-new-img.png') }}" alt="Hero Image">
                 </div>
             </div>
             <div class="col-xl-8 col-lg-12">
@@ -140,7 +140,7 @@
             <div class="col-xl-4 col-lg-12">
                 <!--=== Hero Image Box ===-->
                 <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">
-                    <img src="assets/images/values-new-img.png" alt="Hero Image">
+                    <img src="{{ asset('images/values-new-img.png') }}" alt="Hero Image">
                 </div>
             </div>
         </div>
@@ -154,7 +154,7 @@
             <div class="col-xl-4 col-lg-12">
                 <!--=== Hero Image Box ===-->
                 <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">
-                    <img src="assets/images/motto-new-img.png" alt="Hero Image">
+                    <img src="{{ asset('images/motto-new-img.png') }}" alt="Hero Image">
                 </div>
             </div>
             <div class="col-xl-8 col-lg-12">

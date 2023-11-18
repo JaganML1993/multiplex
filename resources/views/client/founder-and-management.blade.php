@@ -20,7 +20,7 @@ padding-top: 40px !important;}
 
 <!--====== Start Page-title-area section ======-->
 <section class="page-title-area text-white bg_cover"
-    style="background-image: url(assets/images/founder-management-header-img4.jpg);">
+    style="background-image: url({{ asset('images/founder-management-header-img4.jpg') }});">
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
@@ -44,7 +44,7 @@ padding-top: 40px !important;}
             <div class="col-xl-6 col-lg-12">
                 <!--=== Hero Image Box ===-->
                 <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">
-                    <img src="assets/images/gp-shetty-4.png" alt="Hero Image">
+                    <img src="{{ asset('images/gp-shetty-4.png') }}" alt="Hero Image">
                 </div>
             </div>
 
@@ -86,7 +86,7 @@ padding-top: 40px !important;}
             <div class="col-xl-6 col-lg-12">
                 <!--=== Hero Image Box ===-->
                 <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">
-                    <img src="assets/images/mg-shetty-2.jpg" alt="Hero Image">
+                    <img src="{{ asset('images/mg-shetty-2.jpg') }}" alt="Hero Image">
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@ padding-top: 40px !important;}
             <div class="col-xl-6 col-lg-12">
                 <!--=== Hero Image Box ===-->
                 <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">
-                    <img src="assets/images/nm-shetty-2.png" alt="Hero Image">
+                    <img src="{{ asset('images/nm-shetty-2.png') }}" alt="Hero Image">
                 </div>
             </div>
 

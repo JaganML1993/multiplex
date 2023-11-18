@@ -1,5 +1,7 @@
 @extends('client.header')
 @section('content')
+@include('client.service-enquiry')
+
 
 <!--====== Start Page-title-area section ======-->
 <section class="page-title-area text-white bg_cover"
@@ -87,7 +89,7 @@
             <div class="col-xl-12 col-lg-12 text-center">
                 <div class="menu-button d-xl-block">
                     <a href="{{ route('contact') }}" data-toggle="modal"
-                                data-target="#sidebar-modal" class="main-btn primary-btn">Enquire Now</a>
+                                data-target="#service-modal" class="main-btn primary-btn">Enquire Now</a>
                 </div>
             </div>
         </div>
