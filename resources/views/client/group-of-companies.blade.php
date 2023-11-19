@@ -1,13 +1,58 @@
 @extends('client.header')
 @section('content')
 <style>
-     @media (max-width:567px){
-.pt-100{
-padding-top: 40px !important;}}
+    @media (max-width:567px) {
+        .pt-100 {
+            padding-top: 40px !important;
+        }
+    }
+
+    .desktop-view {
+        display: block !important;
+    }
+
+    .mobile-view {
+        display: none !important;
+    }
+
+    @media (max-width:567px) {
+
+
+        .desktop-view {
+            display: none !important;
+        }
+
+        .mobile-view {
+            display: block !important;
+        }
+
+        .mobile-view .page-title-area {
+            padding-top: 0px !important;
+        }
+
+        .mobile-view .page-title-area .page-title-inner h1.page-title {
+            font-size: 18px !important;
+
+            padding: 3.5rem 0rem !important;
+            text-align: center !important;
+        }
+
+        .mobile-view .gd-breadcrumb {
+            background: #dee2e6;
+            text-align: center;
+            font-size: 16px !important;
+            color: #1a9f53 !important;
+            font-weight: 500;
+        }
+
+        .mobile-view .bg_cover {
+            background-size: 100% 100% !important;
+
+        }
+    }
 </style>
 <!--====== Start Page-title-area section ======-->
-<section class="page-title-area text-white bg_cover"
-    style="background-image: url({{ asset('images/goc-header-img1.jpg') }});">
+<section class="page-title-area text-white bg_cover desktop-view" style="background-image: url({{ asset('images/goc-header-img1.jpg') }});">
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
@@ -18,6 +63,22 @@ padding-top: 40px !important;}}
                 <span class="breadcrumb-entry active">Group of Companies </span>
             </div>
         </div>
+    </div>
+</section>
+<section class="mobile-view">
+    <section class="page-title-area text-white bg_cover" style="background-image: url({{ asset('images/goc-header-img1.jpg') }});">
+        <div class="container">
+            <!--======  Page-title-Inner ======-->
+            <div class="page-title-inner text-center">
+                <h1 class="page-title">Group of Companies </h1>
+
+            </div>
+        </div>
+    </section>
+    <div class="gd-breadcrumb">
+        <span class="breadcrumb-entry"><a href="index.html">Home | </a></span>
+        <span class="separator"></span>
+        <span class="breadcrumb-entry active">Group of Companies </span>
     </div>
 </section>
 <!--====== End Page-title-area section ======-->
@@ -45,7 +106,7 @@ padding-top: 40px !important;}}
                     <!--</div>-->
                     <p class="mb-15">Our primary mission is to deliver exceptional products that adhere to the nutrient grades and specifications prescribed by local authorities. We provide the farming community with high-quality agricultural inputs that enhance crop nutrition and plant protection.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
-                    
+
                 </div>
             </div>
         </div>
@@ -55,7 +116,7 @@ padding-top: 40px !important;}}
 <section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
         <div class="row vision-row">
-           
+
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
                 <div class="features-content-box mb-50 wow fadeInRight">
@@ -72,7 +133,7 @@ padding-top: 40px !important;}}
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
                 </div>
             </div>
-             <div class="col-lg-6">
+            <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
                     <img src="{{ asset('images/group/mfpl-two.jpg') }}" alt="Group of companies">
@@ -105,7 +166,7 @@ padding-top: 40px !important;}}
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
                 </div>
             </div>
-            
+
         </div>
     </div>
 </section>
@@ -114,7 +175,7 @@ padding-top: 40px !important;}}
 <section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
         <div class="row vision-row">
-            
+
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
                 <div class="features-content-box mb-50 wow fadeInRight">
@@ -154,14 +215,14 @@ padding-top: 40px !important;}}
                     <div class="section-title">
                         <h2>Multiplex Movers</h2>
                     </div>
-                     <div class="goc-sub mb-20">
+                    <div class="goc-sub mb-20">
                         <p>Reliable Logistic solutions for Multiplex</p>
                     </div>
                     <p class="mb-35">In-House Wing, under the banner of Multiplex Movers, offers streamlined logistics solutions tailored to our business needs. Our dedication to simplifying logistics allows us to focus on PAN India operations while we handle the complexities. With our experience, reliability we ensure our products reach timely.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
                 </div>
             </div>
-            
+
         </div>
     </div>
 </section>
@@ -170,7 +231,7 @@ padding-top: 40px !important;}}
 <section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
         <div class="row vision-row">
-           
+
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
                 <div class="features-content-box mb-50 wow fadeInRight">
@@ -184,7 +245,7 @@ padding-top: 40px !important;}}
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
                 </div>
             </div>
-             <div class="col-lg-6">
+            <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
                     <img src="{{ asset('images/group/bio-tech-new.jpg') }}" alt="Group of companies">
@@ -210,7 +271,7 @@ padding-top: 40px !important;}}
                     <div class="section-title">
                         <h2>Anshul Agro Chemicals</h2>
                     </div>
-                     <div class="goc-sub mb-20">
+                    <div class="goc-sub mb-20">
                         <p>Empowering Agriculture, Nurturing Growth</p>
                     </div>
                     <p class="mb-15"> Anshul Agro Chemicals (AAC), founded in 2005, is a dynamic player in the agricultural sector. Based in Bengaluru, we offer a comprehensive range of agri-input solutions for a variety of crops. As a proud member of the Multiplex Group of Companies, with over 40 years of rich agricultural experience, we place farmers and their success at the heart of our mission. With operations spanning across India, our commitment to meeting the unique needs of farming communities remains unwavering. At AAC, we empower agriculture and nurture growth for a sustainable future.</p>
@@ -220,7 +281,7 @@ padding-top: 40px !important;}}
                     <a href="https://www.anshulagro.com/" target="_blank" class="main-btn filled-btn mb-10">Know More </a>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </section>
@@ -229,7 +290,7 @@ padding-top: 40px !important;}}
 <section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
         <div class="row vision-row">
-           
+
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
                 <div class="features-content-box mb-10 wow fadeInRight">
@@ -249,7 +310,7 @@ padding-top: 40px !important;}}
                     <a href="https://www.multiplexurbangreen.com/" target="_blank" class="main-btn filled-btn mb-10">Know More </a>
                 </div>
             </div>
-             <div class="col-lg-6">
+            <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
                     <img src="{{ asset('images/group/mug-new.jpg') }}" alt="Group of companies">
@@ -285,7 +346,7 @@ padding-top: 40px !important;}}
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
                 </div>
             </div>
-            
+
         </div>
     </div>
 </section>
@@ -327,7 +388,7 @@ padding-top: 40px !important;}}
 <section class="features-seciton pt-100 pb-20 goc">
     <div class="container">
         <div class="row ">
-             <div class="col-lg-6">
+            <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
                     <img src="{{ asset('images/group/safe-farm-fresh-new.jpg') }}" alt="Group of companies">
@@ -346,7 +407,7 @@ padding-top: 40px !important;}}
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
                 </div>
             </div>
-           
+
         </div>
     </div>
 </section>

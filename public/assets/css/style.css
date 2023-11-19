@@ -387,7 +387,7 @@ select::-ms-expand {
   background-color: #2a7d2e;
 }
 
-..review-form-area {
+.review-form-area {
 	background-color: #fff;
 }
 
@@ -1100,8 +1100,8 @@ button {
 .nice-select:after {
   position: absolute;
   right: 0;
-  content: "";
-  font-family: "Font Awesome 5 Pro";
+  content: "\f002";
+  font-family: "Font Awesome 5 Free";
   font-weight: 400;
 }
 .nice-select ul.list {
@@ -2645,7 +2645,7 @@ ul.check-style-one li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font: 500 15px "Montserrat", sans-serif;
+  font: 400 15px "Roboto", sans-serif;
 }
 ul.check-style-one li:not(:last-child) {
   margin-bottom: 15px;
@@ -4280,6 +4280,10 @@ ul.check-style-one li i {
   .project-details-wrapper .project-info-widget {
     padding: 45px 20px;
   }
+  .project-details-wrapper h3.title, .section-title h2  {
+      font-size:17px !important;
+  }
+ 
 }
 .project-details-wrapper .project-info-widget .info-content h6 {
   font-weight: 500;
@@ -7976,4 +7980,28 @@ ul.slick-dots li.slick-active {
 .sidebar-panel-wrapper .sidebar-wrapper .sidebar-gallery .single-gallery-item {
   margin-bottom: 30px;
 }
+
+  @media (max-width:567px){
+    .counter-area .col-sm-6{
+        width:50% !important;
+        padding-left:7px !important ;
+        padding-right:7px !important;
+        
+    }
+    .counter-area .col-sm-6 .inner-counter img{
+        width:80px  !important;
+        
+    }
+       .counter-area .col-sm-6 .inner-counter h2{
+           font-size:25px !important;
+       }
+}
+
+ @media (max-width:567px){
+      
+        .vision-row{
+            flex-direction: column-reverse !important;
+        }
+    }
+
 /*# sourceMappingURL=style.css.map */

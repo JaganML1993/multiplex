@@ -1,8 +1,30 @@
 @extends('client.header')
 @section('content')
+<style>
+    @media (max-width:576px){
+
+.banner-section-home{
+
+background-size: 100% !important;
+background-position: center !important;
+min-height: 100% !important;
+}
+.banner-section-home .hero-wrapper-one .hero-content h1 {
+font-size: 18px !important;
+margin-bottom: 0% !important;
+text-align: center !important;
+}
+.banner-section-home .hero-wrapper-one {
+  padding: 75px 0 !important;
+}
+.skills-section.pt-80{
+padding-top: 30px !important;
+}
+}
+</style>
 <!--====== Start Banner Section ======-->
-<section class="banner-section" style="background-image: url({{ asset('images/hero-new-1309.jpg') }});background-repeat: no-repeat; background-size: cover; background-position: center;
-    min-height: 565px;">
+<section class="banner-section banner-section-home" style="background-image: url({{asset('images/hero-new-1309.jpg')}});background-repeat: no-repeat; background-size: cover; background-position: center;
+    min-height:565px;">
     <!--=== Hero Wrapper ===-->
     <div class="hero-wrapper-one gray-bg1">
         <div class="container">
@@ -20,8 +42,9 @@
                 
             </div>
         </div>
-    </div>
+    </div> 
 </section>
+
 <!--====== End Banner Section ======-->
 
 <!--====== Start About Section  ======-->
