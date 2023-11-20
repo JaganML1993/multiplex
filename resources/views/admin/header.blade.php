@@ -28,7 +28,7 @@ if(isset($title)){
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin/logo.svg')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/images/loader-new1.png') }}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -102,7 +102,7 @@ if(isset($title)){
           <div class="app-brand demo">
             <a href="javascript:void(0);" class="app-brand-link">
               <span class="app-brand-logo demo">
-                <img src="{{ asset('admin/logo.svg') }}" alt="logo">
+                <img src="{{ asset('/images/logo/multiplex-logo2.png') }}" alt="logo">
               </span>
             </a>
 
@@ -117,77 +117,77 @@ if(isset($title)){
             <!-- Dashboard -->
             <li class="menu-item @if ($page == 'dashboard') active open @endif">
               <a href="{{ route('dashboard') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Dashboard</div>
+                <img src="{{ asset('/images/dashboard-icon.svg') }}" width="20" height="20" alt="logo">
+                <div data-i18n="Analytics">&nbsp;&nbsp;Dashboard</div>
               </a>
             </li>
 
             <li class="menu-item @if ($page == 'category') active open @endif">
               <a href="{{ route('admin.category') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Category</div>
+                <img src="{{ asset('/images/bars-staggered-solid.svg') }}" width="20" height="20" alt="logo">
+                <div data-i18n="Analytics">&nbsp;&nbsp;Category</div>
               </a>
             </li>
 
             <li class="menu-item @if ($page == 'sub_category') active open @endif">
               <a href="{{ route('admin.sub_category') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Sub Category</div>
+                <img src="{{ asset('/images/uncharted.svg') }}" width="20" height="20" alt="logo">
+                <div data-i18n="Analytics">&nbsp;&nbsp;Sub Category</div>
               </a>
             </li>
 
             <li class="menu-item @if ($page == 'products') active open @endif">
               <a href="{{ route('products') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Products</div>
+                <img src="{{ asset('/images/box-solid.svg') }}" width="20" height="20" alt="logo">
+                <div data-i18n="Analytics">&nbsp;&nbsp;Products</div>
               </a>
             </li>
 
             <li class="menu-item @if ($page == 'productenquiry') active open @endif">
               <a href="{{ route('product-enquiry.list') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Product Enquiries</div>
+                <img src="{{ asset('/images/clipboard-question-solid.svg') }}" width="20" height="20" alt="logo">
+                <div data-i18n="Analytics">&nbsp;&nbsp;Product Enquiries</div>
               </a>
             </li>
 
             <li class="menu-item @if ($page == 'serviceenquiry') active open @endif">
               <a href="{{ route('service-enquiry.list') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Service Enquiries</div>
+                <img src="{{ asset('/images/paper-plane-solid.svg') }}" width="20" height="20" alt="logo">
+                <div data-i18n="Analytics">&nbsp;&nbsp;Service Enquiries</div>
               </a>
             </li>
 
             <li class="menu-item @if ($page == 'enquiry') active open @endif">
               <a href="{{ route('enquiry.list') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Enquiries</div>
+                <img src="{{ asset('/images/note-sticky-regular.svg') }}" width="20" height="20" alt="logo">
+                <div data-i18n="Analytics">&nbsp;&nbsp;General Enquiries</div>
               </a>
             </li>
 
             <li class="menu-item @if ($page == 'openings') active open @endif">
               <a href="{{ route('openings') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Openings</div>
+                <img src="{{ asset('/images/briefcase-solid.svg') }}" width="20" height="20" alt="logo">
+                <div data-i18n="Analytics">&nbsp;&nbsp;Job Openings</div>
               </a>
             </li>
 
             <li class="menu-item @if ($page == 'job') active open @endif">
               <a href="{{ route('job') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Jobs Applied</div>
+                <img src="{{ asset('/images/briefcase-solid.svg') }}" width="20" height="20" alt="logo">
+                <div data-i18n="Analytics">&nbsp;&nbsp;Jobs Applied</div>
               </a>
             </li>
 
             <li class="menu-item @if ($page == 'departments') active open @endif">
               <a href="{{ url('admin/departments') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Departments</div>
+                <img src="{{ asset('/images/building-solid.svg') }}" width="20" height="20" alt="logo">
+                <div data-i18n="Analytics">&nbsp;&nbsp;Departments</div>
               </a>
             </li>
             <li class="menu-item @if ($page == 'galleries') active open @endif">
               <a href="{{ url('admin/galleries') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Gallery</div>
+                <img src="{{ asset('/images/image-solid.svg') }}" width="20" height="20" alt="logo">
+                <div data-i18n="Analytics">&nbsp;&nbsp;Gallery</div>
               </a>
             </li>
 
@@ -212,7 +212,7 @@ if(isset($title)){
             <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
               <!-- Search -->
               <div class="navbar-nav align-items-center">
-                <div class="nav-item d-flex align-items-center">
+                {{-- <div class="nav-item d-flex align-items-center">
                   <i class="bx bx-search fs-4 lh-0"></i>
                   <input
                     type="text"
@@ -220,7 +220,8 @@ if(isset($title)){
                     placeholder="Search..."
                     aria-label="Search..."
                   />
-                </div>
+                </div> --}}
+                <h3>Welcome To Multiplex Group</h3>
               </div>
               <!-- /Search -->
 
@@ -230,7 +231,7 @@ if(isset($title)){
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="{{ asset('user/img/logo.svg') }}" alt class="w-px-40 h-auto rounded-circle" />
+                      <img src="{{ asset('/images/loader-new1.png') }}" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -239,7 +240,7 @@ if(isset($title)){
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                              <img src="{{ asset('user/img/logo.svg') }}" alt class="w-px-40 h-auto rounded-circle" />
+                              <img src="{{ asset('/images/loader-new1.png') }}" alt class="w-px-40 h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -258,7 +259,7 @@ if(isset($title)){
                     </li>
                     <li>
                       <a class="dropdown-item" href="{{ route('logout') }}">
-                        <i class="bx bx-power-off me-2"></i>
+                         <img src="{{ asset('/images/arrow-right-from-bracket-solid.svg') }}" width="20" height="20" alt="logo">
                         <span class="align-middle">Log Out</span>
                       </a>
                     </li>
@@ -286,7 +287,7 @@ if(isset($title)){
                     document.write(new Date().getFullYear());
                   </script>
                   made with ❤️ by
-                  <a href="https://www.multiplex.in" target="_blank" class="footer-link fw-bolder">MULTIPLEX</a>
+                  <a href="https://www.multiplexgroup.com/" target="_blank" class="footer-link fw-bolder">MULTIPLEX</a>
                 </div>
                
               </div>

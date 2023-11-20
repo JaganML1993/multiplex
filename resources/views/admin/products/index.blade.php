@@ -9,7 +9,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     @endif
-    <h4 class="fw-bold py-3 mb-4">Products <a href="{{ route('product.create') }}" type="button" class="btn btn-danger btn-lg" style="float: right;">Create</a></h4>
+    <h4 class="fw-bold py-3 mb-4">Products <a href="{{ route('product.create') }}" type="button" class="btn btn-success btn-lg" style="float: right;">Create</a></h4>
     <!-- Basic Bootstrap Table -->
     <div class="card">
 

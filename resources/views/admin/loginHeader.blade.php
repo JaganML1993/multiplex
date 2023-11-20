@@ -7,12 +7,12 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Admin Login</title>
+    <title>Multiplex Admin Login</title>
 
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('admin/logo.svg')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/images/loader-new1.png') }}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

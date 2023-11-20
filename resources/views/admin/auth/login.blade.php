@@ -1,6 +1,6 @@
 @extends('admin.loginHeader')
 @section('content')
-<div class="container-xxl" style="margin-left: 30%; margin-right: 30%; margin-top:5%; width: 40%;">
+<div class="container-xxl" style="margin-left: 30%; margin-right: 30%; margin-top:5%; width: 40%; background-image: url(http://localhost/multiplex/public/assets/images/vision-mission-header-three.jpg);">
       <div class="authentication-wrapper authentication-basic container-p-y">
         <div class="authentication-inner">
           <!-- Register -->
@@ -16,10 +16,10 @@
               <!-- Logo -->
               <div class="app-brand justify-content-center">
                 {{-- <!-- <img src="{{ asset('/img/icons/Vyomann_Logo.png') }}" style="width:40%;"/> --> --}}
-                <img src="{{ asset('admin/logo.svg')}}" alt="logo">
+                <img src="{{ asset('/images/logo/multiplex-logo2.png') }}" alt="logo">
               </div>
               <!-- /Logo -->
-              <h4 class="mb-2 mt-4" style="text-align:center;"> Admin Login</h4>
+              <h4 class="mb-2 mt-4" style="text-align:center;"> Multiplex Admin Login</h4>
 
               <form action="{{ route('login.post') }}" class="mb-3" method="POST">
                 @csrf

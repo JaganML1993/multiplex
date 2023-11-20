@@ -1968,7 +1968,7 @@ progress {
 }
 .table > thead {
   vertical-align: bottom;
-  background: #ff3e1d1a;
+  background: #c2e1ce;
 }
 .table > :not(:first-child) {
   border-top: 2px solid #d9dee3;
@@ -3841,7 +3841,7 @@ textarea.form-control-lg {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #ffffffd4;
   background-clip: border-box;
   border: 0 solid #d9dee3;
   border-radius: 0.5rem;
@@ -6231,7 +6231,7 @@ a.invert-bg-dark:hover, a.invert-bg-dark:focus {
   letter-spacing: 1px;
 }
 .table:not(.table-dark) th {
-  color: #566a7f;
+  color: #000000;
 }
 
 .table-border-bottom-0 tr:last-child td,

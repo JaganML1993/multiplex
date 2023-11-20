@@ -10,7 +10,7 @@
 <!-- Content -->
 <div class="container-xxl flex-grow-1 container-p-y">
     <h4 class="fw-bold py-3 mb-4">Create Department</h4>
-    <h4 class="fw-bold py-3 mb-4"> <a href="{{ url('admin/departments') }}" type="button" class="btn btn-danger btn-lg" style="float: right;">Back</a></h4>
+    <h4 class="fw-bold py-3 mb-4"> <a href="{{ url('admin/departments') }}" type="button" class="btn btn-success btn-lg" style="float: right;">Back</a></h4>
 
 
     <!-- Basic Layout & Basic with Icons -->

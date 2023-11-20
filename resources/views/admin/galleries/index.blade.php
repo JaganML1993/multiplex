@@ -4,7 +4,7 @@
 <!-- Content -->
 <div class="container-xxl flex-grow-1 container-p-y">
 
-    <h4 class="fw-bold py-3 mb-4">Galleries<a href="{{ url('admin/galleries/create') }}" type="button" class="btn btn-danger btn-lg" style="float: right;">Add Gallery</a></h4>
+    <h4 class="fw-bold py-3 mb-4">Galleries<a href="{{ url('admin/galleries/create') }}" type="button" class="btn btn-success btn-lg" style="float: right;">Add Gallery</a></h4>
     <!-- Basic Bootstrap Table -->
     <div class="card">
 
