@@ -42,10 +42,10 @@
                                 </select>
                             </div>
 
-                            <div class="col-md-4">
+                            {{-- <div class="col-md-4">
                                 <label class="col-form-label" for="basic-default-name">Image<span class="required_star">*</span></label>
                                 <input type="file" class="form-control" required name="image" accept="image/png, image/jpeg">
-                            </div>
+                            </div> --}}
 
                         </div>
 

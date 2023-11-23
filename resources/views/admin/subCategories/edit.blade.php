@@ -42,7 +42,7 @@
                                 </select>
                             </div>
 
-                            @php
+                            {{-- @php
                             if ($data->image){
                                 $required = '';
                             }else{
@@ -55,7 +55,7 @@
                                 @if ($data->image)
                                 <a href="{{ url('').'/'.$data->image }}" target="_blank"><img src="{{ url('').'/'.$data->image }}" style="width:40%; margin-top: 10px;"></a>
                                 @endif
-                            </div>
+                            </div> --}}
 
                         </div>
 

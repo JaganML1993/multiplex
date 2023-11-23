@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\admin\Category;
+use App\Models\admin\SubCategory;
 use App\Models\Department;
 use App\Models\Index;
 use App\Models\Openings;
 use App\Models\JobApplication;
 use App\Models\Location;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use File;
 use Illuminate\Support\Facades\DB;
@@ -67,7 +69,7 @@ class IndexController extends Controller
             $serialId = "DEPT" . str_pad($enquiry->id, 4, '0', STR_PAD_LEFT);
 
             Mail::to($departmentEmail)
-            ->cc('admin@gmail.com')
+            ->cc('analysis@multiplexgroup.com')
             ->send(new \App\Mail\Enquiry($data));
 
         }elseif($request->type == 2){
@@ -75,16 +77,16 @@ class IndexController extends Controller
             $serialId = "PROD" . str_pad($enquiry->id, 4, '0', STR_PAD_LEFT);
 
 
-            Mail::to('product@gmail.com')
-            ->cc('admin@gmail.com')
+            Mail::to('analysis@multiplexgroup.com')
+            ->cc('analysis@multiplexgroup.com')
             ->send(new \App\Mail\Enquiry($data));
 
         }elseif($request->type == 3){
 
             $serialId = "SERV" . str_pad($enquiry->id, 4, '0', STR_PAD_LEFT);
 
-            Mail::to('service@gmail.com')
-            ->cc('admin@gmail.com')            
+            Mail::to('analysis@multiplexgroup.com')
+            ->cc('analysis@multiplexgroup.com')            
             ->send(new \App\Mail\Enquiry($data));
 
         }
@@ -141,7 +143,8 @@ class IndexController extends Controller
 
         if(isset($request->department) && !empty($request->department))
         {
-            $careers = $careers->where('openings.department', 'LIKE', '%' . $request->department . '%');
+           
+            $careers = $careers->where('openings.department_name', 'LIKE', '%' . $request->department . '%');
         }
 
         if(isset($request->location) && !empty($request->location))
@@ -190,6 +193,10 @@ class IndexController extends Controller
         $job = Openings::where('id',$request->id)->first();
 
         $location = Location::where('id',$job->location)->first();
+
+        $department = Department::where('id', $job->department)->first();
+        
+        $departmentEmail = $department->email;
       
 
             // Send email
@@ -207,8 +214,8 @@ class IndexController extends Controller
         $attachmentPath = $image_path; // Use the saved file path as attachment
         $attachmentName = basename($image_path);
 
-        Mail::to('xx@gmail.com')
-            ->cc('admin@gmail.com')
+        Mail::to($departmentEmail)
+            ->cc('analysis@multiplexgroup.com')
             ->send(new \App\Mail\JobApplication($data, $attachmentPath, $attachmentName));
 
         // Return a response or redirect as needed
@@ -345,6 +352,42 @@ class IndexController extends Controller
 
         return view('client.products')->with('categories',$categories);
     }
+
+    public function autocompleteSearch(Request $request)
+    {
+          $query = $request->get('query');
+          $filterResult = Location::where('location', 'LIKE', '%'. $query. '%')->get();
+          return response()->json($filterResult);
+    }
+    
+    public function autocompleteDepartment(Request $request)
+    {
+          $query = $request->get('query');
+          $filterResult = Department::where('name', 'LIKE', '%'. $query. '%')->get();
+          return response()->json($filterResult);
+    } 
+
+    public function showProducts(Request $request)
+{
+    $category_id = $request->get('category');
+    $sub_category_id = $request->get('sub_category_id');
+    
+    // Retrieve category and subcategories data
+    $category = Category::find($category_id);
+    $subCategories = SubCategory::where('category_id', $category_id)->get();
+
+    // Your existing product retrieval logic
+    $products = Product::when($sub_category_id != 'all' && $sub_category_id != 0, function($q) use ($sub_category_id) {
+        $q->where('sub_category_id', $sub_category_id);
+    })->where('category_id', $category_id)->get();
+
+    // Render the Blade view
+    $view = view('client.product-result', compact('products'))->render();
+
+    // Return the HTML as a JSON response
+    return response()->json(['html' => $view]);
+}
+
 
 
 }

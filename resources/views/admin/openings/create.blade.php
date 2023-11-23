@@ -30,6 +30,19 @@
                                     @endforeach
                                 </select>
                             </div>
+                            @php
+
+                            $departments = \App\Models\Department::get();
+
+                            @endphp
+                            <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-name">Department<span class="required_star">*</span></label>
+                                <select class="form-control" name="department">
+                                    @foreach($departments as $department)
+                                       <option value="{{ $department->id }}">{{ $department->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
 
                             <div class="col-md-4">
                                 <label class="col-form-label" for="basic-default-name">Position<span class="required_star">*</span></label>

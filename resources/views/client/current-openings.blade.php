@@ -1,5 +1,13 @@
 @extends('client.header')
 @section('content')
+
+   <!-- Include jQuery -->
+   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+   <!-- Include jQuery UI -->
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 <style>
       .desktop-view {
         display: block !important;
@@ -198,8 +206,39 @@
 @endsection
 @section('scripts')
 @parent
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js">
+</script>
+<script type="text/javascript">
+    var route = "{{ url('autocomplete-search') }}";
+    $('#location').typeahead({
+        source: function (query, process) {
+            return $.get(route, {
+                query: query
+            }, function (data) {
+                  // Extract 'location' field from the response
+                  var locations = data.map(function(item) {
+                    return item.location;
+                });
+                return process(locations);
+            });
+        }
+    });
+    var department = "{{ url('autocomplete-department') }}";
+    $('#department').typeahead({
+        source: function (query, process) {
+            return $.get(department, {
+                query: query
+            }, function (data) {
+                  // Extract 'location' field from the response
+                  var name = data.map(function(item) {
+                    return item.name;
+                });
+                return process(name);
+            });
+        }
+    });
+</script>
 <script>
     $(document).ready(function () {
         var page = 1; // Initial page

@@ -76,7 +76,7 @@
 
                             <div class="col-md-4">
                                 <label class="col-form-label" for="basic-default-name">Category<span class="required_star">*</span></label>
-                                <select class="form-control" name="category" id="category">
+                                <select class="form-control" name="category_id" id="category">
                                     @foreach($category as $item)    
                                     <option value="{{$item->id}}" @if($data->category_id == $item->id) selected @endif>{{$item->name}}</option>
                                     @endforeach
@@ -85,7 +85,7 @@
 
                             <div class="col-md-4">
                                 <label class="col-form-label" for="basic-default-name">Sub Category</label>
-                                <select class="form-control" name="subcategory" id="subcategory">
+                                <select class="form-control" name="sub_category_id" id="subcategory">
                                     <option value="">Please Select</option>
                                     @foreach($subCategory as $item)    
                                     <option value="{{$item->id}}" @if($data->sub_category_id == $item->id) selected @endif>{{$item->name}}</option>

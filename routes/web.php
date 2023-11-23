@@ -78,6 +78,10 @@ Route::get('/success-stories', [IndexController::class, 'success_stories'])->nam
 Route::get('/terms-and-conditions', [IndexController::class, 'terms_and_conditions'])->name('terms-and-conditions');
 
 
+Route::get('/autocomplete-search', [IndexController::class, 'autocompleteSearch']);
+Route::get('/autocomplete-department', [IndexController::class, 'autocompleteDepartment']);
+Route::get('/search-products', [IndexController::class, 'showProducts'])->name('search.products');
+
 /** contact us */
 Route::get('/contact', [IndexController::class, 'contact'])->name('contact');
 

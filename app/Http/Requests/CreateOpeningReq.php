@@ -25,6 +25,7 @@ class CreateOpeningReq extends FormRequest
     {
         return [
             'location' => ['required'],
+            'department' => ['required'],
             'position' => ['required', 'string', 'unique:openings,position'],
             'vacancies' => ['required', 'integer'],
             'description' => ['required', 'string'],

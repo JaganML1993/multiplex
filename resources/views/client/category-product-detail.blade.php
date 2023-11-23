@@ -194,17 +194,20 @@
 <section class="service-details-section pt-30">
     <div class="container">
         <div class="row">
+
             <div class="col-xl-6 col-lg-6">
+                @if(!empty($product->video_link))
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/W3P9deLFkk8?rel=0"
+                    <iframe class="embed-responsive-item" src="{{ $product->video_link }}"
                         allowfullscreen></iframe>
                 </div>
+                @endif
             </div>
             <div class="col-xl-6 col-lg-6 prod-cta-bn">
                 @if(!empty($product->catelog_link))
                 <div class="menu-button d-xl-block">
                     <a href="{{$product->catelog_link}}" target="_blank"
-                        class="main-btn primary-btn">Download Catalog</a>
+                        class="main-btn primary-btn">Download Catalog </a>
                 </div>
                 <br />
                 @endif

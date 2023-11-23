@@ -28,6 +28,7 @@ class UpdateOpeningReq extends FormRequest
         
         return [
             'location' => ['filled'],
+            'department' => ['required'],
             'position' => ['filled', 'string', 'unique:openings,position,' . $id . ',id'],
             'vacancies' => ['filled', 'integer'],
             'description' => ['filled', 'string'],

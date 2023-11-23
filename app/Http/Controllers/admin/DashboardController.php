@@ -79,9 +79,10 @@ class DashboardController extends Controller
     {
 
         $folder = 'uploads/subCategory';
-        $file_name = UploadImageAct::run($folder, $request->image);
+        // $file_name = UploadImageAct::run($folder, $request->image);
+        // $file_name = null;
 
-        SubCategory::create(['name' => $request->name, 'status' => $request->status, 'category_id' => $request->category_id, 'image' => $file_name]);
+        SubCategory::create(['name' => $request->name, 'status' => $request->status, 'category_id' => $request->category_id,]);
         return redirect('admin/sub_category')->with('status', 'Sub Category saved successfully');
     }
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateOpeningReq;
 use App\Http\Requests\UpdateOpeningReq;
+use App\Models\Department;
 use App\Models\JobApplication;
 use App\Models\Location;
 use App\Models\Openings;
@@ -29,6 +30,8 @@ class OpeningController extends Controller
     {
         $data = $request->validated();
         unset($data["_token"]);
+        $department = Department::where('id',$data['department'])->first();
+        $data['department_name'] = $department->name;
         Openings::create($data);
 
         return redirect('admin/openings')->with('status', 'Openings saved successfully');
@@ -46,6 +49,8 @@ class OpeningController extends Controller
     {
         $id = $request->id;
         $data = $request->validated();
+        $department = Department::where('id',$data['department'])->first();
+        $data['department_name'] = $department->name;
         Openings::where('id', $id)->update($data);
 
         return redirect('admin/openings')->with('status', 'Openings updated successfully');

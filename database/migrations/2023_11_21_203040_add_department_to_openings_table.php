@@ -13,13 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sub_categories', function (Blueprint $table) {
-            $table->id();
-            $table->integer('category_id');
-            $table->string('name', 100);
-            $table->string('image', 191)->nullable();
-            $table->integer('status')->default('1');
-            $table->timestamps();
+        Schema::table('openings', function (Blueprint $table) {
+            $table->string('department')->nullable();
+            $table->string('department_name')->nullable();
         });
     }
 
@@ -30,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sub_categories');
+        Schema::table('openings', function (Blueprint $table) {
+            //
+        });
     }
 };
