@@ -268,7 +268,7 @@ $categories = CategoryAct::run();
                                     alt="Site Logo"></a>
                         </div>
                         <!--=== Nav Search ===-->
-                        <div class="nav-search mb-30 d-block d-xl-none ">
+                        <!-- <div class="nav-search mb-30 d-block d-xl-none ">
                             <form>
                                 <div class="form_group">
                                     <input type="email" class="form_control" placeholder="Search Here" name="email"
@@ -276,7 +276,7 @@ $categories = CategoryAct::run();
                                     <button class="search-btn"><i class="fas fa-search"></i></button>
                                 </div>
                             </form>
-                        </div>
+                        </div> -->
                         <!--====== main Menu ======-->
                         <nav class="main-menu">
                             <ul>
