@@ -27,6 +27,14 @@
                                 <label class="col-form-label" for="basic-default-name">Department<span class="required_star">*</span></label>
                                 <input type="text" class="form-control" required name="name" />
                             </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-name">Type<span class="required_star">*</span></label>
+                                <select class="form-control"  name="type">
+                                    <option value="1" >Enquiry</option>
+                                    <option value="2">Job</option>
+                                </select>
+                              
+                            </div>
                     
                             <div class="col-md-4">
                                 <label class="col-form-label" for="basic-default-name">Email Address<span class="required_star">*</span></label>

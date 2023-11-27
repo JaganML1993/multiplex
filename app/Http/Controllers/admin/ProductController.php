@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Actions\CreateProductAct;
+use App\Actions\UploadImageAct;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateProductReq;
 use App\Http\Requests\UpdateProductReq;
@@ -43,7 +44,17 @@ class ProductController extends Controller
      */
     public function store(CreateProductReq $request)
     {
-        CreateProductAct::run($request->validated());
+        $data = $request->validated();
+        $folder = 'uploads/products';
+        if ($request->hasFile('catelog_link')) {
+            $catalogPdf = $request->file('catelog_link');
+            $fileName = time() . '.' . $catalogPdf->extension();
+            $catalogPdf->move(public_path($folder), $fileName);
+
+            $data['catelog_link'] = "$folder/$fileName";
+        }
+       
+        CreateProductAct::run($data);
         return redirect('admin/products')->with('status', 'Product created successfully');
     }
 
@@ -82,7 +93,31 @@ class ProductController extends Controller
     public function update(UpdateProductReq $request)
     {
         $product = Product::find($request->id);
-        $product->update($request->validated());
+        $data = $request->validated();
+        $folder = 'uploads/products';
+        if ($request->hasFile('front_image')) {
+            if(isset($request->front_image)){
+                $data['front_image'] = UploadImageAct::run($folder, $request->front_image);
+            }
+        }
+
+        if ($request->hasFile('back_image')) {
+
+            if(isset($request->back_image) && !empty($request->back_image)){
+                $data['back_image'] = UploadImageAct::run($folder, $request->back_image);
+            }
+        }    
+        if ($request->hasFile('catelog_link')) {
+            $catalogPdf = $request->file('catelog_link');
+            $fileName = time() . '.' . $catalogPdf->extension();
+            $catalogPdf->move(public_path($folder), $fileName);
+        
+            $data['catelog_link'] = "$folder/$fileName";
+        }
+      
+        $product->update($data);
+       
+        
 
         return redirect('admin/products')->with('status', 'Product updated successfully');
     }

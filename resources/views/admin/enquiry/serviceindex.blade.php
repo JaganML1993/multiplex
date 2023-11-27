@@ -42,7 +42,9 @@
                             </a>
                 
                         </td>
-                        <td>{{$enquiry->status ? "closed":"open"}}</td> 
+                        <td style="color: {{ $enquiry->status ? 'red' : 'green' }}">
+                            {{ $enquiry->status ? 'closed' : 'open' }}
+                        </td>
                         <td>{{date('d-m-Y h:i A', strtotime($enquiry->created_at))}}</td>
                     </tr>
                     @php 

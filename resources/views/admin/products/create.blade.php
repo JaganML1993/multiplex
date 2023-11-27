@@ -87,10 +87,10 @@
                             </div>
 
                             <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-name">Catelog Link</label>
-                                <input type="text" class="form-control" name="catelog_link" />
+                                <label class="col-form-label" for="basic-default-name">Catalog PDF</label>
+                                <input type="file" class="form-control" name="catelog_link" accept=".pdf" />
                                 @if($errors->has('catelog_link'))
-                                <div class="error">{{ $errors->first('catelog_link') }}</div>
+                                    <div class="error">{{ $errors->first('catelog_link') }}</div>
                                 @endif
                             </div>
 

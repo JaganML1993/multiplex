@@ -102,11 +102,11 @@
             <div class="col-lg-12">
                 <!--====== Filter Button ======-->
                 <ul class="project-filter mb-50">
-                    <li @if($sub_category_id == 0) class="active" @endif data-filter="*">
+                    <li  class="active" data-filter="*">
                         <a class="subcategory-link" data-subcategory-id="all" href="#">Show All</a>
                     </li>
                     @foreach($subCategories as $subCategory)
-                        <li @if($sub_category_id == $subCategory->id) class="active sub_category" @endif data-filter=".cat-{{ $subCategory->id }}">
+                        <li  class="sub_category"data-filter=".cat-{{ $subCategory->id }}">
                             <a class="subcategory-link" data-subcategory-id="{{ $subCategory->id }}" href="#">
                                 {{ $subCategory->name }}
                             </a>

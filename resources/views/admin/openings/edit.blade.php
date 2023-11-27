@@ -33,9 +33,9 @@
 
                             @php
 
-                            $departments = \App\Models\Department::get();
+                            $departments = \App\Models\Department::where('type',2)->get();
 
-                            @endphp
+                          @endphp
                             <div class="col-md-4">
                                 <label class="col-form-label" for="basic-default-name">Department<span class="required_star">*</span></label>
                                 <select class="form-control" name="department">

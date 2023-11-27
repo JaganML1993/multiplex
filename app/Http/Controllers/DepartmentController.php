@@ -25,6 +25,7 @@ class DepartmentController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|email',
+            'type' => 'required'
         ]);
 
         Department::create($request->all());
@@ -47,6 +48,7 @@ class DepartmentController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:departments,email,' . $department->id,
+            'type' => 'required'
         ]);
 
         $department->update($request->all());
