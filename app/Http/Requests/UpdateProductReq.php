@@ -31,8 +31,8 @@ class UpdateProductReq extends FormRequest
             'category_id' => ['filled'],
             'sub_category_id' => ['filled'],
             'status' => ['filled'],
-            'video_link' => ['filled', 'string'],
-            'catelog_link' => ['filled', 'string'],
+            'video_link' => ['nullable', 'string'],
+            'catelog_link' => ['nullable', 'file', 'mimes:pdf', 'max:10240'], // max:10240 is the file size limit in kilobytes (10 MB)
             'crop' => ['filled'],
             'dosage' => ['filled'],
             'packing' => ['filled'],

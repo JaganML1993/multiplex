@@ -32,7 +32,7 @@ class CreateProductReq extends FormRequest
             'subcategory' => ['nullable'],
             'status' => ['required'],
             'video_link' => ['nullable', 'string'],
-            'catelog_link' => ['nullable', 'string'],
+            'catelog_link' => ['nullable', 'file', 'mimes:pdf', 'max:10240'], // max:10240 is the file size limit in kilobytes (10 MB)
             'crop' => ['nullable'],
             'dosage' => ['nullable'],
             'packing' => ['nullable'],

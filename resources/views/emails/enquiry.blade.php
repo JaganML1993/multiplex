@@ -46,7 +46,9 @@
                                     <p><strong>Phone:</strong> {{ $data['phone'] }}</p>
                                     <p><strong>Email:</strong> {{ $data['email'] }}</p>
                                     <p><strong>Location:</strong> {{ $data['loc'] }}</p>
+                                    @isset($data['department'])                                        
                                     <p><strong>Department:</strong> {{ $data['department'] }}</p>
+                                    @endisset
                                     <p><strong>Message:</strong> {{ $data['message'] }}</p>
                                 </td>
                             </tr>

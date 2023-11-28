@@ -35,6 +35,8 @@ class CreateProductAct
         if(isset($params['back_image']) && !empty($params['back_image'])){
             $insertData['back_image'] = UploadImageAct::run($folder, $params['back_image']);
         }
+
+      
         
 
         return Product::create($insertData);

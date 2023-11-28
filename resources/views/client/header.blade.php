@@ -40,6 +40,15 @@ $categories = CategoryAct::run();
     <link rel="stylesheet" href="{{ asset('css/default.css') }}">
     <!--====== Style css ======-->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+    
+   <!-- Include jQuery -->
+   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+   <!-- Include jQuery UI -->
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <style>
         .page-title-area {
             margin-top: 0 !important;
@@ -65,7 +74,7 @@ $categories = CategoryAct::run();
             <div class="modal-content">
                 <form>
                     <div class="form_group">
-                        <input type="search" class="form_control" placeholder="Search here" name="search">
+                        <input type="search" class="form_control" placeholder="Search here" name="search" id="search">
                         <label><i class="fa fa-search"></i></label>
                         <p class="mt-10" style="color:#9d9d9d;font-size:14px; font-style:italic;">Hit enter to search</p>
                     </div>
@@ -89,9 +98,13 @@ $categories = CategoryAct::run();
                                     <!--<p style="color:#000;">Our team will get back to you shortly.</p>-->
                                     <!--=== Review Form ===-->
                                     <div class="review-form-area wow fadeInUp mt-10 mb-10">
+                                        
                                         <form class="review-form" method="post"
                                             action="{{ route('home.save_enquiry') }}">
                                             @csrf
+                                            <div class="my-3 d-none success-message" style="width: 100%">
+                                                <div class="btn btn-success">Form Submitted Successfully</div>
+                                            </div>
                                             <input type="hidden" name="type" value="1">
                                             <div class="row">
                                                 <div class="col-lg-6">
@@ -121,7 +134,7 @@ $categories = CategoryAct::run();
                                                 </div>
                                                 @php
 
-                                                $departments = \App\Models\Department::get();
+                                                $departments = \App\Models\Department::where('type',1)->get();
 
                                                 @endphp
                                                 <div class="col-lg-4">
@@ -142,14 +155,18 @@ $categories = CategoryAct::run();
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12">
-                                                    <div class="form_group">
+                                                    <div class="form_group success-below">
                                                         <button type="submit"
                                                             class="main-btn primary-btn">Submit</button>
                                                     </div>
                                                     <br/>
                                                     <h4>Thank you, we will get back to you.</h4>
                                                 </div>
+<<<<<<< HEAD
                                                 
+=======
+                                              
+>>>>>>> 4deda8abd3aa8329990ce104a372978e32e19f3b
                                             </div>
                                         </form>
                                     </div>
@@ -274,7 +291,7 @@ $categories = CategoryAct::run();
                         <div class="nav-search mb-30 d-block d-xl-none ">
                             <form>
                                 <div class="form_group">
-                                    <input type="email" class="form_control" placeholder="Search Here" name="email"
+                                    <input type="search" class="form_control" placeholder="Search Here" name="search"
                                         required>
                                     <button class="search-btn"><i class="fas fa-search"></i></button>
                                 </div>
@@ -306,7 +323,7 @@ $categories = CategoryAct::run();
                                 <li class="menu-item has-children"><a href="{{ route('products.index') }}">Products</a>
                                     <ul class="sub-menu">
                                         @foreach($categories as $category)
-                                        <li><a href="{{ route('category.products',['id' => $category->id, 'sub_id' => 0]) }}">{{ $category->name}}</a></li>
+                                        <li><a href="{{ route('category.products',['id' => $category->id]) }}">{{ $category->name}}</a></li>
                                         @endforeach
                                      </ul>
                                 </li>
@@ -480,6 +497,11 @@ $categories = CategoryAct::run();
     <!--====== Main js ======-->
     <script src="{{ asset('/js/theme.js') }}"></script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js">
+</script>
+
     <script>
         function num_validate(evt) {
             var theEvent = evt || window.event;
@@ -502,8 +524,97 @@ $categories = CategoryAct::run();
         function googleTranslateElementInit() {
           new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
         }
-
+        var route = "{{ url('autocomplete-global') }}";
+    $('#search').typeahead({
+        source: function (query, process) {
+        return $.get(route, { query: query }, function (data) {
+            var suggestions = data.map(function(item) {
+                return {
+                    id: item.id,
+                    name: item.name
+                };
+            });
+            return process(suggestions);
+        });
+    },
+    afterSelect: function(item) {
+        // Redirect to the category page with the id when an item is selected
+        window.location.href = "{{ url('category-product-detail') }}/" + item.id;
+    }
+    });
     </script>
+
+<script>
+    $(document).ready(function () {
+        $('.review-form').submit(function (e) {
+            e.preventDefault();
+
+            var form = $(this);
+
+            $.ajax({
+                type: 'POST',
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function (response) {
+                    // Show the success message
+                    form.find('.success-message').removeClass('d-none').addClass('d-block');
+
+                    // Reset the form after 5 seconds
+                    setTimeout(function () {
+                        // Hide the success message
+                        form.find('.success-message').removeClass('d-block').addClass('d-none');
+
+                        form[0].reset();
+
+                        // Clear the selected value in the select element
+                        form.find('select[name="department"]').prop('selectedIndex', 0);
+
+                         // Close the modal (adjust the modal ID if needed)
+                        $('#sidebar-modal').modal('hide');
+                    }, 5000);
+
+                   
+                },
+                error: function (error) {
+                    // Handle error if needed
+                }
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#service-modal .review-form').submit(function (e) {
+            e.preventDefault();
+
+            var form = $(this);
+
+            $.ajax({
+                type: 'POST',
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function (response) {
+                    // Handle the success response here
+                    console.log(response);
+
+                    // Show the success message
+                    form.find('.service-message').removeClass('d-none').addClass('d-block');
+
+                    // Reset the form and hide the service message after 5 seconds
+                    setTimeout(function () {
+                        form.find('.service-message').removeClass('d-block').addClass('d-none');
+                        form[0].reset();
+                    }, 5000);
+                },
+                error: function (error) {
+                    // Handle the error response here
+                    console.log(error);
+                }
+            });
+        });
+    });
+</script>
 <!-- Content -->
 @yield('scripts')
 <!-- / Content -->

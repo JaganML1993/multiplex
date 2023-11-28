@@ -87,6 +87,9 @@
                             <form class="review-form" method="post"
                                 action="{{ route('home.save_job') }}" enctype="multipart/form-data">
                                 @csrf
+                                <div class="my-3 d-none success-message" style="width: 100%">
+                                    <div class="btn btn-success">Form Submitted Successfully</div>
+                                </div>
                                 <input type="hidden" name="id" value="{{ $openings->id }}">
                                 <div class="row">
                                     <div class="col-lg-6">
@@ -174,7 +177,38 @@
 @endsection
 @section('scripts')
 @parent
-<script type="text/javascript">
+<script>
+    $(document).ready(function () {
+        $('.review-form').submit(function (e) {
+            e.preventDefault();
 
+            var form = $(this);
+
+            $.ajax({
+                type: 'POST',
+                url: form.attr('action'),
+                data: new FormData(form[0]),
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    // Handle the success response here
+                    console.log(response);
+
+                   // Show the success message
+                   form.find('.success-message').removeClass('d-none').addClass('d-block');
+
+                    // Reset the form and hide the success message after 5 seconds
+                    setTimeout(function () {
+                        form.find('.success-message').removeClass('d-block').addClass('d-none');
+                        form[0].reset();
+                    }, 5000);
+                },
+                error: function (error) {
+                    // Handle the error response here
+                    console.log(error);
+                }
+            });
+        });
+    });
 </script>
 @endsection

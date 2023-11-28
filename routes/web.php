@@ -52,7 +52,7 @@ Route::get('/products-index', [IndexController::class, 'products'])->name('produ
 Route::get('/fertilizers', [IndexController::class, 'fertilizers'])->name('fertilizers');
 Route::get('/multi-pk', [IndexController::class, 'multi_pk'])->name('multi-pk');
 
-Route::get('/category-products/{id}/{sub_id}', [ProductCategoryController::class, 'categoryProducts'])->name('category.products');
+Route::get('/category-products/{id}', [ProductCategoryController::class, 'categoryProducts'])->name('category.products');
 Route::get('/category-product-detail/{id}', [ProductCategoryController::class, 'categoryProductDetail'])->name('category.product.detail');
 
 
@@ -81,6 +81,7 @@ Route::get('/terms-and-conditions', [IndexController::class, 'terms_and_conditio
 Route::get('/autocomplete-search', [IndexController::class, 'autocompleteSearch']);
 Route::get('/autocomplete-department', [IndexController::class, 'autocompleteDepartment']);
 Route::get('/search-products', [IndexController::class, 'showProducts'])->name('search.products');
+Route::get('/autocomplete-global', [IndexController::class, 'showGlobal'])->name('search.global');
 
 /** contact us */
 Route::get('/contact', [IndexController::class, 'contact'])->name('contact');

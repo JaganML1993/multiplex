@@ -14,6 +14,9 @@
                                     <form class="review-form" method="post"
                                         action="{{ route('home.save_enquiry') }}">
                                         @csrf
+                                        <div class="my-3 d-none success-message" style="width: 100%">
+                                            <div class="btn btn-success">Form Submitted Successfully</div>
+                                        </div>
                                         <input type="hidden" name="type" value="2">
                                         <div class="row">
                                             <div class="col-lg-6">

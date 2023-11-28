@@ -206,8 +206,9 @@
             <div class="col-xl-6 col-lg-6 prod-cta-bn">
                 @if(!empty($product->catelog_link))
                 <div class="menu-button d-xl-block">
-                    <a href="{{$product->catelog_link}}" target="_blank"
-                        class="main-btn primary-btn">Download Catalog </a>
+                    <a href="{{ url($product->catelog_link) }}" target="_blank" class="main-btn primary-btn">
+                        Download Catalog
+                    </a>
                 </div>
                 <br />
                 @endif
@@ -225,7 +226,36 @@
 @endsection
 @section('scripts')
 @parent
-<script type="text/javascript">
+<script>
+    $(document).ready(function () {
+        $('#product-modal .review-form').submit(function (e) {
+            e.preventDefault();
 
+            var form = $(this);
+
+            $.ajax({
+                type: 'POST',
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function (response) {
+                    // Handle the success response here
+                    console.log(response);
+
+                    // Show the success message
+                    form.find('.success-message').removeClass('d-none').addClass('d-block');
+
+                    // Reset the form and hide the success message after 5 seconds
+                    setTimeout(function () {
+                        form.find('.success-message').removeClass('d-block').addClass('d-none');
+                        form[0].reset();
+                    }, 5000);
+                },
+                error: function (error) {
+                    // Handle the error response here
+                    console.log(error);
+                }
+            });
+        });
+    });
 </script>
 @endsection

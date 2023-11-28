@@ -21,5 +21,6 @@ class Product extends Model
     public function sub_category(){
         return $this->hasOne(SubCategory::class, 'id', 'sub_category_id');
     }
+
 }
  

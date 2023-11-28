@@ -32,7 +32,7 @@
                             </div>
                             @php
 
-                            $departments = \App\Models\Department::get();
+                              $departments = \App\Models\Department::where('type',2)->get();
 
                             @endphp
                             <div class="col-md-4">
