@@ -9,7 +9,7 @@
 <!-- Content -->
 <div class="container-xxl flex-grow-1 container-p-y">
     <div class="row">
-        <div class="col-lg-3 mb-4 order-0">
+        <div class="col-lg-4 mb-4 order-0">
             <div class="card">
             <div class="d-flex align-items-end row">
                 <div class="col-sm-7">
@@ -17,8 +17,9 @@
 
                     
                      
-                        <span class="fw-semibold d-block mb-1">Products</span>
-                        <h3 class="card-title mb-2">{{ $products??'' }}</h3>
+                        <span class="fw-bold d-block mb-1" style="font-size: 20px;">
+                        <img src="http://127.0.0.1:8000/assets/images/box-solid.svg" width="50" height="50" alt="logo"> Products</span>
+                        <h3 class="card-title mb-2" style="font-size: 45px;color:#1a9f53">{{ $products??'' }}</h3>
                     
                 
 
@@ -27,11 +28,12 @@
                 
             </div>
             </div>
-        </div>
-                    
+        </div>     
     </div>
 </div>
 <!-- / Content -->
+
+
 @endsection
 @section('scripts')
 @parent

@@ -147,9 +147,10 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form_group">
-                                            <button type="submit" class="main-btn primary-btn">Submit
-                                                Application</button>
+                                            <button type="submit" class="main-btn primary-btn">Submit Application</button>
                                         </div>
+                                        <br/>
+                                        <h4>Thank you, we will get back to you.</h4>
                                     </div>
                                 </div>
                             </form>

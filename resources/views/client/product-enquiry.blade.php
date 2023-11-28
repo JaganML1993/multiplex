@@ -53,6 +53,8 @@
                                                     <button type="submit"
                                                         class="main-btn primary-btn">Submit</button>
                                                 </div>
+                                                <br/>
+                                                <h4>Thank you, we will get back to you.</h4>
                                             </div>
                                         </div>
                                     </form>
