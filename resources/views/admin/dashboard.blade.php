@@ -20,17 +20,6 @@
                             <h3 class="card-title mb-2">{{ $products??'' }}</h3>                    
                     </div>
                     </div>
-                    
-<<<<<<< HEAD
-                     
-                        <span class="fw-bold d-block mb-1" style="font-size: 20px;">
-                        <img src="http://127.0.0.1:8000/assets/images/box-solid.svg" width="50" height="50" alt="logo"> Products</span>
-                        <h3 class="card-title mb-2" style="font-size: 45px;color:#1a9f53">{{ $products??'' }}</h3>
-                    
-                
-
-=======
->>>>>>> 4deda8abd3aa8329990ce104a372978e32e19f3b
                 </div>
             </div>
         </div>
