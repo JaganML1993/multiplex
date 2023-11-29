@@ -162,11 +162,6 @@ $categories = CategoryAct::run();
                                                     <br/>
                                                     <h4>Thank you, we will get back to you.</h4>
                                                 </div>
-<<<<<<< HEAD
-                                                
-=======
-                                              
->>>>>>> 4deda8abd3aa8329990ce104a372978e32e19f3b
                                             </div>
                                         </form>
                                     </div>
