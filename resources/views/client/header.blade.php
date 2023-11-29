@@ -102,9 +102,7 @@ $categories = CategoryAct::run();
                                         <form class="review-form" method="post"
                                             action="{{ route('home.save_enquiry') }}">
                                             @csrf
-                                            <div class="my-3 d-none success-message" style="width: 100%">
-                                                <div class="btn btn-success">Form Submitted Successfully</div>
-                                            </div>
+                                           
                                             <input type="hidden" name="type" value="1">
                                             <div class="row">
                                                 <div class="col-lg-6">
@@ -160,7 +158,10 @@ $categories = CategoryAct::run();
                                                             class="main-btn primary-btn">Submit</button>
                                                     </div>
                                                     <br/>
-                                                    <h4>Thank you, we will get back to you.</h4>
+                                                    <div class="my-3 d-none success-message" style="width: 100%">
+                                                        <h4>Thank you, we will get back to you.</h4>
+                                                    </div>
+                                                    
                                                 </div>
                                             </div>
                                         </form>

@@ -87,9 +87,7 @@
                             <form class="review-form" method="post"
                                 action="{{ route('home.save_job') }}" enctype="multipart/form-data">
                                 @csrf
-                                <div class="my-3 d-none success-message" style="width: 100%">
-                                    <div class="btn btn-success">Form Submitted Successfully</div>
-                                </div>
+                                
                                 <input type="hidden" name="id" value="{{ $openings->id }}">
                                 <div class="row">
                                     <div class="col-lg-6">
@@ -153,7 +151,10 @@
                                             <button type="submit" class="main-btn primary-btn">Submit Application</button>
                                         </div>
                                         <br/>
-                                        <h4>Thank you, we will get back to you.</h4>
+                                        <div class="my-3 d-none success-message" style="width: 100%">
+                                           <h4>Thank you, we will get back to you.</h4>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </form>
