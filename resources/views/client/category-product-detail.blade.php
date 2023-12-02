@@ -109,25 +109,25 @@
 
                                 @if(!empty($product->crop))
                                 <h6>Crop</h6>
-                                <p class="mt-10"><i class="fa-solid fa-circle-check" style="color: #2a7d2e;"></i><?php echo $product->crop ?></p>
+                               <div class="mt-10" style="display: flex;align-items: flex-start;gap: 10px"> <p ><i class="fa-solid fa-circle-check" style="color: #2a7d2e;"></i><?php echo $product->crop ?></p></div>
                                 <hr>
                                 @endif
 
                                 @if(!empty($product->dosage))
                                 <h6>Dosage & Methods of Application</h6>
-                                <p class="mt-10"><i class="fa-solid fa-circle-check" style="color: #2a7d2e;"></i><?php echo $product->dosage ?></p>
+                                <div class="mt-10" style="display: flex;align-items: flex-start;gap: 10px">  <p><i class="fa-solid fa-circle-check" style="color: #2a7d2e;"></i><?php echo $product->dosage ?></p></div>
                                 <hr>
                                 @endif
 
                                 @if(!empty($product->packing))
                                 <h6>Available Packing</h6>
-                                <p class="mt-10"><?php echo $product->packing ?></p>
+                                <div class="mt-10" style="display: flex;align-items: flex-start;gap: 10px">  <p><?php echo $product->packing ?></p></div>
                                 <hr>
                                 @endif
 
                                 @if(!empty($product->composition))
                                 <h6>Composition</h6>
-                                <p class="mt-10"><?php echo $product->composition ?></p>
+                                <div class="mt-10" style="display: flex;align-items: flex-start;gap: 10px">  <p class="mt-10"><?php echo $product->composition ?></p></div>
                                 <hr>
                                 @endif
 
@@ -206,9 +206,8 @@
             <div class="col-xl-6 col-lg-6 prod-cta-bn">
                 @if(!empty($product->catelog_link))
                 <div class="menu-button d-xl-block">
-                    <a href="{{ url($product->catelog_link) }}" target="_blank" class="main-btn primary-btn">
-                        Download Catalog
-                    </a>
+                    <a href="{{$product->catelog_link}}" target="_blank"
+                        class="main-btn primary-btn">Download Catalog </a>
                 </div>
                 <br />
                 @endif
@@ -226,36 +225,7 @@
 @endsection
 @section('scripts')
 @parent
-<script>
-    $(document).ready(function () {
-        $('#product-modal .review-form').submit(function (e) {
-            e.preventDefault();
+<script type="text/javascript">
 
-            var form = $(this);
-
-            $.ajax({
-                type: 'POST',
-                url: form.attr('action'),
-                data: form.serialize(),
-                success: function (response) {
-                    // Handle the success response here
-                    console.log(response);
-
-                    // Show the success message
-                    form.find('.success-message').removeClass('d-none').addClass('d-block');
-
-                    // Reset the form and hide the success message after 5 seconds
-                    setTimeout(function () {
-                        form.find('.success-message').removeClass('d-block').addClass('d-none');
-                        form[0].reset();
-                    }, 5000);
-                },
-                error: function (error) {
-                    // Handle the error response here
-                    console.log(error);
-                }
-            });
-        });
-    });
 </script>
 @endsection

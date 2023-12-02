@@ -16,7 +16,27 @@
 <!--    </div>-->
 <!--</section>-->
 <!--====== End Page-title-area section ======-->
+<style>
+      ul {
+  
+  list-style: none;
+  padding: 0;
+}
 
+li {
+  padding-left:1em;
+}
+
+li:before {
+  content: "\f058"; 
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: calc(1em * -1 );
+  color: #2a7d2e !important;
+ 
+}
+
+</style>
 <section class="faq-section pt-95 bg-dark-goc">
     <div class="container">
         <div class="accordion" id="accordionOne">
