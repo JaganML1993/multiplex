@@ -17,27 +17,28 @@
 <!--</section>-->
 <!--====== End Page-title-area section ======-->
 <style>
-      ul {
+      .job-open ul {
   
   list-style: none;
   padding: 0;
 }
 
-li {
+.job-open li {
   padding-left:1em;
 }
 
-li:before {
+.job-open li:before {
   content: "\f058"; 
   font-family: FontAwesome;
   display: inline-block;
   margin-left: calc(1em * -1 );
   color: #2a7d2e !important;
+  margin-right: 0.5rem;
  
 }
 
 </style>
-<section class="faq-section pt-95 bg-dark-goc">
+<section class="faq-section pt-95 bg-dark-goc job-open">
     <div class="container">
         <div class="accordion" id="accordionOne">
             <div class="row">

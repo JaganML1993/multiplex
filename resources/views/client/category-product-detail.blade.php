@@ -67,6 +67,9 @@
     opacity: .5;
     transition: opacity .6s ease;
 }
+.single-pricing-item:hover .pricing-body ul li{
+    color: #000 !important;
+}
 </style>
 
 
