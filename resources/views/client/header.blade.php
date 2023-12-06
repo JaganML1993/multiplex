@@ -16,9 +16,7 @@ $categories = CategoryAct::run();
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/png">
     <!--====== Google Fonts ======-->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <!--====== Flaticon css ======-->
     <link rel="stylesheet" href="{{ asset('fonts/flaticon/flaticon_gadden.css') }}">
@@ -41,19 +39,18 @@ $categories = CategoryAct::run();
     <!--====== Style css ======-->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-    
-   <!-- Include jQuery -->
-   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-   <!-- Include jQuery UI -->
-   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Include jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <style>
         .page-title-area {
             margin-top: 0 !important;
         }
-
     </style>
 </head>
 
@@ -74,9 +71,8 @@ $categories = CategoryAct::run();
             <div class="modal-content">
                 <form>
                     <div class="form_group">
-                        <input type="search" class="form_control" placeholder="Search here" name="search" id="search">
+                        <input type="search" class="form_control search-input" placeholder="Search here" name="search" id="search">
                         <label><i class="fa fa-search"></i></label>
-                        <p class="mt-10" style="color:#9d9d9d;font-size:14px; font-style:italic;">Hit enter to search</p>
                     </div>
                 </form>
             </div>
@@ -98,36 +94,32 @@ $categories = CategoryAct::run();
                                     <!--<p style="color:#000;">Our team will get back to you shortly.</p>-->
                                     <!--=== Review Form ===-->
                                     <div class="review-form-area wow fadeInUp mt-10 mb-10">
-                                        
-                                        <form class="review-form" method="post"
-                                            action="{{ route('home.save_enquiry') }}">
+
+                                        <form class="review-form" method="post" action="{{ route('home.save_enquiry') }}">
                                             @csrf
-                                           
+                                            <div class="my-3 d-none success-message" style="width: 100%">
+                                                <div class="btn btn-success">Form Submitted Successfully</div>
+                                            </div>
                                             <input type="hidden" name="type" value="1">
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form_group">
-                                                        <input type="text" class="form_control" placeholder="Your Name"
-                                                            name="name" required>
+                                                        <input type="text" class="form_control" placeholder="Your Name" name="name" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form_group">
-                                                        <input type="text" class="form_control"
-                                                            onkeypress="num_validate(event)" placeholder="Phone Number"
-                                                            name="phone" required>
+                                                        <input type="text" class="form_control" onkeypress="num_validate(event)" placeholder="Phone Number" name="phone" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="form_group">
-                                                        <input type="email" class="form_control"
-                                                            placeholder="Email Address" name="email" required>
+                                                        <input type="email" class="form_control" placeholder="Email Address" name="email" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="form_group">
-                                                        <input type="text" class="form_control" placeholder="Location"
-                                                            name="loc" required>
+                                                        <input type="text" class="form_control" placeholder="Location" name="loc" required>
                                                     </div>
                                                 </div>
                                                 @php
@@ -143,26 +135,20 @@ $categories = CategoryAct::run();
                                                             <option value="{{ $department->id }}">{{ $department->name }}</option>
                                                             @endforeach
                                                         </select>
-                                                        
+
                                                     </div>
-                                                    </div>
+                                                </div>
                                                 <div class="col-lg-12">
                                                     <div class="form_group">
-                                                        <textarea name="message" class="form_control"
-                                                            placeholder="Message"></textarea>
+                                                        <textarea name="message" class="form_control" placeholder="Message"></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="form_group success-below">
-                                                        <button type="submit"
-                                                            class="main-btn primary-btn">Submit</button>
+                                                        <button type="submit" class="main-btn primary-btn">Submit</button>
                                                     </div>
-                                                    <br/>
-                                                    <div class="my-3 d-none success-message" style="width: 100%">
-                                                        <h4>Thank you, we will get back to you.</h4>
-                                                    </div>
-                                                    
                                                 </div>
+
                                             </div>
                                         </form>
                                     </div>
@@ -175,7 +161,7 @@ $categories = CategoryAct::run();
         </div>
     </div>
     <!--====== Enquiry Wrapper ======-->
-    
+
     <!--====== Enquiry Wrapper ======-->
     <!--<div class="modal fade sidebar-panel-wrapper" id="sidebar-modal-upi">-->
     <!--    <div class="modal-dialog modal-dialog-scrollable">-->
@@ -196,43 +182,43 @@ $categories = CategoryAct::run();
     <!--    </div>-->
     <!--</div>-->
     <!--====== Enquiry Wrapper ======-->
-    
+
     <!-- The Modal -->
-      <div class="modal" id="myModal">
+    <div class="modal" id="myModal">
         <div class="modal-dialog">
-          <div class="modal-content">
-          
-            <!-- Modal Header -->
-            <div class="modal-header">
-              <h4 class="modal-title">UPI Payment</h4>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">UPI Payment</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="{{ asset('/images/upi_payment.jpg') }}" alt="">
+                </div>
+
+                <!-- Modal footer -->
+                <!--<div class="modal-footer">-->
+                <!--  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>-->
+                <!--</div>-->
+
             </div>
-            
-            <!-- Modal body -->
-            <div class="modal-body">
-                 <img src="{{ asset('/images/upi_payment.jpg') }}" alt="">
-            </div>
-            
-            <!-- Modal footer -->
-            <!--<div class="modal-footer">-->
-            <!--  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>-->
-            <!--</div>-->
-            
-          </div>
         </div>
-      </div>
-      
-  
+    </div>
+
+
 
     <!--====== Header Area ======-->
     <header class="header-area header-one transparent-header1">
         @if(session('status'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin: 10px;">
-                {{ session('status') }}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+        <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin: 10px;">
+            {{ session('status') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
         @endif
         <!--<div id="google_translate_element"></div>-->
         <div class="container-fluid">
@@ -249,21 +235,17 @@ $categories = CategoryAct::run();
                         <!--====== Top Right ======-->
                         <div class="top-right float-lg-right">
                             <ul class="social-link">
-                                <li><a href="https://www.facebook.com/MultiplexGroupofCompanies" target="_blank"><i
-                                            class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="https://www.instagram.com/multiplexgroup/" target="_blank"><i
-                                            class="fab fa-instagram"></i></a></li>
-                                <li><a href="https://www.linkedin.com/company/multiplex-group-of-companies"
-                                        target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href="https://www.youtube.com/@MultiplexFarmer/videos" target="_blank"><i
-                                            class="fab fa-youtube"></i></a></li>
+                                <li><a href="https://www.facebook.com/MultiplexGroupofCompanies" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/multiplexgroup/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/multiplex-group-of-companies" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/@MultiplexFarmer/videos" target="_blank"><i class="fab fa-youtube"></i></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!--====== Header Navigation ======-->
         <div class="header-navigation">
             <div class="nav-overlay"></div>
@@ -271,24 +253,19 @@ $categories = CategoryAct::run();
                 <div class="primary-menu">
                     <!--====== Site Branding ======-->
                     <div class="site-branding">
-                        <a href="{{ url('/') }}" class="brand-logo"><img
-                                src="{{ asset('/images/logo/multiplex-logo2.png') }}"
-                                alt="Site Logo"></a>
+                        <a href="{{ url('/') }}" class="brand-logo"><img src="{{ asset('/images/logo/multiplex-logo2.png') }}" alt="Site Logo"></a>
                     </div>
                     <!--====== Nav Menu ======-->
                     <div class="nav-menu">
                         <!--====== Site Branding ======-->
                         <div class="mobile-logo mb-30 d-block d-xl-none">
-                            <a href="{{ url('/') }}" class="brand-logo"><img
-                                    src="{{ asset('/images/logo/multiplex-logo.png') }}"
-                                    alt="Site Logo"></a>
+                            <a href="{{ url('/') }}" class="brand-logo"><img src="{{ asset('/images/logo/multiplex-logo.png') }}" alt="Site Logo"></a>
                         </div>
                         <!--=== Nav Search ===-->
                         <div class="nav-search mb-30 d-block d-xl-none ">
                             <form>
                                 <div class="form_group">
-                                    <input type="search" class="form_control" placeholder="Search Here" name="search"
-                                        required>
+                                    <input type="search" class="form_control search-input" placeholder="Search Here" name="search" required>
                                     <button class="search-btn"><i class="fas fa-search"></i></button>
                                 </div>
                             </form>
@@ -321,7 +298,7 @@ $categories = CategoryAct::run();
                                         @foreach($categories as $category)
                                         <li><a href="{{ route('category.products',['id' => $category->id]) }}">{{ $category->name}}</a></li>
                                         @endforeach
-                                     </ul>
+                                    </ul>
                                 </li>
                                 <li class="menu-item has-children"><a href="#">Services</a>
                                     <ul class="sub-menu">
@@ -341,23 +318,20 @@ $categories = CategoryAct::run();
                                     </ul>
                                 </li>
                                 <li class="menu-item">
-                                    <div class="search-btn" data-toggle="modal" data-target="#search-modal"><i
-                                            class="fa-solid fa-magnifying-glass"></i></div>
+                                    <div class="search-btn" data-toggle="modal" data-target="#search-modal"><i class="fa-solid fa-magnifying-glass"></i></div>
                                 </li>
                             </ul>
                         </nav>
                         <!--====== Menu Button ======-->
                         <!-- mobile button -->
                         <div class="menu-button mt-40 d-xl-none">
-                            <a href="{{ route('contact') }}" data-toggle="modal"
-                                data-target="#sidebar-modal" class="main-btn secondary-btn">Quick Enquiry</a>
+                            <a href="{{ route('contact') }}" data-toggle="modal" data-target="#sidebar-modal" class="main-btn secondary-btn">Quick Enquiry</a>
                         </div>
                     </div>
                     <!--====== Nav Right Item ======-->
                     <div class="nav-right-item">
                         <div class="menu-button d-xl-block d-none">
-                            <a href="{{ route('contact') }}" data-toggle="modal"
-                                data-target="#sidebar-modal" class="main-btn primary-btn">Quick Enquiry</a>
+                            <a href="{{ route('contact') }}" data-toggle="modal" data-target="#sidebar-modal" class="main-btn primary-btn">Quick Enquiry</a>
                         </div>
                         <div class="navbar-toggler">
                             <span></span>
@@ -419,7 +393,7 @@ $categories = CategoryAct::run();
                             <h4 class="widget-title">Careers</h4>
                             <div class="widget-content">
                                 <ul class="footer-nav">
-                                    
+
                                     <li><a href="{{ route('home.life_at_multiplex') }}">Life @ Multiplex</a></li>
                                     <div class="hero-button wow fadeInUp" data-wow-delay=".7s">
                                         <a href="{{ route('home.current_openings') }}" class="main-btn golden-btn mb-10">Current Openings</a>
@@ -457,10 +431,15 @@ $categories = CategoryAct::run();
             </div>
         </div>
     </footer>
-    <style>.nice-select:after {
-  display:none !important;}
-  .nice-select .list{
-  width:100% !important;}</style>
+    <style>
+        .nice-select:after {
+            display: none !important;
+        }
+
+        .nice-select .list {
+            width: 100% !important;
+        }
+    </style>
     <!--====== End Footer ======-->
     <!--====== Back To Top  ======-->
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
@@ -493,10 +472,10 @@ $categories = CategoryAct::run();
     <!--====== Main js ======-->
     <script src="{{ asset('/js/theme.js') }}"></script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js">
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js">
+    </script>
 
     <script>
         function num_validate(evt) {
@@ -516,104 +495,145 @@ $categories = CategoryAct::run();
                 if (theEvent.preventDefault) theEvent.preventDefault();
             }
         }
-        
+
         function googleTranslateElementInit() {
-          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
         }
         var route = "{{ url('autocomplete-global') }}";
-    $('#search').typeahead({
-        source: function (query, process) {
-        return $.get(route, { query: query }, function (data) {
-            var suggestions = data.map(function(item) {
-                return {
-                    id: item.id,
-                    name: item.name
-                };
-            });
-            return process(suggestions);
+
+        $('.search-input').typeahead({
+            source: function(query, process) {
+                return $.get(route, {
+                    query: query
+                }, function(data) {
+                    var suggestions = data.map(function(item) {
+                        return {
+                            id: item.id,
+                            name: item.name
+                        };
+                    });
+
+                    console.log(suggestions);
+
+                    // Remove the existing suggestions list before creating a new one
+                    $('.suggestions-list').remove();
+
+                    // Additional code to display suggestions in a list
+                    var suggestionsList = $('<ul class="suggestions-list" style="background-color: white;"></ul>');
+                    suggestions.forEach(function(item) {
+                        suggestionsList.append('<li data-id="' + item.id + '">' + item.name + '</li>');
+                    });
+
+                    // Append the suggestions list below the input form
+                    $('.search-input').after(suggestionsList);
+                });
+            }
         });
-    },
-    afterSelect: function(item) {
-        // Redirect to the category page with the id when an item is selected
-        window.location.href = "{{ url('category-product-detail') }}/" + item.id;
-    }
-    });
+
+        // Handle the selection of a suggestion
+        $(document).on('click', '.suggestions-list li', function() {
+            var selectedId = $(this).data('id');
+
+            // Navigate to the URL using the item.id
+            window.location.href = "{{ url('category-product-detail') }}/" + selectedId;
+
+            // Remove the suggestions list
+            $('.suggestions-list').remove();
+        });
+
+        // Add CSS to change cursor to pointer
+        $(document).on('mouseenter', '.suggestions-list li', function() {
+            $(this).css('cursor', 'pointer');
+        });
+
+        $(document).on('mouseleave', '.suggestions-list li', function() {
+            $(this).css('cursor', 'default');
+        });
+        // Disable the "Enter" key for the input field
+        $('.search-input').keydown(function(e) {
+            if (e.which === 13) {
+                e.preventDefault();
+                return false;
+            }
+        });
     </script>
 
-<script>
-    $(document).ready(function () {
-        $('.review-form').submit(function (e) {
-            e.preventDefault();
+    <script>
+        $(document).ready(function() {
+            $('.review-form').submit(function(e) {
+                e.preventDefault();
 
-            var form = $(this);
+                var form = $(this);
 
-            $.ajax({
-                type: 'POST',
-                url: form.attr('action'),
-                data: form.serialize(),
-                success: function (response) {
-                    // Show the success message
-                    form.find('.success-message').removeClass('d-none').addClass('d-block');
+                $.ajax({
+                    type: 'POST',
+                    url: form.attr('action'),
+                    data: form.serialize(),
+                    success: function(response) {
+                        // Show the success message
+                        form.find('.success-message').removeClass('d-none').addClass('d-block');
 
-                    // Reset the form after 5 seconds
-                    setTimeout(function () {
-                        // Hide the success message
-                        form.find('.success-message').removeClass('d-block').addClass('d-none');
+                        // Reset the form after 5 seconds
+                        setTimeout(function() {
+                            // Hide the success message
+                            form.find('.success-message').removeClass('d-block').addClass('d-none');
 
-                        form[0].reset();
+                            form[0].reset();
 
-                        // Clear the selected value in the select element
-                        form.find('select[name="department"]').prop('selectedIndex', 0);
+                            // Clear the selected value in the select element
+                            form.find('select[name="department"]').prop('selectedIndex', 0);
 
-                         // Close the modal (adjust the modal ID if needed)
-                        $('#sidebar-modal').modal('hide');
-                    }, 5000);
+                            // Close the modal (adjust the modal ID if needed)
+                            $('#sidebar-modal').modal('hide');
+                        }, 5000);
 
-                   
-                },
-                error: function (error) {
-                    // Handle error if needed
-                }
+
+                    },
+                    error: function(error) {
+                        // Handle error if needed
+                    }
+                });
             });
         });
-    });
-</script>
+    </script>
 
-<script>
-    $(document).ready(function () {
-        $('#service-modal .review-form').submit(function (e) {
-            e.preventDefault();
+    <script>
+        $(document).ready(function() {
+            $('#service-modal .review-form').submit(function(e) {
+                e.preventDefault();
 
-            var form = $(this);
+                var form = $(this);
 
-            $.ajax({
-                type: 'POST',
-                url: form.attr('action'),
-                data: form.serialize(),
-                success: function (response) {
-                    // Handle the success response here
-                    console.log(response);
+                $.ajax({
+                    type: 'POST',
+                    url: form.attr('action'),
+                    data: form.serialize(),
+                    success: function(response) {
+                        // Handle the success response here
+                        console.log(response);
 
-                    // Show the success message
-                    form.find('.service-message').removeClass('d-none').addClass('d-block');
+                        // Show the success message
+                        form.find('.service-message').removeClass('d-none').addClass('d-block');
 
-                    // Reset the form and hide the service message after 5 seconds
-                    setTimeout(function () {
-                        form.find('.service-message').removeClass('d-block').addClass('d-none');
-                        form[0].reset();
-                    }, 5000);
-                },
-                error: function (error) {
-                    // Handle the error response here
-                    console.log(error);
-                }
+                        // Reset the form and hide the service message after 5 seconds
+                        setTimeout(function() {
+                            form.find('.service-message').removeClass('d-block').addClass('d-none');
+                            form[0].reset();
+                        }, 5000);
+                    },
+                    error: function(error) {
+                        // Handle the error response here
+                        console.log(error);
+                    }
+                });
             });
         });
-    });
-</script>
-<!-- Content -->
-@yield('scripts')
-<!-- / Content -->
+    </script>
+    <!-- Content -->
+    @yield('scripts')
+    <!-- / Content -->
 </body>
 
 </html>
