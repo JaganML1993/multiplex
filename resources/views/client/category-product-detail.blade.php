@@ -70,6 +70,26 @@
 .single-pricing-item:hover .pricing-body ul li{
     color: #000 !important;
 }
+
+      .pricing-section ul {
+  
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-section li {
+  padding-left:1em;
+}
+
+.pricing-section li:before {
+  content: "\f058"; 
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: calc(1em * -1 );
+  color: #2a7d2e !important;
+  margin-right: 0.5rem;
+ 
+}
 </style>
 
 
@@ -112,13 +132,13 @@
 
                                 @if(!empty($product->crop))
                                 <h6>Crop</h6>
-                               <div class="mt-10" style="display: flex;align-items: flex-start;gap: 10px"> <p ><i class="fa-solid fa-circle-check" style="color: #2a7d2e;"></i><?php echo $product->crop ?></p></div>
+                               <div class="mt-10" style="display: flex;align-items: flex-start;gap: 10px"> <p><?php echo $product->crop ?></p></div>
                                 <hr>
                                 @endif
 
                                 @if(!empty($product->dosage))
                                 <h6>Dosage & Methods of Application</h6>
-                                <div class="mt-10" style="display: flex;align-items: flex-start;gap: 10px">  <p><i class="fa-solid fa-circle-check" style="color: #2a7d2e;"></i><?php echo $product->dosage ?></p></div>
+                                <div class="mt-10" style="display: flex;align-items: flex-start;gap: 10px">  <p><?php echo $product->dosage ?></p></div>
                                 <hr>
                                 @endif
 
