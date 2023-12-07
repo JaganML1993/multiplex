@@ -348,7 +348,22 @@ select::-ms-expand {
 /* custom css ends*/
 
 
-.sidebar-panel-wrapper .sidebar-wrapper .sidebar-information-area .sidebar-info-widget .social-item ul.social-link li a:hover, .features-section-two .experience-box-two .icon-btn, .footer-nav-widget .footer-nav li a:after, .footer-about-widget .widget-content form .submit-btn:hover, .footer-about-widget .widget-content .main-btn.filled-btn:hover, .single-info-item.style-one, .gadden-pagination li a:hover, .sidebar-widget-area .widget-post-author .author-content ul.social-link li a:hover, .blog-details-wrapper .blog-post .entry-footer .tag-links a:hover, .blog-details-wrapper .blog-post .entry-content .wp-block-quote span:before, .single-blog-post .entry-content .cat-link:hover:before, .description-wrapper .content-box ul.check-style-one li i, .product-details-wrapper .product-info ul.social-link li a:hover, ul.slick-dots li:after, .team-details-wrapper .member-info .member-meta .member-contact-info .icon, .skill-image-box .circle-logo, .single-skill-bar .progress-bar .progress, .single-team-item:hover .member-img .icon-btn, .project-details-wrapper ul.check-style-one li i, .single-project-item-three .project-img .hover-content, .single-project-item-two .project-img .project-overlay .hover-content, .service-info-wrapper ul.check-style-one li i, .single-service-item .service-img .icon-btn i, .single-counter-item:hover .icon, .features-thumb-item-two:hover .text .icon, .choose-content-box .thumb-content .check-style-one li i, .choose-nav-tab .nav-link.active:after, .header-two .header-navigation .site-branding a.brand-logo, .back-to-top:hover, .back-to-top:focus, .main-btn.filled-btn:hover, .main-btn.golden-btn:hover, .main-btn.secondary-btn, .main-btn.primary-btn:hover {
+.sidebar-panel-wrapper .sidebar-wrapper .sidebar-information-area .sidebar-info-widget .social-item ul.social-link li a:hover, 
+.features-section-two .experience-box-two .icon-btn, .footer-nav-widget .footer-nav li a:after, .footer-about-widget 
+.widget-content form .submit-btn:hover, .footer-about-widget .widget-content .main-btn.filled-btn:hover, 
+.single-info-item.style-one, .gadden-pagination li a:hover, .sidebar-widget-area .widget-post-author 
+.author-content ul.social-link li a:hover, .blog-details-wrapper .blog-post .entry-footer .tag-links a:hover, 
+.blog-details-wrapper .blog-post .entry-content .wp-block-quote span:before, .single-blog-post .entry-content 
+.cat-link:hover:before, .description-wrapper .content-box ul.check-style-one li i, .product-details-wrapper 
+.product-info ul.social-link li a:hover, ul.slick-dots li:after, .team-details-wrapper .member-info .member-meta 
+.member-contact-info .icon, .skill-image-box .circle-logo, .single-skill-bar .progress-bar .progress,
+ .single-team-item:hover .member-img .icon-btn, .project-details-wrapper ul.check-style-one li i, 
+ .single-project-item-three .project-img .hover-content, .single-project-item-two .project-img 
+ .project-overlay .hover-content, .service-info-wrapper ul.check-style-one li i, .single-service-item 
+ .service-img .icon-btn i, .single-counter-item:hover .icon, .features-thumb-item-two:hover .text .icon,
+  .choose-content-box .thumb-content .check-style-one li i, .choose-nav-tab .nav-link.active:after, 
+  .header-two .header-navigation .site-branding a.brand-logo, .back-to-top:hover, .back-to-top:focus, 
+  .main-btn.filled-btn:hover, .main-btn.golden-btn:hover, .main-btn.secondary-btn, .main-btn.primary-btn:hover {
   background-color: #2A7D2E;
 }
 
@@ -360,7 +375,7 @@ select::-ms-expand {
 .text .icon-btn, .single-service-item-two:hover .icon, .single-counter-item-two .icon, .single-counter-item, 
 .single-process-item .step, .single-features-item-two:hover, .features-thumb-item:hover .content, .hero-slider-two 
 .slick-arrow:hover, .main-btn.golden-btn {
-  background-color: #fff !important;
+  background-color: #F3CF9Eff !important;
 }
 
 .projects-slider-one .slick-dots li:after {
@@ -5282,7 +5297,7 @@ ul.slick-dots li.slick-active {
   }
 }
 .single-pricing-item .pricing-body ul li:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 2px;
 }
 .single-pricing-item .pricing-body ul li i {
   -webkit-margin-end: 12px;

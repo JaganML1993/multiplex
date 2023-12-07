@@ -720,7 +720,7 @@ padding-top: 30px !important;
     responsive: [{
       breakpoint: 768,
       settings: {
-        slidesToShow: 3
+        slidesToShow: 1
       }
     }, {
       breakpoint: 520,

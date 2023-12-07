@@ -229,7 +229,7 @@
             <div class="col-xl-6 col-lg-6 prod-cta-bn">
                 @if(!empty($product->catelog_link))
                 <div class="menu-button d-xl-block">
-                    <a href="{{$product->catelog_link}}" target="_blank"
+                    <a href="{{url($product->catelog_link)}}" target="_blank"
                         class="main-btn primary-btn">Download Catalog </a>
                 </div>
                 <br />
