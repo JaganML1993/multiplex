@@ -3843,8 +3843,9 @@ textarea.form-control-lg {
   word-wrap: break-word;
   background-color: #ffffffd4;
   background-clip: border-box;
-  border: 2px solid #076d05;
+  /* border: 2px solid #076d05; */
   border-radius: 0.5rem;
+  padding: 15px;
 }
 .card > hr {
   margin-right: 0;

@@ -1,6 +1,6 @@
 @php
-use App\Actions\CategoryAct;
-$categories = CategoryAct::run();
+    use App\Actions\CategoryAct;
+    $categories = CategoryAct::run();
 @endphp
 <!DOCTYPE html>
 <html lang="zxx">
@@ -16,7 +16,9 @@ $categories = CategoryAct::run();
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/png">
     <!--====== Google Fonts ======-->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <!--====== Flaticon css ======-->
     <link rel="stylesheet" href="{{ asset('fonts/flaticon/flaticon_gadden.css') }}">
@@ -71,7 +73,8 @@ $categories = CategoryAct::run();
             <div class="modal-content">
                 <form>
                     <div class="form_group">
-                        <input type="search" class="form_control search-input" placeholder="Search here" name="search" id="search">
+                        <input type="search" class="form_control search-input" placeholder="Search here" name="search"
+                            id="search">
                         <label><i class="fa fa-search"></i></label>
                     </div>
                 </form>
@@ -95,7 +98,8 @@ $categories = CategoryAct::run();
                                     <!--=== Review Form ===-->
                                     <div class="review-form-area wow fadeInUp mt-10 mb-10">
 
-                                        <form class="review-form" method="post" action="{{ route('home.save_enquiry') }}">
+                                        <form class="review-form" method="post"
+                                            action="{{ route('home.save_enquiry') }}">
                                             @csrf
                                             <div class="my-3 d-none success-message" style="width: 100%">
                                                 <div class="btn btn-success">Form Submitted Successfully</div>
@@ -104,35 +108,41 @@ $categories = CategoryAct::run();
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form_group">
-                                                        <input type="text" class="form_control" placeholder="Your Name" name="name" required>
+                                                        <input type="text" class="form_control"
+                                                            placeholder="Your Name" name="name" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form_group">
-                                                        <input type="text" class="form_control" onkeypress="num_validate(event)" placeholder="Phone Number" name="phone" required>
+                                                        <input type="text" class="form_control"
+                                                            onkeypress="num_validate(event)" placeholder="Phone Number"
+                                                            name="phone" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="form_group">
-                                                        <input type="email" class="form_control" placeholder="Email Address" name="email" required>
+                                                        <input type="email" class="form_control"
+                                                            placeholder="Email Address" name="email" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="form_group">
-                                                        <input type="text" class="form_control" placeholder="Location" name="loc" required>
+                                                        <input type="text" class="form_control"
+                                                            placeholder="Location" name="loc" required>
                                                     </div>
                                                 </div>
                                                 @php
 
-                                                $departments = \App\Models\Department::where('type',1)->get();
+                                                    $departments = \App\Models\Department::where('type', 1)->get();
 
                                                 @endphp
                                                 <div class="col-lg-4">
                                                     <div class="form_group">
                                                         <select class="form_control " name="department">
                                                             <option selected disabled>Select Department</option>
-                                                            @foreach($departments as $department)
-                                                            <option value="{{ $department->id }}">{{ $department->name }}</option>
+                                                            @foreach ($departments as $department)
+                                                                <option value="{{ $department->id }}">
+                                                                    {{ $department->name }}</option>
                                                             @endforeach
                                                         </select>
 
@@ -145,7 +155,8 @@ $categories = CategoryAct::run();
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="form_group success-below">
-                                                        <button type="submit" class="main-btn primary-btn">Submit</button>
+                                                        <button type="submit"
+                                                            class="main-btn primary-btn">Submit</button>
                                                     </div>
                                                 </div>
 
@@ -212,13 +223,13 @@ $categories = CategoryAct::run();
 
     <!--====== Header Area ======-->
     <header class="header-area header-one transparent-header1">
-        @if(session('status'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin: 10px;">
-            {{ session('status') }}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
+        @if (session('status'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin: 10px;">
+                {{ session('status') }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
         @endif
         <!--<div id="google_translate_element"></div>-->
         <div class="container-fluid">
@@ -235,10 +246,14 @@ $categories = CategoryAct::run();
                         <!--====== Top Right ======-->
                         <div class="top-right float-lg-right">
                             <ul class="social-link">
-                                <li><a href="https://www.facebook.com/MultiplexGroupofCompanies" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="https://www.instagram.com/multiplexgroup/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="https://www.linkedin.com/company/multiplex-group-of-companies" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href="https://www.youtube.com/@MultiplexFarmer/videos" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="https://www.facebook.com/MultiplexGroupofCompanies" target="_blank"><i
+                                            class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/multiplexgroup/" target="_blank"><i
+                                            class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/multiplex-group-of-companies"
+                                        target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/@MultiplexFarmer/videos" target="_blank"><i
+                                            class="fab fa-youtube"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -253,19 +268,22 @@ $categories = CategoryAct::run();
                 <div class="primary-menu">
                     <!--====== Site Branding ======-->
                     <div class="site-branding">
-                        <a href="{{ url('/') }}" class="brand-logo"><img src="{{ asset('/images/logo/multiplex-logo2.png') }}" alt="Site Logo"></a>
+                        <a href="{{ url('/') }}" class="brand-logo"><img
+                                src="{{ asset('/images/logo/multiplex-logo2.png') }}" alt="Site Logo"></a>
                     </div>
                     <!--====== Nav Menu ======-->
                     <div class="nav-menu">
                         <!--====== Site Branding ======-->
                         <div class="mobile-logo mb-30 d-block d-xl-none">
-                            <a href="{{ url('/') }}" class="brand-logo"><img src="{{ asset('/images/logo/multiplex-logo.png') }}" alt="Site Logo"></a>
+                            <a href="{{ url('/') }}" class="brand-logo"><img
+                                    src="{{ asset('/images/logo/multiplex-logo.png') }}" alt="Site Logo"></a>
                         </div>
                         <!--=== Nav Search ===-->
                         <div class="nav-search mb-30 d-block d-xl-none ">
                             <form>
                                 <div class="form_group">
-                                    <input type="search" class="form_control search-input" placeholder="Search Here" name="search" required>
+                                    <input type="search" class="form_control search-input" placeholder="Search Here"
+                                        name="search" required>
                                     <button class="search-btn"><i class="fas fa-search"></i></button>
                                 </div>
                             </form>
@@ -278,9 +296,11 @@ $categories = CategoryAct::run();
                                 <li class="menu-item has-children"><a href="#">About Us</a>
                                     <ul class="sub-menu">
                                         <li><a href="{{ route('vision-and-misssion') }}">Vision & Mission</a></li>
-                                        <li><a href="{{ route('founder-and-management') }}">Founder & Management </a></li>
+                                        <li><a href="{{ route('founder-and-management') }}">Founder & Management </a>
+                                        </li>
                                         <li><a href="{{ route('group-of-companies') }}">Group of Companies </a></li>
-                                        <li><a href="{{ route('awards-and-recognitions') }}">Awards & Recognitions</a></li>
+                                        <li><a href="{{ route('awards-and-recognitions') }}">Awards & Recognitions</a>
+                                        </li>
                                         <li><a href="{{ route('team') }}">Team </a></li>
                                         <li><a href="{{ route('timeline') }}">Our 50 Years Journey</a></li>
                                     </ul>
@@ -290,20 +310,25 @@ $categories = CategoryAct::run();
                                         <li><a href="{{ route('r-and-d') }}">R & D</a></li>
                                         <li><a href="{{ route('infrastructure') }}">Infrastructure</a></li>
                                         <li><a href="{{ route('branches') }}">Branches </a></li>
-                                        <li><a href="{{ route('global-connect') }}">Global/International Connect</a></li>
+                                        <li><a href="{{ route('global-connect') }}">Global/International Connect</a>
+                                        </li>
                                     </ul>
                                 </li>
-                                <li class="menu-item has-children"><a href="{{ route('products.index') }}">Products</a>
+                                <li class="menu-item has-children"><a
+                                        href="{{ route('products.index') }}">Products</a>
                                     <ul class="sub-menu">
-                                        @foreach($categories as $category)
-                                        <li><a href="{{ route('category.products',['id' => $category->id]) }}">{{ $category->name}}</a></li>
+                                        @foreach ($categories as $category)
+                                            <li><a
+                                                    href="{{ route('category.products', ['id' => $category->id]) }}">{{ $category->name }}</a>
+                                            </li>
                                         @endforeach
                                     </ul>
                                 </li>
                                 <li class="menu-item has-children"><a href="#">Services</a>
                                     <ul class="sub-menu">
                                         <li><a href="{{ route('quality-testing') }}">Quality Testing</a></li>
-                                        <li><a href="{{ route('microbial-analysis-laboratory') }}">Microbial Analysis Laboratory</a></li>
+                                        <li><a href="{{ route('microbial-analysis-laboratory') }}">Microbial Analysis
+                                                Laboratory</a></li>
                                         <li><a href="{{ route('drone-services') }}">Drone Services</a></li>
                                         <li><a href="{{ route('gardening-services') }}">Gardening Services</a></li>
 
@@ -318,20 +343,23 @@ $categories = CategoryAct::run();
                                     </ul>
                                 </li>
                                 <li class="menu-item">
-                                    <div class="search-btn" data-toggle="modal" data-target="#search-modal"><i class="fa-solid fa-magnifying-glass"></i></div>
+                                    <div class="search-btn" data-toggle="modal" data-target="#search-modal"><i
+                                            class="fa-solid fa-magnifying-glass"></i></div>
                                 </li>
                             </ul>
                         </nav>
                         <!--====== Menu Button ======-->
                         <!-- mobile button -->
                         <div class="menu-button mt-40 d-xl-none">
-                            <a href="{{ route('contact') }}" data-toggle="modal" data-target="#sidebar-modal" class="main-btn secondary-btn">Quick Enquiry</a>
+                            <a href="{{ route('contact') }}" data-toggle="modal" data-target="#sidebar-modal"
+                                class="main-btn secondary-btn">Quick Enquiry</a>
                         </div>
                     </div>
                     <!--====== Nav Right Item ======-->
                     <div class="nav-right-item">
                         <div class="menu-button d-xl-block d-none">
-                            <a href="{{ route('contact') }}" data-toggle="modal" data-target="#sidebar-modal" class="main-btn primary-btn">Quick Enquiry</a>
+                            <a href="{{ route('contact') }}" data-toggle="modal" data-target="#sidebar-modal"
+                                class="main-btn primary-btn">Quick Enquiry</a>
                         </div>
                         <div class="navbar-toggler">
                             <span></span>
@@ -381,7 +409,8 @@ $categories = CategoryAct::run();
                                     <li><a href="{{ route('gallery') }}">Gallery</a></li>
                                     <li><a href="{{ route('success-stories') }}">Success Stories</a></li>
                                     <li><a href="#">News & Media</a></li>
-                                    <li><a href="#" data-toggle="modal" data-target="#myModal">Digital Payment</a></li>
+                                    <li><a href="#" data-toggle="modal" data-target="#myModal">Digital
+                                            Payment</a></li>
                                     <!-- <li><a href="#">FAQs</a></li> -->
                                 </ul>
                             </div>
@@ -396,7 +425,8 @@ $categories = CategoryAct::run();
 
                                     <li><a href="{{ route('home.life_at_multiplex') }}">Life @ Multiplex</a></li>
                                     <div class="hero-button wow fadeInUp" data-wow-delay=".7s">
-                                        <a href="{{ route('home.current_openings') }}" class="main-btn golden-btn mb-10">Current Openings</a>
+                                        <a href="{{ route('home.current_openings') }}"
+                                            class="main-btn golden-btn mb-10">Current Openings</a>
                                     </div>
                                 </ul>
                             </div>
@@ -439,6 +469,7 @@ $categories = CategoryAct::run();
         .nice-select .list {
             width: 100% !important;
         }
+
     </style>
     <!--====== End Footer ======-->
     <!--====== Back To Top  ======-->
@@ -453,8 +484,7 @@ $categories = CategoryAct::run();
     <!--====== Slick js ======-->
     <script src="{{ asset('/vendor/slick/slick.min.js') }}"></script>
     <!--====== Magnific js ======-->
-    <script src="{{ asset('/vendor/magnific-popup/dist/jquery.magnific-popup.min.js') }}">
-    </script>
+    <script src="{{ asset('/vendor/magnific-popup/dist/jquery.magnific-popup.min.js') }}"></script>
     <!--====== Isotope js ======-->
     <script src="{{ asset('/vendor/isotope.min.js') }}"></script>
     <!--====== Imagesloaded js ======-->
@@ -471,11 +501,11 @@ $categories = CategoryAct::run();
     <script src="{{ asset('/vendor/wow.min.js') }}"></script>
     <!--====== Main js ======-->
     <script src="{{ asset('/js/theme.js') }}"></script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
 
     <script>
         function num_validate(evt) {
@@ -521,9 +551,11 @@ $categories = CategoryAct::run();
                     $('.suggestions-list').remove();
 
                     // Additional code to display suggestions in a list
-                    var suggestionsList = $('<ul class="suggestions-list" style="background-color: white;"></ul>');
+                    var suggestionsList = $(
+                        '<ul class="suggestions-list" style="background-color: white;"></ul>');
                     suggestions.forEach(function(item) {
-                        suggestionsList.append('<li data-id="' + item.id + '">' + item.name + '</li>');
+                        suggestionsList.append('<li data-id="' + item.id + '">' + item.name +
+                            '</li>');
                     });
 
                     // Append the suggestions list below the input form
@@ -578,12 +610,14 @@ $categories = CategoryAct::run();
                         // Reset the form after 5 seconds
                         setTimeout(function() {
                             // Hide the success message
-                            form.find('.success-message').removeClass('d-block').addClass('d-none');
+                            form.find('.success-message').removeClass('d-block')
+                                .addClass('d-none');
 
                             form[0].reset();
 
                             // Clear the selected value in the select element
-                            form.find('select[name="department"]').prop('selectedIndex', 0);
+                            form.find('select[name="department"]').prop('selectedIndex',
+                                0);
 
                             // Close the modal (adjust the modal ID if needed)
                             $('#sidebar-modal').modal('hide');
@@ -619,7 +653,8 @@ $categories = CategoryAct::run();
 
                         // Reset the form and hide the service message after 5 seconds
                         setTimeout(function() {
-                            form.find('.service-message').removeClass('d-block').addClass('d-none');
+                            form.find('.service-message').removeClass('d-block')
+                                .addClass('d-none');
                             form[0].reset();
                         }, 5000);
                     },
