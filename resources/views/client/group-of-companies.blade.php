@@ -58,7 +58,7 @@
         <div class="page-title-inner text-center">
             <h1 class="page-title">Group of Companies </h1>
             <div class="gd-breadcrumb">
-                <span class="breadcrumb-entry"><a href="index.html">Home</a></span>
+                <span class="breadcrumb-entry"><a href="{{ url('/') }}">Home</a></span>
                 <span class="separator"></span>
                 <span class="breadcrumb-entry active">Group of Companies </span>
             </div>
@@ -76,7 +76,7 @@
         </div>
     </section>
     <div class="gd-breadcrumb">
-        <span class="breadcrumb-entry"><a href="index.html">Home | </a></span>
+        <span class="breadcrumb-entry"><a href="{{ url('/') }}">Home | </a></span>
         <span class="separator"></span>
         <span class="breadcrumb-entry active">Group of Companies </span>
     </div>

@@ -61,7 +61,6 @@
     <div class="preloader">
         <div class="loader">
             <div class="corners">
-
                 <img src="{{ asset('/images/loader-new1.png') }}" alt="Site Logo">
             </div>
         </div>

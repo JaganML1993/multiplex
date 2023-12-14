@@ -55,9 +55,9 @@
         <div class="page-title-inner text-center">
             <h1 class="page-title">Leaf Analysis Laboratory </h1>
             <div class="gd-breadcrumb">
-                <span class="breadcrumb-entry"><a href="index.html">Home</a></span>
+                <span class="breadcrumb-entry"><a href="{{ url('/') }}">Home</a></span>
                 <span class="separator"></span>
-                <span class="breadcrumb-entry active">Quality Testing </span>
+                <span class="breadcrumb-entry"><a href="{{ route('quality-testing') }}">Quality Testing </a></span>
                 <span class="separator"></span>
                 <span class="breadcrumb-entry active">Leaf Analysis Laboratory </span>
             </div>
@@ -69,15 +69,14 @@
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
-            <h1 class="page-title">Leaf Analysis Laboratory </h1>
-           
+            <h1 class="page-title">Leaf Analysis Laboratory </h1> 
         </div>
     </div>
 </section>
 <div class="gd-breadcrumb">
-                <span class="breadcrumb-entry"><a href="index.html">Home | </a></span>
+                <span class="breadcrumb-entry"><a href="{{ url('/') }}">Home | </a></span>
                 <span class="separator"></span>
-                <span class="breadcrumb-entry active">Quality Testing </span>
+                <span class="breadcrumb-entry"><a href="{{ route('quality-testing') }}">Quality Testing |</a></span>
                 <span class="separator"></span>
                 <span class="breadcrumb-entry active">Leaf Analysis Laboratory </span>
             </div></section>
