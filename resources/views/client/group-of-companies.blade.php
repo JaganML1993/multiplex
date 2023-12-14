@@ -144,7 +144,7 @@
 </section>
 
 
-<section class="features-seciton pt-100 pb-20  goc">
+{{-- <section class="features-seciton pt-100 pb-20  goc">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -169,10 +169,10 @@
 
         </div>
     </div>
-</section>
+</section> --}}
 
 
-<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
+<section class="features-seciton pt-100 pb-20 goc">
     <div class="container">
         <div class="row vision-row">
 
@@ -192,7 +192,7 @@
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/mapl-four.jpg') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-agricare.jpg') }}" alt="Group of companies">
                 </div>
             </div>
         </div>
@@ -200,13 +200,13 @@
 </section>
 
 
-<section class="features-seciton pt-100 pb-20 goc">
+<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/mnovers-five.jpg') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-movers.jpg') }}" alt="Group of companies">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -228,7 +228,7 @@
 </section>
 
 
-<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
+<section class="features-seciton pt-100 pb-20 goc">
     <div class="container">
         <div class="row vision-row">
 
@@ -248,7 +248,7 @@
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/bio-tech-new.jpg') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-mbt.jpg') }}" alt="Group of companies">
                 </div>
             </div>
         </div>
@@ -256,13 +256,13 @@
 </section>
 
 
-<section class="features-seciton pt-100 pb-20 goc">
+<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/anshul-new.jpg') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-anshul.jpg') }}" alt="Group of companies">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -287,7 +287,7 @@
 </section>
 
 
-<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
+<section class="features-seciton pt-100 pb-20 goc">
     <div class="container">
         <div class="row vision-row">
 
@@ -313,7 +313,7 @@
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/mug-new.jpg') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-mug.jpg') }}" alt="Group of companies">
                 </div>
             </div>
         </div>
@@ -321,13 +321,13 @@
 </section>
 
 
-<section class="features-seciton pt-100 pb-20 goc">
+<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/m-farming-new.jpg') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-mf2.jpg') }}" alt="Group of companies">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -352,7 +352,7 @@
 </section>
 
 
-<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
+<section class="features-seciton pt-100 pb-20 goc">
     <div class="container">
         <div class="row vision-row">
             <div class="col-lg-6">
@@ -377,7 +377,7 @@
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/gps1.png') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-gps.jpg') }}" alt="Group of companies">
                 </div>
             </div>
         </div>
@@ -385,13 +385,13 @@
 </section>
 
 
-<section class="features-seciton pt-100 pb-20 goc">
+<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
         <div class="row ">
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/safe-farm-fresh-new.jpg') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-msf.jpg') }}" alt="Group of companies">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -413,7 +413,7 @@
 </section>
 
 
-<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
+<section class="features-seciton pt-100 pb-20 goc">
     <div class="container">
         <div class="row vision-row">
             <div class="col-lg-6">
@@ -438,7 +438,7 @@
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/agriplex-new.jpg') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-agriplex.jpg') }}" alt="Group of companies">
                 </div>
             </div>
         </div>
@@ -446,13 +446,13 @@
 </section>
 
 
-<section class="features-seciton pt-100 pb-20 goc">
+<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
         <div class="row ">
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/m-drone-twelve.jpg') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-drone.jpg') }}" alt="Group of companies">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -479,7 +479,7 @@
 </section>
 
 
-<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
+<section class="features-seciton pt-100 pb-20 goc">
     <div class="container">
         <div class="row vision-row">
             <div class="col-lg-6">
@@ -501,7 +501,7 @@
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/forest-factree.jpg') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-factree.jpg') }}" alt="Group of companies">
                 </div>
             </div>
         </div>

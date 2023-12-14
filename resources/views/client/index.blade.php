@@ -192,8 +192,8 @@
                             Dedicated to the pursuit of the highest quality in agricultural yields, our devoted team of
                             scientists leverage cutting-edge technologies to develop innovative
                             crop nutrition and plant protection solutions at our facility. To know more about our advanced
-                            manufacturing facilities,
-                            <a class="link_a" href="{{ route('infrastructure') }}" target="_blank">click here.</a>
+                            R & D facilities,
+                            <a class="link_a" href="{{ route('r-and-d') }}" target="_blank">click here.</a>
                         </p>
                     </div>
                 </div>
@@ -410,8 +410,8 @@
                     alt="Karnataka Agro Chemicals"></a></div>
             <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-two.png') }}"
                     alt="Multiplex Fertlizer's Pvt. Ltd"></a></div>
-            <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-three.png') }}"
-                    alt="Mystique Apparels India Pvt. Ltd"></a></div>
+            {{-- <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-three.png') }}"
+                    alt="Mystique Apparels India Pvt. Ltd"></a></div> --}}
             <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-four.png') }}"
                     alt="Multiplex Agricare Pvt. Ltd"></a></div>
             <div class="slide-in-right slide"><img src="{{ asset('images/goc/goc-new-five.png') }}"
