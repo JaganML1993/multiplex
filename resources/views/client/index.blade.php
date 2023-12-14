@@ -152,7 +152,7 @@
                         <div class="hero-content">
                             <!--<p class="wow fadeInDown" data-wow-delay=".6s">Integrity, Quality and Trust, Transparency, <br/>Commitment, Relationship, Innovation.</p>-->
                             <h1 class="wow fadeInUp" data-wow-delay=".4s" style="color:#fff;">Innovators in Agricultural
-                                Solutions</h1>
+                                Sectors</h1>
                             <!--<div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">-->
                             <!--    <a href="{{ route('vision-and-misssion') }}" class="main-btn golden-btn mb-10">Know More</a>-->
                             <!--</div>-->
@@ -924,7 +924,6 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<<<<<<< HEAD
     <script type="text/javascript">
         $(document).ready(function() {
             $('.customer-logos').slick({
@@ -977,60 +976,4 @@
             });
         });
     </script>
-=======
-<script type="text/javascript">
-
-  $(document).ready(function(){
-    $('.customer-logos').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: false,
-    dots: false,
-    pauseOnHover: false,
-    prevArrow: '<i class="slick-prev fas fa-angle-left"></i>',
-    nextArrow: '<i class="slick-next fas fa-angle-right"></i>',
-    responsive: [{
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1
-      }
-    }, {
-      breakpoint: 520,
-      settings: {
-        slidesToShow: 1
-      }
-    }]
-    });
-  });
-</script>
-<script type="text/javascript">
-
-  $(document).ready(function(){
-    $('.customer-logos').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: false,
-    dots: false,
-    pauseOnHover: false,
-    prevArrow: '<i class="slick-prev fas fa-angle-left"></i>',
-    nextArrow: '<i class="slick-next fas fa-angle-right"></i>',
-    responsive: [{
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 3
-      }
-    }, {
-      breakpoint: 520,
-      settings: {
-        slidesToShow: 1
-      }
-    }]
-    });
-  });
-</script>
->>>>>>> 9eb83db164f877f30d14f4915a8a44b1c4ffea28
 @endsection
