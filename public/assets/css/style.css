@@ -8008,5 +8008,12 @@ ul.slick-dots li.slick-active {
             flex-direction: column-reverse !important;
         }
     }
+.single-pricing-item:hover{
+background-color: #d1d1d13b !important;
+opacity: 1;
 
+}
+.main-btn.golden-btn:hover{
+  background-color: #2A7D2E !important;
+}
 /*# sourceMappingURL=style.css.map */

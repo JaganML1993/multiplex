@@ -133,7 +133,7 @@
         <div class='cnt223'>
             <div class="popup-content">
                 <img src="{{ asset('images/welcome-banner.jpg') }}">
-                <a href='' class='close'>Close</a>
+                <a href='' class='close cls'>Close</a>
             </div>
         </div>
     </div>
@@ -908,7 +908,7 @@
             overlay.show();
             overlay.appendTo(document.body);
             $('.popup-onload').show();
-            $('.close').click(function() {
+            $('.cls').click(function() {
                 $('.popup-onload').hide();
                 overlay.appendTo(document.body).remove();
                 return false;

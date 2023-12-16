@@ -44,7 +44,6 @@
             background-size: 100% 100% !important;
 
         }
-
     }
 </style>
 
@@ -69,16 +68,17 @@
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
             <h1 class="page-title">Water Analysis Laboratory </h1>
-            <div class="gd-breadcrumb">
+          
+        </div>
+    </div>
+</section>
+<div class="gd-breadcrumb">
                 <span class="breadcrumb-entry"><a href="{{ url('/') }}">Home</a></span>
                 <span class="separator"></span>
                 <span class="breadcrumb-entry"><a href="{{ route('quality-testing') }}">Quality Testing |</a></span>
                 <span class="separator"></span>
                 <span class="breadcrumb-entry active">Water Analysis Laboratory </span>
-            </div>
-        </div>
-    </div>
-</section></section>
+            </div></section>
 <!--====== End Page-title-area section ======-->
 
 <!--====== Start Project-Details section ======-->
