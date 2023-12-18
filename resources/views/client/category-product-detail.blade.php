@@ -154,6 +154,178 @@
                                 <hr>
                                 @endif
 
+                                @if(!empty($product->active_ingredients))
+                                <h6>Active Incredients</h6>
+                                <div class="mt-10" style="display: flex;align-items: flex-start;gap: 10px">  <p class="mt-10"><?php echo $product->active_ingredients ?></p></div>
+                                <hr>
+                                @endif
+
+                                <!-- Mode Of Action -->
+                                @if(!empty($product->mode_of_action))
+                                <h6>Mode Of Action</h6>
+                                <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+                                    <p class="mt-10"><?php echo $product->mode_of_action ?></p>
+                                </div>
+                                <hr>
+                                @endif
+
+                                <!-- Precautions -->
+                                @if(!empty($product->precautions))
+                                <h6>Precautions</h6>
+                                <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+                                    <p class="mt-10"><?php echo $product->precautions ?></p>
+                                </div>
+                                <hr>
+                                @endif
+
+                                <!-- Special Features -->
+                                @if(!empty($product->special_features))
+                                <h6>Special Features</h6>
+                                <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+                                    <p class="mt-10"><?php echo $product->special_features ?></p>
+                                </div>
+                                <hr>
+                                @endif
+
+                                <!-- Time of Erection -->
+                                @if(!empty($product->time_of_erection))
+                                <h6>Time of Erection</h6>
+                                <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+                                    <p class="mt-10"><?php echo $product->time_of_erection ?></p>
+                                </div>
+                                <hr>
+                                @endif
+
+                                <!-- Note -->
+                                @if(!empty($product->note))
+                                <h6>Note</h6>
+                                <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+                                    <p class="mt-10"><?php echo $product->note ?></p>
+                                </div>
+                                <hr>
+                                @endif
+
+                                <!-- Plant Type -->
+                                @if(!empty($product->plant_type))
+                                <h6>Plant Type</h6>
+                                <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+                                    <p class="mt-10"><?php echo $product->plant_type ?></p>
+                                </div>
+                                <hr>
+                                @endif
+
+                                <!-- Plant Height -->
+@if(!empty($product->plant_height))
+<h6>Plant Height</h6>
+<div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+    <p class="mt-10"><?php echo $product->plant_height ?></p>
+</div>
+<hr>
+@endif
+
+<!-- Duration -->
+@if(!empty($product->duration))
+<h6>Duration</h6>
+<div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+    <p class="mt-10"><?php echo $product->duration ?></p>
+</div>
+<hr>
+@endif
+
+<!-- Fruit Shape -->
+@if(!empty($product->fruit_shape))
+<h6>Fruit Shape</h6>
+<div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+    <p class="mt-10"><?php echo $product->fruit_shape ?></p>
+</div>
+<hr>
+@endif
+
+<!-- Fruit Weight -->
+@if(!empty($product->fruit_weight))
+<h6>Fruit Weight</h6>
+<div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+    <p class="mt-10"><?php echo $product->fruit_weight ?></p>
+</div>
+<hr>
+@endif
+
+<!-- Crud weight -->
+@if(!empty($product->crud_weight))
+<h6>Crud Weight</h6>
+<div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+    <p class="mt-10"><?php echo $product->crud_weight ?></p>
+</div>
+<hr>
+@endif
+
+<!-- Fruit Color -->
+@if(!empty($product->fruit_color))
+<h6>Fruit Color</h6>
+<div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+    <p class="mt-10"><?php echo $product->fruit_color ?></p>
+</div>
+<hr>
+@endif
+
+<!-- Fruit Length -->
+@if(!empty($product->fruit_length))
+<h6>Fruit Length</h6>
+<div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+    <p class="mt-10"><?php echo $product->fruit_length ?></p>
+</div>
+<hr>
+@endif
+@if(!empty($product->pod_length))
+    <h6>Pod Length</h6>
+    <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+        <p class="mt-10">{{ $product->pod_length }}</p>
+    </div>
+    <hr>
+@endif
+
+@if(!empty($product->flowering))
+    <h6>Flowering</h6>
+    <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+        <p class="mt-10">{{ $product->flowering }}</p>
+    </div>
+    <hr>
+@endif
+
+@if(!empty($product->fruit_bearing))
+    <h6>Fruit Bearing</h6>
+    <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+        <p class="mt-10">{{ $product->fruit_bearing }}</p>
+    </div>
+    <hr>
+@endif
+
+@if(!empty($product->root_length))
+    <h6>Root Length</h6>
+    <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+        <p class="mt-10">{{ $product->root_length }}</p>
+    </div>
+    <hr>
+@endif
+
+@if(!empty($product->harvesting))
+    <h6>Harvesting</h6>
+    <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+        <p class="mt-10">{{ $product->harvesting }}</p>
+    </div>
+    <hr>
+@endif
+
+@if(!empty($product->package_of_practices))
+    <h6>Package Of Practices</h6>
+    <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+        <p class="mt-10">{{ $product->package_of_practices }}</p>
+    </div>
+    <hr>
+@endif
+
+
+
                             </div>
                         </div>
                     </div>
