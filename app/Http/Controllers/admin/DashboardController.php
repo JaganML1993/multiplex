@@ -27,8 +27,15 @@ class DashboardController extends Controller
     {
         $folder = 'uploads/category';
         $file_name = UploadImageAct::run($folder, $request->image);
+        $folder = 'uploads/products';
+        if ($request->hasFile('catelog_link')) {
+            $catalogPdf = $request->file('catelog_link');
+            $fileName = time() . '.' . $catalogPdf->extension();
+            $catalogPdf->move(public_path($folder), $fileName);
 
-        Category::create(['name' => $request->name, 'status' => $request->status, 'image' => $file_name, 'description' => $request->description]);
+            $catelog_link = "$folder/$fileName";
+        }
+        Category::create(['name' => $request->name, 'status' => $request->status, 'image' => $file_name, 'description' => $request->description,'catelog_link' => $catelog_link]);
         return redirect('admin/category')->with('status', 'Category saved successfully');
     }
 
@@ -48,14 +55,35 @@ class DashboardController extends Controller
             $data['image'] = $file_name;
         }
 
-        Category::where('id', $request->id)->update($data);
+        $c = Category::where('id', $request->id)->first();
+
+        if ($request->hasFile('catelog_link')) {
+            $folder = 'uploads/category';
+            $catalogPdf = $request->file('catelog_link');
+            $fileName = time() . '.' . $catalogPdf->extension();
+            $catalogPdf->move(public_path($folder), $fileName);
+
+            $data['catelog_link'] = "$folder/$fileName";
+        }else{
+            $data['catelog_link'] = $c->catelog_link;
+
+        }
+        
+
+        $update = Category::where('id', $request->id)->update($data);
 
         return redirect('admin/category')->with('status', 'Category updated successfully');
     }
 
     public function delete_category($id)
     {
-        Category::where('id', $id)->delete();
+          // Step 1: Retrieve the related products
+        $category = Category::find($id);
+        $relatedProducts = $category->products;
+        $category->products()->delete();
+        // Step 2: Delete the category and its related products
+        $category->delete();
+      
         return redirect('admin/category')->with('status', 'Category deleted successfully');
     }
 

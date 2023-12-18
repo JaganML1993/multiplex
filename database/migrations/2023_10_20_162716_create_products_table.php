@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('slug')->nullable();
             $table->string('front_image')->nullable();
+            $table->string('image')->nullable();
             $table->string('back_image')->nullable();
             $table->text('benefits')->nullable();
             $table->tinyInteger('status')->nullable();
@@ -29,8 +30,8 @@ return new class extends Migration
             $table->text('dosage')->nullable();
             $table->text('packing')->nullable();
             $table->text('composition')->nullable();
-            $table->foreignIdFor(Category::class)->nullable()->constrained();
-            $table->foreignIdFor(SubCategory::class)->nullable()->constrained();
+            $table->foreignIdFor(Category::class)->nullable()->constrained()->onDelete('cascade');
+            $table->foreignIdFor(SubCategory::class)->nullable()->constrained()->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });

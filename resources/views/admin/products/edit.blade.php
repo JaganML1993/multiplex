@@ -30,6 +30,17 @@
                                 @endif
                             </div>
 
+                            <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-name">Image<span class="required_star">*</span></label>
+                                <input type="file" class="form-control" name="image" accept="image/png, image/jpeg">
+                                @if ($data->image)
+                                <a href="{{ url('').'/'.$data->image }}" target="_blank"><img src="{{ url('').'/'.$data->image }}" style="width:40%; margin-top: 10px;"></a>
+                                @endif
+                                @if($errors->has('image'))
+                                <div class="error">{{ $errors->first('image') }}</div>
+                                @endif
+                            </div>
+
                             @php
                             if ($data->front_image){
                                 $required = '';
@@ -67,7 +78,7 @@
                             </div>
 
                             <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-name">Benefits<span class="required_star">*</span></label>
+                                <label class="col-form-label" for="basic-default-name">Benefits</label>
                                 <textarea class="form-control" name="benefits" id="benefits" rows="4">{{$data->benefits}}</textarea>
                                 @if($errors->has('benefits'))
                                 <div class="error">{{ $errors->first('benefits') }}</div>
@@ -109,16 +120,7 @@
                                 @endif
                             </div>
 
-                            <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-name">Catalog PDF</label>
-                                <input type="file" class="form-control" name="catelog_link" accept=".pdf" />
-                                @if($errors->has('catelog_link'))
-                                    <div class="error">{{ $errors->first('catelog_link') }}</div>
-                                @endif
-                                @if($data->catelog_link)
-                                <span>{{ $data->catelog_link }}</span>
-                                @endif
-                            </div>
+                            
 
                         </div>
                         <br>

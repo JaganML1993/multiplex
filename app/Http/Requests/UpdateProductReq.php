@@ -27,16 +27,16 @@ class UpdateProductReq extends FormRequest
             'name' => ['filled', 'min:3', 'max:50'],
             'front_image' => ['filled', 'mimes:jpeg,png,jpg', 'max:2048'],
             'back_image' => ['filled', 'mimes:jpeg,png,jpg', 'max:2048'],
-            'benefits' => ['filled'],
+            'benefits' => ['nullable'],
             'category_id' => ['filled'],
-            'sub_category_id' => ['filled'],
+            //'sub_category_id' => ['filled'],
             'status' => ['filled'],
             'video_link' => ['nullable', 'string'],
             'catelog_link' => ['nullable', 'file', 'mimes:pdf', 'max:10240'], // max:10240 is the file size limit in kilobytes (10 MB)
-            'crop' => ['filled'],
-            'dosage' => ['filled'],
-            'packing' => ['filled'],
-            'composition' => ['filled'],
+            'crop' => ['nullable'],
+            'dosage' => ['nullable'],
+            'packing' => ['nullable'],
+            //'composition' => ['filled'],
         ];
     }
 }

@@ -31,6 +31,14 @@
                             </div>
 
                             <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-name">Image<span class="required_star">*</span></label>
+                                <input type="file" class="form-control" name="image" accept="image/png, image/jpeg">
+                                @if($errors->has('image'))
+                                <div class="error">{{ $errors->first('image') }}</div>
+                                @endif
+                            </div>
+
+                            <div class="col-md-4">
                                 <label class="col-form-label" for="basic-default-name">Front Image<span class="required_star">*</span></label>
                                 <input type="file" class="form-control" name="front_image" accept="image/png, image/jpeg">
                                 @if($errors->has('front_image'))
@@ -47,7 +55,7 @@
                             </div>
 
                             <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-name">Benefits<span class="required_star">*</span></label>
+                                <label class="col-form-label" for="basic-default-name">Benefits</label>
                                 <textarea class="form-control" name="benefits" id="benefits" rows="4"></textarea>
                                 @if($errors->has('benefits'))
                                 <div class="error">{{ $errors->first('benefits') }}</div>
@@ -86,13 +94,6 @@
                                 @endif
                             </div>
 
-                            <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-name">Catalog PDF</label>
-                                <input type="file" class="form-control" name="catelog_link" accept=".pdf" />
-                                @if($errors->has('catelog_link'))
-                                    <div class="error">{{ $errors->first('catelog_link') }}</div>
-                                @endif
-                            </div>
 
                         </div>
                         <br>

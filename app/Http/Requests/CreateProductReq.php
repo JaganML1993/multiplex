@@ -26,8 +26,9 @@ class CreateProductReq extends FormRequest
         return [
             'name' => ['required', 'min:3', 'max:50', 'unique:products,name'],
             'front_image' => ['required', 'mimes:jpeg,png,jpg', 'max:2048'],
+            'image' => ['required', 'mimes:jpeg,png,jpg', 'max:2048'],
             'back_image' => ['nullable', 'mimes:jpeg,png,jpg', 'max:2048'],
-            'benefits' => ['required'],
+            'benefits' => ['nullable'],
             'category' => ['required'],
             'subcategory' => ['nullable'],
             'status' => ['required'],
