@@ -59,7 +59,7 @@
                             }
                             @endphp
                             <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-name">Thumbnail<span class="required_star">*</span></label>
+                                <label class="col-form-label" for="basic-default-name">Category Thumbnail<span class="required_star">*</span></label>
                                 <input type="file" class="form-control" {{ $required }} name="image" accept="image/png, image/jpeg">
                                 @if ($data->image)
                                 <a href="{{ url('').'/'.$data->image }}" target="_blank"><img src="{{ url('').'/'.$data->image }}" style="width:40%; margin-top: 10px;"></a>

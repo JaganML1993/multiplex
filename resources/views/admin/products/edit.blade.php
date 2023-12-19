@@ -23,7 +23,7 @@
                         <div class="row mb-3">
 
                             <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-name">Name<span class="required_star">*</span></label>
+                                <label class="col-form-label" for="basic-default-name">Product Name<span class="required_star">*</span></label>
                                 <input type="text" class="form-control" name="name" value="{{$data->name}}"/>
                                 @if($errors->has('name'))
                                 <div class="error">{{ $errors->first('name') }}</div>
@@ -31,7 +31,7 @@
                             </div>
 
                             <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-name">Image<span class="required_star">*</span></label>
+                                <label class="col-form-label" for="basic-default-name">Main Image<span class="required_star">*</span></label>
                                 <input type="file" class="form-control" name="image" accept="image/png, image/jpeg">
                                 @if ($data->image)
                                 <a href="{{ url('').'/'.$data->image }}" target="_blank"><img src="{{ url('').'/'.$data->image }}" style="width:40%; margin-top: 10px;"></a>

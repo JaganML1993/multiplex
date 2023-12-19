@@ -3,7 +3,7 @@
 @include('client.product-enquiry')
 
 <!--====== Start CTA Section  ======-->
-<section class="cta-bg-section bg_cover pt-100 p-r z-1" style="background-image: url(assets/images/bg33.jpg);">
+<section class="cta-bg-section bg_cover pt-100 p-r z-1" style="background-image: url({{url('assets/images/bg33.jpg')}});">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">

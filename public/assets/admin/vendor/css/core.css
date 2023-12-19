@@ -3835,6 +3835,14 @@ textarea.form-control-lg {
   color: #fff;
 }
 
+.alert-warning {
+  color: #ffffff;
+  background-color: #009f2f;
+  border-color: #000000;
+  font-size: 18px;
+  text-align: center;
+}
+
 .card {
   position: relative;
   display: flex;
