@@ -49,7 +49,7 @@
 </style>
 <!--====== Start Page-title-area section ======-->
 <section class="page-title-area text-white bg_cover desktop-view"
-    style="background-image: url(assets/images/fertilizer-header-img.jpg);">
+    style="background-image: url({{url('assets/images/fertilizers-header-banner1140x406.webp')}});">
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
@@ -66,7 +66,7 @@
 </section>
 <section class="mobile-view">
 <section class="page-title-area text-white bg_cover"
-    style="background-image: url(assets/images/fertilizer-header-img.jpg);">
+    style="background-image: url(assets/images/fertilizers-header-banner1140x406.webp);">
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">

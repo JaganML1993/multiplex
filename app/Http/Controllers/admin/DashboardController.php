@@ -28,12 +28,14 @@ class DashboardController extends Controller
         $folder = 'uploads/category';
         $file_name = UploadImageAct::run($folder, $request->image);
         $folder = 'uploads/products';
-        if ($request->hasFile('catelog_link')) {
+        if (isset($request->catelog_link) && $request->hasFile('catelog_link')) {
             $catalogPdf = $request->file('catelog_link');
             $fileName = time() . '.' . $catalogPdf->extension();
             $catalogPdf->move(public_path($folder), $fileName);
 
             $catelog_link = "$folder/$fileName";
+        }else{
+            $catelog_link = null;
         }
         Category::create(['name' => $request->name, 'status' => $request->status, 'image' => $file_name, 'description' => $request->description,'catelog_link' => $catelog_link]);
         return redirect('admin/category')->with('status', 'Category saved successfully');
