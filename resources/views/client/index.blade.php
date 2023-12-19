@@ -126,6 +126,19 @@
             line-height: 1.5;
         }
         }
+        @media (min-width:1679px){
+.skill-two_image-boxss {
+width: 100% !important;
+}
+.features-wrapper-two {
+    max-width: 100% !important;
+}
+.about-two_image-box{
+margin-inline-start: -115px !important;}
+.in-img{
+    margin-left: 7rem !important;
+}
+}
     </style>
 
 
@@ -452,7 +465,7 @@
             <div class="row align-items-lg-center">
                 <div class="col-xl-6 col-lg-12">
                     <!--====== About Image Box ======-->
-                    <div class="skill-two_image-box mb-20 p-r z-1 wow fadeInRight">
+                    <div class="skill-two_image-box skill-two_image-boxss mb-20 p-r z-1 wow fadeInRight">
                         <img src="{{ asset('images/about-bg-2.jpg') }}" class="" alt="Skill Image">
                     </div>
                 </div>
@@ -889,7 +902,7 @@
                             <div class="about-two_image-box wow fadeInLeft">
                                 <a href="https://play.google.com/store/apps/details?id=com.elevatozloyalty.sambrama&pli=1"
                                     target="_blank"><img src="{{ asset('images/playstore-logo.png') }}"
-                                        alt=""></a>
+                                        alt="" class="in-img"></a>
                             </div>
                         </div>
                     </div>
