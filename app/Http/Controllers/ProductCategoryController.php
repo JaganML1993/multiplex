@@ -21,8 +21,9 @@ class ProductCategoryController extends Controller
 
     public function categoryProductDetail($productId){
         $product = Product::find($productId);
+        $category = Category::where('id',$product->category_id)->first();
 
-        return view('client.category-product-detail')->with('product', $product);
+        return view('client.category-product-detail', compact('product', 'category'));
     }
 
     

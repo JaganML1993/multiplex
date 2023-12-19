@@ -2,10 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
-use App\Http\Controllers\Admin\AuthController;
-use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\OpeningController;
-use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\admin\AuthController;
+use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\OpeningController;
+use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProductCategoryController;

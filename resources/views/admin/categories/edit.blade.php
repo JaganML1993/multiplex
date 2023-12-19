@@ -31,6 +31,17 @@
                                 <label class="col-form-label" for="basic-default-name">Description<span class="required_star">*</span></label>
                                 <textarea class="form-control" name="description" rows="4" required>{{ $data->description }}</textarea>
                             </div>
+
+                            <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-name">Catalog PDF</label>
+                                <input type="file" class="form-control" name="catelog_link" accept=".pdf" />
+                                @if($errors->has('catelog_link'))
+                                    <div class="error">{{ $errors->first('catelog_link') }}</div>
+                                @endif
+                                @if($data->catelog_link)
+                                <span>{{ $data->catelog_link }}</span>
+                                @endif
+                            </div>
       
                             <div class="col-md-4">
                                 <label class="col-form-label" for="basic-default-name">Status<span class="required_star">*</span></label>

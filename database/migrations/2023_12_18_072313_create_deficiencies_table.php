@@ -13,13 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('deficiencies', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 100);
-            $table->text('description');
-            $table->string('image', 191);
-            $table->integer('status')->default('1');
-            $table->text('catelog_link')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('deficiencies');
     }
 };
