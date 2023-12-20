@@ -4,7 +4,7 @@
                 <!--====== Single Gallery Item ======-->
                 <div class="single-project-item mb-30 wow fadeInLeft">
                     <div class="project-img">
-                         <a href="{{ route('category.product.detail',['id' => $product->id]) }}"><img src="{{ url('').'/'.$product->front_image }}" alt="Gallery Image"></a>
+                         <a href="{{ route('category.product.detail',['id' => $product->id]) }}"><img src="{{ url('').'/'.$product->image }}" alt="Gallery Image"></a>
                         <div class="hover-content">
                             <div class="text text-white">
                                 <h3 class="title"><a href="{{ route('category.product.detail',['id' => $product->id]) }}">{{$product->name}}</a></h3>

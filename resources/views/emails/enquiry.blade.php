@@ -40,7 +40,9 @@
                             <!-- Body content -->
                             <tr>
                                 <td class="content-cell" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; max-width: 100vw; padding: 32px;">
-                                    <h1 style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; color: #3d4852; font-size: 18px; font-weight: bold; margin-top: 0; text-align: left;">New Enquiry</h1>
+                                    <h1 style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; color: #3d4852; font-size: 18px; font-weight: bold; margin-top: 0; text-align: left;">Multiplex Group of Companies</h1>
+                                    <br>
+                                    <h1 style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative; color: #3d4852; font-size: 18px; font-weight: bold; margin-top: 0; text-align: left;">New Enquiry - {{ $data['tokenid']??'' }}</h1>
 
                                     <p><strong>Name:</strong> {{ $data['name'] }}</p>
                                     <p><strong>Phone:</strong> {{ $data['phone'] }}</p>
@@ -50,6 +52,9 @@
                                     <p><strong>Department:</strong> {{ $data['department'] }}</p>
                                     @endisset
                                     <p><strong>Message:</strong> {{ $data['message'] }}</p>
+                                    
+                                    <p style="margin-top: 10px"><b>Thankyou!</b> </p>
+
                                 </td>
                             </tr>
                         </table>

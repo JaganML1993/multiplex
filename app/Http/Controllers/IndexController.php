@@ -51,7 +51,8 @@ class IndexController extends Controller
 
             $departmentEmail = $department->email??'';
 
-
+            $tokenid = str_pad($enquiry->id, 3, '0', STR_PAD_LEFT);
+           
           // Send email
         $data = [
             'id' => $enquiry->id,
@@ -62,11 +63,12 @@ class IndexController extends Controller
             'message' => $request->input('message')??'',
             'department' => $department->name??'',
             'type' => $request->type,
+            'tokenid' => $tokenid
         ];
 
         if($request->type == 1){
 
-            $serialId = "DEPT" . str_pad($enquiry->id, 4, '0', STR_PAD_LEFT);
+            $serialId = "MULT/GENE/" . $tokenid;
 
             Mail::to($departmentEmail)
             ->cc('analysis@multiplexgroup.com')
@@ -74,16 +76,16 @@ class IndexController extends Controller
 
         }elseif($request->type == 2){
 
-            $serialId = "PROD" . str_pad($enquiry->id, 4, '0', STR_PAD_LEFT);
+            $serialId = "MULT/PROD/" . $tokenid;
 
 
-            Mail::to('analysis@multiplexgroup.com')
+            Mail::to('mco@multiplexgroup.com')
             ->cc('analysis@multiplexgroup.com')
             ->send(new \App\Mail\Enquiry($data));
 
         }elseif($request->type == 3){
 
-            $serialId = "SERV" . str_pad($enquiry->id, 4, '0', STR_PAD_LEFT);
+            $serialId = "MULT/SERV/" . $tokenid;
 
             Mail::to('analysis@multiplexgroup.com')
             ->cc('analysis@multiplexgroup.com')            
@@ -215,7 +217,7 @@ class IndexController extends Controller
         $attachmentName = basename($image_path);
 
         Mail::to($departmentEmail)
-            ->cc('analysis@multiplexgroup.com')
+            ->cc('recruitment@multiplexgroup.com')
             ->send(new \App\Mail\JobApplication($data, $attachmentPath, $attachmentName));
 
         // Return a response or redirect as needed
