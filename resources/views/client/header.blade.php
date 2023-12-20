@@ -107,7 +107,7 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form_group">
-                                                        <input type="text" class="form_control"
+                                                        <input type="text" class="form_control" onkeypress="return /[a-zA-Z,' ']/i.test(event.key)"
                                                             placeholder="Your Name" name="name" required>
                                                     </div>
                                                 </div>
@@ -137,7 +137,7 @@
                                                 @endphp
                                                 <div class="col-lg-4">
                                                     <div class="form_group">
-                                                        <select class="form_control " name="department">
+                                                        <select class="form_control" name="department" required>
                                                             <option selected disabled>Select Department</option>
                                                             @foreach ($departments as $department)
                                                                 <option value="{{ $department->id }}">
@@ -149,7 +149,7 @@
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="form_group">
-                                                        <textarea name="message" class="form_control" placeholder="Message"></textarea>
+                                                        <textarea name="message" class="form_control" placeholder="Message" required></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12">

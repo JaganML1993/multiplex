@@ -19,7 +19,7 @@
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="form_group">
-                                                    <input type="text" class="form_control" placeholder="Your Name"
+                                                    <input type="text" class="form_control" onkeypress="return /[a-zA-Z,' ']/i.test(event.key)" placeholder="Your Name"
                                                         name="name" required>
                                                 </div>
                                             </div>
@@ -46,7 +46,7 @@
                                             <div class="col-lg-12">
                                                 <div class="form_group">
                                                     <textarea name="message" class="form_control"
-                                                        placeholder="Message"></textarea>
+                                                        placeholder="Message" required></textarea>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
