@@ -199,10 +199,8 @@ if(isset($title)){
         <div class="layout-page">
           <!-- Navbar -->
 
-          <nav
-            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
-            id="layout-navbar"
-          >
+          <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            id="layout-navbar" style="background-color: rgb(0 164 90) !important;">
             <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
               <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
                 <i class="bx bx-menu bx-sm"></i>
@@ -221,7 +219,7 @@ if(isset($title)){
                     aria-label="Search..."
                   />
                 </div> --}}
-                <h3>Welcome To Multiplex Group</h3>
+                <h3 style="margin-top: 10px;">Welcome To <span style="font-weight:600;color:#fff;">Multiplex Group</span></h3>
               </div>
               <!-- /Search -->
 

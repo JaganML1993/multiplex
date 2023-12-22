@@ -96,8 +96,11 @@
 
 
                         </div>
-                        <br>
-                        <hr>
+
+                        <div class="gap1" style="margin-top:20px;">
+                            <hr style="background-color:green; height:2px;">
+                        </div>
+
                         <div class="row mb-3">
                             <div class="col-md-4">
                                 <label class="col-form-label" for="basic-default-name">Crop</label>
@@ -311,6 +314,11 @@
                                 @endif
                             </div>
 
+                            <div class="gap1" style="margin-top:20px;">
+                                <hr style="background-color:green; height:2px;">
+                            </div>
+                            
+
                             <div class="col-md-4">
                                 <label class="col-form-label" for="basic-default-package-of-practices">Type of Deficiency</label>
                                 <input type="text" class="form-control" name="type_of_deficiency" id="type_of_deficiency">
@@ -326,6 +334,7 @@
                                     <div class="error">{{ $errors->first('image1') }}</div>
                                 @endif
                             </div>
+
                             <div class="col-md-4">
                                 <label class="col-form-label" for="basic-default-package-of-practices">Image 2</label>
                                 <input type="file" class="form-control" name="image2" id="image2">
@@ -333,14 +342,16 @@
                                     <div class="error">{{ $errors->first('image2') }}</div>
                                 @endif
                             </div>
-                            <div class="col-md-4">
+
+                            <div class="col-md-6">
                                 <label class="col-form-label" for="basic-default-package-of-practices">Role of Deficiency</label>
                                 <input type="text" class="form-control" name="role_of_deficiency" id="role_of_deficiency">
                                 @if($errors->has('role_of_deficiency'))
                                     <div class="error">{{ $errors->first('role_of_deficiency') }}</div>
                                 @endif
                             </div>
-                            <div class="col-md-4">
+
+                            <div class="col-md-6">
                                 <label class="col-form-label" for="basic-default-time-of-erection">Role of Deficiency Description</label>
                                 <textarea class="form-control" name="role_description" id="role_description" rows="4"></textarea>
                                 @if($errors->has('role_description'))
@@ -348,14 +359,14 @@
                                 @endif
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <label class="col-form-label" for="basic-default-package-of-practices">Deficiency</label>
                                 <input type="text" class="form-control" name="deficiency" id="deficiency">
                                 @if($errors->has('deficiency'))
                                     <div class="error">{{ $errors->first('deficiency') }}</div>
                                 @endif
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <label class="col-form-label" for="basic-default-time-of-erection">Deficiency Description</label>
                                 <textarea class="form-control" name="deficiency_description" id="deficiency_description" rows="4"></textarea>
                                 @if($errors->has('deficiency_description'))
