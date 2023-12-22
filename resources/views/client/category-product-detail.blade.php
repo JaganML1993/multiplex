@@ -337,46 +337,34 @@
 <section class="service-details-section pt-50 pb-50 bg-dark-home">
             <div class="container">
                 <div class="pricing-title mb-30 text-center">
-                    <h3 class="title">Potassium (K)</h3>
+                    <h3 class="title">{{ $product->type_of_deficiency ??''}}</h3>
                 </div>
                 <div class="row">
 				    <div class="col-xl-6 col-lg-6">
                         <!--====== Sidebar Widget Area ======-->
                             <div class="sidebar-widget product-back-img widget-service-nav gray-bg mb-30 wow fadeInUp">
-                                <div class="block-image wow fadeInDown rad10"> <img src="{{ asset('/images/potassium-img1.jpg') }}" alt="Gallery Image"></div>
+                                <div class="block-image wow fadeInDown rad10"> <img src="{{ url('').'/'.$product->image1 }}" alt="Gallery Image"></div>
                             </div>
                     </div>
 
                     <div class="col-xl-6 col-lg-6">
                         <!--====== Sidebar Widget Area ======-->
                             <div class="sidebar-widget product-back-img widget-service-nav gray-bg mb-30 wow fadeInUp">
-                                <div class="block-image wow fadeInDown rad10"> <img src="{{asset('/images/potassium-img2.jpg') }}" alt="Gallery Image"></div>
+                                <div class="block-image wow fadeInDown rad10"> <img src="{{ url('').'/'.$product->image2 }}" alt="Gallery Image"></div>
                             </div>
                     </div>
 					
                     <div class="col-xl-6 col-lg-6 padprod">
                         <div class="service-info-wrapper pr-lg-40 wow fadeInDown">
-                            <h6>Role of Potassium</h6>
-                            {{-- <p>Unde omnis iste natus error voluptatem accusantium doloremque laudantium totam rem aperiam </p> --}}
-                            <ul class="check-style-one pt-20">
-                                        <li><i class="fa fa-check"></i>It is absorbed by plants in larger amounts than any other mineral element except nitrogen and in some cases, calcium</li>
-                                        <li><i class="fa fa-check"></i>It helps in protein synthesis, photosynthesis</li>
-                                        <li><i class="fa fa-check"></i>Improves overall plant vigor and disease resistance</li>
-                                        <li><i class="fa fa-check"></i>Encourages root growth and fruit quality</li>
-                                        <li><i class="fa fa-check"></i>Enhances drought and cold tolerance</li>
-                                        <li><i class="fa fa-check"></i>Second most used nutrient</li>   
-                            </ul>
+                            <h6> {{ $product->role_of_deficiency ??''}}</h6>
+                            {!! $product->role_description ??'' !!}
                         </div>
                     </div>
 
                     <div class="col-xl-6 col-lg-6 padprod">
                         <div class="service-info-wrapper pr-lg-40 wow fadeInDown">
-                            <h6>Deficiency</h6>
-                            {{-- <p>Unde omnis iste natus error voluptatem accusantium doloremque laudantium totam rem aperiam </p> --}}
-                            <ul class="check-style-one pt-20">
-                                        <li><i class="fa fa-check"></i>Yellow translucent spots on older leaves and marginal chlorosis</li>
-                                        <li><i class="fa fa-check"></i>Browning of whole plant</li>
-                            </ul>
+                            <h6> {{ $product->deficiency ??''}}</h6>
+                            {!! $product->deficiency_description ??'' !!}
                         </div>
                     </div>
                     

@@ -56,7 +56,15 @@ class UpdateProductReq extends FormRequest
             'fruit_bearing' => ['nullable', 'string'],
             'root_length' => ['nullable', 'string'],
             'harvesting' => ['nullable', 'string'],
-            'package_of_practices' => ['nullable', 'string']
+            'package_of_practices' => ['nullable', 'string'],
+
+            'type_of_deficiency' => ['nullable'],
+            'image1' => ['nullable'],
+            'image2' => ['nullable'],
+            'role_of_deficiency' => ['nullable'],
+            'role_description' => ['nullable'],
+            'deficiency' => ['nullable'],
+            'deficiency_description' => ['nullable']
         ];
     }
 }

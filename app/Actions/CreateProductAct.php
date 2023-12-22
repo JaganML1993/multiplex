@@ -45,6 +45,14 @@ class CreateProductAct
             'root_length' => $params['root_length'] ?? null,
             'harvesting' => $params['harvesting'] ?? null,
             'package_of_practices' => $params['package_of_practices'] ?? null,
+            'type_of_deficiency' => $params['type_of_deficiency'] ?? null,
+            'role_of_deficiency' => $params['role_of_deficiency'] ?? null,
+            'role_description' => $params['role_description'] ?? null,
+            'deficiency' => $params['deficiency'] ?? null,
+            'deficiency_description' => $params['deficiency_description'] ?? null,
+            
+            
+
         ];
 
         $folder = 'uploads/products';
@@ -60,6 +68,14 @@ class CreateProductAct
             $insertData['back_image'] = UploadImageAct::run($folder, $params['back_image']);
         }
 
+        if(isset($params['image1']) && !empty($params['image1'])){
+            $insertData['image1'] = UploadImageAct::run($folder, $params['image1']);
+        }
+        
+        if(isset($params['image2']) && !empty($params['image2'])){
+            $insertData['image2'] = UploadImageAct::run($folder, $params['image2']);
+        }
+        
       
         return Product::create($insertData);
     }

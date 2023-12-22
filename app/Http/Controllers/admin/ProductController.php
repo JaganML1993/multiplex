@@ -116,6 +116,17 @@ class ProductController extends Controller
             $data['catelog_link'] = "$folder/$fileName";
         }
 
+        if ($request->hasFile('image1')) {
+            if(isset($request->image1)){
+                $data['image1'] = UploadImageAct::run($folder, $request->image1);
+            }
+        }
+        if ($request->hasFile('image2')) {
+            if(isset($request->image2)){
+                $data['image2'] = UploadImageAct::run($folder, $request->image2);
+            }
+        }
+
         $product->update($data);
        
         

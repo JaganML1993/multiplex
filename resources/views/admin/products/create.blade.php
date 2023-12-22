@@ -311,6 +311,58 @@
                                 @endif
                             </div>
 
+                            <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-package-of-practices">Type of Deficiency</label>
+                                <input type="text" class="form-control" name="type_of_deficiency" id="type_of_deficiency">
+                                @if($errors->has('type_of_deficiency'))
+                                    <div class="error">{{ $errors->first('type_of_deficiency') }}</div>
+                                @endif
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-package-of-practices">Image 1</label>
+                                <input type="file" class="form-control" name="image1" id="image1">
+                                @if($errors->has('image1'))
+                                    <div class="error">{{ $errors->first('image1') }}</div>
+                                @endif
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-package-of-practices">Image 2</label>
+                                <input type="file" class="form-control" name="image2" id="image2">
+                                @if($errors->has('image2'))
+                                    <div class="error">{{ $errors->first('image2') }}</div>
+                                @endif
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-package-of-practices">Role of Deficiency</label>
+                                <input type="text" class="form-control" name="role_of_deficiency" id="role_of_deficiency">
+                                @if($errors->has('role_of_deficiency'))
+                                    <div class="error">{{ $errors->first('role_of_deficiency') }}</div>
+                                @endif
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-time-of-erection">Role of Deficiency Description</label>
+                                <textarea class="form-control" name="role_description" id="role_description" rows="4"></textarea>
+                                @if($errors->has('role_description'))
+                                    <div class="error">{{ $errors->first('role_description') }}</div>
+                                @endif
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-package-of-practices">Deficiency</label>
+                                <input type="text" class="form-control" name="deficiency" id="deficiency">
+                                @if($errors->has('deficiency'))
+                                    <div class="error">{{ $errors->first('deficiency') }}</div>
+                                @endif
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-time-of-erection">Deficiency Description</label>
+                                <textarea class="form-control" name="deficiency_description" id="deficiency_description" rows="4"></textarea>
+                                @if($errors->has('deficiency_description'))
+                                    <div class="error">{{ $errors->first('deficiency_description') }}</div>
+                                @endif
+                            </div>
+
                         </div>
 
                         <br>
@@ -466,6 +518,24 @@
 
         ClassicEditor
         .create(document.querySelector('#plant_type'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+        ClassicEditor
+        .create(document.querySelector('#role_description'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+        ClassicEditor
+        .create(document.querySelector('#deficiency_description'))
         .then(editor => {
             console.log(editor);
         })
