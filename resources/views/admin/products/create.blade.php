@@ -63,6 +63,14 @@
                             </div>
 
                             <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-name">Product Leaflet</label>
+                                <input type="file" class="form-control" name="catelog_link" accept=".pdf" />
+                                @if($errors->has('catelog_link'))
+                                    <div class="error">{{ $errors->first('catelog_link') }}</div>
+                                @endif
+                            </div>
+
+                            <div class="col-md-4">
                                 <label class="col-form-label" for="basic-default-name">Category<span class="required_star">*</span></label>
                                 <select class="form-control" name="category" id="category">
                                     @foreach($category as $item)

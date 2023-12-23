@@ -31,8 +31,7 @@
                                 <textarea class="form-control" name="description" rows="4" required></textarea>
                             </div>
 
-
-                            <div class="col-md-4">
+                            <div class="col-md-4" style="display:none;">
                                 <label class="col-form-label" for="basic-default-name">Catalog PDF</label>
                                 <input type="file" class="form-control" name="catelog_link" accept=".pdf" />
                                 @if($errors->has('catelog_link'))
