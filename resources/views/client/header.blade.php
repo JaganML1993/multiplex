@@ -442,8 +442,10 @@
                             <div class="widget-content">
                                 <ul class="footer-nav">
                                     <li><a href="{{ route('terms-and-conditions') }}">Terms & Conditions</a></li>
-                                    <!--<li><a href="#">Privacy Policy</a></li>-->
-                                    <!--<li><a href="#">Refund Policy</a></li>-->
+                                    <li><a href="#">Fertilizers & Micro-Nutrients</a></li>
+                                    <li><a href="#">Bio-Products</a></li>
+                                    <li><a href="#">Pesticides</a></li>
+                                   
                                 </ul>
                             </div>
                         </div>
@@ -459,7 +461,6 @@
                             <P>Copyright &copy; 2023 Multiplex Group of Companies. All Rights Reserved.</P>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
