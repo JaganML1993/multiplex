@@ -69,6 +69,7 @@ class IndexController extends Controller
         if($request->type == 1){
 
             $serialId = "MULT/GENE/" . $tokenid;
+            $data['serialIdSub'] = $serialId;
 
             Mail::to($departmentEmail)
             ->cc('analysis@multiplexgroup.com')
@@ -77,7 +78,7 @@ class IndexController extends Controller
         }elseif($request->type == 2){
 
             $serialId = "MULT/PROD/" . $tokenid;
-
+            $data['serialIdSub'] = $serialId;
 
             Mail::to('mco@multiplexgroup.com')
             ->cc('analysis@multiplexgroup.com')
@@ -86,6 +87,7 @@ class IndexController extends Controller
         }elseif($request->type == 3){
 
             $serialId = "MULT/SERV/" . $tokenid;
+            $data['serialIdSub'] = $serialId;
 
             Mail::to('analysis@multiplexgroup.com')
             ->cc('analysis@multiplexgroup.com')            

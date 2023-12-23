@@ -46,7 +46,7 @@
                                             <div class="col-lg-12">
                                                 <div class="form_group">
                                                     <textarea name="message" class="form_control"
-                                                        placeholder="Message"></textarea>
+                                                        placeholder="Message" required></textarea>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">

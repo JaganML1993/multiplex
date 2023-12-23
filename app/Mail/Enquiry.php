@@ -35,15 +35,15 @@ class Enquiry extends Mailable
         switch ($this->data['type']) {
             case 1:
                 $serialId = "DEPT";
-                $name = "Common Enquiry";
+                $name = "New Quick Enquiry";
                 break;
             case 2:
                 $serialId = "PROD";
-                $name = "Product Enquiry";
+                $name = "New Product Enquiry";
                 break;
             case 3:
                 $serialId = "SERV";
-                $name = "Service Enquiry";
+                $name = "New Service Enquiry";
                 break;
             // Add more cases for other types if needed
 
@@ -56,7 +56,7 @@ class Enquiry extends Mailable
         $serialId .= str_pad($this->data['id'], 4, '0', STR_PAD_LEFT);
 
         return $this->view('emails.enquiry')
-                    ->subject($name .'- ' . $serialId)
+                    ->subject($name .'- ' . $this->data['serialIdSub'])
                     ->with(['data' => $this->data]);
     }
 
