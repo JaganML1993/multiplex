@@ -14,7 +14,7 @@ class DashboardController extends Controller
 {
     public function category()
     {
-        $data = Category::get();
+        $data = Category::orderBy('id', 'desc')->get();
         return view('admin.categories.index')->with('page', 'category')->with('data', $data);
     }
 
@@ -94,6 +94,7 @@ class DashboardController extends Controller
         $data = DB::table('sub_categories')
             ->join('categories', 'categories.id', '=', 'sub_categories.category_id')
             ->select('sub_categories.*', 'categories.name as category_name')
+            ->orderBy('id', 'desc')
             ->get();
 
         return view('admin.subCategories.index')->with('page', 'sub_category')->with('data', $data);
@@ -150,19 +151,19 @@ class DashboardController extends Controller
     }
 
     public function enquiryList(){
-        $enquiries = Index::where('type',1)->get();
+        $enquiries = Index::where('type',1)->orderBy('id', 'desc')->get();
         
         return view('admin.enquiry.index')->with('page', 'enquiry')->with('enquiries', $enquiries);
     }
 
     public function productenquiryList(){
-        $enquiries = Index::where('type',2)->get();
+        $enquiries = Index::where('type',2)->orderBy('id', 'desc')->get();
         
         return view('admin.enquiry.productindex')->with('page', 'productenquiry')->with('enquiries', $enquiries);
     }
 
     public function serviceenquiryList(){
-        $enquiries = Index::where('type',3)->get();
+        $enquiries = Index::where('type',3)->orderBy('id', 'desc')->get();
         
         return view('admin.enquiry.serviceindex')->with('page', 'serviceenquiry')->with('enquiries', $enquiries);
     }

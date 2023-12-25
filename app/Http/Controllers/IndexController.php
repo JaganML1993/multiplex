@@ -25,7 +25,7 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
+        $categories = Category::orderBy('id', 'desc')->all();
         return view('client.index')->with('categories', $categories);
     }
 
