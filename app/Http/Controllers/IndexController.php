@@ -200,10 +200,9 @@ class IndexController extends Controller
 
         $department = Department::where('id', $job->department)->first();
         
-        $departmentEmail = $department->email;
+        $departmentEmail = $location->email;
       
-
-            // Send email
+        // Send email
         $data = [
             'fname' => $request->input('fname'),
             'lname' => $request->input('lname'),
