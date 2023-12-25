@@ -571,7 +571,7 @@ $categories = CategoryAct::run();
 
     <script>
         $(document).ready(function() {
-            $('.review-form').submit(function(e) {
+            $('.product-form').submit(function(e) {
                 e.preventDefault();
 
                 var form = $(this);
@@ -612,7 +612,7 @@ $categories = CategoryAct::run();
 
     <script>
         $(document).ready(function() {
-            $('#service-modal .review-form').submit(function(e) {
+            $('.service-form').submit(function(e) {
                 e.preventDefault();
 
                 var form = $(this);
