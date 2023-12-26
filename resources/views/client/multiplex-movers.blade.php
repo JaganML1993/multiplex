@@ -77,13 +77,13 @@
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
-            <h1 class="page-title">Multiplex Farming  </h1>
+            <h1 class="page-title">Multiplex Movers  </h1>
             <div class="gd-breadcrumb">
                 <span class="breadcrumb-entry"><a href="{{ url('/') }}">Home</a></span>
                 <span class="separator"></span>
                 <span class="breadcrumb-entry"><a href="{{ route('group-of-companies') }}">Group of Companies </a></span>
                 <span class="separator"></span>
-                <span class="breadcrumb-entry active">Multiplex Farming  </span>
+                <span class="breadcrumb-entry active">Multiplex Movers  </span>
             </div>
         </div>
     </div>
@@ -94,7 +94,7 @@
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
-            <h1 class="page-title">Multiplex Farming  </h1>
+            <h1 class="page-title">Multiplex Movers  </h1>
            
         </div>
     </div>
@@ -104,7 +104,7 @@
                 <span class="separator"></span>
                 <span class="breadcrumb-entry"><a href="{{ route('group-of-companies') }}">Group of Companies |</a></span>
                 <span class="separator"></span>
-                <span class="breadcrumb-entry active">Multiplex Farming  </span>
+                <span class="breadcrumb-entry active">Multiplex Movers  </span>
             </div>
 </section>
 <!--====== End Page-title-area section ======-->
@@ -116,34 +116,17 @@
                     <div class="col-xl-12 col-lg-12">
                         <!--====== Section-title ======-->
                         <div class="section-title mb-25">
-                            <h2>Multiplex Farming - Collaborative Agriculture - Transforming Barren Lands into Productive Green Fields
-                            </h2>
+                            <h2>Multiplex Movers - Reliable Logistic Solutions for Multiplex</h2>
                         </div>
                         <div class="description-wrapper mt-30">
                             <div class="tab-content wow fadeInUp">
                                 <div class="tab-pane fade show active">
                                     <div class="content-box">
-                                       <p>MULTIPLEX proudly presents "Collaborative Agriculture" for passionate agriculturists. Our mission is to partner in the development and transformation of barren and semi-cultivated land into thriving, green, and productive agricultural landscapes.
-                                        </p>
-                                        <p>With over four decades of experience in advocating cultivation practices across diverse crops and various agro-climatic conditions, Multiplex has managed vast expanses of land across the country and beyond its borders. Drawing upon our wealth of experience, expertise, and practical skills, we are now eager to collaborate with you to realize your vision of green and productive land.
-                                        </p>
-
-                                        <h3 class="mb-10 mt-30">Need for a Holistic Approach</h3>
-                                        <p>In today's world, the need for a holistic approach to agricultural productivity has become increasingly evident. To address this need, we extend our support to landowners, whether they possess as little as 10 acres or vast expanses of land, be it individuals or companies.
-                                        </p>
-                                    
-                                        <p>At Multiplex Group, we aspire to become your "Total Solution Provider" for improving soil health, enhancing crop productivity, and elevating your quality of life. Our integrated approach, honed over decades of research and development, is characterized by unparalleled quality and innovation. We are committed to meeting your expectations and fostering a relationship based on trust, transparency, and mutual benefits.
-                                        </p>
-
-                                        <h3  class="mb-10 mt-30">The Way Forward</h3>
-
-                                        <p>Are you a landowner with dreams of making your land green and productive? If so, consider Multiplex Farming as your partner on this transformative journey. Together, we can make your dreams a reality.</p>
-
-                                        <h3  class="mb-10 mt-30">Let's Work Together!</h3>
-
-                                        <p>Our collaboration encompasses every facet of agricultural activity, guiding you through each step of the process. From soil testing, field layout, and land preparation to crop selection, seedling choices, input recommendations, weed and nutrient management, pest and disease control, harvesting, post-harvest techniques, and even finding markets for your crops – we are here to support and empower you in your agricultural endeavours.</p>
-
-                                        
+                                        <p>Established in 1998, Multiplex Movers has emerged as a cornerstone within the logistics industry, offering dependable and tailored solutions to meet the diverse needs of Multiplex's operations. Operating as an in-house wing under the prestigious Multiplex banner, Multiplex Movers takes pride in delivering streamlined logistics services that are finely tuned to the specific requirements of our business.</p>
+                                        <p>At the heart of Multiplex Movers' mission is the commitment to simplify the complexities of logistics, allowing Multiplex to concentrate on its PAN India operations with unwavering focus. By integrating an in-house logistics wing, we have created a seamless and efficient channel that optimizes the movement of goods and resources, contributing to the overall effectiveness and success of our operations.</p>
+                                        <p>The wealth of experience amassed since our inception in 1998 serves as a testament to our proficiency in navigating the intricacies of logistics. We understand the dynamic nature of supply chains, and our team is adept at designing solutions that adapt to the ever-evolving demands of the industry.</p>
+                                        <p>Reliability is a cornerstone of Multiplex Movers' ethos. Through meticulous planning, strategic execution, and robust quality control measures, we ensure that our products traverse the intricate network of logistics and reach their destinations in a timely manner. Our commitment to reliability is not just a promise; it's a track record built over years of successful operations.</p>
+                                        <p>Multiplex Movers stands as a strategic partner, offering more than just logistics services. We are an integral part of Multiplex's journey, contributing to its growth and success by providing logistical support that aligns with the company's overarching goals. Our dedication to efficiency, reliability, and customer satisfaction positions Multiplex Movers as a key player in the logistics landscape, facilitating the smooth flow of goods across the diverse landscape of India.</p>
                                     </div>
                                 </div>
                             </div>

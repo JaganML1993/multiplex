@@ -190,7 +190,7 @@
                     <div class="goc-sub mb-20">
                         <p>Plant Protection Solutions </p>
                     </div>
-                    <p class="mb-35">Established in 1997, Multiplex Agricare Pvt Ltd is a pioneering force in the pesticide manufacturing industry. Nestled in the heart of the industrial estate in Tumkur, our cutting-edge facility spans a generous 2.5 acres, dedicated exclusively to the production of pesticides in liquid and powder formulations.</p>
+                    <p class="mb-15">Established in 1997, Multiplex Agricare Pvt Ltd is a pioneering force in the pesticide manufacturing industry. Nestled in the heart of the industrial estate in Tumkur, our cutting-edge facility spans a generous 2.5 acres, dedicated exclusively to the production of pesticides in liquid and powder formulations.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
                 </div>
                 <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
@@ -219,15 +219,18 @@
             </div>
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
-                <div class="features-content-box mb-50 wow fadeInRight">
+                <div class="features-content-box mb-10 wow fadeInRight">
                     <div class="section-title">
                         <h2>Multiplex Movers</h2>
                     </div>
                     <div class="goc-sub mb-20">
                         <p>Reliable Logistic solutions for Multiplex</p>
                     </div>
-                    <p class="mb-35">In-House Wing, under the banner of Multiplex Movers, offers streamlined logistics solutions tailored to our business needs. Our dedication to simplifying logistics allows us to focus on PAN India operations while we handle the complexities. With our experience, reliability we ensure our products reach timely.</p>
+                    <p class="mb-15">In-House Wing, under the banner of Multiplex Movers, offers streamlined logistics solutions tailored to our business needs. Our dedication to simplifying logistics allows us to focus on PAN India operations while we handle the complexities. With our experience, reliability we ensure our products reach timely.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
+                </div>
+                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
+                    <a href="{{ route('multiplex-movers') }}" class="main-btn filled-btn mb-10">Know More </a>
                 </div>
             </div>
 
@@ -410,15 +413,18 @@
             </div>
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
-                <div class="features-content-box mb-50 wow fadeInRight">
+                <div class="features-content-box mb-10 wow fadeInRight">
                     <div class="section-title">
                         <h2>Multiplex Safe & Farm Fresh</h2>
                     </div>
                     <div class="goc-sub mb-20">
                         <p>Nature’s Bounty at your Doorstep</p>
                     </div>
-                    <p class="mb-35">Established in 2016 and nestled in the vibrant city of Bengaluru, Multiplex Safe Farm & Fresh is on a mission to bridge the growing gap between urbanites and chemical-free, wholesome produce. As urban life gets busier, the desire for healthy, untainted fruits and vegetables has never been more significant. We've embraced this need and are dedicated to bringing the freshness of the organic farm right to your doorstep.</p>
+                    <p class="mb-15">Established in 2016 and nestled in the vibrant city of Bengaluru, Multiplex Safe Farm & Fresh is on a mission to bridge the growing gap between urbanites and chemical-free, wholesome produce. As urban life gets busier, the desire for healthy, untainted fruits and vegetables has never been more significant. We've embraced this need and are dedicated to bringing the freshness of the organic farm right to your doorstep.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
+                </div>
+                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
+                    <a href="{{ route('multiplex-safe-and-farm-fresh') }}" class="main-btn filled-btn mb-10">Know More </a>
                 </div>
             </div>
 

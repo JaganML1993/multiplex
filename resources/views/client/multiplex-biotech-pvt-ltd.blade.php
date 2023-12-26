@@ -73,13 +73,15 @@
 </style>
 <!--====== Start Page-title-area section ======-->
 <section class="page-title-area text-white bg_cover desktop-view"
-    style="background-image: url(assets/images/vaahini-banner1140x406.webp);">
+    style="background-image: url(assets/images/goc-header-img1.jpg);">
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
             <h1 class="page-title">Multiplex Biotech Pvt Ltd </h1>
             <div class="gd-breadcrumb">
                 <span class="breadcrumb-entry"><a href="{{ url('/') }}">Home</a></span>
+                <span class="separator"></span>
+                <span class="breadcrumb-entry"><a href="{{ route('group-of-companies') }}">Group of Companies </a></span>
                 <span class="separator"></span>
                 <span class="breadcrumb-entry active">Multiplex Biotech Pvt Ltd </span>
             </div>
@@ -88,7 +90,7 @@
 </section>
 <section class="mobile-view">
 <section class="page-title-area text-white bg_cover"
-    style="background-image: url(assets/images/vaahini-banner1140x406.webp);">
+    style="background-image: url(assets/images/goc-header-img1.jpg);">
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
@@ -100,83 +102,117 @@
 <div class="gd-breadcrumb">
                 <span class="breadcrumb-entry"><a href="{{ url('/') }}">Home | </a></span>
                 <span class="separator"></span>
+                <span class="breadcrumb-entry"><a href="{{ route('group-of-companies') }}">Group of Companies |</a></span>
+                <span class="separator"></span>
                 <span class="breadcrumb-entry active">Multiplex Biotech Pvt Ltd </span>
             </div>
 </section>
 <!--====== End Page-title-area section ======-->
 
-<section class="shop-details-section pt-60 pb-60 services-img-round">
-    <div class="container">
-        <div class="product-details-wrapper">
-            <div class="row">
-                <div class="col-xl-12 col-lg-12">
-                     <!--====== Section-title ======-->
-                    <div class="section-title mb-25">
-                        <h2>Multiplex Biotech Pvt Ltd</h2>
+<section class="shop-details-section pt-60 pb-30 services-img-round">
+        <div class="container">
+            <div class="product-details-wrapper">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <!--====== Section-title ======-->
+                        <div class="section-title mb-25">
+                            <h2>Multiplex Biotech Pvt Ltd - Leading the Way in Agricultural Innovation and Sustainability</h2>
+                        </div>
+                        <div class="description-wrapper mt-30">
+                            <div class="tab-content wow fadeInUp">
+                                <div class="tab-pane fade show active">
+                                    <div class="content-box">
+                                        <p>Multiplex Group has been at the forefront of addressing the evolving needs of agriculture and allied sectors through innovative products and services. With over two decades of field experience, we embarked on a journey in the year 2000 to establish state-of-the-art biotech units. </p>
+                                        <p>Our commitment to agricultural innovation is bolstered by cutting-edge facilities and technologies, enabling us to conduct groundbreaking research, innovate, manufacture, and supply a wide range of bio-organic products. Our world-class facilities include:</p>
+
+                                        <ul class="check-style-one mb-30">
+                                            <li><i class="fa fa-check"></i>Bio-Organic Product Manufacturing: We are leading manufacturers of bio-organic manures, bio-fertilizers, bio-pesticides, and plant growth promoters.</li>
+                                            <li><i class="fa fa-check"></i>Insect Virus-Based Bio-Pesticides: Scientifically produced to combat pests like cotton bollworm and tobacco leaf-eating caterpillar, replacing chemical pesticides.</li>
+                                            <li><i class="fa fa-check"></i>EPN Technology: Introduced in India in 2010 under the brand name Soldier, successfully controlling soil-borne pests.</li>
+                                            <li><i class="fa fa-check"></i>Powder Formulation: Developed in 2010 to increase shelf life and field efficacy.</li>
+                                            <li><i class="fa fa-check"></i>Chirayu Seed Treatment: Microorganism-based seed dressing formulation proven effective for improving germination and plant growth.</li>
+                                            <li><i class="fa fa-check"></i>Consortium-Based Products: Utilized for controlling plant parasitic nematodes and various soil and foliar diseases.</li>
+                                            <li><i class="fa fa-check"></i>Shuddi - A Cleaning, Sanitizer, and Bioremediation Product: Certified with Green Seal USA, offering eco-friendly solutions.</li>
+                                        </ul>
+
+                                        <p>Fully Automated Biotech Unit (September 2021): Equipped with advanced technologies, capable of producing substantial quantities of bio-fertilizers, bio-pesticides, and bio-decomposers with precision and quality. Features commercial walk-in cold rooms for product preservation and automated packing for utmost accuracy.</p>
+
+                                        <p>Our journey has been marked by significant achievements, including:</p>
+
+                                        <ul class="check-style-one mb-30">
+                                            <li><i class="fa fa-check"></i>Pioneer in insect virus-based bio-pesticides, such as Multiplex Helimar & Multiplex Spodomar, which replaced chemical pesticides.</li>
+                                            <li><i class="fa fa-check"></i>Introduction of EPN Technology as an excellent soil pest controller against various pests.</li>
+                                            <li><i class="fa fa-check"></i>Production of Nisarga W. P powder formulation using innovative technology.</li>
+                                            <li><i class="fa fa-check"></i>Manufacturing the highly effective seed treatment product, Chirayu, under license agreement.</li>
+                                            <li><i class="fa fa-check"></i>Pioneering the use of consortia for products to control nematodes and diseases.</li>
+                                            <li><i class="fa fa-check"></i>Development of Shuddi, a certified cleaning, sanitizer, and bioremediation product.</li>
+                                        </ul>
+
+                                        <p>Establishment of a fully automated world-class biotech unit in September 2021, setting new standards in quality, preservation, and precision.</p>
+                                        <p>At Multiplex Biotech Pvt Ltd, we are committed to pushing the boundaries of agricultural innovation, ensuring a sustainable and productive future for farming communities worldwide. Our state-of-the-art facilities and groundbreaking research continue to shape the future of agriculture.</p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="description-wrapper mt-30">
-                        <div class="tab-content wow fadeInUp">
-                            <div class="tab-pane fade show active">
-                                <div class="content-box">
-                                    <p>Multiplex Group proudly presents Multiplex Vaahini, a bi-monthly magazine in the Kannada language, dedicated to enriching farmers' knowledge in the fields of Agriculture and Horticulture. Crafted by a team of seasoned experts in the realm of Agriculture and Horticulture, this publication covers a diverse range of topics. From Soil Management and Water Management to Crop Management, Pest Management, and Harvest and Post-Harvest Management, we delve into a plethora of subjects aimed at empowering our farming community.</p>
-                                    <p>Multiplex Vaahini wholeheartedly advocates for a holistic approach to sustainable agriculture, aspiring to elevate the prosperity of our dedicated farmers. Each issue features insightful messages from our esteemed founder and visionary leader, Dr. G.P. Shetty.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="shop-details-section pt-30 pb-30 services-img-round bg-dark-infra">
+        <div class="container">
+            <div class="product-details-wrapper">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <!--====== Section-title ======-->
+                        <div class="section-title mb-25">
+                            <h2>Pheromones - Pioneering Sustainable Pest Management Solutions</h2>
+                        </div>
+                        <div class="description-wrapper mt-30">
+                            <div class="tab-content wow fadeInUp">
+                                <div class="tab-pane fade show active">
+                                    <div class="content-box">
+                                        <p>In 2016, Multiplex Group recognized the significance of "Integrated Pest Management" and initiated the development of "Pheromone Traps" as a vital component of this approach. The "GPS Institute Of Agricultural Management" (GPSIOAM) was established under the auspices of the Dr. GP Shetty Agri Research and Education Trust, with a dedicated Research and Product Development wing for pheromone traps.</p>
+                                        <p>Our journey began with the release of "Multiplex Aakarshan – Pheromone Trap for Fruit Flies" in May 2017, leading to nearly ten pheromone products in the past five years. We continue to research and launch products targeting various pests every year, focusing on environmentally safe solutions to reduce chemical use and promote a healthier planet.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="row">
-                <div class="col-xl-7 col-lg-7">
-                    <h6 style="text-transform:uppercase;margin-top: 28px;" class="text-a">Current Edition</h6>
-                    <div class="sidebar-widget-area mt-30">
-                        <img src="assets/images/magazine-main-cover.jpg" alt="Banner Image">
-                    </div>
-                    <div class="hero-button mb-30 mt-15 wow fadeInUp text-center" data-wow-delay=".7s">
-                        <a href="#" class="main-btn filled-btn mb-10">Download Magazine </a>
-                    </div>
-                </div>
-                <div class="col-xl-5 col-lg-5">
-                    <h6 style="text-transform:uppercase;margin-top: 28px;"class="text-a" >Previous Edition</h6>
-                    <div class="sidebar-widget-area mt-30">
-                        <img src="assets/images/magazine-470x211-01.jpg" style="border:1px solid #00844e26;" alt="Banner Image">
-                    </div>
-                    <div class="hero-button mb-30 mt-10 wow fadeInUp" data-wow-delay=".7s">
-                        <a href="#" class="main-btn filled-btn mb-10">Download </a>
-                    </div>
-                     <h6 style="text-transform:uppercase;margin-top: 28px;"class="text-a" >October Edition</h6>
-                     <div class="sidebar-widget-area mt-30">
-                        <img src="assets/images/magazine-470x211-02.jpg"  style="border:1px solid #00844e26;" alt="Banner Image">
-                    </div>
-                    <div class="hero-button mb-30 mt-10 wow fadeInUp" data-wow-delay=".7s">
-                        <a href="#" class="main-btn filled-btn mb-10">Download </a>
+        </div>
+    </section>
+
+    <section class="shop-details-section pt-30 pb-30 services-img-round">
+        <div class="container">
+            <div class="product-details-wrapper">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <!--====== Section-title ======-->
+                        <div class="section-title mb-25">
+                            <h2>Multiplex Biotech Pvt Ltd Laboratory - Precision Testing for Agriculture Advancement</h2>
+                        </div>
+                        <div class="description-wrapper mt-30">
+                            <div class="tab-content wow fadeInUp">
+                                <div class="tab-pane fade show active">
+                                    <div class="content-box">
+                                        <p>Founded in 1991 as a soil and fertilizer testing laboratory, Multiplex Biotech PVT. LTD Laboratory has evolved into an institution dedicated to serving the agricultural community. Accredited by NABL since 2017, we adhere to ISO/IEC 17025/2017 standards, ensuring precision and quality in agricultural testing. Our laboratory offers comprehensive quality testing of soil, water, plants/leaves, organic manure, and fertilizers. Our team of highly qualified professionals manages the laboratory, providing accurate assessments and recommendations to enhance crop productivity. </p>
+                                        <p>We specialize in soil analysis, water analysis, plant/leaf analysis, fertilizer analysis, and organic manure analysis. Additionally, our laboratory serves as a study center for GPS-IOAM, offering agricultural management courses, prioritizing an optimal learning experience for students.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
         </div>
-    </div>
-</section>
-<!--====== End Shop Details Section ======-->
-
-<section class="shop-details-section pt-30 pb-30 services-img-round bg-dark-home">
-    <div class="container">
-        <div class="product-details-wrapper">
-            <div class="row justify-content-center">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <h3 class="mb-10 text-a">Benefits of Multiplex Vaahini Magazine</h3>
-                    <p class="mb-15">This bi-monthly agricultural magazine is a testament to Multiplex Group's commitment to extending our reach through meaningful initiatives. Vaahini serves as a beacon of scientific knowledge, offering valuable insights into sustainable farming practices, crop-specific guidelines, and well-researched articles. Farmers across the region rely on our technical journals to adopt cutting-edge crop management techniques.</p>
-                    <p class="mb-15">Multiplex Vaahini is your gateway to a wealth of scientific insights into sustainable farming. It's designed to provide unwavering support to farmers throughout the crop cycle, helping them effectively manage pests, diseases, and nutrients to enhance both the quality and quantity of their yields.</p>
-                    <p class="mb-15">Furthermore, our magazine dedicates a special section to share updates from the Department of Agriculture, Government of Karnataka. This invaluable resource keeps you abreast of policy changes and the latest trends in agricultural technology, ensuring you remain at the forefront of the farming industry.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--====== End Shop Details Section ======-->
-
-
+    </section>
 
 <br />
 

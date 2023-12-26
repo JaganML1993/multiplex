@@ -77,13 +77,13 @@
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
-            <h1 class="page-title">Multiplex Farming  </h1>
+            <h1 class="page-title">Multiplex Safe & Farm Fresh </h1>
             <div class="gd-breadcrumb">
                 <span class="breadcrumb-entry"><a href="{{ url('/') }}">Home</a></span>
                 <span class="separator"></span>
                 <span class="breadcrumb-entry"><a href="{{ route('group-of-companies') }}">Group of Companies </a></span>
                 <span class="separator"></span>
-                <span class="breadcrumb-entry active">Multiplex Farming  </span>
+                <span class="breadcrumb-entry active">Multiplex Safe & Farm Fresh </span>
             </div>
         </div>
     </div>
@@ -94,7 +94,7 @@
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
-            <h1 class="page-title">Multiplex Farming  </h1>
+            <h1 class="page-title">Multiplex Safe & Farm Fresh </h1>
            
         </div>
     </div>
@@ -104,7 +104,7 @@
                 <span class="separator"></span>
                 <span class="breadcrumb-entry"><a href="{{ route('group-of-companies') }}">Group of Companies |</a></span>
                 <span class="separator"></span>
-                <span class="breadcrumb-entry active">Multiplex Farming  </span>
+                <span class="breadcrumb-entry active">Multiplex Safe & Farm Fresh </span>
             </div>
 </section>
 <!--====== End Page-title-area section ======-->
@@ -116,34 +116,16 @@
                     <div class="col-xl-12 col-lg-12">
                         <!--====== Section-title ======-->
                         <div class="section-title mb-25">
-                            <h2>Multiplex Farming - Collaborative Agriculture - Transforming Barren Lands into Productive Green Fields
-                            </h2>
+                            <h2>Multiplex Safe & Farm Fresh - Nature's Bounty at Your Doorstep</h2>
                         </div>
                         <div class="description-wrapper mt-30">
                             <div class="tab-content wow fadeInUp">
                                 <div class="tab-pane fade show active">
                                     <div class="content-box">
-                                       <p>MULTIPLEX proudly presents "Collaborative Agriculture" for passionate agriculturists. Our mission is to partner in the development and transformation of barren and semi-cultivated land into thriving, green, and productive agricultural landscapes.
-                                        </p>
-                                        <p>With over four decades of experience in advocating cultivation practices across diverse crops and various agro-climatic conditions, Multiplex has managed vast expanses of land across the country and beyond its borders. Drawing upon our wealth of experience, expertise, and practical skills, we are now eager to collaborate with you to realize your vision of green and productive land.
-                                        </p>
-
-                                        <h3 class="mb-10 mt-30">Need for a Holistic Approach</h3>
-                                        <p>In today's world, the need for a holistic approach to agricultural productivity has become increasingly evident. To address this need, we extend our support to landowners, whether they possess as little as 10 acres or vast expanses of land, be it individuals or companies.
-                                        </p>
-                                    
-                                        <p>At Multiplex Group, we aspire to become your "Total Solution Provider" for improving soil health, enhancing crop productivity, and elevating your quality of life. Our integrated approach, honed over decades of research and development, is characterized by unparalleled quality and innovation. We are committed to meeting your expectations and fostering a relationship based on trust, transparency, and mutual benefits.
-                                        </p>
-
-                                        <h3  class="mb-10 mt-30">The Way Forward</h3>
-
-                                        <p>Are you a landowner with dreams of making your land green and productive? If so, consider Multiplex Farming as your partner on this transformative journey. Together, we can make your dreams a reality.</p>
-
-                                        <h3  class="mb-10 mt-30">Let's Work Together!</h3>
-
-                                        <p>Our collaboration encompasses every facet of agricultural activity, guiding you through each step of the process. From soil testing, field layout, and land preparation to crop selection, seedling choices, input recommendations, weed and nutrient management, pest and disease control, harvesting, post-harvest techniques, and even finding markets for your crops – we are here to support and empower you in your agricultural endeavours.</p>
-
-                                        
+                                        <p>Founded in 2016 and situated in the dynamic city of Bengaluru, Multiplex Safe Farm & Fresh is a pioneering initiative committed to narrowing the ever-expanding divide between urban dwellers and unadulterated, nutritious produce. In the midst of increasingly hectic urban lifestyles, the demand for wholesome, chemical-free fruits and vegetables has become more pronounced than ever. Recognizing this essential need, we have embraced the challenge and made it our mission to deliver the freshness of organic farms directly to your doorstep.</p>
+                                        <p>The bustling pace of urban life often makes it challenging for individuals to prioritize healthy eating habits, and our venture seeks to address this concern by offering a convenient solution. Our dedication to providing organic and healthy foods is deeply ingrained in our philosophy, with a growing commitment to making such choices an integral part of your daily life.</p>
+                                        <p>Multiplex Safe Farm & Fresh stands as a beacon of change, championing the cause of wellness amid the hustle and bustle of urban existence. By sourcing produce directly from organic farms, we ensure that you receive not only the finest quality but also items free from harmful chemicals. Our emphasis on a farm-to-door approach signifies a direct link between you and nature's bounty, fostering a connection that transcends the confines of city life.</p>
+                                        <p>Through our efforts, we aim to redefine the way urbanites perceive and access fresh, organic produce. Multiplex Safe Farm & Fresh is not just a provider of goods; it is a lifestyle choice that aligns with the growing consciousness around health and sustainability. Join us on this journey as we cultivate a healthier, more conscious community, one doorstep at a time.</p>
                                     </div>
                                 </div>
                             </div>
