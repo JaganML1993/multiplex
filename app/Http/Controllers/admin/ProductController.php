@@ -85,7 +85,6 @@ class ProductController extends Controller
     public function update(UpdateProductReq $request)
     {
 
-        //dd($request->all());
         $product = Product::find($request->id);
         $data = $request->validated();
         $folder = 'uploads/products';
