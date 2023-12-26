@@ -95,6 +95,7 @@
 
 
 <!--====== Start Benefits Section ======-->
+@if(!empty($product->benefits))
         <section class="pricing-section pt-100 pb-20">
             <div class="container">
                 <div class="row justify-content-center">
@@ -115,11 +116,12 @@
                 </div>
             </div>
         </section>
+        @endif
 <!--====== End Benefits Section ======-->
 
 
 <!--====== Start Specification Section ======-->
-        <section class="pricing-section pt-15 pb-30">
+        <section class="pricing-section pt-30 pb-30">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-12 col-md-12 col-sm-12">
