@@ -11,7 +11,7 @@
                                 <!--<p style="color:#000;">Our team will get back to you shortly.</p>-->
                                 <!--=== Review Form ===-->
                                 <div class="review-form-area wow fadeInUp mt-10 mb-10">
-                                    <form class="review-form" method="post"
+                                    <form class="review-form product-form" method="post" id="service-form"
                                         action="{{ route('home.save_enquiry') }}">
                                         @csrf
                                        

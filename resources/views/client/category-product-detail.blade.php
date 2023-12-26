@@ -387,9 +387,9 @@
                 @endif
             </div>
             <div class="col-xl-6 col-lg-6 prod-cta-bn">
-                @if(!empty($category->catelog_link))
+                @if(!empty($product->catelog_link))
                 <div class="menu-button d-xl-block">
-                    <a href="{{url($category->catelog_link)}}" target="_blank"
+                    <a href="{{url($product->catelog_link)}}" target="_blank"
                         class="main-btn primary-btn">Product Leaflet </a>
                 </div>
                 <br />

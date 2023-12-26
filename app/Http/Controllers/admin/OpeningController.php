@@ -65,7 +65,7 @@ class OpeningController extends Controller
 
     public function job()
     {
-        $data = JobApplication::get();
+        $data = JobApplication::orderBy('id', 'desc')->get();
 
         return view('admin.job.index')->with('page', 'job')->with('data', $data ?? []);
     }

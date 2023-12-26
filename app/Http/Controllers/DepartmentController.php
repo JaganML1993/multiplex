@@ -11,7 +11,7 @@ class DepartmentController extends Controller
 {
     public function index()
     {
-        $departments = Department::all();
+        $departments = Department::orderBy('id', 'desc')->all();
         return view('admin.departments.index', compact('departments'))->with('page', 'departments');
     }
 
