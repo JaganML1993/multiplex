@@ -25,7 +25,7 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $categories = Category::orderBy('id', 'desc')->all();
+        $categories = Category::orderBy('id', 'desc')->get();
         return view('client.index')->with('categories', $categories);
     }
 
@@ -138,7 +138,7 @@ class IndexController extends Controller
 
     public function searchOpenings(Request $request)
     {
-        //dd($request->all());
+        //dd($request->get());
 
         $careers = DB::table('openings')
             ->select('openings.*', 'locations.location as job_location')
