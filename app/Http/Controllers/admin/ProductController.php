@@ -21,7 +21,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $data = Product::orderBy('id', 'desc')->all();
+        $data = Product::orderBy('id', 'desc')->get();
         return view('admin.products.index')->with('page', 'products')->with('data', $data ?? []);
     }
 
