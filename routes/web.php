@@ -72,6 +72,19 @@ Route::get('/farmers-meet', [IndexController::class, 'farmers_meet'])->name('far
 Route::get('/multiplex-vaahini', [IndexController::class, 'multiplex_vaahini'])->name('multiplex-vaahini');
 
 
+/** Group of companies */
+Route::get('/karnataka-agro-chemicals', [IndexController::class, 'karnataka_agro_chemicals'])->name('karnataka-agro-chemicals');
+Route::get('/multiplex-biotech-pvt-ltd', [IndexController::class, 'multiplex_biotech_pvt_ltd'])->name('multiplex-biotech-pvt-ltd');
+Route::get('/multiplex-biotech-pvt-ltd-pheromones', [IndexController::class, 'multiplex_biotech_pvt_ltd_pheromones'])->name('multiplex-biotech-pvt-ltd-pheromones');
+Route::get('/multiplex-biotech-laboratory', [IndexController::class, 'multiplex_biotech_laboratory'])->name('multiplex-biotech-laboratory');
+Route::get('/multiplex-fertilizer-pvt-ltd', [IndexController::class, 'multiplex_fertilizer_pvt_ltd'])->name('multiplex-fertilizer-pvt-ltd');
+Route::get('/multiplex-forest-factree', [IndexController::class, 'multiplex_forest_factree'])->name('multiplex-forest-factree');
+Route::get('/multiplex-farming', [IndexController::class, 'multiplex_farming'])->name('multiplex-farming');
+Route::get('/multiplex-agricare-pvt-ltd', [IndexController::class, 'multiplex_agricare_pvt_ltd'])->name('multiplex-agricare-pvt-ltd');
+
+
+
+
 /** footer */
 Route::get('/gallery', [IndexController::class, 'gallery'])->name('gallery');
 Route::get('/success-stories', [IndexController::class, 'success_stories'])->name('success-stories');

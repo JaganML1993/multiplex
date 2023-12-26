@@ -94,7 +94,7 @@
             </div>
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
-                <div class="features-content-box mb-50 wow fadeInRight">
+                <div class="features-content-box mb-10 wow fadeInRight">
                     <div class="section-title">
                         <h2>Karnataka Agro Chemicals</h2>
                     </div>
@@ -106,7 +106,9 @@
                     <!--</div>-->
                     <p class="mb-15">Our primary mission is to deliver exceptional products that adhere to the nutrient grades and specifications prescribed by local authorities. We provide the farming community with high-quality agricultural inputs that enhance crop nutrition and plant protection.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
-
+                </div>
+                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
+                    <a href="{{ route('karnataka-agro-chemicals') }}" class="main-btn filled-btn mb-10">Know More </a>
                 </div>
             </div>
         </div>
@@ -119,7 +121,7 @@
 
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
-                <div class="features-content-box mb-50 wow fadeInRight">
+                <div class="features-content-box mb-10 wow fadeInRight">
                     <div class="section-title">
                         <h2>Multiplex Fertlizer's Pvt. Ltd.</h2>
                     </div>
@@ -131,6 +133,9 @@
                     <!--</div>-->
                     <p class="mb-15">Seeds are the fundamental cornerstone of agriculture, serving as both input and output in the farming process. The agricultural sector's success is deeply intertwined with the availability of high-quality seeds, as they profoundly influence crop production. The quality of seeds not only dictates the performance of other inputs but also significantly contributes to overall crop productivity. Many farmers continue to rely on their own seeds, often unaware that using seeds from consecutive generations can lead to reduced viability, vigor, altered genetic traits, and heightened susceptibility to pests and diseases, ultimately resulting in diminished crop yields.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
+                </div>
+                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
+                    <a href="{{ route('multiplex-fertilizer-pvt-ltd') }}" class="main-btn filled-btn mb-10">Know More </a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -178,7 +183,7 @@
 
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
-                <div class="features-content-box mb-50 wow fadeInRight">
+                <div class="features-content-box mb-10 wow fadeInRight">
                     <div class="section-title">
                         <h2>Multiplex Agricare Pvt. Ltd.</h2>
                     </div>
@@ -187,6 +192,9 @@
                     </div>
                     <p class="mb-35">Established in 1997, Multiplex Agricare Pvt Ltd is a pioneering force in the pesticide manufacturing industry. Nestled in the heart of the industrial estate in Tumkur, our cutting-edge facility spans a generous 2.5 acres, dedicated exclusively to the production of pesticides in liquid and powder formulations.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
+                </div>
+                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
+                    <a href="{{ route('multiplex-agricare-pvt-ltd') }}" class="main-btn filled-btn mb-10">Know More </a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -234,7 +242,7 @@
 
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
-                <div class="features-content-box mb-50 wow fadeInRight">
+                <div class="features-content-box mb-10 wow fadeInRight">
                     <div class="section-title">
                         <h2>Multiplex Bio-Tech Pvt. Ltd.</h2>
                     </div>
@@ -243,6 +251,9 @@
                     </div>
                     <p class="mb-15">Multiplex Group has been at the forefront of addressing the evolving needs of agriculture and allied sectors through innovative products and services. With over two decades of field experience, we embarked on a journey in the year 2000 to establish state-of-the-art biotech units.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
+                </div>
+                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
+                    <a href="{{ route('multiplex-biotech-pvt-ltd') }}" class="main-btn filled-btn mb-10">Know More </a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -332,7 +343,7 @@
             </div>
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
-                <div class="features-content-box mb-50 wow fadeInRight">
+                <div class="features-content-box mb-10 wow fadeInRight">
                     <div class="section-title">
                         <h2>Multiplex Farming</h2>
                     </div>
@@ -344,6 +355,9 @@
                     <!--</div>-->
                     <p class="mb-15">MULTIPLEX proudly presents "Collaborative Agriculture" for passionate agriculturists. Our mission is to partner in the development and transformation of barren and semi-cultivated land into thriving, green, and productive agricultural landscapes.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
+                </div>
+                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
+                    <a href="{{ route('multiplex-farming') }}" class="main-btn filled-btn mb-10">Know More </a>
                 </div>
             </div>
 
@@ -484,7 +498,7 @@
         <div class="row vision-row">
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
-                <div class="features-content-box mb-50 wow fadeInRight">
+                <div class="features-content-box mb-10 wow fadeInRight">
                     <div class="section-title">
                         <h2>Multiplex Forest Factree</h2>
                     </div>
@@ -496,6 +510,9 @@
                     <!--</div>-->
                     <p class="mb-15"> Our primary objective is to produce uniform, healthy, and disease-free planting materials through seeds or vegetative methods. These materials play a crucial role in enhancing productivity for various stakeholders.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
+                </div>
+                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
+                    <a href="{{ route('multiplex-forest-factree') }}" class="main-btn filled-btn mb-10">Know More </a>
                 </div>
             </div>
             <div class="col-lg-6">

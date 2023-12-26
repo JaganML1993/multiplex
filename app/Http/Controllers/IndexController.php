@@ -330,6 +330,51 @@ class IndexController extends Controller
         return view('client.multiplex-vaahini');
     }
 
+
+
+
+
+
+
+    public function karnataka_agro_chemicals(){
+        return view('client.karnataka-agro-chemicals');
+    }
+
+    public function multiplex_biotech_pvt_ltd(){
+        return view('client.multiplex-biotech-pvt-ltd');
+    }
+
+    public function multiplex_biotech_pvt_ltd_pheromones(){
+        return view('client.multiplex-biotech-pvt-ltd-pheromones');
+    }
+
+    public function multiplex_biotech_laboratory(){
+        return view('client.multiplex-biotech-laboratory');
+    }
+
+    public function multiplex_fertilizer_pvt_ltd(){
+        return view('client.multiplex-fertilizer-pvt-ltd');
+    }
+
+    public function multiplex_forest_factree(){
+        return view('client.multiplex-forest-factree');
+    }
+
+    public function multiplex_farming(){
+        return view('client.multiplex-farming');
+    }
+
+    public function multiplex_agricare_pvt_ltd(){
+        return view('client.multiplex-agricare-pvt-ltd');
+    }
+
+
+
+
+
+
+
+
     public function contact(){
         return view('client.contact');
     }
