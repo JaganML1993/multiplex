@@ -90,6 +90,26 @@
   margin-right: 0.5rem;
  
 }
+
+      .defi-prod ul {
+  
+  list-style: none;
+  padding: 0;
+}
+
+.defi-prod li {
+  padding-left:1em;
+}
+
+.defi-prod li:before {
+  content: "\f058"; 
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: calc(1em * -1 );
+  color: #2a7d2e !important;
+  margin-right: 0.5rem;
+ 
+}
 </style>
 
 
@@ -356,14 +376,15 @@
                             </div>
                     </div>
 					
-                    <div class="col-xl-6 col-lg-6 padprod">
+                    <div class="col-xl-6 col-lg-6 padprod defi-prod">
                         <div class="service-info-wrapper pr-lg-40 wow fadeInDown">
                             <h6> {{ $product->role_of_deficiency ??''}}</h6>
                             {!! $product->role_description ??'' !!}
+                           
                         </div>
                     </div>
 
-                    <div class="col-xl-6 col-lg-6 padprod">
+                    <div class="col-xl-6 col-lg-6 padprod def-prod">
                         <div class="service-info-wrapper pr-lg-40 wow fadeInDown">
                             <h6> {{ $product->deficiency ??''}}</h6>
                             {!! $product->deficiency_description ??'' !!}
