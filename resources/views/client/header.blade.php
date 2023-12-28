@@ -149,8 +149,8 @@ $categories = CategoryAct::run();
                                                         <button type="submit" class="main-btn primary-btn">Submit</button>
                                                     </div>
                                                     <br />
-                                                    <div class="my-3 d-none success-message" style="width: 100%">
-                                                        <h4>Thank you, we will get back to you.</h4>
+                                                    <div class="my-3 d-none review-message" style="width: 100%">
+                                                   <h4>Thank you, we will get back to you.</h4>
                                                     </div>
                                                 </div>
 
@@ -632,6 +632,40 @@ $categories = CategoryAct::run();
                         // Reset the form and hide the service message after 5 seconds
                         setTimeout(function() {
                             form.find('.service-message').removeClass('d-block')
+                                .addClass('d-none');
+                            form[0].reset();
+                        }, 5000);
+                    },
+                    error: function(error) {
+                        // Handle the error response here
+                        console.log(error);
+                    }
+                });
+            });
+        });
+    </script>
+
+<script>
+        $(document).ready(function() {
+            $('.review-form').submit(function(e) {
+                e.preventDefault();
+
+                var form = $(this);
+
+                $.ajax({
+                    type: 'POST',
+                    url: form.attr('action'),
+                    data: form.serialize(),
+                    success: function(response) {
+                        // Handle the success response here
+                        console.log(response);
+
+                        // Show the success message
+                        form.find('.review-message').removeClass('d-none').addClass('d-block');
+
+                        // Reset the form and hide the review message after 5 seconds
+                        setTimeout(function() {
+                            form.find('.review-message').removeClass('d-block')
                                 .addClass('d-none');
                             form[0].reset();
                         }, 5000);
