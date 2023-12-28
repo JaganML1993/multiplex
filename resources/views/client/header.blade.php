@@ -94,7 +94,7 @@ $categories = CategoryAct::run();
                                     <!--=== Review Form ===-->
                                     <div class="review-form-area wow fadeInUp mt-10 mb-10">
 
-                                        <form class="review-form" method="post" action="{{ route('home.save_enquiry') }}">
+                                        <form class="review-form general-form" method="post" action="{{ route('home.save_enquiry') }}">
                                             @csrf
                                             {{-- <div class="my-3 d-none success-message" style="width: 100%">
                                                 <div class="btn btn-success">Form Submitted Successfully</div>
@@ -647,7 +647,7 @@ $categories = CategoryAct::run();
 
 <script>
         $(document).ready(function() {
-            $('.review-form').submit(function(e) {
+            $('.general-form').submit(function(e) {
                 e.preventDefault();
 
                 var form = $(this);
