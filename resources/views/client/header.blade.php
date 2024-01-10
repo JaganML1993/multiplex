@@ -59,7 +59,6 @@ $categories = CategoryAct::run();
     <div class="preloader">
         <div class="loader">
             <div class="corners">
-
                 <img src="{{ asset('/images/loader-new1.png') }}" alt="Site Logo">
             </div>
         </div>
@@ -95,21 +94,21 @@ $categories = CategoryAct::run();
                                     <!--=== Review Form ===-->
                                     <div class="review-form-area wow fadeInUp mt-10 mb-10">
 
-                                        <form class="review-form" method="post" action="{{ route('home.save_enquiry') }}">
+                                        <form class="review-form general-form" method="post" action="{{ route('home.save_enquiry') }}">
                                             @csrf
-                                            <div class="my-3 d-none success-message" style="width: 100%">
+                                            {{-- <div class="my-3 d-none success-message" style="width: 100%">
                                                 <div class="btn btn-success">Form Submitted Successfully</div>
-                                            </div>
+                                            </div> --}}
                                             <input type="hidden" name="type" value="1">
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form_group">
-                                                        <input type="text" class="form_control" placeholder="Your Name" name="name" required>
+                                                        <input type="text" class="form_control" onkeypress="return /[a-zA-Z,' ']/i.test(event.key)" placeholder="Your Name" name="name" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form_group">
-                                                        <input type="text" class="form_control" onkeypress="num_validate(event)" placeholder="Phone Number" name="phone" required>
+                                                        <input type="text" class="form_control" onkeypress="num_validate(event)" oninput="maxLengthCheck(this)" maxlength="10" placeholder="Phone Number" name="phone" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
@@ -124,15 +123,17 @@ $categories = CategoryAct::run();
                                                 </div>
                                                 @php
 
-                                                $departments = \App\Models\Department::where('type',1)->get();
+                                                $departments = \App\Models\Department::where('type', 1)->get();
 
                                                 @endphp
                                                 <div class="col-lg-4">
                                                     <div class="form_group">
-                                                        <select class="form_control " name="department">
+                                                        <select class="form_control" name="department" required>
                                                             <option selected disabled>Select Department</option>
-                                                            @foreach($departments as $department)
-                                                            <option value="{{ $department->id }}">{{ $department->name }}</option>
+                                                            @foreach ($departments as $department)
+                                                            <option value="{{ $department->id }}">
+                                                                {{ $department->name }}
+                                                            </option>
                                                             @endforeach
                                                         </select>
 
@@ -140,12 +141,16 @@ $categories = CategoryAct::run();
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="form_group">
-                                                        <textarea name="message" class="form_control" placeholder="Message"></textarea>
+                                                        <textarea name="message" class="form_control" placeholder="Message" required></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="form_group success-below">
                                                         <button type="submit" class="main-btn primary-btn">Submit</button>
+                                                    </div>
+                                                    <br />
+                                                    <div class="my-3 d-none review-message" style="width: 100%">
+                                                   <h4>Thank you, we will get back to you.</h4>
                                                     </div>
                                                 </div>
 
@@ -212,7 +217,7 @@ $categories = CategoryAct::run();
 
     <!--====== Header Area ======-->
     <header class="header-area header-one transparent-header1">
-        @if(session('status'))
+        @if (session('status'))
         <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin: 10px;">
             {{ session('status') }}
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -278,9 +283,11 @@ $categories = CategoryAct::run();
                                 <li class="menu-item has-children"><a href="#">About Us</a>
                                     <ul class="sub-menu">
                                         <li><a href="{{ route('vision-and-misssion') }}">Vision & Mission</a></li>
-                                        <li><a href="{{ route('founder-and-management') }}">Founder & Management </a></li>
+                                        <li><a href="{{ route('founder-and-management') }}">Founder & Management </a>
+                                        </li>
                                         <li><a href="{{ route('group-of-companies') }}">Group of Companies </a></li>
-                                        <li><a href="{{ route('awards-and-recognitions') }}">Awards & Recognitions</a></li>
+                                        <li><a href="{{ route('awards-and-recognitions') }}">Awards & Recognitions</a>
+                                        </li>
                                         <li><a href="{{ route('team') }}">Team </a></li>
                                         <li><a href="{{ route('timeline') }}">Our 50 Years Journey</a></li>
                                     </ul>
@@ -290,20 +297,23 @@ $categories = CategoryAct::run();
                                         <li><a href="{{ route('r-and-d') }}">R & D</a></li>
                                         <li><a href="{{ route('infrastructure') }}">Infrastructure</a></li>
                                         <li><a href="{{ route('branches') }}">Branches </a></li>
-                                        <li><a href="{{ route('global-connect') }}">Global/International Connect</a></li>
+                                        <li><a href="{{ route('global-connect') }}">Global/International Connect</a>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li class="menu-item has-children"><a href="{{ route('products.index') }}">Products</a>
                                     <ul class="sub-menu">
-                                        @foreach($categories as $category)
-                                        <li><a href="{{ route('category.products',['id' => $category->id]) }}">{{ $category->name}}</a></li>
+                                        @foreach ($categories as $category)
+                                        <li><a href="{{ route('category.products', ['id' => $category->id]) }}">{{ $category->name }}</a>
+                                        </li>
                                         @endforeach
                                     </ul>
                                 </li>
                                 <li class="menu-item has-children"><a href="#">Services</a>
                                     <ul class="sub-menu">
                                         <li><a href="{{ route('quality-testing') }}">Quality Testing</a></li>
-                                        <li><a href="{{ route('microbial-analysis-laboratory') }}">Microbial Analysis Laboratory</a></li>
+                                        <li><a href="{{ route('microbial-analysis-laboratory') }}">Microbial Analysis
+                                                Laboratory</a></li>
                                         <li><a href="{{ route('drone-services') }}">Drone Services</a></li>
                                         <li><a href="{{ route('gardening-services') }}">Gardening Services</a></li>
 
@@ -381,7 +391,8 @@ $categories = CategoryAct::run();
                                     <li><a href="{{ route('gallery') }}">Gallery</a></li>
                                     <li><a href="{{ route('success-stories') }}">Success Stories</a></li>
                                     <li><a href="#">News & Media</a></li>
-                                    <li><a href="#" data-toggle="modal" data-target="#myModal">Digital Payment</a></li>
+                                    <li><a href="#" data-toggle="modal" data-target="#myModal">Digital
+                                            Payment</a></li>
                                     <!-- <li><a href="#">FAQs</a></li> -->
                                 </ul>
                             </div>
@@ -409,8 +420,10 @@ $categories = CategoryAct::run();
                             <div class="widget-content">
                                 <ul class="footer-nav">
                                     <li><a href="{{ route('terms-and-conditions') }}">Terms & Conditions</a></li>
-                                    <!--<li><a href="#">Privacy Policy</a></li>-->
-                                    <!--<li><a href="#">Refund Policy</a></li>-->
+                                    <li><a href="#">Fertilizers & Micro-Nutrients</a></li>
+                                    <li><a href="#">Bio-Products</a></li>
+                                    <li><a href="#">Pesticides</a></li>
+                                   
                                 </ul>
                             </div>
                         </div>
@@ -426,7 +439,6 @@ $categories = CategoryAct::run();
                             <P>Copyright &copy; 2023 Multiplex Group of Companies. All Rights Reserved.</P>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -453,8 +465,7 @@ $categories = CategoryAct::run();
     <!--====== Slick js ======-->
     <script src="{{ asset('/vendor/slick/slick.min.js') }}"></script>
     <!--====== Magnific js ======-->
-    <script src="{{ asset('/vendor/magnific-popup/dist/jquery.magnific-popup.min.js') }}">
-    </script>
+    <script src="{{ asset('/vendor/magnific-popup/dist/jquery.magnific-popup.min.js') }}"></script>
     <!--====== Isotope js ======-->
     <script src="{{ asset('/vendor/isotope.min.js') }}"></script>
     <!--====== Imagesloaded js ======-->
@@ -471,28 +482,25 @@ $categories = CategoryAct::run();
     <script src="{{ asset('/vendor/wow.min.js') }}"></script>
     <!--====== Main js ======-->
     <script src="{{ asset('/js/theme.js') }}"></script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js">
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
     </script>
 
-    <script>
-        function num_validate(evt) {
-            var theEvent = evt || window.event;
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
 
-            // Handle paste
-            if (theEvent.type === 'paste') {
-                key = event.clipboardData.getData('text/plain');
-            } else {
-                // Handle key press
-                var key = theEvent.keyCode || theEvent.which;
-                key = String.fromCharCode(key);
+    <script>
+        function num_validate(event) {
+            // Ensure only numeric characters are allowed
+            var charCode = event.which ? event.which : event.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                event.preventDefault();
             }
-            var regex = /[0-9]|\./;
-            if (!regex.test(key)) {
-                theEvent.returnValue = false;
-                if (theEvent.preventDefault) theEvent.preventDefault();
+        }
+
+        function maxLengthCheck(object) {
+            // Ensure the entered value does not exceed the maximum length (10 digits)
+            if (object.value.length > object.maxLength) {
+                object.value = object.value.slice(0, object.maxLength);
             }
         }
 
@@ -521,9 +529,11 @@ $categories = CategoryAct::run();
                     $('.suggestions-list').remove();
 
                     // Additional code to display suggestions in a list
-                    var suggestionsList = $('<ul class="suggestions-list" style="background-color: white;"></ul>');
+                    var suggestionsList = $(
+                        '<ul class="suggestions-list" style="background-color: white;"></ul>');
                     suggestions.forEach(function(item) {
-                        suggestionsList.append('<li data-id="' + item.id + '">' + item.name + '</li>');
+                        suggestionsList.append('<li data-id="' + item.id + '">' + item.name +
+                            '</li>');
                     });
 
                     // Append the suggestions list below the input form
@@ -562,7 +572,7 @@ $categories = CategoryAct::run();
 
     <script>
         $(document).ready(function() {
-            $('.review-form').submit(function(e) {
+            $('.product-form').submit(function(e) {
                 e.preventDefault();
 
                 var form = $(this);
@@ -578,12 +588,14 @@ $categories = CategoryAct::run();
                         // Reset the form after 5 seconds
                         setTimeout(function() {
                             // Hide the success message
-                            form.find('.success-message').removeClass('d-block').addClass('d-none');
+                            form.find('.success-message').removeClass('d-block')
+                                .addClass('d-none');
 
                             form[0].reset();
 
                             // Clear the selected value in the select element
-                            form.find('select[name="department"]').prop('selectedIndex', 0);
+                            form.find('select[name="department"]').prop('selectedIndex',
+                                0);
 
                             // Close the modal (adjust the modal ID if needed)
                             $('#sidebar-modal').modal('hide');
@@ -601,7 +613,7 @@ $categories = CategoryAct::run();
 
     <script>
         $(document).ready(function() {
-            $('#service-modal .review-form').submit(function(e) {
+            $('.service-form').submit(function(e) {
                 e.preventDefault();
 
                 var form = $(this);
@@ -619,7 +631,42 @@ $categories = CategoryAct::run();
 
                         // Reset the form and hide the service message after 5 seconds
                         setTimeout(function() {
-                            form.find('.service-message').removeClass('d-block').addClass('d-none');
+                            form.find('.service-message').removeClass('d-block')
+                                .addClass('d-none');
+                            form[0].reset();
+                        }, 5000);
+                    },
+                    error: function(error) {
+                        // Handle the error response here
+                        console.log(error);
+                    }
+                });
+            });
+        });
+    </script>
+
+<script>
+        $(document).ready(function() {
+            $('.general-form').submit(function(e) {
+                e.preventDefault();
+
+                var form = $(this);
+
+                $.ajax({
+                    type: 'POST',
+                    url: form.attr('action'),
+                    data: form.serialize(),
+                    success: function(response) {
+                        // Handle the success response here
+                        console.log(response);
+
+                        // Show the success message
+                        form.find('.review-message').removeClass('d-none').addClass('d-block');
+
+                        // Reset the form and hide the review message after 5 seconds
+                        setTimeout(function() {
+                            form.find('.review-message').removeClass('d-block')
+                                .addClass('d-none');
                             form[0].reset();
                         }, 5000);
                     },

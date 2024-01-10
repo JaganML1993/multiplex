@@ -79,7 +79,7 @@
         <div class="page-title-inner text-center">
             <h1 class="page-title">Multiplex Vaahini </h1>
             <div class="gd-breadcrumb">
-                <span class="breadcrumb-entry"><a href="index.html">Home</a></span>
+                <span class="breadcrumb-entry"><a href="{{ url('/') }}">Home</a></span>
                 <span class="separator"></span>
                 <span class="breadcrumb-entry active">Multiplex Vaahini </span>
             </div>
@@ -98,7 +98,7 @@
     </div>
 </section>
 <div class="gd-breadcrumb">
-                <span class="breadcrumb-entry"><a href="index.html">Home | </a></span>
+                <span class="breadcrumb-entry"><a href="{{ url('/') }}">Home | </a></span>
                 <span class="separator"></span>
                 <span class="breadcrumb-entry active">Multiplex Vaahini </span>
             </div>
@@ -134,7 +134,7 @@
                         <img src="assets/images/magazine-main-cover.jpg" alt="Banner Image">
                     </div>
                     <div class="hero-button mb-30 mt-15 wow fadeInUp text-center" data-wow-delay=".7s">
-                        <a href="#" class="main-btn filled-btn mb-10">Download Magazine </a>
+                        <a href="assets/doc/vaahini_05_Dec2023-Jan2024.pdf" target="_blank" class="main-btn filled-btn mb-10">Download Magazine </a>
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-5">
@@ -143,14 +143,14 @@
                         <img src="assets/images/magazine-470x211-01.jpg" style="border:1px solid #00844e26;" alt="Banner Image">
                     </div>
                     <div class="hero-button mb-30 mt-10 wow fadeInUp" data-wow-delay=".7s">
-                        <a href="#" class="main-btn filled-btn mb-10">Download </a>
+                        <a href="assets/doc/vaahini_03_July-Aug 2023.pdf" target="_blank" class="main-btn filled-btn mb-10">Download </a>
                     </div>
                      <h6 style="text-transform:uppercase;margin-top: 28px;"class="text-a" >October Edition</h6>
                      <div class="sidebar-widget-area mt-30">
                         <img src="assets/images/magazine-470x211-02.jpg"  style="border:1px solid #00844e26;" alt="Banner Image">
                     </div>
                     <div class="hero-button mb-30 mt-10 wow fadeInUp" data-wow-delay=".7s">
-                        <a href="#" class="main-btn filled-btn mb-10">Download </a>
+                        <a href="assets/doc/vaahini_04_Oct-Nov 2023.pdf" target="_blank" class="main-btn filled-btn mb-10">Download </a>
                     </div>
                 </div>
             </div>

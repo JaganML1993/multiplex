@@ -3,7 +3,7 @@
 @include('client.product-enquiry')
 
 <!--====== Start CTA Section  ======-->
-<section class="cta-bg-section bg_cover pt-100 p-r z-1" style="background-image: url(assets/images/bg33.jpg);">
+<section class="cta-bg-section bg_cover pt-100 p-r z-1" style="background-image: url({{url('assets/images/bg33.jpg')}});">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -90,11 +90,32 @@
   margin-right: 0.5rem;
  
 }
+
+      .defi-prod ul {
+  
+  list-style: none;
+  padding: 0;
+}
+
+.defi-prod li {
+  padding-left:1em;
+}
+
+.defi-prod li:before {
+  content: "\f058"; 
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: calc(1em * -1 );
+  color: #2a7d2e !important;
+  margin-right: 0.5rem;
+ 
+}
 </style>
 
 
 
 <!--====== Start Benefits Section ======-->
+@if(!empty($product->benefits))
         <section class="pricing-section pt-100 pb-20">
             <div class="container">
                 <div class="row justify-content-center">
@@ -115,11 +136,12 @@
                 </div>
             </div>
         </section>
+        @endif
 <!--====== End Benefits Section ======-->
 
 
 <!--====== Start Specification Section ======-->
-        <section class="pricing-section pt-15 pb-30">
+        <section class="pricing-section pt-30 pb-30">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-12 col-md-12 col-sm-12">
@@ -154,6 +176,178 @@
                                 <hr>
                                 @endif
 
+                                @if(!empty($product->active_ingredients))
+                                <h6>Active Incredients</h6>
+                                <div class="mt-10" style="display: flex;align-items: flex-start;gap: 10px">  <p class="mt-10"><?php echo $product->active_ingredients ?></p></div>
+                                <hr>
+                                @endif
+
+                                <!-- Mode Of Action -->
+                                @if(!empty($product->mode_of_action))
+                                <h6>Mode Of Action</h6>
+                                <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+                                    <p class="mt-10"><?php echo $product->mode_of_action ?></p>
+                                </div>
+                                <hr>
+                                @endif
+
+                                <!-- Precautions -->
+                                @if(!empty($product->precautions))
+                                <h6>Precautions</h6>
+                                <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+                                    <p class="mt-10"><?php echo $product->precautions ?></p>
+                                </div>
+                                <hr>
+                                @endif
+
+                                <!-- Special Features -->
+                                @if(!empty($product->special_features))
+                                <h6>Special Features</h6>
+                                <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+                                    <p class="mt-10"><?php echo $product->special_features ?></p>
+                                </div>
+                                <hr>
+                                @endif
+
+                                <!-- Time of Erection -->
+                                @if(!empty($product->time_of_erection))
+                                <h6>Time of Erection</h6>
+                                <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+                                    <p class="mt-10"><?php echo $product->time_of_erection ?></p>
+                                </div>
+                                <hr>
+                                @endif
+
+                                <!-- Note -->
+                                @if(!empty($product->note))
+                                <h6>Note</h6>
+                                <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+                                    <p class="mt-10"><?php echo $product->note ?></p>
+                                </div>
+                                <hr>
+                                @endif
+
+                                <!-- Plant Type -->
+                                @if(!empty($product->plant_type))
+                                <h6>Plant Type</h6>
+                                <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+                                    <p class="mt-10"><?php echo $product->plant_type ?></p>
+                                </div>
+                                <hr>
+                                @endif
+
+                                <!-- Plant Height -->
+@if(!empty($product->plant_height))
+<h6>Plant Height</h6>
+<div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+    <p class="mt-10"><?php echo $product->plant_height ?></p>
+</div>
+<hr>
+@endif
+
+<!-- Duration -->
+@if(!empty($product->duration))
+<h6>Duration</h6>
+<div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+    <p class="mt-10"><?php echo $product->duration ?></p>
+</div>
+<hr>
+@endif
+
+<!-- Fruit Shape -->
+@if(!empty($product->fruit_shape))
+<h6>Fruit Shape</h6>
+<div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+    <p class="mt-10"><?php echo $product->fruit_shape ?></p>
+</div>
+<hr>
+@endif
+
+<!-- Fruit Weight -->
+@if(!empty($product->fruit_weight))
+<h6>Fruit Weight</h6>
+<div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+    <p class="mt-10"><?php echo $product->fruit_weight ?></p>
+</div>
+<hr>
+@endif
+
+<!-- Crud weight -->
+@if(!empty($product->crud_weight))
+<h6>Crud Weight</h6>
+<div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+    <p class="mt-10"><?php echo $product->crud_weight ?></p>
+</div>
+<hr>
+@endif
+
+<!-- Fruit Color -->
+@if(!empty($product->fruit_color))
+<h6>Fruit Color</h6>
+<div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+    <p class="mt-10"><?php echo $product->fruit_color ?></p>
+</div>
+<hr>
+@endif
+
+<!-- Fruit Length -->
+@if(!empty($product->fruit_length))
+<h6>Fruit Length</h6>
+<div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+    <p class="mt-10"><?php echo $product->fruit_length ?></p>
+</div>
+<hr>
+@endif
+@if(!empty($product->pod_length))
+    <h6>Pod Length</h6>
+    <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+        <p class="mt-10">{{ $product->pod_length }}</p>
+    </div>
+    <hr>
+@endif
+
+@if(!empty($product->flowering))
+    <h6>Flowering</h6>
+    <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+        <p class="mt-10">{{ $product->flowering }}</p>
+    </div>
+    <hr>
+@endif
+
+@if(!empty($product->fruit_bearing))
+    <h6>Fruit Bearing</h6>
+    <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+        <p class="mt-10">{{ $product->fruit_bearing }}</p>
+    </div>
+    <hr>
+@endif
+
+@if(!empty($product->root_length))
+    <h6>Root Length</h6>
+    <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+        <p class="mt-10">{{ $product->root_length }}</p>
+    </div>
+    <hr>
+@endif
+
+@if(!empty($product->harvesting))
+    <h6>Harvesting</h6>
+    <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+        <p class="mt-10">{{ $product->harvesting }}</p>
+    </div>
+    <hr>
+@endif
+
+@if(!empty($product->package_of_practices))
+    <h6>Package Of Practices</h6>
+    <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
+        <p class="mt-10">{{ $product->package_of_practices }}</p>
+    </div>
+    <hr>
+@endif
+
+
+
                             </div>
                         </div>
                     </div>
@@ -165,46 +359,35 @@
 <section class="service-details-section pt-50 pb-50 bg-dark-home">
             <div class="container">
                 <div class="pricing-title mb-30 text-center">
-                    <h3 class="title">Potassium (K)</h3>
+                    <h3 class="title">{{ $product->type_of_deficiency ??''}}</h3>
                 </div>
                 <div class="row">
 				    <div class="col-xl-6 col-lg-6">
                         <!--====== Sidebar Widget Area ======-->
                             <div class="sidebar-widget product-back-img widget-service-nav gray-bg mb-30 wow fadeInUp">
-                                <div class="block-image wow fadeInDown rad10"> <img src="{{ asset('/images/potassium-img1.jpg') }}" alt="Gallery Image"></div>
+                                <div class="block-image wow fadeInDown rad10"> <img src="{{ url('').'/'.$product->image1 }}" alt="Gallery Image"></div>
                             </div>
                     </div>
 
                     <div class="col-xl-6 col-lg-6">
                         <!--====== Sidebar Widget Area ======-->
                             <div class="sidebar-widget product-back-img widget-service-nav gray-bg mb-30 wow fadeInUp">
-                                <div class="block-image wow fadeInDown rad10"> <img src="{{asset('/images/potassium-img2.jpg') }}" alt="Gallery Image"></div>
+                                <div class="block-image wow fadeInDown rad10"> <img src="{{ url('').'/'.$product->image2 }}" alt="Gallery Image"></div>
                             </div>
                     </div>
 					
-                    <div class="col-xl-6 col-lg-6 padprod">
+                    <div class="col-xl-6 col-lg-6 padprod defi-prod">
                         <div class="service-info-wrapper pr-lg-40 wow fadeInDown">
-                            <h6>Role of Potassium</h6>
-                            {{-- <p>Unde omnis iste natus error voluptatem accusantium doloremque laudantium totam rem aperiam </p> --}}
-                            <ul class="check-style-one pt-20">
-                                        <li><i class="fa fa-check"></i>It is absorbed by plants in larger amounts than any other mineral element except nitrogen and in some cases, calcium</li>
-                                        <li><i class="fa fa-check"></i>It helps in protein synthesis, photosynthesis</li>
-                                        <li><i class="fa fa-check"></i>Improves overall plant vigor and disease resistance</li>
-                                        <li><i class="fa fa-check"></i>Encourages root growth and fruit quality</li>
-                                        <li><i class="fa fa-check"></i>Enhances drought and cold tolerance</li>
-                                        <li><i class="fa fa-check"></i>Second most used nutrient</li>   
-                            </ul>
+                            <h6> {{ $product->role_of_deficiency ??''}}</h6>
+                            {!! $product->role_description ??'' !!}
+                           
                         </div>
                     </div>
 
-                    <div class="col-xl-6 col-lg-6 padprod">
+                    <div class="col-xl-6 col-lg-6 padprod def-prod">
                         <div class="service-info-wrapper pr-lg-40 wow fadeInDown">
-                            <h6>Deficiency</h6>
-                            {{-- <p>Unde omnis iste natus error voluptatem accusantium doloremque laudantium totam rem aperiam </p> --}}
-                            <ul class="check-style-one pt-20">
-                                        <li><i class="fa fa-check"></i>Yellow translucent spots on older leaves and marginal chlorosis</li>
-                                        <li><i class="fa fa-check"></i>Browning of whole plant</li>
-                            </ul>
+                            <h6> {{ $product->deficiency ??''}}</h6>
+                            {!! $product->deficiency_description ??'' !!}
                         </div>
                     </div>
                     
@@ -230,7 +413,7 @@
                 @if(!empty($product->catelog_link))
                 <div class="menu-button d-xl-block">
                     <a href="{{url($product->catelog_link)}}" target="_blank"
-                        class="main-btn primary-btn">Download Catalog </a>
+                        class="main-btn primary-btn">Product Leaflet </a>
                 </div>
                 <br />
                 @endif

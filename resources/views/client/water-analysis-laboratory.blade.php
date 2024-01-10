@@ -44,43 +44,41 @@
             background-size: 100% 100% !important;
 
         }
-
     }
 </style>
 
 <!--====== Start Page-title-area section ======-->
-<section class="page-title-area text-white bg_cover desktop-view"
-    style="background-image: url(assets/images/water-lab-header-img.jpg);">
+<section class="page-title-area text-white bg_cover desktop-view" style="background-image: url(assets/images/water-lab-header-img.jpg);">
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
             <h1 class="page-title">Water Analysis Laboratory </h1>
             <div class="gd-breadcrumb">
-                <span class="breadcrumb-entry"><a href="index.html">Home</a></span>
+                <span class="breadcrumb-entry"><a href="{{ url('/') }}">Home</a></span>
                 <span class="separator"></span>
-                <span class="breadcrumb-entry active">Quality Testing </span>
+                <span class="breadcrumb-entry"><a href="{{ route('quality-testing') }}">Quality Testing </a></span>
                 <span class="separator"></span>
                 <span class="breadcrumb-entry active">Water Analysis Laboratory </span>
             </div>
         </div>
     </div>
 </section>
-<section class="mobile-view"><section class="page-title-area text-white bg_cover"
-    style="background-image: url(assets/images/water-lab-header-img.jpg);">
+<section class="mobile-view"><section class="page-title-area text-white bg_cover" style="background-image: url(assets/images/water-lab-header-img.jpg);">
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
             <h1 class="page-title">Water Analysis Laboratory </h1>
-            <div class="gd-breadcrumb">
-                <span class="breadcrumb-entry"><a href="index.html">Home</a></span>
-                <span class="separator"></span>
-                <span class="breadcrumb-entry active">Quality Testing </span>
-                <span class="separator"></span>
-                <span class="breadcrumb-entry active">Water Analysis Laboratory </span>
-            </div>
+          
         </div>
     </div>
-</section></section>
+</section>
+<div class="gd-breadcrumb">
+                <span class="breadcrumb-entry"><a href="{{ url('/') }}">Home</a></span>
+                <span class="separator"></span>
+                <span class="breadcrumb-entry"><a href="{{ route('quality-testing') }}">Quality Testing |</a></span>
+                <span class="separator"></span>
+                <span class="breadcrumb-entry active">Water Analysis Laboratory </span>
+            </div></section>
 <!--====== End Page-title-area section ======-->
 
 <!--====== Start Project-Details section ======-->

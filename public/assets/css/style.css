@@ -399,7 +399,7 @@ select::-ms-expand {
 }
 
 .review-form-area {
-	background-color: #fff;
+	background-color: #f5f5f5;
 }
 
 .accordion-card {
@@ -495,6 +495,7 @@ h6 {
     padding-bottom: 20px;
 	display: inline-flex;
 }
+
 
 .testimonial-section {
 	background-color: rgba(243, 207, 158, 0.7);
@@ -8008,5 +8009,12 @@ ul.slick-dots li.slick-active {
             flex-direction: column-reverse !important;
         }
     }
+.single-pricing-item:hover{
+background-color: #d1d1d13b !important;
+opacity: 1;
 
+}
+.main-btn.golden-btn:hover{
+  background-color: #2A7D2E !important;
+}
 /*# sourceMappingURL=style.css.map */

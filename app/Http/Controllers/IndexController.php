@@ -25,7 +25,7 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
+        $categories = Category::orderBy('id', 'desc')->get();
         return view('client.index')->with('categories', $categories);
     }
 
@@ -51,7 +51,8 @@ class IndexController extends Controller
 
             $departmentEmail = $department->email??'';
 
-
+            $tokenid = str_pad($enquiry->id, 3, '0', STR_PAD_LEFT);
+           
           // Send email
         $data = [
             'id' => $enquiry->id,
@@ -62,11 +63,13 @@ class IndexController extends Controller
             'message' => $request->input('message')??'',
             'department' => $department->name??'',
             'type' => $request->type,
+            'tokenid' => $tokenid
         ];
 
         if($request->type == 1){
 
-            $serialId = "DEPT" . str_pad($enquiry->id, 4, '0', STR_PAD_LEFT);
+            $serialId = "MULT/GENE/" . $tokenid;
+            $data['serialIdSub'] = $serialId;
 
             Mail::to($departmentEmail)
             ->cc('analysis@multiplexgroup.com')
@@ -74,16 +77,17 @@ class IndexController extends Controller
 
         }elseif($request->type == 2){
 
-            $serialId = "PROD" . str_pad($enquiry->id, 4, '0', STR_PAD_LEFT);
+            $serialId = "MULT/PROD/" . $tokenid;
+            $data['serialIdSub'] = $serialId;
 
-
-            Mail::to('analysis@multiplexgroup.com')
+            Mail::to('mco@multiplexgroup.com')
             ->cc('analysis@multiplexgroup.com')
             ->send(new \App\Mail\Enquiry($data));
 
         }elseif($request->type == 3){
 
-            $serialId = "SERV" . str_pad($enquiry->id, 4, '0', STR_PAD_LEFT);
+            $serialId = "MULT/SERV/" . $tokenid;
+            $data['serialIdSub'] = $serialId;
 
             Mail::to('analysis@multiplexgroup.com')
             ->cc('analysis@multiplexgroup.com')            
@@ -134,7 +138,7 @@ class IndexController extends Controller
 
     public function searchOpenings(Request $request)
     {
-        //dd($request->all());
+        //dd($request->get());
 
         $careers = DB::table('openings')
             ->select('openings.*', 'locations.location as job_location')
@@ -196,10 +200,9 @@ class IndexController extends Controller
 
         $department = Department::where('id', $job->department)->first();
         
-        $departmentEmail = $department->email;
+        $departmentEmail = $location->email;
       
-
-            // Send email
+        // Send email
         $data = [
             'fname' => $request->input('fname'),
             'lname' => $request->input('lname'),
@@ -215,7 +218,7 @@ class IndexController extends Controller
         $attachmentName = basename($image_path);
 
         Mail::to($departmentEmail)
-            ->cc('analysis@multiplexgroup.com')
+            ->cc('recruitment@multiplexgroup.com')
             ->send(new \App\Mail\JobApplication($data, $attachmentPath, $attachmentName));
 
         // Return a response or redirect as needed
@@ -326,6 +329,42 @@ class IndexController extends Controller
     public function multiplex_vaahini(){
         return view('client.multiplex-vaahini');
     }
+
+    public function karnataka_agro_chemicals(){
+        return view('client.karnataka-agro-chemicals');
+    }
+
+    public function multiplex_biotech_pvt_ltd(){
+        return view('client.multiplex-biotech-pvt-ltd');
+    }
+
+    public function multiplex_fertilizer_pvt_ltd(){
+        return view('client.multiplex-fertilizer-pvt-ltd');
+    }
+
+    public function multiplex_forest_factree(){
+        return view('client.multiplex-forest-factree');
+    }
+
+    public function multiplex_farming(){
+        return view('client.multiplex-farming');
+    }
+
+    public function multiplex_agricare_pvt_ltd(){
+        return view('client.multiplex-agricare-pvt-ltd');
+    }
+
+    public function multiplex_movers(){
+        return view('client.multiplex-movers');
+    }
+
+    public function multiplex_safe_and_farm_fresh(){
+        return view('client.multiplex-safe-and-farm-fresh');
+    }
+
+
+
+
 
     public function contact(){
         return view('client.contact');

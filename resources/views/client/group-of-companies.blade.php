@@ -58,7 +58,7 @@
         <div class="page-title-inner text-center">
             <h1 class="page-title">Group of Companies </h1>
             <div class="gd-breadcrumb">
-                <span class="breadcrumb-entry"><a href="index.html">Home</a></span>
+                <span class="breadcrumb-entry"><a href="{{ url('/') }}">Home</a></span>
                 <span class="separator"></span>
                 <span class="breadcrumb-entry active">Group of Companies </span>
             </div>
@@ -76,7 +76,7 @@
         </div>
     </section>
     <div class="gd-breadcrumb">
-        <span class="breadcrumb-entry"><a href="index.html">Home | </a></span>
+        <span class="breadcrumb-entry"><a href="{{ url('/') }}">Home | </a></span>
         <span class="separator"></span>
         <span class="breadcrumb-entry active">Group of Companies </span>
     </div>
@@ -94,7 +94,7 @@
             </div>
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
-                <div class="features-content-box mb-50 wow fadeInRight">
+                <div class="features-content-box mb-10 wow fadeInRight">
                     <div class="section-title">
                         <h2>Karnataka Agro Chemicals</h2>
                     </div>
@@ -106,7 +106,9 @@
                     <!--</div>-->
                     <p class="mb-15">Our primary mission is to deliver exceptional products that adhere to the nutrient grades and specifications prescribed by local authorities. We provide the farming community with high-quality agricultural inputs that enhance crop nutrition and plant protection.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
-
+                </div>
+                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
+                    <a href="{{ route('karnataka-agro-chemicals') }}" class="main-btn filled-btn mb-10">Know More </a>
                 </div>
             </div>
         </div>
@@ -119,7 +121,7 @@
 
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
-                <div class="features-content-box mb-50 wow fadeInRight">
+                <div class="features-content-box mb-10 wow fadeInRight">
                     <div class="section-title">
                         <h2>Multiplex Fertlizer's Pvt. Ltd.</h2>
                     </div>
@@ -131,6 +133,9 @@
                     <!--</div>-->
                     <p class="mb-15">Seeds are the fundamental cornerstone of agriculture, serving as both input and output in the farming process. The agricultural sector's success is deeply intertwined with the availability of high-quality seeds, as they profoundly influence crop production. The quality of seeds not only dictates the performance of other inputs but also significantly contributes to overall crop productivity. Many farmers continue to rely on their own seeds, often unaware that using seeds from consecutive generations can lead to reduced viability, vigor, altered genetic traits, and heightened susceptibility to pests and diseases, ultimately resulting in diminished crop yields.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
+                </div>
+                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
+                    <a href="{{ route('multiplex-fertilizer-pvt-ltd') }}" class="main-btn filled-btn mb-10">Know More </a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -144,7 +149,7 @@
 </section>
 
 
-<section class="features-seciton pt-100 pb-20  goc">
+{{-- <section class="features-seciton pt-100 pb-20  goc">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -169,32 +174,66 @@
 
         </div>
     </div>
-</section>
+</section> --}}
 
 
-<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
+<section class="features-seciton pt-100 pb-20 goc">
     <div class="container">
         <div class="row vision-row">
 
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
-                <div class="features-content-box mb-50 wow fadeInRight">
+                <div class="features-content-box mb-10 wow fadeInRight">
                     <div class="section-title">
                         <h2>Multiplex Agricare Pvt. Ltd.</h2>
                     </div>
                     <div class="goc-sub mb-20">
                         <p>Plant Protection Solutions </p>
                     </div>
-                    <p class="mb-35">Established in 1997, Multiplex Agricare Pvt Ltd is a pioneering force in the pesticide manufacturing industry. Nestled in the heart of the industrial estate in Tumkur, our cutting-edge facility spans a generous 2.5 acres, dedicated exclusively to the production of pesticides in liquid and powder formulations.</p>
+                    <p class="mb-15">Established in 1997, Multiplex Agricare Pvt Ltd is a pioneering force in the pesticide manufacturing industry. Nestled in the heart of the industrial estate in Tumkur, our cutting-edge facility spans a generous 2.5 acres, dedicated exclusively to the production of pesticides in liquid and powder formulations.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
+                </div>
+                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
+                    <a href="{{ route('multiplex-agricare-pvt-ltd') }}" class="main-btn filled-btn mb-10">Know More </a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/mapl-four.jpg') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-agricare.jpg') }}" alt="Group of companies">
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <!--====== Features Image Box ======-->
+                <div class="features-image-box mb-50 wow fadeInLeft">
+                    <img src="{{ asset('images/group/goc-f1-movers.jpg') }}" alt="Group of companies">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <!--====== Features Content Box ======-->
+                <div class="features-content-box mb-10 wow fadeInRight">
+                    <div class="section-title">
+                        <h2>Multiplex Movers</h2>
+                    </div>
+                    <div class="goc-sub mb-20">
+                        <p>Reliable Logistic solutions for Multiplex</p>
+                    </div>
+                    <p class="mb-15">In-House Wing, under the banner of Multiplex Movers, offers streamlined logistics solutions tailored to our business needs. Our dedication to simplifying logistics allows us to focus on PAN India operations while we handle the complexities. With our experience, reliability we ensure our products reach timely.</p>
+                    <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
+                </div>
+                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
+                    <a href="{{ route('multiplex-movers') }}" class="main-btn filled-btn mb-10">Know More </a>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -202,39 +241,11 @@
 
 <section class="features-seciton pt-100 pb-20 goc">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <!--====== Features Image Box ======-->
-                <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/mnovers-five.jpg') }}" alt="Group of companies">
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <!--====== Features Content Box ======-->
-                <div class="features-content-box mb-50 wow fadeInRight">
-                    <div class="section-title">
-                        <h2>Multiplex Movers</h2>
-                    </div>
-                    <div class="goc-sub mb-20">
-                        <p>Reliable Logistic solutions for Multiplex</p>
-                    </div>
-                    <p class="mb-35">In-House Wing, under the banner of Multiplex Movers, offers streamlined logistics solutions tailored to our business needs. Our dedication to simplifying logistics allows us to focus on PAN India operations while we handle the complexities. With our experience, reliability we ensure our products reach timely.</p>
-                    <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
-    <div class="container">
         <div class="row vision-row">
 
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
-                <div class="features-content-box mb-50 wow fadeInRight">
+                <div class="features-content-box mb-10 wow fadeInRight">
                     <div class="section-title">
                         <h2>Multiplex Bio-Tech Pvt. Ltd.</h2>
                     </div>
@@ -244,11 +255,14 @@
                     <p class="mb-15">Multiplex Group has been at the forefront of addressing the evolving needs of agriculture and allied sectors through innovative products and services. With over two decades of field experience, we embarked on a journey in the year 2000 to establish state-of-the-art biotech units.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
                 </div>
+                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
+                    <a href="{{ route('multiplex-biotech-pvt-ltd') }}" class="main-btn filled-btn mb-10">Know More </a>
+                </div>
             </div>
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/bio-tech-new.jpg') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-mbt.jpg') }}" alt="Group of companies">
                 </div>
             </div>
         </div>
@@ -256,13 +270,13 @@
 </section>
 
 
-<section class="features-seciton pt-100 pb-20 goc">
+<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/anshul-new.jpg') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-anshul.jpg') }}" alt="Group of companies">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -287,7 +301,7 @@
 </section>
 
 
-<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
+<section class="features-seciton pt-100 pb-20 goc">
     <div class="container">
         <div class="row vision-row">
 
@@ -313,7 +327,7 @@
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/mug-new.jpg') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-mug.jpg') }}" alt="Group of companies">
                 </div>
             </div>
         </div>
@@ -321,18 +335,18 @@
 </section>
 
 
-<section class="features-seciton pt-100 pb-20 goc">
+<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/m-farming-new.jpg') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-mf2.jpg') }}" alt="Group of companies">
                 </div>
             </div>
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
-                <div class="features-content-box mb-50 wow fadeInRight">
+                <div class="features-content-box mb-10 wow fadeInRight">
                     <div class="section-title">
                         <h2>Multiplex Farming</h2>
                     </div>
@@ -345,6 +359,9 @@
                     <p class="mb-15">MULTIPLEX proudly presents "Collaborative Agriculture" for passionate agriculturists. Our mission is to partner in the development and transformation of barren and semi-cultivated land into thriving, green, and productive agricultural landscapes.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
                 </div>
+                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
+                    <a href="{{ route('multiplex-farming') }}" class="main-btn filled-btn mb-10">Know More </a>
+                </div>
             </div>
 
         </div>
@@ -352,7 +369,7 @@
 </section>
 
 
-<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
+<section class="features-seciton pt-100 pb-20 goc">
     <div class="container">
         <div class="row vision-row">
             <div class="col-lg-6">
@@ -377,43 +394,46 @@
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/gps1.png') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-gps.jpg') }}" alt="Group of companies">
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="features-seciton pt-100 pb-20 goc">
-    <div class="container">
-        <div class="row ">
-            <div class="col-lg-6">
-                <!--====== Features Image Box ======-->
-                <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/safe-farm-fresh-new.jpg') }}" alt="Group of companies">
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <!--====== Features Content Box ======-->
-                <div class="features-content-box mb-50 wow fadeInRight">
-                    <div class="section-title">
-                        <h2>Multiplex Safe & Farm Fresh</h2>
-                    </div>
-                    <div class="goc-sub mb-20">
-                        <p>Nature’s Bounty at your Doorstep</p>
-                    </div>
-                    <p class="mb-35">Established in 2016 and nestled in the vibrant city of Bengaluru, Multiplex Safe Farm & Fresh is on a mission to bridge the growing gap between urbanites and chemical-free, wholesome produce. As urban life gets busier, the desire for healthy, untainted fruits and vegetables has never been more significant. We've embraced this need and are dedicated to bringing the freshness of the organic farm right to your doorstep.</p>
-                    <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
-                </div>
-            </div>
-
         </div>
     </div>
 </section>
 
 
 <section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-6">
+                <!--====== Features Image Box ======-->
+                <div class="features-image-box mb-50 wow fadeInLeft">
+                    <img src="{{ asset('images/group/goc-f1-msf.jpg') }}" alt="Group of companies">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <!--====== Features Content Box ======-->
+                <div class="features-content-box mb-10 wow fadeInRight">
+                    <div class="section-title">
+                        <h2>Multiplex Safe & Farm Fresh</h2>
+                    </div>
+                    <div class="goc-sub mb-20">
+                        <p>Nature’s Bounty at your Doorstep</p>
+                    </div>
+                    <p class="mb-15">Established in 2016 and nestled in the vibrant city of Bengaluru, Multiplex Safe Farm & Fresh is on a mission to bridge the growing gap between urbanites and chemical-free, wholesome produce. As urban life gets busier, the desire for healthy, untainted fruits and vegetables has never been more significant. We've embraced this need and are dedicated to bringing the freshness of the organic farm right to your doorstep.</p>
+                    <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
+                </div>
+                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
+                    <a href="{{ route('multiplex-safe-and-farm-fresh') }}" class="main-btn filled-btn mb-10">Know More </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="features-seciton pt-100 pb-20 goc">
     <div class="container">
         <div class="row vision-row">
             <div class="col-lg-6">
@@ -438,7 +458,7 @@
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/agriplex-new.jpg') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-agriplex.jpg') }}" alt="Group of companies">
                 </div>
             </div>
         </div>
@@ -446,13 +466,13 @@
 </section>
 
 
-<section class="features-seciton pt-100 pb-20 goc">
+<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
     <div class="container">
         <div class="row ">
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/m-drone-twelve.jpg') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-drone.jpg') }}" alt="Group of companies">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -479,12 +499,12 @@
 </section>
 
 
-<section class="features-seciton pt-100 pb-20 bg-dark-goc goc">
+<section class="features-seciton pt-100 pb-20 goc">
     <div class="container">
         <div class="row vision-row">
             <div class="col-lg-6">
                 <!--====== Features Content Box ======-->
-                <div class="features-content-box mb-50 wow fadeInRight">
+                <div class="features-content-box mb-10 wow fadeInRight">
                     <div class="section-title">
                         <h2>Multiplex Forest Factree</h2>
                     </div>
@@ -497,11 +517,14 @@
                     <p class="mb-15"> Our primary objective is to produce uniform, healthy, and disease-free planting materials through seeds or vegetative methods. These materials play a crucial role in enhancing productivity for various stakeholders.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
                 </div>
+                <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
+                    <a href="{{ route('multiplex-forest-factree') }}" class="main-btn filled-btn mb-10">Know More </a>
+                </div>
             </div>
             <div class="col-lg-6">
                 <!--====== Features Image Box ======-->
                 <div class="features-image-box mb-50 wow fadeInLeft">
-                    <img src="{{ asset('images/group/forest-factree.jpg') }}" alt="Group of companies">
+                    <img src="{{ asset('images/group/goc-f1-factree.jpg') }}" alt="Group of companies">
                 </div>
             </div>
         </div>

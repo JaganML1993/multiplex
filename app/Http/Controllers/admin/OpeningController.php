@@ -21,7 +21,7 @@ class OpeningController extends Controller
 
     public function create()
     {
-        $location = Location::all() ?? [];
+        $location = Location::get() ?? [];
 
         return view('admin.openings.create')->with('page', 'openings')->with('location', $location ?? []);
     }
@@ -40,7 +40,7 @@ class OpeningController extends Controller
     public function edit($id)
     {
         $openings = Openings::find($id);
-        $location = Location::all() ?? [];
+        $location = Location::get() ?? [];
 
         return view('admin.openings.edit')->with('page', 'openings')->with('openings', $openings ?? [])->with('location', $location ?? []);
     }
@@ -65,7 +65,7 @@ class OpeningController extends Controller
 
     public function job()
     {
-        $data = JobApplication::get();
+        $data = JobApplication::orderBy('id', 'desc')->get();
 
         return view('admin.job.index')->with('page', 'job')->with('data', $data ?? []);
     }

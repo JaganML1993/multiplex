@@ -21,7 +21,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $data = Product::all();
+        $data = Product::orderBy('id', 'desc')->get();
         return view('admin.products.index')->with('page', 'products')->with('data', $data ?? []);
     }
 
@@ -45,15 +45,7 @@ class ProductController extends Controller
     public function store(CreateProductReq $request)
     {
         $data = $request->validated();
-        $folder = 'uploads/products';
-        if ($request->hasFile('catelog_link')) {
-            $catalogPdf = $request->file('catelog_link');
-            $fileName = time() . '.' . $catalogPdf->extension();
-            $catalogPdf->move(public_path($folder), $fileName);
-
-            $data['catelog_link'] = "$folder/$fileName";
-        }
-       
+     
         CreateProductAct::run($data);
         return redirect('admin/products')->with('status', 'Product created successfully');
     }
@@ -92,9 +84,17 @@ class ProductController extends Controller
      */
     public function update(UpdateProductReq $request)
     {
+
         $product = Product::find($request->id);
         $data = $request->validated();
         $folder = 'uploads/products';
+
+        if ($request->hasFile('image')) {
+            if(isset($request->image)){
+                $data['image'] = UploadImageAct::run($folder, $request->image);
+            }
+        }
+
         if ($request->hasFile('front_image')) {
             if(isset($request->front_image)){
                 $data['front_image'] = UploadImageAct::run($folder, $request->front_image);
@@ -114,7 +114,18 @@ class ProductController extends Controller
         
             $data['catelog_link'] = "$folder/$fileName";
         }
-      
+
+        if ($request->hasFile('image1')) {
+            if(isset($request->image1)){
+                $data['image1'] = UploadImageAct::run($folder, $request->image1);
+            }
+        }
+        if ($request->hasFile('image2')) {
+            if(isset($request->image2)){
+                $data['image2'] = UploadImageAct::run($folder, $request->image2);
+            }
+        }
+
         $product->update($data);
        
         
