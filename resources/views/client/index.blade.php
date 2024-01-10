@@ -154,7 +154,7 @@ margin-inline-start: -115px !important;}
 
     <!--====== Start Banner Section ======-->
     <section class="banner-section banner-section-home"
-        style="background-image: url({{ asset('images/hero-new-1309.jpg') }});background-repeat: no-repeat; background-size: cover; background-position: center;
+        style="background-image: url({{ asset('images/home-banner-1920x929-new.webp') }});background-repeat: no-repeat; background-size: cover; background-position: center;
     min-height:565px;">
         <!--=== Hero Wrapper ===-->
         <div class="hero-wrapper-one gray-bg1">
