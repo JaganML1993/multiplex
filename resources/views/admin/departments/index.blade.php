@@ -42,12 +42,8 @@
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="{{ route('departments.edit',$item->id) }}"><i
                                     class="bx bx-edit-alt me-1"></i> Edit</a>
-                                    <form action="{{ route('departments.destroy', $item->id) }}" method="POST" style="display: inline;">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this gallery?')">Delete</button>
-                                    </form>
-                                  
+                                    <a class="dropdown-item" onclick="return confirm('Are you sure you want to delete this item?');" href="{{ route('departments.destroy',$item->id) }}"><i class="bx bx-trash me-1"></i>
+                                    Delete</a>
                                 </div>
                             </div>
                         </td>

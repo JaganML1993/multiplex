@@ -12,37 +12,37 @@
 <div class="container-xxl flex-grow-1 container-p-y">
     <div class="row">
         <div class="col-lg-4 mb-4 order-0">
-            <div class="card" style="background-color:#9fcf4f2b;">
+            <div class="card">
                 <div class="d-flex align-items-end row">
                     <div class="col-sm-7">
                     <div class="card-body">
-                            <span class="fw-semibold d-block mb-1" style="font-size:20px;">Total Products</span>
-                            <h3 class="card-title mb-2 fw-bold" style="font-size:48px;color:#1a9f53;">{{ $products??'' }}</h3>                    
+                            <span class="fw-semibold d-block mb-1">Total Products</span>
+                            <h3 class="card-title mb-2">{{ $products??'' }}</h3>                    
                     </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 mb-4 order-0">
-            <div class="card" style="background-color:#f826262e;">
+        <div class="col-lg-3 mb-4 order-0">
+            <div class="card">
                 <div class="d-flex align-items-end row">
                     <div class="col-sm-7">
                     <div class="card-body">
-                            <span class="fw-semibold d-block mb-1" style="font-size:20px;">Total Enquiries</span>
-                            <h3 class="card-title mb-2 fw-bold" style="font-size:48px;color:#1a9f53;">{{ $enquiries??'' }}</h3>                    
+                            <span class="fw-semibold d-block mb-1">Total Enquiries</span>
+                            <h3 class="card-title mb-2">{{ $enquiries??'' }}</h3>                    
                     </div>
                     </div>
                     
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 mb-4 order-0">
-            <div class="card" style="background-color:#00000017;">
+        <div class="col-lg-3 mb-4 order-0">
+            <div class="card">
                 <div class="d-flex align-items-end row">
                     <div class="col-sm-7">
                     <div class="card-body">
-                            <span class="fw-semibold d-block mb-1" style="font-size:20px;">Total Openings</span>
-                            <h3 class="card-title mb-2 fw-bold" style="font-size:48px;color:#1a9f53;">{{ $openings??'' }}</h3>                    
+                            <span class="fw-semibold d-block mb-1">Total Openings</span>
+                            <h3 class="card-title mb-2">{{ $openings??'' }}</h3>                    
                     </div>
                     </div>
                     

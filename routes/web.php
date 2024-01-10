@@ -2,10 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
-use App\Http\Controllers\admin\AuthController;
-use App\Http\Controllers\admin\DashboardController;
-use App\Http\Controllers\admin\OpeningController;
-use App\Http\Controllers\admin\ProductController;
+use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\OpeningController;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProductCategoryController;
@@ -70,18 +70,6 @@ Route::get('/farmers-club', [IndexController::class, 'farmer_club'])->name('farm
 Route::get('/dealers-meet', [IndexController::class, 'dealers_meet'])->name('dealers-meet');
 Route::get('/farmers-meet', [IndexController::class, 'farmers_meet'])->name('farmers-meet');
 Route::get('/multiplex-vaahini', [IndexController::class, 'multiplex_vaahini'])->name('multiplex-vaahini');
-
-
-/** Group of companies */
-Route::get('/karnataka-agro-chemicals', [IndexController::class, 'karnataka_agro_chemicals'])->name('karnataka-agro-chemicals');
-Route::get('/multiplex-biotech-pvt-ltd', [IndexController::class, 'multiplex_biotech_pvt_ltd'])->name('multiplex-biotech-pvt-ltd');
-Route::get('/multiplex-fertilizer-pvt-ltd', [IndexController::class, 'multiplex_fertilizer_pvt_ltd'])->name('multiplex-fertilizer-pvt-ltd');
-Route::get('/multiplex-forest-factree', [IndexController::class, 'multiplex_forest_factree'])->name('multiplex-forest-factree');
-Route::get('/multiplex-farming', [IndexController::class, 'multiplex_farming'])->name('multiplex-farming');
-Route::get('/multiplex-agricare-pvt-ltd', [IndexController::class, 'multiplex_agricare_pvt_ltd'])->name('multiplex-agricare-pvt-ltd');
-Route::get('/multiplex-movers', [IndexController::class, 'multiplex_movers'])->name('multiplex-movers');
-Route::get('/multiplex-safe-and-farm-fresh', [IndexController::class, 'multiplex_safe_and_farm_fresh'])->name('multiplex-safe-and-farm-fresh');
-
 
 
 /** footer */

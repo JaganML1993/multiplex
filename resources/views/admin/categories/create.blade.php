@@ -31,16 +31,8 @@
                                 <textarea class="form-control" name="description" rows="4" required></textarea>
                             </div>
 
-                            <div class="col-md-4" style="display:none;">
-                                <label class="col-form-label" for="basic-default-name">Catalog PDF</label>
-                                <input type="file" class="form-control" name="catelog_link" accept=".pdf" />
-                                @if($errors->has('catelog_link'))
-                                    <div class="error">{{ $errors->first('catelog_link') }}</div>
-                                @endif
-                            </div>
-
                             <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-name">Category Thumbnail<span class="required_star">*</span></label>
+                                <label class="col-form-label" for="basic-default-name">Image<span class="required_star">*</span></label>
                                 <input type="file" class="form-control" required name="image" accept="image/png, image/jpeg">
                             </div>
                       

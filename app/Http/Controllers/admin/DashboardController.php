@@ -14,7 +14,7 @@ class DashboardController extends Controller
 {
     public function category()
     {
-        $data = Category::orderBy('id', 'desc')->get();
+        $data = Category::get();
         return view('admin.categories.index')->with('page', 'category')->with('data', $data);
     }
 
@@ -27,17 +27,8 @@ class DashboardController extends Controller
     {
         $folder = 'uploads/category';
         $file_name = UploadImageAct::run($folder, $request->image);
-        $folder = 'uploads/products';
-        if (isset($request->catelog_link) && $request->hasFile('catelog_link')) {
-            $catalogPdf = $request->file('catelog_link');
-            $fileName = time() . '.' . $catalogPdf->extension();
-            $catalogPdf->move(public_path($folder), $fileName);
 
-            $catelog_link = "$folder/$fileName";
-        }else{
-            $catelog_link = null;
-        }
-        Category::create(['name' => $request->name, 'status' => $request->status, 'image' => $file_name, 'description' => $request->description,'catelog_link' => $catelog_link]);
+        Category::create(['name' => $request->name, 'status' => $request->status, 'image' => $file_name, 'description' => $request->description]);
         return redirect('admin/category')->with('status', 'Category saved successfully');
     }
 
@@ -57,35 +48,14 @@ class DashboardController extends Controller
             $data['image'] = $file_name;
         }
 
-        $c = Category::where('id', $request->id)->first();
-
-        if ($request->hasFile('catelog_link')) {
-            $folder = 'uploads/category';
-            $catalogPdf = $request->file('catelog_link');
-            $fileName = time() . '.' . $catalogPdf->extension();
-            $catalogPdf->move(public_path($folder), $fileName);
-
-            $data['catelog_link'] = "$folder/$fileName";
-        }else{
-            $data['catelog_link'] = $c->catelog_link;
-
-        }
-        
-
-        $update = Category::where('id', $request->id)->update($data);
+        Category::where('id', $request->id)->update($data);
 
         return redirect('admin/category')->with('status', 'Category updated successfully');
     }
 
     public function delete_category($id)
     {
-          // Step 1: Retrieve the related products
-        $category = Category::find($id);
-        $relatedProducts = $category->products;
-        $category->products()->delete();
-        // Step 2: Delete the category and its related products
-        $category->delete();
-      
+        Category::where('id', $id)->delete();
         return redirect('admin/category')->with('status', 'Category deleted successfully');
     }
 
@@ -94,7 +64,6 @@ class DashboardController extends Controller
         $data = DB::table('sub_categories')
             ->join('categories', 'categories.id', '=', 'sub_categories.category_id')
             ->select('sub_categories.*', 'categories.name as category_name')
-            ->orderBy('id', 'desc')
             ->get();
 
         return view('admin.subCategories.index')->with('page', 'sub_category')->with('data', $data);
@@ -151,19 +120,19 @@ class DashboardController extends Controller
     }
 
     public function enquiryList(){
-        $enquiries = Index::where('type',1)->orderBy('id', 'desc')->get();
+        $enquiries = Index::where('type',1)->get();
         
         return view('admin.enquiry.index')->with('page', 'enquiry')->with('enquiries', $enquiries);
     }
 
     public function productenquiryList(){
-        $enquiries = Index::where('type',2)->orderBy('id', 'desc')->get();
+        $enquiries = Index::where('type',2)->get();
         
         return view('admin.enquiry.productindex')->with('page', 'productenquiry')->with('enquiries', $enquiries);
     }
 
     public function serviceenquiryList(){
-        $enquiries = Index::where('type',3)->orderBy('id', 'desc')->get();
+        $enquiries = Index::where('type',3)->get();
         
         return view('admin.enquiry.serviceindex')->with('page', 'serviceenquiry')->with('enquiries', $enquiries);
     }

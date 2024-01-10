@@ -23,21 +23,10 @@
                         <div class="row mb-3">
 
                             <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-name">Product Name<span class="required_star">*</span></label>
+                                <label class="col-form-label" for="basic-default-name">Name<span class="required_star">*</span></label>
                                 <input type="text" class="form-control" name="name" value="{{$data->name}}"/>
                                 @if($errors->has('name'))
                                 <div class="error">{{ $errors->first('name') }}</div>
-                                @endif
-                            </div>
-
-                            <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-name">Main Image<span class="required_star">*</span></label>
-                                <input type="file" class="form-control" name="image" accept="image/png, image/jpeg">
-                                @if ($data->image)
-                                <a href="{{ url('').'/'.$data->image }}" target="_blank"><img src="{{ url('').'/'.$data->image }}" style="width:40%; margin-top: 10px;"></a>
-                                @endif
-                                @if($errors->has('image'))
-                                <div class="error">{{ $errors->first('image') }}</div>
                                 @endif
                             </div>
 
@@ -78,21 +67,10 @@
                             </div>
 
                             <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-name">Benefits</label>
+                                <label class="col-form-label" for="basic-default-name">Benefits<span class="required_star">*</span></label>
                                 <textarea class="form-control" name="benefits" id="benefits" rows="4">{{$data->benefits}}</textarea>
                                 @if($errors->has('benefits'))
                                 <div class="error">{{ $errors->first('benefits') }}</div>
-                                @endif
-                            </div>
-
-                            <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-name">Product Leaflet</label>
-                                <input type="file" class="form-control" name="catelog_link" accept=".pdf" />
-                                @if($errors->has('catelog_link'))
-                                    <div class="error">{{ $errors->first('catelog_link') }}</div>
-                                @endif
-                                @if($data->catelog_link)
-                                <span>{{ $data->catelog_link }}</span>
                                 @endif
                             </div>
 
@@ -131,7 +109,16 @@
                                 @endif
                             </div>
 
-                            
+                            <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-name">Catalog PDF</label>
+                                <input type="file" class="form-control" name="catelog_link" accept=".pdf" />
+                                @if($errors->has('catelog_link'))
+                                    <div class="error">{{ $errors->first('catelog_link') }}</div>
+                                @endif
+                                @if($data->catelog_link)
+                                <span>{{ $data->catelog_link }}</span>
+                                @endif
+                            </div>
 
                         </div>
                         <br>
@@ -168,243 +155,6 @@
                                 <div class="error">{{ $errors->first('composition') }}</div>
                                 @endif
                             </div>
-
-                            <!-- Active Ingredients -->
-                            <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-active-ingredients">Active Ingredients</label>
-                                <textarea class="form-control" name="active_ingredients" id="active_ingredients" rows="4">{{$data->active_ingredients??''}}</textarea>
-                                @if($errors->has('active_ingredients'))
-                                    <div class="error">{{ $errors->first('active_ingredients') }}</div>
-                                @endif
-                            </div>
-                            
-                           <!-- Mode Of Action -->
-                            <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-mode-of-action">Mode Of Action</label>
-                                <textarea class="form-control" name="mode_of_action" id="mode_of_action" rows="4">{{$data->mode_of_action??''}}</textarea>
-                                @if($errors->has('mode_of_action'))
-                                    <div class="error">{{ $errors->first('mode_of_action') }}</div>
-                                @endif
-                            </div>
-
-                            <!-- Precautions -->
-                            <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-precautions">Precautions</label>
-                                <textarea class="form-control" name="precautions" id="precautions" rows="4">{{$data->precautions??''}}</textarea>
-                                @if($errors->has('precautions'))
-                                    <div class="error">{{ $errors->first('precautions') }}</div>
-                                @endif
-                            </div>
-
-                            <!-- Special Features -->
-                            <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-special-features">Special Features</label>
-                                <textarea class="form-control" name="special_features" id="special_features" rows="4">{{$data->special_features??''}}</textarea>
-                                @if($errors->has('special_features'))
-                                    <div class="error">{{ $errors->first('special_features') }}</div>
-                                @endif
-                            </div>
-
-                            <!-- Time of Erection -->
-                            <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-time-of-erection">Time of Erection</label>
-                                <textarea class="form-control" name="time_of_erection" id="time_of_erection" rows="4">{{$data->time_of_erection??''}}</textarea>
-                                @if($errors->has('time_of_erection'))
-                                    <div class="error">{{ $errors->first('time_of_erection') }}</div>
-                                @endif
-                            </div>
-
-                            <!-- Note -->
-                            <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-note">Note</label>
-                                <textarea class="form-control" name="note" id="note" rows="4">{{$data->note??''}}</textarea>
-                                @if($errors->has('note'))
-                                    <div class="error">{{ $errors->first('note') }}</div>
-                                @endif
-                            </div>
-
-                            <!-- Plant Type -->
-                            <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-plant-type">Plant Type</label>
-                                <textarea class="form-control" name="plant_type" id="plant_type" rows="4">{{$data->plant_type??''}}</textarea>
-                                @if($errors->has('plant_type'))
-                                    <div class="error">{{ $errors->first('plant_type') }}</div>
-                                @endif
-                            </div>
-
-                            <!-- Plant Height -->
-                            <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-plant-height">Plant Height</label>
-                                <input type="text" class="form-control" name="plant_height" id="plant_height" value="{{$data->plant_height??''}}">
-                                @if($errors->has('plant_height'))
-                                    <div class="error">{{ $errors->first('plant_height') }}</div>
-                                @endif
-                            </div>
-
-                            <!-- Duration -->
-                            <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-duration">Duration</label>
-                                <input type="text" class="form-control" name="duration" id="duration" value="{{$data->duration??''}}">
-                                @if($errors->has('duration'))
-                                    <div class="error">{{ $errors->first('duration') }}</div>
-                                @endif
-                            </div>
-
-                            <!-- Fruit Shape -->
-                            <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-fruit-shape">Fruit Shape</label>
-                                <input type="text" class="form-control" name="fruit_shape" id="fruit_shape" value="{{$data->fruit_shape??''}}">
-                                @if($errors->has('fruit_shape'))
-                                    <div class="error">{{ $errors->first('fruit_shape') }}</div>
-                                @endif
-                            </div>
-
-                            <!-- Fruit Weight -->
-                            <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-fruit-weight">Fruit Weight</label>
-                                <input type="text" class="form-control" name="fruit_weight" id="fruit_weight" value="{{$data->fruit_weight??''}}">
-                                @if($errors->has('fruit_weight'))
-                                    <div class="error">{{ $errors->first('fruit_weight') }}</div>
-                                @endif
-                            </div>
-
-                            <!-- Crud weight -->
-                            <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-crud-weight">Crud Weight</label>
-                                <input type="text" class="form-control" name="crud_weight" id="crud_weight" value="{{$data->crud_weight??''}}">
-                                @if($errors->has('crud_weight'))
-                                    <div class="error">{{ $errors->first('crud_weight') }}</div>
-                                @endif
-                            </div>
-
-                            <!-- Fruit Color -->
-                            <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-fruit-color">Fruit Color</label>
-                                <input type="text" class="form-control" name="fruit_color" id="fruit_color" value="{{$data->fruit_color??''}}">
-                                @if($errors->has('fruit_color'))
-                                    <div class="error">{{ $errors->first('fruit_color') }}</div>
-                                @endif
-                            </div>
-
-                            <!-- Fruit Length -->
-                            <div class="col-md-4">
-                                <label class="col-form-label" for="basic-default-fruit-length">Fruit Length</label>
-                                <input type="text" class="form-control" name="fruit_length" id="fruit_length" value="{{$data->fruit_length??''}}">
-                                @if($errors->has('fruit_length'))
-                                    <div class="error">{{ $errors->first('fruit_length') }}</div>
-                                @endif
-                            </div>
-<!-- Pod Length -->
-<div class="col-md-4">
-    <label class="col-form-label" for="basic-default-pod-length">Pod Length</label>
-    <input type="text" class="form-control" name="pod_length" id="pod_length" value="{{$data->pod_length ?? ''}}">
-    @if($errors->has('pod_length'))
-        <div class="error">{{ $errors->first('pod_length') }}</div>
-    @endif
-</div>
-
-<!-- Flowering -->
-<div class="col-md-4">
-    <label class="col-form-label" for="basic-default-flowering">Flowering</label>
-    <input type="text" class="form-control" name="flowering" id="flowering" value="{{$data->flowering ?? ''}}">
-    @if($errors->has('flowering'))
-        <div class="error">{{ $errors->first('flowering') }}</div>
-    @endif
-</div>
-
-<!-- Fruit Bearing -->
-<div class="col-md-4">
-    <label class="col-form-label" for="basic-default-fruit-bearing">Fruit Bearing</label>
-    <input type="text" class="form-control" name="fruit_bearing" id="fruit_bearing" value="{{$data->fruit_bearing ?? ''}}">
-    @if($errors->has('fruit_bearing'))
-        <div class="error">{{ $errors->first('fruit_bearing') }}</div>
-    @endif
-</div>
-
-<!-- Root Length -->
-<div class="col-md-4">
-    <label class="col-form-label" for="basic-default-root-length">Root Length</label>
-    <input type="text" class="form-control" name="root_length" id="root_length" value="{{$data->root_length ?? ''}}">
-    @if($errors->has('root_length'))
-        <div class="error">{{ $errors->first('root_length') }}</div>
-    @endif
-</div>
-
-<!-- Harvesting -->
-<div class="col-md-4">
-    <label class="col-form-label" for="basic-default-harvesting">Harvesting</label>
-    <input type="text" class="form-control" name="harvesting" id="harvesting" value="{{$data->harvesting ?? ''}}">
-    @if($errors->has('harvesting'))
-        <div class="error">{{ $errors->first('harvesting') }}</div>
-    @endif
-</div>
-
-<!-- Package Of Practices -->
-<div class="col-md-4">
-    <label class="col-form-label" for="basic-default-package-of-practices">Package Of Practices</label>
-    <input type="text" class="form-control" name="package_of_practices" id="package_of_practices" value="{{$data->package_of_practices ?? ''}}">
-    @if($errors->has('package_of_practices'))
-        <div class="error">{{ $errors->first('package_of_practices') }}</div>
-    @endif
-</div>
-
-<div class="col-md-4">
-    <label class="col-form-label" for="basic-default-package-of-practices">Type of Deficiency</label>
-    <input type="text" class="form-control" name="type_of_deficiency" id="type_of_deficiency" value="{{$data->type_of_deficiency ?? ''}}">
-    @if($errors->has('type_of_deficiency'))
-        <div class="error">{{ $errors->first('type_of_deficiency') }}</div>
-    @endif
-</div>
-
-<div class="col-md-4">
-    <label class="col-form-label" for="basic-default-package-of-practices">Image 1</label>
-    <input type="file" class="form-control" name="image1" id="image1">
-    @if ($data->image1)
-    <a href="{{ url('').'/'.$data->image1 }}" target="_blank"><img src="{{ url('').'/'.$data->image1 }}" style="width:40%; margin-top: 10px;"></a>
-    @endif
-    @if($errors->has('image1'))
-        <div class="error">{{ $errors->first('image1') }}</div>
-    @endif
-</div>
-<div class="col-md-4">
-    <label class="col-form-label" for="basic-default-package-of-practices">Image 2</label>
-    <input type="file" class="form-control" name="image2" id="image2">
-    @if ($data->image2)
-    <a href="{{ url('').'/'.$data->image2 }}" target="_blank"><img src="{{ url('').'/'.$data->image2 }}" style="width:40%; margin-top: 10px;"></a>
-    @endif
-    @if($errors->has('image2'))
-        <div class="error">{{ $errors->first('image2') }}</div>
-    @endif
-</div>
-<div class="col-md-4">
-    <label class="col-form-label" for="basic-default-package-of-practices">Role of Deficiency</label>
-    <input type="text" class="form-control" name="role_of_deficiency" id="role_of_deficiency" value="{{$data->role_of_deficiency ?? ''}}">
-    @if($errors->has('role_of_deficiency'))
-        <div class="error">{{ $errors->first('role_of_deficiency') }}</div>
-    @endif
-</div>
-<div class="col-md-4">
-    <label class="col-form-label" for="basic-default-time-of-erection">Role of Deficiency Description</label>
-    <textarea class="form-control" name="role_description" id="role_description" rows="4">{{$data->role_description ?? ''}}</textarea>
-    @if($errors->has('role_description'))
-        <div class="error">{{ $errors->first('role_description') }}</div>
-    @endif
-</div>
-
-<div class="col-md-4">
-    <label class="col-form-label" for="basic-default-package-of-practices">Deficiency</label>
-    <input type="text" class="form-control" name="deficiency" id="deficiency" value="{{$data->deficiency ?? ''}}">
-    @if($errors->has('deficiency'))
-        <div class="error">{{ $errors->first('deficiency') }}</div>
-    @endif
-</div>
-<div class="col-md-4">
-    <label class="col-form-label" for="basic-default-time-of-erection">Deficiency Description</label>
-    <textarea class="form-control" name="deficiency_description" id="deficiency_description" rows="4">{{$data->deficiency ?? ''}}</textarea>
-    @if($errors->has('deficiency_description'))
-        <div class="error">{{ $errors->first('deficiency_description') }}</div>
-    @endif
-</div>
 
                         </div>
 
@@ -497,87 +247,6 @@
 
     ClassicEditor
         .create(document.querySelector('#composition'))
-        .then(editor => {
-            console.log(editor);
-        })
-        .catch(error => {
-            console.error(error);
-        });
-
-        ClassicEditor
-        .create(document.querySelector('#active_ingredients'))
-        .then(editor => {
-            console.log(editor);
-        })
-        .catch(error => {
-            console.error(error);
-        });
-
-        ClassicEditor
-        .create(document.querySelector('#mode_of_action'))
-        .then(editor => {
-            console.log(editor);
-        })
-        .catch(error => {
-            console.error(error);
-        });
-
-        ClassicEditor
-        .create(document.querySelector('#precautions'))
-        .then(editor => {
-            console.log(editor);
-        })
-        .catch(error => {
-            console.error(error);
-        });
-
-        ClassicEditor
-        .create(document.querySelector('#special_features'))
-        .then(editor => {
-            console.log(editor);
-        })
-        .catch(error => {
-            console.error(error);
-        });
-
-        ClassicEditor
-        .create(document.querySelector('#time_of_erection'))
-        .then(editor => {
-            console.log(editor);
-        })
-        .catch(error => {
-            console.error(error);
-        });
-
-        ClassicEditor
-        .create(document.querySelector('#note'))
-        .then(editor => {
-            console.log(editor);
-        })
-        .catch(error => {
-            console.error(error);
-        });
-
-
-        ClassicEditor
-        .create(document.querySelector('#plant_type'))
-        .then(editor => {
-            console.log(editor);
-        })
-        .catch(error => {
-            console.error(error);
-        });    
-        ClassicEditor
-        .create(document.querySelector('#role_description'))
-        .then(editor => {
-            console.log(editor);
-        })
-        .catch(error => {
-            console.error(error);
-        });
-
-        ClassicEditor
-        .create(document.querySelector('#deficiency_description'))
         .then(editor => {
             console.log(editor);
         })

@@ -50,7 +50,7 @@
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="{{ route('admin.edit.category',$item->id) }}"><i
                                     class="bx bx-edit-alt me-1"></i> Edit</a>
-                                    <a class="dropdown-item" onclick="return confirm('Are you sure you want to delete this item?. Products also delete under this Category and SubCategory!!!!!!!!');" href="{{ route('admin.delete.category',$item->id) }}"><i class="bx bx-trash me-1"></i>
+                                    <a class="dropdown-item" onclick="return confirm('Are you sure you want to delete this item?');" href="{{ route('admin.delete.category',$item->id) }}"><i class="bx bx-trash me-1"></i>
                                     Delete</a>
                                 </div>
                             </div>

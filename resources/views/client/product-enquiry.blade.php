@@ -11,7 +11,7 @@
                                 <!--<p style="color:#000;">Our team will get back to you shortly.</p>-->
                                 <!--=== Review Form ===-->
                                 <div class="review-form-area wow fadeInUp mt-10 mb-10">
-                                    <form class="review-form product-form" method="post" id="product-form"
+                                    <form class="review-form" method="post"
                                         action="{{ route('home.save_enquiry') }}">
                                         @csrf
                                         
@@ -19,7 +19,7 @@
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="form_group">
-                                                    <input type="text" class="form_control" onkeypress="return /[a-zA-Z,' ']/i.test(event.key)" placeholder="Your Name"
+                                                    <input type="text" class="form_control" placeholder="Your Name"
                                                         name="name" required>
                                                 </div>
                                             </div>
@@ -46,7 +46,7 @@
                                             <div class="col-lg-12">
                                                 <div class="form_group">
                                                     <textarea name="message" class="form_control"
-                                                        placeholder="Message" required></textarea>
+                                                        placeholder="Message"></textarea>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">

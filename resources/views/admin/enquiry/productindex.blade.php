@@ -4,7 +4,7 @@
 <!-- Content -->
 <div class="container-xxl flex-grow-1 container-p-y">
 
-    <h4 class="fw-bold py-3 mb-4">Product Enquries</h4>
+    <h4 class="fw-bold py-3 mb-4">Enquries</h4>
     <!-- Basic Bootstrap Table -->
     <div class="card">
 
@@ -25,7 +25,7 @@
                 </thead>
                 <tbody class="table-border-bottom-0">
                     @php
-                    $i = 1;
+                        $i = 1;
                     @endphp
                     @foreach($enquiries as $enquiry)
                     <tr>
@@ -37,19 +37,19 @@
                         <td>{{$enquiry->message}}</td>
                         <td>
                             <!-- Button trigger modal -->
-                            <a href="{{ route('update.remark', ['id' => $enquiry->id]) }}" class="btn btn-primary">
+                            <a href="{{ route('update.remark', ['id' => $enquiry->id]) }}" class="btn btn-primary" >
                                 Update Remark
                             </a>
-
+                
                         </td>
                         <td style="color: {{ $enquiry->status ? 'red' : 'green' }}">
                             {{ $enquiry->status ? 'closed' : 'open' }}
                         </td>
-
+                        
                         <td>{{date('d-m-Y h:i A', strtotime($enquiry->created_at))}}</td>
                     </tr>
-                    @php
-                    $i++;
+                    @php 
+                        $i++;
                     @endphp
                     @endforeach
                 </tbody>
@@ -65,12 +65,9 @@
 @parent
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('#tablePagination').DataTable({
-            dom: 'Bfrtip',
-            buttons: [
-                'csv', 'excel', 'pdf', 'print'
-            ]
+            pagingType: 'full_numbers',
         });
     });
 </script>

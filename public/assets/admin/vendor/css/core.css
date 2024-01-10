@@ -3835,15 +3835,6 @@ textarea.form-control-lg {
   color: #fff;
 }
 
-.alert-warning {
-  color: #ffffff;
-  background-color: #009f2f;
-  border-color: #000000;
-  font-size: 18px;
-  text-align: center;
-}
-
-
 .card {
   position: relative;
   display: flex;
@@ -3852,9 +3843,8 @@ textarea.form-control-lg {
   word-wrap: break-word;
   background-color: #ffffffd4;
   background-clip: border-box;
-  /* border: 2px solid #076d05; */
+  border: 2px solid #076d05;
   border-radius: 0.5rem;
-  padding: 15px;
 }
 .card > hr {
   margin-right: 0;

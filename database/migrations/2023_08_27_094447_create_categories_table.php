@@ -19,7 +19,6 @@ return new class extends Migration
             $table->text('description');
             $table->string('image', 191);
             $table->integer('status')->default('1');
-            $table->text('catelog_link')->nullable();
             $table->timestamps();
         });
     }

@@ -58,13 +58,11 @@
 @endsection
 @section('scripts')
 @parent
+
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('#tablePagination').DataTable({
-            dom: 'Bfrtip',
-            buttons: [
-                'csv', 'excel', 'pdf', 'print'
-            ]
+            pagingType: 'full_numbers',
         });
     });
 </script>
