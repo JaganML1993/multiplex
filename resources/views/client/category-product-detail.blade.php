@@ -117,7 +117,7 @@
 
 <!--====== Start Benefits Section ======-->
 @if(!empty($product->benefits))
-<section class="pricing-section pt-100 pb-20">
+<section class="pricing-section pt-30 pb-10">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -140,6 +140,31 @@
 @endif
 <!--====== End Benefits Section ======-->
 
+<!--====== Start Special Features Section ======-->
+@if(!empty($product->special_features))
+<section class="pricing-section pt-30 pb-20">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <!--====== Pricing Item ======-->
+                <div class="single-pricing-item mb-40 wow fadeInUp" data-wow-delay=".2s">
+
+                    <div class="pricing-body">
+                        <div class="pricing-title mb-10">
+                            <h3 class="title">Special Features</h3>
+                        </div>
+                        <p><?php echo $product->special_features ?></p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+@endif
+<!--====== End Special Features Section ======-->
+
 
 <!--====== Start Specification Section ======-->
 <section class="pricing-section pt-30 pb-30">
@@ -154,13 +179,13 @@
                         </div>
 
                         <!-- Special Features -->
-                        @if(!empty($product->special_features))
+                        {{-- @if(!empty($product->special_features))
                         <h6>Special Features</h6>
                         <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
                             <p class="mt-10"><?php echo $product->special_features ?></p>
                         </div>
                         <hr>
-                        @endif
+                        @endif --}}
 
                         @if(!empty($product->composition))
                         <h6>Composition</h6>
