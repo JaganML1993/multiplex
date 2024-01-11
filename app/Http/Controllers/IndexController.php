@@ -338,8 +338,8 @@ class IndexController extends Controller
         return view('client.multiplex-biotech-pvt-ltd');
     }
 
-    public function multiplex_fertilizer_pvt_ltd(){
-        return view('client.multiplex-fertilizer-pvt-ltd');
+    public function multiplex_fertilizers_pvt_ltd(){
+        return view('client.multiplex-fertilizers-pvt-ltd');
     }
 
     public function multiplex_forest_factree(){

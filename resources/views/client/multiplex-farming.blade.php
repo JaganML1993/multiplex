@@ -123,7 +123,7 @@
                             <div class="tab-content wow fadeInUp">
                                 <div class="tab-pane fade show active">
                                     <div class="content-box">
-                                       <p>MULTIPLEX proudly presents "Collaborative Agriculture" for passionate agriculturists. Our mission is to partner in the development and transformation of barren and semi-cultivated land into thriving, green, and productive agricultural landscapes.
+                                       <p>Multiplex proudly presents "Collaborative Agriculture" for passionate agriculturists. Our mission is to partner in the development and transformation of barren and semi-cultivated land into thriving, green, and productive agricultural landscapes.
                                         </p>
                                         <p>With over four decades of experience in advocating cultivation practices across diverse crops and various agro-climatic conditions, Multiplex has managed vast expanses of land across the country and beyond its borders. Drawing upon our wealth of experience, expertise, and practical skills, we are now eager to collaborate with you to realize your vision of green and productive land.
                                         </p>

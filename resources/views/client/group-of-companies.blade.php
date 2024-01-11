@@ -123,7 +123,7 @@
                 <!--====== Features Content Box ======-->
                 <div class="features-content-box mb-10 wow fadeInRight">
                     <div class="section-title">
-                        <h2>Multiplex Fertlizer's Pvt. Ltd.</h2>
+                        <h2>Multiplex Fertilizers Pvt. Ltd.</h2>
                     </div>
                     <div class="goc-sub mb-20">
                         <p>Commitment to Quality Seeds for Sustainable Agriculture</p>
@@ -135,7 +135,7 @@
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
                 </div>
                 <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
-                    <a href="{{ route('multiplex-fertilizer-pvt-ltd') }}" class="main-btn filled-btn mb-10">Know More </a>
+                    <a href="{{ route('multiplex-fertilizers-pvt-ltd') }}" class="main-btn filled-btn mb-10">Know More </a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -226,7 +226,7 @@
                     <div class="goc-sub mb-20">
                         <p>Reliable Logistic solutions for Multiplex</p>
                     </div>
-                    <p class="mb-15">In-House Wing, under the banner of Multiplex Movers, offers streamlined logistics solutions tailored to our business needs. Our dedication to simplifying logistics allows us to focus on PAN India operations while we handle the complexities. With our experience, reliability we ensure our products reach timely.</p>
+                    <p class="mb-15">In-house wing, under the banner of Multiplex Movers, offers streamlined logistics solutions tailored to our business needs. Our dedication to simplifying logistics allows us to focus on PAN India operations while we handle the complexities. With our experience, reliability we ensure our products reach timely.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
                 </div>
                 <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
@@ -356,7 +356,7 @@
                     <!--<div class="goc-sub-two">-->
                     <!--    <p>Objectives</p>-->
                     <!--</div>-->
-                    <p class="mb-15">MULTIPLEX proudly presents "Collaborative Agriculture" for passionate agriculturists. Our mission is to partner in the development and transformation of barren and semi-cultivated land into thriving, green, and productive agricultural landscapes.</p>
+                    <p class="mb-15">Multiplex proudly presents "Collaborative Agriculture" for passionate agriculturists. Our mission is to partner in the development and transformation of barren and semi-cultivated land into thriving, green, and productive agricultural landscapes.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
                 </div>
                 <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
@@ -420,7 +420,7 @@
                     <div class="goc-sub mb-20">
                         <p>Nature’s Bounty at your Doorstep</p>
                     </div>
-                    <p class="mb-15">Established in 2016 and nestled in the vibrant city of Bengaluru, Multiplex Safe Farm & Fresh is on a mission to bridge the growing gap between urbanites and chemical-free, wholesome produce. As urban life gets busier, the desire for healthy, untainted fruits and vegetables has never been more significant. We've embraced this need and are dedicated to bringing the freshness of the organic farm right to your doorstep.</p>
+                    <p class="mb-15">Established in 2016 and nestled in the vibrant city of Bengaluru, Multiplex Safe & Farm Fresh is on a mission to bridge the growing gap between urbanites and chemical-free, wholesome produce. As urban life gets busier, the desire for healthy, untainted fruits and vegetables has never been more significant. We've embraced this need and are dedicated to bringing the freshness of the organic farm right to your doorstep.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
                 </div>
                 <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
@@ -487,7 +487,7 @@
                     <!--<div class="goc-sub-two">-->
                     <!--    <p>Objectives</p>-->
                     <!--</div>-->
-                    <p class="mb-15">Multiplex Drone Pvt Ltd, incorporated on July 17, 2019, has emerged as a leading manufacturer and service provider in the field of agricultural drones. As a DGCA approved RPTO (Remotely Piloted Aircraft System Training Organization), we are committed to leveraging drone technology to revolutionize aerial crop spraying for the farming community. Our roots trace back to the esteemed Multiplex Group of Companies, with a rich legacy in agriculture spanning five decades.</p>
+                    <p class="mb-15">Multiplex Drone Pvt. Ltd., incorporated on July 17, 2019, has emerged as a leading manufacturer and service provider in the field of agricultural drones. As a DGCA approved RPTO (Remotely Piloted Aircraft System Training Organization), we are committed to leveraging drone technology to revolutionize aerial crop spraying for the farming community. Our roots trace back to the esteemed Multiplex Group of Companies, with a rich legacy in agriculture spanning five decades.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
                 </div>
                 <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">

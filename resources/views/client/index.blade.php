@@ -190,7 +190,7 @@ margin-inline-start: -115px !important;}
                         <div class="section-title mb-25">
                             <span class="sub-title"><img src="{{ asset('images/leaf-svgrepo-com-new.svg') }}" height="35"
                                     width="35" alt=""></span>
-                            <h2>About <span style="color:#ee282a;"><img style="max-width:30%;" src="{{ asset('images/multiplex-text-logo-1.svg') }}"></span></h2>
+                            <h2 style="display:flex;">About <span style="color:#ee282a;"><img style="max-width: 25%;margin-top: -8px;margin-left: 10px;" src="{{ asset('images/multiplex-text-logo-1.svg') }}"></span></h2>
                         </div>
                         <p class="mb-20">The Multiplex Group of Companies has been at the forefront of the agricultural
                             sector since its inception in 1974. As industry leaders,

@@ -77,13 +77,13 @@
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
-            <h1 class="page-title">Multiplex Biotech Pvt Ltd </h1>
+            <h1 class="page-title">Multiplex Bio-Tech Pvt. Ltd. </h1>
             <div class="gd-breadcrumb">
                 <span class="breadcrumb-entry"><a href="{{ url('/') }}">Home</a></span>
                 <span class="separator"></span>
                 <span class="breadcrumb-entry"><a href="{{ route('group-of-companies') }}">Group of Companies </a></span>
                 <span class="separator"></span>
-                <span class="breadcrumb-entry active">Multiplex Biotech Pvt Ltd </span>
+                <span class="breadcrumb-entry active">Multiplex Bio-Tech Pvt. Ltd. </span>
             </div>
         </div>
     </div>
@@ -94,7 +94,7 @@
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
-            <h1 class="page-title">Multiplex Biotech Pvt Ltd </h1>
+            <h1 class="page-title">Multiplex Bio-Tech Pvt. Ltd. </h1>
            
         </div>
     </div>
@@ -104,7 +104,7 @@
                 <span class="separator"></span>
                 <span class="breadcrumb-entry"><a href="{{ route('group-of-companies') }}">Group of Companies |</a></span>
                 <span class="separator"></span>
-                <span class="breadcrumb-entry active">Multiplex Biotech Pvt Ltd </span>
+                <span class="breadcrumb-entry active">Multiplex Bio-Tech Pvt. Ltd. </span>
             </div>
 </section>
 <!--====== End Page-title-area section ======-->
@@ -116,7 +116,7 @@
                     <div class="col-xl-12 col-lg-12">
                         <!--====== Section-title ======-->
                         <div class="section-title mb-25">
-                            <h2>Multiplex Biotech Pvt Ltd - Leading the Way in Agricultural Innovation and Sustainability</h2>
+                            <h2>Multiplex Bio-Tech Pvt. Ltd. - Leading the Way in Agricultural Innovation and Sustainability</h2>
                         </div>
                         <div class="description-wrapper mt-30">
                             <div class="tab-content wow fadeInUp">
@@ -196,13 +196,13 @@
                     <div class="col-xl-12 col-lg-12">
                         <!--====== Section-title ======-->
                         <div class="section-title mb-25">
-                            <h2>Multiplex Biotech Pvt Ltd Laboratory - Precision Testing for Agriculture Advancement</h2>
+                            <h2>Multiplex Bio-Tech Pvt. Ltd. Laboratory - Precision Testing for Agriculture Advancement</h2>
                         </div>
                         <div class="description-wrapper mt-30">
                             <div class="tab-content wow fadeInUp">
                                 <div class="tab-pane fade show active">
                                     <div class="content-box">
-                                        <p>Founded in 1991 as a soil and fertilizer testing laboratory, Multiplex Biotech PVT. LTD Laboratory has evolved into an institution dedicated to serving the agricultural community. Accredited by NABL since 2017, we adhere to ISO/IEC 17025/2017 standards, ensuring precision and quality in agricultural testing. Our laboratory offers comprehensive quality testing of soil, water, plants/leaves, organic manure, and fertilizers. Our team of highly qualified professionals manages the laboratory, providing accurate assessments and recommendations to enhance crop productivity. </p>
+                                        <p>Founded in 1991 as a soil and fertilizer testing laboratory, Multiplex Bio-Tech Pvt. Ltd. Laboratory has evolved into an institution dedicated to serving the agricultural community. Accredited by NABL since 2017, we adhere to ISO/IEC 17025/2017 standards, ensuring precision and quality in agricultural testing. Our laboratory offers comprehensive quality testing of soil, water, plants/leaves, organic manure, and fertilizers. Our team of highly qualified professionals manages the laboratory, providing accurate assessments and recommendations to enhance crop productivity. </p>
                                         <p>We specialize in soil analysis, water analysis, plant/leaf analysis, fertilizer analysis, and organic manure analysis. Additionally, our laboratory serves as a study center for GPS-IOAM, offering agricultural management courses, prioritizing an optimal learning experience for students.</p>
                                     </div>
                                 </div>
