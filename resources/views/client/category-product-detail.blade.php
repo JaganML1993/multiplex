@@ -391,15 +391,15 @@
 
             <div class="col-xl-6 col-lg-6 padprod defi-prod">
                 <div class="service-info-wrapper pr-lg-40 wow fadeInDown">
-                    <h6> {{ $product->role_of_deficiency ??''}}</h6>
+                    <h6 class="pb-20"> {{ $product->role_of_deficiency ??''}}</h6>
                     {!! $product->role_description ??'' !!}
 
                 </div>
             </div>
 
-            <div class="col-xl-6 col-lg-6 padprod def-prod">
+            <div class="col-xl-6 col-lg-6 padprod defi-prod">
                 <div class="service-info-wrapper pr-lg-40 wow fadeInDown">
-                    <h6> {{ $product->deficiency ??''}}</h6>
+                    <h6 class="pb-20"> {{ $product->deficiency ??''}}</h6>
                     {!! $product->deficiency_description ??'' !!}
                 </div>
             </div>
