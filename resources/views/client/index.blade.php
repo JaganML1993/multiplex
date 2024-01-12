@@ -59,14 +59,14 @@
             line-height: 1;
             color: #fff;
             text-shadow: none;
-            margin-top: 20px;
+            margin-top: -38px;
         }
 
         .cnt223 a {
             text-decoration: none;
             background-color: green;
             padding: 5px;
-            border-radius: 50px;
+            border-radius: 0px;
         }
 
         .popup-onload {
@@ -145,8 +145,8 @@ margin-inline-start: -115px !important;}
     <div class='popup-onload'>
         <div class='cnt223'>
             <div class="popup-content">
+                <a href='' class='close cls'>X</a>
                 <img src="{{ asset('images/welcome-banner.jpg') }}">
-                <a href='' class='close cls'>Close</a>
             </div>
         </div>
     </div>
