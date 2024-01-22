@@ -188,14 +188,10 @@
                         @endif --}}
 
                         @if(!empty($product->composition))
-                        <h6>Composition</h6>
-                        <div class="mt-10" style="display: flex;align-items: flex-start;gap: 10px">
-                            <p class="mt-10"><?php echo $product->composition ?></p>
-                        </div>
-                        <hr>
+                        <?php echo $product->composition ?>
                         @endif
 
-                        @if(!empty($product->active_ingredients))
+                        <!-- @if(!empty($product->active_ingredients))
                         <h6>Active Incredients</h6>
                         <div class="mt-10" style="display: flex;align-items: flex-start;gap: 10px">
                             <p class="mt-10"><?php echo $product->active_ingredients ?></p>
@@ -203,7 +199,6 @@
                         <hr>
                         @endif
 
-                        <!-- Mode Of Action -->
                         @if(!empty($product->mode_of_action))
                         <h6>Mode Of Action</h6>
                         <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
@@ -228,7 +223,6 @@
                         <hr>
                         @endif
 
-                        <!-- Precautions -->
                         @if(!empty($product->precautions))
                         <h6>Precautions</h6>
                         <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
@@ -237,7 +231,6 @@
                         <hr>
                         @endif
 
-                        <!-- Time of Erection -->
                         @if(!empty($product->time_of_erection))
                         <h6>Time of Erection</h6>
                         <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
@@ -246,7 +239,6 @@
                         <hr>
                         @endif
 
-                        <!-- Plant Type -->
                         @if(!empty($product->plant_type))
                         <h6>Plant Type</h6>
                         <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
@@ -255,7 +247,6 @@
                         <hr>
                         @endif
 
-                        <!-- Plant Height -->
                         @if(!empty($product->plant_height))
                         <h6>Plant Height</h6>
                         <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
@@ -264,7 +255,6 @@
                         <hr>
                         @endif
 
-                        <!-- Duration -->
                         @if(!empty($product->duration))
                         <h6>Duration</h6>
                         <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
@@ -273,7 +263,6 @@
                         <hr>
                         @endif
 
-                        <!-- Fruit Shape -->
                         @if(!empty($product->fruit_shape))
                         <h6>Fruit Shape</h6>
                         <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
@@ -282,7 +271,6 @@
                         <hr>
                         @endif
 
-                        <!-- Fruit Weight -->
                         @if(!empty($product->fruit_weight))
                         <h6>Fruit Weight</h6>
                         <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
@@ -291,7 +279,6 @@
                         <hr>
                         @endif
 
-                        <!-- Fruit Color -->
                         @if(!empty($product->fruit_color))
                         <h6>Fruit Color</h6>
                         <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
@@ -300,7 +287,6 @@
                         <hr>
                         @endif
 
-                        <!-- Fruit Length -->
                         @if(!empty($product->fruit_length))
                         <h6>Fruit Length</h6>
                         <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
@@ -309,7 +295,6 @@
                         <hr>
                         @endif
 
-                        <!-- Crud weight -->
                         @if(!empty($product->crud_weight))
                         <h6>Crud Weight</h6>
                         <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
@@ -374,14 +359,13 @@
                         <hr>
                         @endif
 
-                        <!-- Note -->
                         @if(!empty($product->note))
                         <h6>Note</h6>
                         <div class="mt-10" style="display: flex; align-items: flex-start; gap: 10px">
                             <p class="mt-10"><?php echo $product->note ?></p>
                         </div>
                         <hr>
-                        @endif
+                        @endif -->
 
                         <!-- --------------------------------------------------- -->
 

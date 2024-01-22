@@ -51,7 +51,8 @@ $title = "Admin Dashboard - MULTIPLEX";
   <script src="{{ asset('admin/js/config.js') }}"></script>
 
   <!-- ck editor -->
-  <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
+  <!-- <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script> -->
+  <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
 
   <!-- datatables -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css" />
