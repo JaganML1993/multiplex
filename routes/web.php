@@ -82,7 +82,8 @@ Route::get('/multiplex-agricare-pvt-ltd', [IndexController::class, 'multiplex_ag
 Route::get('/multiplex-movers', [IndexController::class, 'multiplex_movers'])->name('multiplex-movers');
 Route::get('/multiplex-safe-and-farm-fresh', [IndexController::class, 'multiplex_safe_and_farm_fresh'])->name('multiplex-safe-and-farm-fresh');
 
-
+/** Blog */
+Route::get('/blog-details', [IndexController::class, 'blog_details'])->name('blog-details');
 
 /** footer */
 Route::get('/gallery', [IndexController::class, 'gallery'])->name('gallery');

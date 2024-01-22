@@ -362,6 +362,10 @@ class IndexController extends Controller
         return view('client.multiplex-safe-and-farm-fresh');
     }
 
+    public function blog_details(){
+        return view('client.blog-details');
+    }
+
 
 
 
