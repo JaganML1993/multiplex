@@ -54,7 +54,7 @@
                                 @endif
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-12">
                                 <label class="col-form-label" for="basic-default-name">Benefits</label>
                                 <textarea class="form-control" name="benefits" id="benefits" rows="4"></textarea>
                                 @if($errors->has('benefits'))
@@ -62,7 +62,7 @@
                                 @endif
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-12">
                                 <label class="col-form-label" for="basic-default-name">Special Features</label>
                                 <textarea class="form-control" name="special_features" id="special_features" rows="4"></textarea>
                                 @if($errors->has('special_features'))
@@ -242,6 +242,26 @@
 
 <script>
     CKEDITOR.replace('composition', {
+        height: 200, // You can adjust the height as needed
+        // Other CKEditor configuration options if needed
+    });
+
+    CKEDITOR.replace('benefits', {
+        height: 200, // You can adjust the height as needed
+        // Other CKEditor configuration options if needed
+    });
+
+    CKEDITOR.replace('special_features', {
+        height: 200, // You can adjust the height as needed
+        // Other CKEditor configuration options if needed
+    });
+
+    CKEDITOR.replace('role_description', {
+        height: 200, // You can adjust the height as needed
+        // Other CKEditor configuration options if needed
+    });
+
+    CKEDITOR.replace('deficiency_description', {
         height: 200, // You can adjust the height as needed
         // Other CKEditor configuration options if needed
     });
