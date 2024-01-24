@@ -63,6 +63,14 @@
                             </div>
 
                             <div class="col-md-4">
+                                <label class="col-form-label" for="basic-default-name">Special Features</label>
+                                <textarea class="form-control" name="special_features" id="special_features" rows="4"></textarea>
+                                @if($errors->has('special_features'))
+                                <div class="error">{{ $errors->first('special_features') }}</div>
+                                @endif
+                            </div>
+
+                            <div class="col-md-4">
                                 <label class="col-form-label" for="basic-default-name">Product Leaflet</label>
                                 <input type="file" class="form-control" name="catelog_link" accept=".pdf" />
                                 @if($errors->has('catelog_link'))
