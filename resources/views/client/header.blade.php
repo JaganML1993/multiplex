@@ -420,9 +420,9 @@ $categories = CategoryAct::run();
                             <div class="widget-content">
                                 <ul class="footer-nav">
                                     <li><a href="{{ route('terms-and-conditions') }}">Terms & Conditions</a></li>
-                                    <li><a href="#">Fertilizers & Micro-Nutrients</a></li>
-                                    <li><a href="#">Bio-Products</a></li>
-                                    <li><a href="#">Pesticides</a></li>
+                                    <li><a href="assets/doc/one-brand-total-solution-brochure.pdf" target="_blank">Fertilizers & Micro-Nutrients</a></li>
+                                    <li><a href="assets/doc/bio-products-brochure.pdf" target="_blank">Bio-Products</a></li>
+                                    <li><a href="assets/doc/pesticides-brochure.pdf" target="_blank">Pesticides</a></li>
                                    
                                 </ul>
                             </div>

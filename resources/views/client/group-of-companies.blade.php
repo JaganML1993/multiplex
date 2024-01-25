@@ -190,7 +190,7 @@
                     <div class="goc-sub mb-20">
                         <p>Plant Protection Solutions </p>
                     </div>
-                    <p class="mb-15">Established in 1997, Multiplex Agricare Pvt Ltd is a pioneering force in the pesticide manufacturing industry. Nestled in the heart of the industrial estate in Tumkur, our cutting-edge facility spans a generous 2.5 acres, dedicated exclusively to the production of pesticides in liquid and powder formulations.</p>
+                    <p class="mb-15">Established in 1997, Multiplex Agricare Pvt. Ltd. is a pioneering force in the pesticide manufacturing industry. Nestled in the heart of the industrial estate in Tumkur, our cutting-edge facility spans a generous 2.5 acres, dedicated exclusively to the production of pesticides in liquid and powder formulations.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
                 </div>
                 <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
@@ -252,7 +252,9 @@
                     <div class="goc-sub mb-20">
                         <p>Leading the Way in Agricultural Innovation and Sustainability</p>
                     </div>
-                    <p class="mb-15">Multiplex Group has been at the forefront of addressing the evolving needs of agriculture and allied sectors through innovative products and services. With over two decades of field experience, we embarked on a journey in the year 2000 to establish state-of-the-art biotech units.</p>
+                    <p class="mb-15">Multiplex Group has been at the forefront of addressing the evolving needs 
+                    of agriculture and allied sectors through innovative products and services. With over two decades
+                     of field experience, we embarked on a journey in the year 2000 to establish state-of-the-art bio-tech units.</p>
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
                 </div>
                 <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">

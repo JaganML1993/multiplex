@@ -819,10 +819,10 @@ margin-inline-start: -115px !important;}
                         </div>
                         <div class="entry-content">
                             <a href="javascript:void(0);" class="cat-link"></a>
-                            <h4 class="entry-title"><a href="#">Cultivating Green Spaces in Urban Living</a></h4>
-                            <p>Multiplex Urban Green is a pioneering initiative by the Multiplex Group ...</p>
+                            <h4 class="entry-title"><a href="{{ route('blog-details') }}">Micronutrients in Crop Production</a></h4>
+                            <p>Large numbers of research workers are studying the importance of micronutrients in crop production all over the world.</p>
                             <div class="post-meta">
-                                <span class="date"><a href="#">Read More</a></span>
+                                <span class="date"><a href="{{ route('blog-details') }}">Read More</a></span>
                             </div>
                         </div>
                     </div>

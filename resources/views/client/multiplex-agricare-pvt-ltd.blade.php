@@ -77,13 +77,13 @@
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
-            <h1 class="page-title">Multiplex Agricare Pvt Ltd </h1>
+            <h1 class="page-title">Multiplex Agricare Pvt. Ltd. </h1>
             <div class="gd-breadcrumb">
                 <span class="breadcrumb-entry"><a href="{{ url('/') }}">Home</a></span>
                 <span class="separator"></span>
                 <span class="breadcrumb-entry"><a href="{{ route('group-of-companies') }}">Group of Companies </a></span>
                 <span class="separator"></span>
-                <span class="breadcrumb-entry active">Multiplex Agricare Pvt Ltd </span>
+                <span class="breadcrumb-entry active">Multiplex Agricare Pvt. Ltd. </span>
             </div>
         </div>
     </div>
@@ -94,7 +94,7 @@
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
-            <h1 class="page-title">Multiplex Agricare Pvt Ltd </h1>
+            <h1 class="page-title">Multiplex Agricare Pvt. Ltd. </h1>
            
         </div>
     </div>
@@ -104,7 +104,7 @@
                 <span class="separator"></span>
                 <span class="breadcrumb-entry"><a href="{{ route('group-of-companies') }}">Group of Companies |</a></span>
                 <span class="separator"></span>
-                <span class="breadcrumb-entry active">Multiplex Agricare Pvt Ltd </span>
+                <span class="breadcrumb-entry active">Multiplex Agricare Pvt. Ltd. </span>
             </div>
 </section>
 <!--====== End Page-title-area section ======-->
@@ -116,13 +116,13 @@
                     <div class="col-xl-12 col-lg-12">
                         <!--====== Section-title ======-->
                         <div class="section-title mb-25">
-                            <h2>Multiplex Agricare Pvt Ltd - Nurturing Crops, Protecting Futures</h2>
+                            <h2>Multiplex Agricare Pvt. Ltd. - Nurturing Crops, Protecting Futures</h2>
                         </div>
                         <div class="description-wrapper mt-30">
                             <div class="tab-content wow fadeInUp">
                                 <div class="tab-pane fade show active">
                                     <div class="content-box">
-                                        <p>Since its inception in 1997, Multiplex Agricare Pvt Ltd has emerged as a stalwart in the pesticide manufacturing industry, dedicated to providing innovative and effective solutions for plant protection. Situated in the thriving industrial estate of Tumkur, our state-of-the-art facility spans 2.5 acres and stands as a testament to our commitment to excellence.</p>
+                                        <p>Since its inception in 1997, Multiplex Agricare Pvt. Ltd. has emerged as a stalwart in the pesticide manufacturing industry, dedicated to providing innovative and effective solutions for plant protection. Situated in the thriving industrial estate of Tumkur, our state-of-the-art facility spans 2.5 acres and stands as a testament to our commitment to excellence.</p>
                                         
                                         <h3 class="mb-10 mt-30">Facility</h3>
                                         <p>Our cutting-edge facility, covering 18,000 square feet, is a hub of ingenuity and precision. Meticulously designed to align with the strictest industry standards, it comprises distinct sections for raw material procurement, formulation, packaging, and storage of finished products. Our infrastructure also houses a state-of-the-art testing laboratory, ensuring the quality and efficacy of every product. A well-organized administrative wing complements our operational prowess.</p>
