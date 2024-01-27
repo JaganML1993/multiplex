@@ -105,31 +105,21 @@
 @section('scripts')
 @parent
 <script type="text/javascript">
-    ClassicEditor
-        .create(document.querySelector('#description'))
-        .then(editor => {
-            console.log(editor);
-        })
-        .catch(error => {
-            console.error(error);
-        });
 
-    ClassicEditor
-        .create(document.querySelector('#roles'))
-        .then(editor => {
-            console.log(editor);
-        })
-        .catch(error => {
-            console.error(error);
-        });
+        CKEDITOR.replace('description', {
+        height: 200, // You can adjust the height as needed
+        // Other CKEditor configuration options if needed
+    });
 
-    ClassicEditor
-        .create(document.querySelector('#qualification'))
-        .then(editor => {
-            console.log(editor);
-        })
-        .catch(error => {
-            console.error(error);
-        });
+    CKEDITOR.replace('roles', {
+        height: 200, // You can adjust the height as needed
+        // Other CKEditor configuration options if needed
+    });
+
+    CKEDITOR.replace('qualification', {
+        height: 200, // You can adjust the height as needed
+        // Other CKEditor configuration options if needed
+    });
+
 </script>
 @endsection

@@ -205,7 +205,7 @@
                             </div>
                             <div class="col-md-4">
                                 <label class="col-form-label" for="basic-default-time-of-erection">Deficiency Description</label>
-                                <textarea class="form-control" name="deficiency_description" id="deficiency_description" rows="4">{{$data->deficiency ?? ''}}</textarea>
+                                <textarea class="form-control" name="deficiency_description" id="deficiency_description" rows="4">{{$data->deficiency_description ?? ''}}</textarea>
                                 @if($errors->has('deficiency_description'))
                                 <div class="error">{{ $errors->first('deficiency_description') }}</div>
                                 @endif

@@ -409,6 +409,7 @@
                 <h2 class="title">{{ $product->type_of_deficiency ?? '' }}</h2>
             </div>
             <div class="row">
+                @if(!empty($product->image1))
                 <div class="col-xl-6 col-lg-6">
                     <!--====== Sidebar Widget Area ======-->
                     <div class="sidebar-widget product-back-img widget-service-nav gray-bg mb-30 wow fadeInUp">
@@ -416,7 +417,9 @@
                                 alt="Gallery Image"></div>
                     </div>
                 </div>
+                @endif
 
+                @if(!empty($product->image2))
                 <div class="col-xl-6 col-lg-6">
                     <!--====== Sidebar Widget Area ======-->
                     <div class="sidebar-widget product-back-img widget-service-nav gray-bg mb-30 wow fadeInUp">
@@ -424,6 +427,7 @@
                                 alt="Gallery Image"></div>
                     </div>
                 </div>
+                @endif
 
                 <div class="col-xl-6 col-lg-6 padprod defi-prod">
                     <div class="service-info-wrapper pr-lg-40 wow fadeInDown">
