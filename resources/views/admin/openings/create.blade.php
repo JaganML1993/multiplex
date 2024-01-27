@@ -32,14 +32,14 @@
                             </div>
                             @php
 
-                              $departments = \App\Models\Department::where('type',2)->get();
+                            $departments = \App\Models\Department::where('type',2)->get();
 
                             @endphp
                             <div class="col-md-4">
                                 <label class="col-form-label" for="basic-default-name">Department<span class="required_star">*</span></label>
                                 <select class="form-control" name="department">
                                     @foreach($departments as $department)
-                                       <option value="{{ $department->id }}">{{ $department->name }}</option>
+                                    <option value="{{ $department->id }}">{{ $department->name }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -105,8 +105,7 @@
 @section('scripts')
 @parent
 <script type="text/javascript">
-
-        CKEDITOR.replace('description', {
+    CKEDITOR.replace('description', {
         height: 200, // You can adjust the height as needed
         // Other CKEditor configuration options if needed
     });
@@ -120,6 +119,5 @@
         height: 200, // You can adjust the height as needed
         // Other CKEditor configuration options if needed
     });
-
 </script>
 @endsection
