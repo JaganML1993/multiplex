@@ -436,7 +436,7 @@ $categories = CategoryAct::run();
                     <div class="col-lg-6">
                         <!--====== Copyright Text ======-->
                         <div class="copyright-text">
-                            <P>Copyright &copy; 2023 Multiplex Group of Companies. All Rights Reserved.</P>
+                            <P>Copyright &copy; 2024 Multiplex Group of Companies. All Rights Reserved.</P>
                         </div>
                     </div>
                 </div>

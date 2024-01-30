@@ -403,6 +403,7 @@
     </section>
     <!--====== End Specification Section ======-->
 
+  @if(!empty($product->type_of_deficiency) || !empty($product->image1) || !empty($product->image2))
     <section class="service-details-section pt-50 pb-50 bg-dark-home">
         <div class="container">
             <div class="pricing-title mb-30 text-center">
@@ -448,6 +449,7 @@
             </div>
         </div>
     </section>
+    @endif
     <br>
 
     <section class="service-details-section pt-30">

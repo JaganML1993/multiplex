@@ -122,7 +122,7 @@
                             <div class="tab-content wow fadeInUp">
                                 <div class="tab-pane fade show active">
                                     <div class="content-box">
-                                        <p>Multiplex Group has been at the forefront of addressing the evolving needs of agriculture and allied sectors through innovative products and services. With over two decades of field experience, we embarked on a journey in the year 2000 to establish state-of-the-art biotech units. </p>
+                                        <p>Multiplex Group has been at the forefront of addressing the evolving needs of agriculture and allied sectors through innovative products and services. With over two decades of field experience, we embarked on a journey in the year 2000 to establish state-of-the-art bio-tech units. </p>
                                         <p>Our commitment to agricultural innovation is bolstered by cutting-edge facilities and technologies, enabling us to conduct groundbreaking research, innovate, manufacture, and supply a wide range of bio-organic products. Our world-class facilities include:</p>
 
                                         <ul class="check-style-one mb-30">
@@ -132,10 +132,10 @@
                                             <li><i class="fa fa-check"></i>Powder Formulation: Developed in 2010 to increase shelf life and field efficacy.</li>
                                             <li><i class="fa fa-check"></i>Chirayu Seed Treatment: Microorganism-based seed dressing formulation proven effective for improving germination and plant growth.</li>
                                             <li><i class="fa fa-check"></i>Consortium-Based Products: Utilized for controlling plant parasitic nematodes and various soil and foliar diseases.</li>
-                                            <li><i class="fa fa-check"></i>Shuddi - A Cleaning, Sanitizer, and Bioremediation Product: Certified with Green Seal USA, offering eco-friendly solutions.</li>
+                                            <li><i class="fa fa-check"></i>Shuddi - A Cleaning, Sanitizer, and Bio-remediation Product: Certified with Green Seal USA, offering eco-friendly solutions.</li>
                                         </ul>
 
-                                        <p>Fully Automated Biotech Unit (September 2021): Equipped with advanced technologies, capable of producing substantial quantities of bio-fertilizers, bio-pesticides, and bio-decomposers with precision and quality. Features commercial walk-in cold rooms for product preservation and automated packing for utmost accuracy.</p>
+                                        <p>Fully Automated Bio-tech Unit (September 2021): Equipped with advanced technologies, capable of producing substantial quantities of bio-fertilizers, bio-pesticides, and bio-decomposers with precision and quality. Features commercial walk-in cold rooms for product preservation and automated packing for utmost accuracy.</p>
 
                                         <p>Our journey has been marked by significant achievements, including:</p>
 
@@ -145,11 +145,11 @@
                                             <li><i class="fa fa-check"></i>Production of Nisarga W. P powder formulation using innovative technology.</li>
                                             <li><i class="fa fa-check"></i>Manufacturing the highly effective seed treatment product, Chirayu, under license agreement.</li>
                                             <li><i class="fa fa-check"></i>Pioneering the use of consortia for products to control nematodes and diseases.</li>
-                                            <li><i class="fa fa-check"></i>Development of Shuddi, a certified cleaning, sanitizer, and bioremediation product.</li>
+                                            <li><i class="fa fa-check"></i>Development of Shuddi, a certified cleaning, sanitizer, and bio-remediation product.</li>
                                         </ul>
 
-                                        <p>Establishment of a fully automated world-class biotech unit in September 2021, setting new standards in quality, preservation, and precision.</p>
-                                        <p>At Multiplex Biotech Pvt Ltd, we are committed to pushing the boundaries of agricultural innovation, ensuring a sustainable and productive future for farming communities worldwide. Our state-of-the-art facilities and groundbreaking research continue to shape the future of agriculture.</p>
+                                        <p>Establishment of a fully automated world-class bio-tech unit in September 2021, setting new standards in quality, preservation, and precision.</p>
+                                        <p>At Multiplex Bio-tech Pvt. Ltd., we are committed to pushing the boundaries of agricultural innovation, ensuring a sustainable and productive future for farming communities worldwide. Our state-of-the-art facilities and groundbreaking research continue to shape the future of agriculture.</p>
 
 
                                     </div>
@@ -177,7 +177,7 @@
                             <div class="tab-content wow fadeInUp">
                                 <div class="tab-pane fade show active">
                                     <div class="content-box">
-                                        <p>In 2016, Multiplex Group recognized the significance of "Integrated Pest Management" and initiated the development of "Pheromone Traps" as a vital component of this approach. The "GPS Institute Of Agricultural Management" (GPSIOAM) was established under the auspices of the Dr. GP Shetty Agri Research and Education Trust, with a dedicated Research and Product Development wing for pheromone traps.</p>
+                                        <p>In 2016, Multiplex Group recognized the significance of "Integrated Pest Management" and initiated the development of "Pheromone Traps" as a vital component of this approach. The "GPS Institute Of Agricultural Management" (GPSIOAM) was established under the auspices of the Dr. G.P. Shetty Agri Research and Education Trust, with a dedicated Research and Product Development wing for pheromone traps.</p>
                                         <p>Our journey began with the release of "Multiplex Aakarshan – Pheromone Trap for Fruit Flies" in May 2017, leading to nearly ten pheromone products in the past five years. We continue to research and launch products targeting various pests every year, focusing on environmentally safe solutions to reduce chemical use and promote a healthier planet.</p>
                                     </div>
                                 </div>
@@ -202,7 +202,7 @@
                             <div class="tab-content wow fadeInUp">
                                 <div class="tab-pane fade show active">
                                     <div class="content-box">
-                                        <p>Founded in 1991 as a soil and fertilizer testing laboratory, Multiplex Bio-Tech Pvt. Ltd. Laboratory has evolved into an institution dedicated to serving the agricultural community. Accredited by NABL since 2017, we adhere to ISO/IEC 17025/2017 standards, ensuring precision and quality in agricultural testing. Our laboratory offers comprehensive quality testing of soil, water, plants/leaves, organic manure, and fertilizers. Our team of highly qualified professionals manages the laboratory, providing accurate assessments and recommendations to enhance crop productivity. </p>
+                                        <p>Founded in 1991 as a soil and fertilizer testing laboratory, Multiplex Bio-Tech Pvt. Ltd. Laboratory has evolved into an institution dedicated to serving the agricultural community. Accredited by NABL since 2017, we adhere to ISO/IEC 17025/2017 standards, ensuring precision and quality in agricultural testing. Our laboratory offers comprehensive quality testing of soil, water, plants/leaves, organic manure, and fertilizers. Our team of highly qualified professionals manage the laboratory, providing accurate assessments and recommendations to enhance crop productivity. </p>
                                         <p>We specialize in soil analysis, water analysis, plant/leaf analysis, fertilizer analysis, and organic manure analysis. Additionally, our laboratory serves as a study center for GPS-IOAM, offering agricultural management courses, prioritizing an optimal learning experience for students.</p>
                                     </div>
                                 </div>

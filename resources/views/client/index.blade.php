@@ -165,7 +165,7 @@ margin-inline-start: -115px !important;}
                         <div class="hero-content">
                             <!--<p class="wow fadeInDown" data-wow-delay=".6s">Integrity, Quality and Trust, Transparency, <br/>Commitment, Relationship, Innovation.</p>-->
                             <h1 class="wow fadeInUp" data-wow-delay=".4s" style="color:#fff;">Innovators in Agricultural
-                                Sectors</h1>
+                                Sector</h1>
                             <!--<div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">-->
                             <!--    <a href="{{ route('vision-and-misssion') }}" class="main-btn golden-btn mb-10">Know More</a>-->
                             <!--</div>-->
@@ -593,9 +593,9 @@ margin-inline-start: -115px !important;}
                                 <!--=== Section Title ===-->
                                 <div class="section-title mb-25 wow fadeInUp years-size">
                                     <span class="sub-title"><img src="{{ asset('images/leaf-svgrepo-com-new.svg') }}"
-                                            height="35" width="35" alt=""> We are fast approaching the
+                                            height="35" width="35" alt="">We are fast approaching the
                                         milestone of</span>
-                                    <h2 style="font-size: 50px;">Multiplex <br />Golden Jubilee <br />Celebration.</h2>
+                                    <h2 style="font-size: 50px;">Multiplex <br />Golden Jubilee <br />Celebration</h2>
                                 </div>
                                 <!--  <p class="mb-40 wow fadeInDown">Sed ut perspiciatis unde omnis iste natus voluptatem accusan inventore</p> -->
                                 <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
