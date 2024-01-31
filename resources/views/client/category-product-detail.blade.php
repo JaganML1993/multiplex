@@ -135,7 +135,19 @@
             font-size: 18px;
             font-weight: 500;
             line-height: 1.3;
+            margin-bottom:15px;
         }
+        
+        .sub-head p {
+            font-size: 18px;
+            font-weight: 500;
+            color: #004827;
+            font-family: "Montserrat", sans-serif;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            border-top: 1px solid rgba(11, 61, 44, 0.1);
+        }
+
     </style>
 
 
@@ -198,9 +210,9 @@
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <!--====== Pricing Item ======-->
                     <div class="single-pricing-item mb-40 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="pricing-body">
+                        <div class="pricing-body sub-head">
                             <div class="pricing-title mb-10">
-                                <h2 class="title">Specification</h2>
+                                <h2 class="title" style="border-bottom: none;">Specification</h2>
                             </div>
 
                             <!-- Special Features -->
@@ -403,6 +415,7 @@
     </section>
     <!--====== End Specification Section ======-->
 
+
   @if(!empty($product->type_of_deficiency) || !empty($product->image1) || !empty($product->image2))
     <section class="service-details-section pt-50 pb-50 bg-dark-home">
         <div class="container">
@@ -486,5 +499,35 @@
 @endsection
 @section('scripts')
     @parent
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+    var emailInput = document.getElementById('emailInput');
+
+    emailInput.addEventListener('input', function () {
+        validateEmail();
+    });
+
+    function validateEmail() {
+        var email = emailInput.value.trim();
+        var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+        if (emailRegex.test(email)) {
+            // Valid email format
+            var allowedDomains = ['com', 'in', 'co']; // Add more domain extensions as needed
+            var domain = email.split('.').pop();
+
+            if (allowedDomains.includes(domain)) {
+                // Email is valid with allowed domain extension
+                emailInput.setCustomValidity('');
+            } else {
+                // Invalid domain extension
+                emailInput.setCustomValidity('Please enter a valid email with allowed domain extension(s).');
+            }
+        } else {
+            // Invalid email format
+            emailInput.setCustomValidity('Please enter a valid email address.');
+        }
+    }
+});
+    </script>
 @endsection

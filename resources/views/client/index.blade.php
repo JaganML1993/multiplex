@@ -26,8 +26,6 @@
         }
 
 
-
-
         #overlay {
             position: fixed;
             top: 0;
@@ -53,13 +51,12 @@
         }
 
         .close {
-            float: right;
-            font-size: 1rem;
-            font-weight: 500;
-            line-height: 1;
-            color: #fff;
-            text-shadow: none;
-            margin-top: -38px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 18px;
+            color: #333;
         }
 
         .cnt223 a {
@@ -126,6 +123,8 @@
             line-height: 1.5;
         }
         }
+
+        
         @media (min-width:1679px){
 .skill-two_image-boxss {
 width: 100% !important;
@@ -815,7 +814,7 @@ margin-inline-start: -115px !important;}
                     <!--====== Single Blog Post  ======-->
                     <div class="single-blog-post mb-40 wow fadeInUp" data-wow-delay=".2s">
                         <div class="post-thumbnail">
-                            <img src="{{ asset('images/blog-1.jpg') }}" alt="Post Thumbnail">
+                            <img src="{{ asset('images/blog-thumb.jpg') }}" alt="Post Thumbnail">
                         </div>
                         <div class="entry-content">
                             <a href="javascript:void(0);" class="cat-link"></a>

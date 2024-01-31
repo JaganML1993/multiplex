@@ -113,26 +113,22 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form_group">
-                                            <input type="text" class="form_control" placeholder="First Name"
-                                                name="fname" required>
+                                            <input type="text" class="form_control" onkeypress="return /[a-zA-Z,' ']/i.test(event.key)" placeholder="First Name" name="fame" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form_group">
-                                            <input type="text" class="form_control" placeholder="Last Name" name="lname"
-                                                required>
+                                            <input type="text" class="form_control" onkeypress="return /[a-zA-Z,' ']/i.test(event.key)" placeholder="Last Name" name="lname" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form_group">
-                                            <input type="email" class="form_control" placeholder="Email Address"
-                                                name="email" required>
+                                            <input type="email" class="form_control" placeholder="Email Address" name="email" id="emailInput" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form_group">
-                                            <input type="text" class="form_control" placeholder="Phone Number"
-                                                onkeypress="num_validate(event)" name="phone" required>
+                                            <input type="text" class="form_control" onkeypress="num_validate(event)" oninput="maxLengthCheck(this)" maxlength="10" placeholder="Phone Number" name="phone" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -143,8 +139,7 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form_group">
-                                            <input type="text" class="form_control" placeholder="Years of Experience"
-                                                name="experience" required>
+                                            <input type="text" class="form_control" onkeypress="num_validate(event)" placeholder="Years of Experience" name="experience" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -233,4 +228,37 @@
         });
     });
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var emailInput = document.getElementById('emailInput');
+
+    emailInput.addEventListener('input', function () {
+        validateEmail();
+    });
+
+    function validateEmail() {
+        var email = emailInput.value.trim();
+        var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+        if (emailRegex.test(email)) {
+            // Valid email format
+            var allowedDomains = ['com', 'in', 'co']; // Add more domain extensions as needed
+            var domain = email.split('.').pop();
+
+            if (allowedDomains.includes(domain)) {
+                // Email is valid with allowed domain extension
+                emailInput.setCustomValidity('');
+            } else {
+                // Invalid domain extension
+                emailInput.setCustomValidity('Please enter a valid email with allowed domain extension(s).');
+            }
+        } else {
+            // Invalid email format
+            emailInput.setCustomValidity('Please enter a valid email address.');
+        }
+    }
+});
+</script>
+
 @endsection
