@@ -1,7 +1,7 @@
 @extends('client.header')
 @section('content')
 <style>
-      .desktop-view {
+    .desktop-view {
         display: block !important;
     }
 
@@ -45,11 +45,17 @@
         }
 
     }
-     
 </style>
 <!--====== Start Page-title-area section ======-->
-<section class="page-title-area text-white bg_cover desktop-view"
-    style="background-image: url({{url('assets/images/fertilizers-header-banner1140x406.webp')}});">
+<section class="page-title-area text-white bg_cover desktop-view" 
+    @if($category->name == 'Fertilizers')
+        style="background-image: url({{url('assets/images/fertilizers-header-banner1140x406.webp')}});"
+    @elseif($category->name == 'Category2')
+        style="background-image: url({{url('assets/images/fertilizers-header-banner1140x406.webp')}});"
+    @elseif($category->name == 'Category1')
+        style="background-image: url({{url('assets/images/fertilizers-header-banner1140x406.webp')}});"
+    @endif
+    >
     <div class="container">
         <!--======  Page-title-Inner ======-->
         <div class="page-title-inner text-center">
@@ -65,23 +71,30 @@
     </div>
 </section>
 <section class="mobile-view">
-<section class="page-title-area text-white bg_cover"
-    style="background-image: url(assets/images/fertilizers-header-banner1140x406.webp);">
-    <div class="container">
-        <!--======  Page-title-Inner ======-->
-        <div class="page-title-inner text-center">
-            <h1 class="page-title">{{$category->name}}</h1>
-           
-        </div>
-    </div>
-</section>
-<div class="gd-breadcrumb">
-                <span class="breadcrumb-entry"><a href="{{url('')}}">Home | </a></span>
-                <span class="separator"></span>
-                <span class="breadcrumb-entry"><a href="{{route('products.index')}}">Products</a></span>
-                <span class="separator"></span>
-                <span class="breadcrumb-entry active">{{$category->name}}</span>
+    <section class="page-title-area text-white bg_cover"
+    @if($category->name == 'Fertilizers')
+        style="background-image: url(assets/images/fertilizers-header-banner1140x406.webp);"
+    @elseif($category->name == 'Category2')
+        style="background-image: url(assets/images/fertilizers-header-banner1140x406.webp);"
+    @elseif($category->name == 'Category3')
+        style="background-image: url(assets/images/fertilizers-header-banner1140x406.webp);"
+    @endif
+     >
+        <div class="container">
+            <!--======  Page-title-Inner ======-->
+            <div class="page-title-inner text-center">
+                <h1 class="page-title">{{$category->name}}</h1>
+
             </div>
+        </div>
+    </section>
+    <div class="gd-breadcrumb">
+        <span class="breadcrumb-entry"><a href="{{url('')}}">Home | </a></span>
+        <span class="separator"></span>
+        <span class="breadcrumb-entry"><a href="{{route('products.index')}}">Products</a></span>
+        <span class="separator"></span>
+        <span class="breadcrumb-entry active">{{$category->name}}</span>
+    </div>
 </section>
 <!--====== End Page-title-area section ======-->
 
@@ -102,34 +115,31 @@
             <div class="col-lg-12">
                 <!--====== Filter Button ======-->
                 <ul class="project-filter mb-50">
-                    <li  class="active" data-filter="*">
+                    <li class="active" data-filter="*">
                         <a class="subcategory-link" data-subcategory-id="all" href="#">Show All</a>
                     </li>
                     @foreach($subCategories as $subCategory)
-                        <li  class="sub_category"data-filter=".cat-{{ $subCategory->id }}">
-                            <a class="subcategory-link" data-subcategory-id="{{ $subCategory->id }}" href="#">
-                                {{ $subCategory->name }}
-                            </a>
-                        </li>
+                    <li class="sub_category" data-filter=".cat-{{ $subCategory->id }}">
+                        <a class="subcategory-link" data-subcategory-id="{{ $subCategory->id }}" href="#">
+                            {{ $subCategory->name }}
+                        </a>
+                    </li>
                     @endforeach
                 </ul>
-                
-                
+
+
             </div>
         </div>
-        <div class="row gallery-active prod-img-border"  id="content_port">         
-            @include('client.product-result')  
+        <div class="row gallery-active prod-img-border" id="content_port">
+            @include('client.product-result')
         </div>
         <div class="ajax-load text-center test-bold fs-25 py-4" style="display:none">
 
             <p>
-               <img 
-               src="{{ asset('assets/img/loader.gif') }}"
-               srcset="{{ asset('assets/img/loader.gif') }}?tr=w-60,h-60,420w"
-               alt="">
-           </p>
+                <img src="{{ asset('assets/img/loader.gif') }}" srcset="{{ asset('assets/img/loader.gif') }}?tr=w-60,h-60,420w" alt="">
+            </p>
 
-       </div>
+        </div>
     </div>
 </section>
 <!--====== End Gallery section ======-->
@@ -140,8 +150,8 @@
 @parent
 
 <script>
-    $(document).ready(function () {
-        $('.subcategory-link').on('click', function (e) {
+    $(document).ready(function() {
+        $('.subcategory-link').on('click', function(e) {
             e.preventDefault();
             var subcategoryId = $(this).data('subcategory-id');
             loadResults(1, subcategoryId);
@@ -149,7 +159,7 @@
 
         function loadResults(page, subCategoryId) {
             var category = $('#category').val();
-            
+
             // Check if the subCategoryId is 'all'
             if (subCategoryId === 'all') {
                 subCategoryId = 0; // Set to 0 for the "All" option
@@ -163,10 +173,10 @@
                     category: category,
                     sub_category_id: subCategoryId,
                 },
-                beforeSend: function () {
+                beforeSend: function() {
                     $('.ajax-load').show();
                 },
-                success: function (data) {
+                success: function(data) {
                     if (!data.html) {
                         $("#no_portfolio1").hide();
                         $('.ajax-load').html("No more careers available");
@@ -175,7 +185,7 @@
                         $("#content_port").empty().html(data.html);
                     }
                 },
-                complete: function () {
+                complete: function() {
                     $('.ajax-load').hide();
                 },
             });

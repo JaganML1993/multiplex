@@ -122,7 +122,7 @@
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="form_group">
-                                                        <input type="email" class="form_control" placeholder="Email Address" name="email" id="emailInput" required>
+                                                        <input type="text" class="form_control" placeholder="Email Address" name="email" id="emailField" required oninput="validateDomain()">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
@@ -514,6 +514,22 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
+
+    <script>
+        function validateDomain() {
+            var emailInput = document.getElementById('emailField');
+            var emailValue = emailInput.value;
+
+            // Simplified regular expression for email validation
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org)$/;
+
+            if (!emailRegex.test(emailValue)) {
+                emailInput.setCustomValidity("Please enter a valid email address.");
+            } else {
+                emailInput.setCustomValidity('');
+            }
+        }   
+    </script>
 
     <script>
         function num_validate(event) {
