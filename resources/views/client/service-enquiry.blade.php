@@ -32,7 +32,8 @@
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form_group">
-                                                    <input type="email" class="form_control" placeholder="Email Address" name="email" id="emailInput" required>
+                                                    <input type="email" class="form_control" 
+                                                    placeholder="Email Address" name="email" id="emailInput" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">

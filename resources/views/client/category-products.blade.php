@@ -50,10 +50,10 @@
 <section class="page-title-area text-white bg_cover desktop-view" 
     @if($category->name == 'Fertilizers')
         style="background-image: url({{url('assets/images/fertilizers-header-banner1140x406.webp')}});"
-    @elseif($category->name == 'Category2')
-        style="background-image: url({{url('assets/images/fertilizers-header-banner1140x406.webp')}});"
-    @elseif($category->name == 'Category1')
-        style="background-image: url({{url('assets/images/fertilizers-header-banner1140x406.webp')}});"
+    @elseif($category->name == 'Bio Products')
+        style="background-image: url({{url('assets/images/bio-products-banner-1140x406.webp')}});"
+    @elseif($category->name == 'Growth Promoters')
+        style="background-image: url({{url('assets/images/pgr-banner-1140x406.webp')}});"
     @endif
     >
     <div class="container">
@@ -73,11 +73,11 @@
 <section class="mobile-view">
     <section class="page-title-area text-white bg_cover"
     @if($category->name == 'Fertilizers')
-        style="background-image: url(assets/images/fertilizers-header-banner1140x406.webp);"
-    @elseif($category->name == 'Category2')
-        style="background-image: url(assets/images/fertilizers-header-banner1140x406.webp);"
-    @elseif($category->name == 'Category3')
-        style="background-image: url(assets/images/fertilizers-header-banner1140x406.webp);"
+        style="background-image: url({{url('assets/images/fertilizers-header-banner1140x406.webp')}});"
+    @elseif($category->name == 'Bio Products')
+        style="background-image: url({{url('assets/images/bio-products-banner-1140x406.webp')}});"
+    @elseif($category->name == 'Growth Promoters')
+        style="background-image: url({{url('assets/images/pgr-banner-1140x406.webp')}});"
     @endif
      >
         <div class="container">

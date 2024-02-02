@@ -122,7 +122,8 @@
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="form_group">
-                                                        <input type="text" class="form_control" placeholder="Email Address" name="email" id="emailField" required oninput="validateDomain()">
+                                                        <input type="text" class="form_control" placeholder="Email Address"
+                                                         name="email" id="emailField" required oninput="validateDomain()">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
@@ -332,8 +333,8 @@
                                 <li class="menu-item has-children"><a href="#">Services</a>
                                     <ul class="sub-menu">
                                         <li><a href="{{ route('quality-testing') }}">Quality Testing</a></li>
-                                        <li><a href="{{ route('microbial-analysis-laboratory') }}">Microbial Analysis
-                                                Laboratory</a></li>
+                                        {{-- <li><a href="{{ route('microbial-analysis-laboratory') }}">Microbial Analysis
+                                                Laboratory</a></li> --}}
                                         <li><a href="{{ route('drone-services') }}">Drone Services</a></li>
                                         <li><a href="{{ route('gardening-services') }}">Gardening Services</a></li>
 
@@ -722,38 +723,7 @@
         });
     </script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var emailInput = document.getElementById('emailInput');
-
-            emailInput.addEventListener('input', function() {
-                validateEmail();
-            });
-
-            function validateEmail() {
-                var email = emailInput.value.trim();
-                var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-
-                if (emailRegex.test(email)) {
-                    // Valid email format
-                    var allowedDomains = ['com', 'in', 'co']; // Add more domain extensions as needed
-                    var domain = email.split('.').pop();
-
-                    if (allowedDomains.includes(domain)) {
-                        // Email is valid with allowed domain extension
-                        emailInput.setCustomValidity('');
-                    } else {
-                        // Invalid domain extension
-                        emailInput.setCustomValidity(
-                        'Please enter a valid email with allowed domain extension(s).');
-                    }
-                } else {
-                    // Invalid email format
-                    emailInput.setCustomValidity('Please enter a valid email address.');
-                }
-            }
-        });
-    </script>
+    
 
 
 

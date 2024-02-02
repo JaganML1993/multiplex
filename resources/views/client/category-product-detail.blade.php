@@ -499,35 +499,19 @@
 @endsection
 @section('scripts')
     @parent
-    <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function () {
-    var emailInput = document.getElementById('emailInput');
+    <script>
+        function validateDomain() {
+            var emailInput = document.getElementById('emailField');
+            var emailValue = emailInput.value;
 
-    emailInput.addEventListener('input', function () {
-        validateEmail();
-    });
+            // Simplified regular expression for email validation
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org)$/;
 
-    function validateEmail() {
-        var email = emailInput.value.trim();
-        var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-
-        if (emailRegex.test(email)) {
-            // Valid email format
-            var allowedDomains = ['com', 'in', 'co']; // Add more domain extensions as needed
-            var domain = email.split('.').pop();
-
-            if (allowedDomains.includes(domain)) {
-                // Email is valid with allowed domain extension
-                emailInput.setCustomValidity('');
+            if (!emailRegex.test(emailValue)) {
+                emailInput.setCustomValidity("Please enter a valid email address.");
             } else {
-                // Invalid domain extension
-                emailInput.setCustomValidity('Please enter a valid email with allowed domain extension(s).');
+                emailInput.setCustomValidity('');
             }
-        } else {
-            // Invalid email format
-            emailInput.setCustomValidity('Please enter a valid email address.');
-        }
-    }
-});
+        }   
     </script>
 @endsection
