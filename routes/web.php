@@ -93,6 +93,7 @@ Route::get('/terms-and-conditions', [IndexController::class, 'terms_and_conditio
 
 Route::get('/autocomplete-search', [IndexController::class, 'autocompleteSearch']);
 Route::get('/autocomplete-department', [IndexController::class, 'autocompleteDepartment']);
+Route::get('/autocomplete-position', [IndexController::class, 'autocompletePosition']);
 Route::get('/search-products', [IndexController::class, 'showProducts'])->name('search.products');
 Route::get('/autocomplete-global', [IndexController::class, 'showGlobal'])->name('search.global');
 

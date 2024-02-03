@@ -217,6 +217,20 @@
             });
         }
     });
+    var position_route = "{{ url('autocomplete-position') }}";
+    $('#position').typeahead({
+        source: function (query, process) {
+            return $.get(position_route, {
+                query: query
+            }, function (data) {
+                  // Extract 'location' field from the response
+                  var posit = data.map(function(item) {
+                    return item.position;
+                });
+                return process(posit);
+            });
+        }
+    });
     var department = "{{ url('autocomplete-department') }}";
     $('#department').typeahead({
         source: function (query, process) {
