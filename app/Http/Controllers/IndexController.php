@@ -390,9 +390,19 @@ class IndexController extends Controller
         return view('client.multiplex-safe-and-farm-fresh');
     }
 
-    public function blog_details()
+    public function micronutrients_in_crop_production()
     {
-        return view('client.blog-details');
+        return view('client.micronutrients-in-crop-production');
+    }
+
+    public function minchu_plus_for_pink_boll_worm()
+    {
+        return view('client.minchu-plus-for-pink-boll-worm');
+    }
+
+    public function what_is_soil_testing()
+    {
+        return view('client.what-is-soil-testing');
     }
 
 

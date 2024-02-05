@@ -818,10 +818,10 @@ margin-inline-start: -115px !important;}
                         </div>
                         <div class="entry-content">
                             <a href="javascript:void(0);" class="cat-link"></a>
-                            <h4 class="entry-title"><a href="{{ route('blog-details') }}">Micronutrients in Crop Production</a></h4>
+                            <h4 class="entry-title"><a href="{{ route('micronutrients-in-crop-production') }}">Micronutrients in Crop Production</a></h4>
                             <p>Large numbers of research workers are studying the importance of micronutrients in crop production all over the world.</p>
                             <div class="post-meta">
-                                <span class="date"><a href="{{ route('blog-details') }}">Read More</a></span>
+                                <span class="date"><a href="{{ route('micronutrients-in-crop-production') }}">Read More</a></span>
                             </div>
                         </div>
                     </div>
@@ -830,15 +830,14 @@ margin-inline-start: -115px !important;}
                     <!--====== Single Blog Post  ======-->
                     <div class="single-blog-post mb-40 wow fadeInUp" data-wow-delay=".2s">
                         <div class="post-thumbnail">
-                            <img src="{{ asset('images/blog-three.jpg') }}" alt="Post Thumbnail">
+                            <img src="{{ asset('images/pink-boll-worm-thumb.jpg') }}" alt="Post Thumbnail">
                         </div>
                         <div class="entry-content">
                             <a href="javascript:void(0);" class="cat-link"></a>
-                            <h4 class="entry-title"><a href="#">Multiplex Forest Factree - Sustainable
-                                    Agroforestry</a></h4>
-                            <p>Our primary objective is to produce uniform, healthy, and disease-free ...</p>
+                            <h4 class="entry-title"><a href="{{ route('minchu-plus-for-pink-boll-worm') }}">Minchu Plus for Pink Boll Worm</a></h4>
+                            <p>Cotton is the most important commercial crop globally, often referred to as "white gold".</p>
                             <div class="post-meta">
-                                <span class="date"><a href="#">Read More</a></span>
+                                <span class="date"><a href="{{ route('minchu-plus-for-pink-boll-worm') }}">Read More</a></span>
                             </div>
                         </div>
                     </div>
@@ -847,14 +846,14 @@ margin-inline-start: -115px !important;}
                     <!--====== Single Blog Post  ======-->
                     <div class="single-blog-post mb-40 wow fadeInUp" data-wow-delay=".2s">
                         <div class="post-thumbnail">
-                            <img src="{{ asset('images/blog-two.jpg') }}" alt="Post Thumbnail">
+                            <img src="{{ asset('images/soil-testing-blog-thumb.jpg') }}" alt="Post Thumbnail">
                         </div>
                         <div class="entry-content">
                             <a href="javascript:void(0);" class="cat-link"></a>
-                            <h4 class="entry-title"><a href="#">Micronutrients in Crop Production</a></h4>
-                            <p>Large numbers of research workers are studying the importance of ...</p>
+                            <h4 class="entry-title"><a href="{{ route('what-is-soil-testing') }}">मिट्टी परीक्षण क्या है?</a></h4>
+                            <p>फसल की अधिक उत्पादन एवं स्वस्थ विकास के लिए  आवश्यक पोषक तत्वों की मिटटी में  उपलब्ध मात्राओं का रासायनिक परीक्षणों द्वारा आंकलन करना ही मृदा परीक्षण कहलाता है।</p>
                             <div class="post-meta">
-                                <span class="date"><a href="#">Read More</a></span>
+                                <span class="date"><a href="{{ route('what-is-soil-testing') }}">Read More</a></span>
                             </div>
                         </div>
                     </div>

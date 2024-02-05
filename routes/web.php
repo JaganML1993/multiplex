@@ -83,7 +83,10 @@ Route::get('/multiplex-movers', [IndexController::class, 'multiplex_movers'])->n
 Route::get('/multiplex-safe-and-farm-fresh', [IndexController::class, 'multiplex_safe_and_farm_fresh'])->name('multiplex-safe-and-farm-fresh');
 
 /** Blog */
-Route::get('/blog-details', [IndexController::class, 'blog_details'])->name('blog-details');
+Route::get('/micronutrients-in-crop-production', [IndexController::class, 'micronutrients_in_crop_production'])->name('micronutrients-in-crop-production');
+Route::get('/minchu-plus-for-pink-boll-worm', [IndexController::class, 'minchu_plus_for_pink_boll_worm'])->name('minchu-plus-for-pink-boll-worm');
+Route::get('/what-is-soil-testing', [IndexController::class, 'what_is_soil_testing'])->name('what-is-soil-testing');
+
 
 /** footer */
 Route::get('/gallery', [IndexController::class, 'gallery'])->name('gallery');

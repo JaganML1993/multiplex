@@ -9,6 +9,10 @@
         display: none !important;
     }
 
+    .management-image img {
+        border-radius:20px;
+    }
+
     @media (max-width:567px) {
         .pt-100 {
             padding-top: 40px !important;
@@ -144,8 +148,8 @@
 
             <div class="col-xl-6 col-lg-12">
                 <!--=== Hero Image Box ===-->
-                <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">
-                    <img src="{{ asset('images/mg-shetty-2.jpg') }}" alt="Hero Image">
+                <div class="hero-image-box d-xl-block wow fadeInRight management-image" data-wow-delay=".75s">
+                    <img src="{{ asset('images/mg-shetty-new2.jpg') }}" alt="Hero Image">
                 </div>
             </div>
         </div>
@@ -155,8 +159,8 @@
         <div class="row align-items-xl-center">
             <div class="col-xl-6 col-lg-12">
                 <!--=== Hero Image Box ===-->
-                <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">
-                    <img src="{{ asset('images/nm-shetty-2.png') }}" alt="Hero Image">
+                <div class="hero-image-box d-xl-block wow fadeInRight management-image" data-wow-delay=".75s">
+                    <img src="{{ asset('images/nm-shetty-new2.jpg') }}" alt="Hero Image">
                 </div>
             </div>
 
