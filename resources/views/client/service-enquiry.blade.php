@@ -27,15 +27,13 @@
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form_group">
-                                                    <input type="text" class="form_control" onkeypress="num_validate(event)" 
-                                                    oninput="maxLengthCheck(this)" maxlength="10" minlength="10" 
-                                                    placeholder="Phone Number" name="phone" required>
+                                                    <input type="text" class="form_control" onkeypress="num_validate(event)" oninput="maxLengthCheck(this)" maxlength="10" placeholder="Phone Number" name="phone" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form_group">
-                                                    <input type="text" class="form_control" placeholder="Email Address"
-                                                         name="email" id="emailField" required oninput="validateDomain()">
+                                                    <input type="text" class="form_control" 
+                                                    placeholder="Email Address" name="email" oninput="validateDomainDrone()" id="emailField1" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">

@@ -162,18 +162,18 @@
 @section('scripts')
 @parent
 <script>
-        function validateDomain() {
-            var emailInput = document.getElementById('emailField');
-            var emailValue = emailInput.value;
+    function validateDomainDrone() {
+        var emailInput1 = document.getElementById('emailField1');
+        var emailValue = emailInput1.value;
 
-            // Simplified regular expression for email validation
-            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org)$/;
+        // Simplified regular expression for email validation
+        var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org)$/;
 
-            if (!emailRegex.test(emailValue)) {
-                emailInput.setCustomValidity("Please enter a valid email address.");
-            } else {
-                emailInput.setCustomValidity('');
-            }
-        }   
-    </script>
+        if (!emailRegex.test(emailValue)) {
+            emailInput1.setCustomValidity("Please enter a valid email address.");
+        } else {
+            emailInput1.setCustomValidity('');
+        }
+    }
+</script>
 @endsection

@@ -166,7 +166,7 @@
             }
 
             $.ajax({
-                url: '/search-products', // Replace with your actual search endpoint
+                url: "{{url('search-products')}}", // Replace with your actual search endpoint
                 type: 'GET',
                 data: {
                     page: page,
