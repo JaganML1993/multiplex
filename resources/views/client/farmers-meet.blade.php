@@ -47,6 +47,64 @@
 
     }
 </style>
+
+<style>
+    .slick-dots {
+    display: block;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  text-align:center;
+  line-height:2.5;
+
+  transform: translateY(-42%);
+  cursor: pointer;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  background-color: #ffffff;
+      box-shadow: 1px 1px 10px 0px #99999954;
+}
+.slick-arrow i{
+    color:#000;
+}
+.slick-arrow.prev {
+  left: 5%;
+}
+ .slick-arrow.next {
+  right: 5%;
+}
+@media only screen and (max-width: 600px) {
+ .slick-arrow {
+     display:block !important;
+ } 
+ .project-img img {
+     width:280px;
+ }
+    .projects-slider-one .slick-arrow.prev {
+    left:70px;
+}
+.projects-slider-one .slick-arrow.next {
+    right: 70px;
+}
+.projects-slider-one .slick-arrow {
+    width: 35px;
+    height: 35px;
+    line-height:1.8 !important;
+}
+}
+ 
+}
+</style>
+
+
 <!--====== Start Page-title-area section ======-->
 <section class="page-title-area text-white bg_cover desktop-view"
     style="background-image: url(assets/images/farmers-meet-header-img6.jpg);">
@@ -110,7 +168,7 @@
 <!--====== Start Project-Details section ======-->
 <section class="project-details-section pt-30 pb-60 services-img-round bg-dark-home">
     <div class="container">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+       <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img class="d-block w-100" src="assets/images/farmers-meet20.jpg" alt="Second slide">
@@ -169,7 +227,112 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div>
+        </div>-->
+        
+         <div class="projects-slider-one wow fadeInDown">
+                               
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/farmers-meet20.jpg" alt="Gallery Image">
+                                    </div>
+                                </div>
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/farmers-meet21.jpg" alt="Gallery Image">
+                                    </div>
+                                </div>
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/farmers-meet22.jpg" alt="Gallery Image">
+                                    </div>
+                                </div>
+                        
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/farmers-meet23.jpg" alt="Gallery Image">
+                                    </div>
+                                </div>
+                        
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/farmers-meet24.jpg" alt="Gallery Image">
+                                    </div>
+                                </div>
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/farmers-meet25.jpg" alt="Gallery Image">
+                                    </div>
+                                </div>
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/farmers-meet5.jpg" alt="Gallery Image">
+                                    </div>
+                                </div>
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/farmers-meet1.jpg" alt="Gallery Image">
+                                        <!-- <div class="hover-content"> -->
+                                    </div>
+                                </div>
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/farmers-meet2.jpg" alt="Gallery Image">
+                                    </div>
+                                </div>
+                                 <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/farmers-meet3.jpg" alt="Gallery Image">
+                                    </div>
+                                </div>
+                                 <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/farmers-meet6.jpg" alt="Gallery Image">
+                                    </div>
+                                </div>
+                                 <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/farmers-meet7.jpg" alt="Gallery Image">
+                                    </div>
+                                </div>
+                                 <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/farmers-meet8.jpg" alt="Gallery Image">
+                                    </div>
+                                </div>
+                                 <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/farmers-meet9.jpg" alt="Gallery Image">
+                                    </div>
+                                </div>
+                                 <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/farmers-meet10.jpg" alt="Gallery Image">
+                                    </div>
+                                </div>
+                                 <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/farmers-meet11.jpg" alt="Gallery Image">
+                                    </div>
+                                </div>
+                        
+                                
+                            </div>
     </div>
 </section>
 <!--====== End Project-Details section ======-->

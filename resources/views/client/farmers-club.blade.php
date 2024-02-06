@@ -54,6 +54,63 @@
 
     }
 </style>
+
+<style>
+    .slick-dots {
+    display: block;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  text-align:center;
+  line-height:2.5;
+
+  transform: translateY(-42%);
+  cursor: pointer;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  background-color: #ffffff;
+      box-shadow: 1px 1px 10px 0px #99999954;
+}
+.slick-arrow i{
+    color:#000;
+}
+.slick-arrow.prev {
+  left: 5%;
+}
+ .slick-arrow.next {
+  right: 5%;
+}
+@media only screen and (max-width: 600px) {
+ .slick-arrow {
+     display:block !important;
+ } 
+ .project-img img {
+     width:280px;
+ }
+    .projects-slider-one .slick-arrow.prev {
+    left:70px;
+}
+.projects-slider-one .slick-arrow.next {
+    right: 70px;
+}
+.projects-slider-one .slick-arrow {
+    width: 35px;
+    height: 35px;
+    line-height:1.8 !important;
+}
+}
+ 
+}
+</style>
+
     <!--====== Start Page-title-area section ======-->
     <section class="page-title-area text-white bg_cover desktop-view"
         style="background-image: url(assets/images/fc-header-img1.jpg);">
@@ -123,51 +180,120 @@
                 <div class="row">
                 <div class="col-xl-12 col-lg-12">
                         <div class="container">
-                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                              <div class="carousel-inner">
+                            <!--<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">-->
+                            <!--  <div class="carousel-inner">-->
                                 <!--<div class="carousel-item active">-->
                                 <!--  <img class="d-block w-100" src="assets/images/fc1.jpg" alt="First slide">-->
                                 <!--</div>-->
-                                <div class="carousel-item active">
-                                  <img class="d-block w-100" src="assets/images/fc2.jpg" alt="Second slide">
+                            <!--    <div class="carousel-item active">-->
+                            <!--      <img class="d-block w-100" src="assets/images/fc2.jpg" alt="Second slide">-->
+                            <!--    </div>-->
+                            <!--    <div class="carousel-item">-->
+                            <!--      <img class="d-block w-100" src="assets/images/fc3.jpg" alt="Third slide">-->
+                            <!--    </div>-->
+                            <!--    <div class="carousel-item">-->
+                            <!--      <img class="d-block w-100" src="assets/images/fc4.jpg" alt="Third slide">-->
+                            <!--    </div>-->
+                            <!--    <div class="carousel-item">-->
+                            <!--      <img class="d-block w-100" src="assets/images/fc5.jpg" alt="Third slide">-->
+                            <!--    </div>-->
+                            <!--    <div class="carousel-item">-->
+                            <!--      <img class="d-block w-100" src="assets/images/fc6.jpg" alt="Third slide">-->
+                            <!--    </div>-->
+                            <!--    <div class="carousel-item">-->
+                            <!--      <img class="d-block w-100" src="assets/images/fc7.jpg" alt="Third slide">-->
+                            <!--    </div>-->
+                            <!--    <div class="carousel-item">-->
+                            <!--      <img class="d-block w-100" src="assets/images/fc8.jpg" alt="Third slide">-->
+                            <!--    </div>-->
+                            <!--    <div class="carousel-item">-->
+                            <!--      <img class="d-block w-100" src="assets/images/fc9.jpg" alt="Third slide">-->
+                            <!--    </div>-->
+                            <!--    <div class="carousel-item">-->
+                            <!--      <img class="d-block w-100" src="assets/images/fc10.jpg" alt="Third slide">-->
+                            <!--    </div>-->
+                            <!--    <div class="carousel-item">-->
+                            <!--      <img class="d-block w-100" src="assets/images/fc11.jpg" alt="Third slide">-->
+                            <!--    </div>-->
+                            <!--  </div>-->
+                            <!--  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">-->
+                            <!--    <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+                            <!--    <span class="sr-only">Previous</span>-->
+                            <!--  </a>-->
+                            <!--  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">-->
+                            <!--    <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+                            <!--    <span class="sr-only">Next</span>-->
+                            <!--  </a>-->
+                            <!--</div>-->
+                            
+                            <div class="projects-slider-one wow fadeInDown">
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/fc2.jpg" alt="Gallery Image">
+                                    </div>
                                 </div>
-                                <div class="carousel-item">
-                                  <img class="d-block w-100" src="assets/images/fc3.jpg" alt="Third slide">
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/fc3.jpg" alt="Gallery Image">
+                                    </div>
                                 </div>
-                                <div class="carousel-item">
-                                  <img class="d-block w-100" src="assets/images/fc4.jpg" alt="Third slide">
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/fc4.jpg" alt="Gallery Image">
+                                    </div>
                                 </div>
-                                <div class="carousel-item">
-                                  <img class="d-block w-100" src="assets/images/fc5.jpg" alt="Third slide">
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/fc5.jpg" alt="Gallery Image">
+                                    </div>
                                 </div>
-                                <div class="carousel-item">
-                                  <img class="d-block w-100" src="assets/images/fc6.jpg" alt="Third slide">
+                        
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/fc6.jpg" alt="Gallery Image">
+                                    </div>
                                 </div>
-                                <div class="carousel-item">
-                                  <img class="d-block w-100" src="assets/images/fc7.jpg" alt="Third slide">
+                        
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/fc7.jpg" alt="Gallery Image">
+                                    </div>
                                 </div>
-                                <div class="carousel-item">
-                                  <img class="d-block w-100" src="assets/images/fc8.jpg" alt="Third slide">
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/fc8.jpg" alt="Gallery Image">
+                                    </div>
                                 </div>
-                                <div class="carousel-item">
-                                  <img class="d-block w-100" src="assets/images/fc9.jpg" alt="Third slide">
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/fc9.jpg" alt="Gallery Image">
+                                    </div>
                                 </div>
-                                <div class="carousel-item">
-                                  <img class="d-block w-100" src="assets/images/fc10.jpg" alt="Third slide">
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/fc10.jpg" alt="Gallery Image">
+                                        <!-- <div class="hover-content"> -->
+                                    </div>
                                 </div>
-                                <div class="carousel-item">
-                                  <img class="d-block w-100" src="assets/images/fc11.jpg" alt="Third slide">
+                                <!--====== Single Gallery Item ======-->
+                                <div class="single-project-item">
+                                    <div class="project-img">
+                                        <img src="assets/images/fc11.jpg" alt="Gallery Image">
+                                    </div>
                                 </div>
-                              </div>
-                              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                              </a>
-                              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                              </a>
+                        
+                                
                             </div>
+    
                         </div>
                     </div>
                     
@@ -188,38 +314,8 @@
         </div>
     </div>
 </section>
-<!--====== End Shop Details Section ======-->
-    
-    
-    
-    
-    <!--====== End Shop Details Section ======-->
 
-    <!--<section class="cta-section">-->
-    <!--    <div class="container">-->
-            <!--====== CTA Wrapper ======-->
-    <!--        <div class="cta-wrapper pt-60 border-top-1">-->
-    <!--            <div class="row align-items-center">-->
-    <!--                <div class="col-lg-9">-->
-                        <!--====== CTA Content Box ======-->
-    <!--                    <div class="cta-content-box d-flex align-items-center mb-40 wow fadeInLeft">-->
-    <!--                        <img src="assets/images/motto.png" class="circle-logo" alt="Circle Logo">-->
-    <!--                        <h2>Contact us for more information.</h2>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--                <div class="col-lg-3">-->
-                        <!--====== CTA Button ======-->
-    <!--                    <div class="cta-button float-lg-right mb-40 wow fadeInRight">-->
-    <!--                        <a href="#" data-toggle="modal" data-target="#sidebar-modal"-->
-    <!--                            class="main-btn golden-btn">Enquire-->
-    <!--                            Now</a>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--</section>-->
-    <!--====== End CTA Section ======-->
+
 
     <br />
 @endsection

@@ -146,6 +146,7 @@
             margin-bottom: 10px;
             margin-top: 20px;
             border-top: 1px solid rgba(11, 61, 44, 0.1);
+            padding-top:16px;
         }
 
     </style>
@@ -466,6 +467,38 @@
     <br>
 
     <section class="service-details-section pt-30">
+    <div class="container text-center">
+        <div class="row">
+
+            <div class="col-xl-6 col-lg-6">
+                @if (!empty($product->video_link))
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="{{ $product->video_link }}"
+                            allowfullscreen></iframe>
+                    </div>
+                @endif
+            </div>
+
+            <div class="col-xl-6 col-lg-6 prod-cta-bn">
+                @if (!empty($product->catelog_link))
+                    <div class="menu-button d-xl-block mb-3">
+                        <a href="{{ url($product->catelog_link) }}" target="_blank"
+                            class="main-btn primary-btn">Product Leaflet</a>
+                    </div>
+                @endif
+
+                <div class="menu-button d-xl-block">
+                    <a href="{{ route('contact') }}" class="main-btn filled-btn" data-toggle="modal"
+                        data-target="#product-modal">Enquire Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    {{-- <section class="service-details-section pt-30">
         <div class="container">
             <div class="row">
 
@@ -492,7 +525,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
     <br /><br /><br />
