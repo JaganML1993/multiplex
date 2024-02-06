@@ -113,7 +113,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form_group">
-                                            <input type="text" class="form_control" onkeypress="return /[a-zA-Z,' ']/i.test(event.key)" placeholder="First Name" name="fame" required>
+                                            <input type="text" class="form_control" onkeypress="return /[a-zA-Z,' ']/i.test(event.key)" placeholder="First Name" name="fname" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
