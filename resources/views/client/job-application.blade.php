@@ -1,21 +1,7 @@
 @extends('client.header')
 @section('content')
 
-<!--====== Start Page-title-area section ======-->
-<!--<section class="page-title-area text-white bg_cover" style="background-image: url(assets/images/openings-header-img.jpg);">-->
-<!--    <div class="container">-->
-        <!--======  Page-title-Inner ======-->
-<!--        <div class="page-title-inner text-center">-->
-<!--            <h1 class="page-title">Job Application </h1>-->
-<!--            <div class="gd-breadcrumb">-->
-<!--                <span class="breadcrumb-entry"><a href="{{url('/')}}">Home</a></span>-->
-<!--                <span class="separator"></span>-->
-<!--                <span class="breadcrumb-entry active">Job Application </span>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-<!--====== End Page-title-area section ======-->
+
 <style>
       .job-open ul {
   
