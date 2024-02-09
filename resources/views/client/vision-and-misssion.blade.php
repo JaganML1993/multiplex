@@ -85,84 +85,32 @@
 
 
 
-<!--====== Start Features Section ======-->
-<section class="features-section" style="background-color:#f6d0a259; padding:18px;margin:20px;">
+<!--====== Start VM Section ======-->
+<section class="features-section pt-100">
     <div class="container">
         <div class="row align-items-xl-center">
-            <div class="col-xl-8 col-lg-12">
-                <!--=== Hero Content ===-->
-                <div class="vm-text">
-                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Who We Are</h2>
-                    <p class="wow fadeInDown" data-wow-delay=".6s">We're a leading manufacturer and supplier of a wide range of Agriculture inputs, including fertilizers, pesticides, nutrients,
-                    organic manure, bio-fertilizers, bio-pesticides, and bio-stimulants. Our dedicated team of scientists employ cutting-edge Agri technology to develop innovative solutions 
-                    for crop nutrition and plant protection, emphasizing high quality farm produce. Our product line extends to Agriculture, Horticulture, and FMCG (Cleaning & Disinfection), 
-                    aligning with the ongoing shift towards an organic era.</p>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-12">
-                <!--=== Hero Image Box ===-->
-                <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">
-                    <img src="{{ asset('images/who-we-are-1.png') }}" alt="Hero Image">
+            <div class="col-xl-12 col-lg-12">
+                <div class="vm-text text-center">
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Vision</h2>
+                    <p class="wow fadeInDown" data-wow-delay=".6s">To progressively research and develop <br/>
+                    innovative products and services to the<br/>
+                    farming community.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!--<section class="features-section" style="margin:20px;">-->
-<!--    <div class="container">-->
-<!--        <div class="row align-items-xl-center vm-bg-color">-->
-<!--            <div class="col-xl-4 col-lg-12">-->
-                <!--=== Hero Image Box ===-->
-<!--                <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">-->
-<!--                    <img src="{{ asset('images/what-we-do-new-img.png') }}" alt="Hero Image">-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-xl-8 col-lg-12">-->
-                <!--=== Hero Content ===-->
-<!--                <div class="vm-text">-->
-<!--                    <h2 class="wow fadeInUp" data-wow-delay=".4s">What We Do</h2>-->
-<!--                    <p class="wow fadeInDown" data-wow-delay=".6s">We are one of the leading manufacturers, marketers-->
-<!--                        and exporters of Micro-->
-<!--                        Nutrients, Organic Manure, Bio-Fertilizers, Bio-Pesticides, and Bio-activators in India.</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-
-<!--<section class="features-section" style="background-color:#f6d0a259; padding:18px;margin:20px;">-->
-<!--    <div class="container">-->
-<!--        <div class="row align-items-xl-center">-->
-<!--            <div class="col-xl-8 col-lg-12">-->
-                <!--=== Hero Content ===-->
-<!--                <div class="vm-text">-->
-<!--                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Our Vision</h2>-->
-<!--                    <p class="wow fadeInDown" data-wow-delay=".6s">To progressively research and develop innovative-->
-<!--                        products and services to the farming community.</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-xl-4 col-lg-12">-->
-                <!--=== Hero Image Box ===-->
-<!--                <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">-->
-<!--                    <img src="{{ asset('images/vision-new-img.png') }}" alt="Hero Image">-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-
-
-<section class="features-section" style="margin:20px;">
+<section class="features-section" style="margin-top:40px;">
     <div class="container">
         <div class="row align-items-xl-center vision-row">
-            <div class="col-xl-4 col-lg-12">
+            <div class="col-xl-12 col-lg-12">
                 <!--=== Hero Image Box ===-->
-                <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">
-                    <img src="{{ asset('images/mission-new-img.png') }}" alt="Hero Image">
+                <div class="hero-image-box d-xl-block wow fadeInRight text-center" data-wow-delay=".75s">
+                    <img src="{{ asset('images/motto-new-img.png') }}" alt="Hero Image">
                 </div>
             </div>
-            <div class="col-xl-8 col-lg-12">
+            {{-- <div class="col-xl-8 col-lg-12">
                 <!--=== Hero Content ===-->
                 <div class="vm-text">
                     <h2 class="wow fadeInUp" data-wow-delay=".4s">Our Vision and Mission</h2>
@@ -172,56 +120,40 @@
                         manufacturer and supplier to achieve “Total Solution provider” in improving overall soil health,
                         crop productivity and quality of the produce.</p>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
 
-<section class="features-section" style="background-color:#f6d0a259; padding:18px;margin:20px;">
+<section class="features-section">
     <div class="container">
         <div class="row align-items-xl-center">
-            <div class="col-xl-8 col-lg-12">
+            <div class="col-xl-6 col-lg-6">
                 <!--=== Hero Content ===-->
-                <div class="vm-text">
-                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Our Values</h2>
-                    <p class="wow fadeInDown" data-wow-delay=".6s">Integrity, Quality, Trust, Transparency, Commitment,
-                        Relationship, and Innovation.</p>
+                <div class="vm-text text-center">
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Mission</h2>
+                    <p class="wow fadeInDown" data-wow-delay=".6s">To be the most preferred quality Agri Input<br/>
+                        manufacturer and supplier to achieve <br/>
+                        “Total Solution provider” in improving overall <br/>
+                        soil health, crop productivity and quality of the produce.</p>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-12">
-                <!--=== Hero Image Box ===-->
-                <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">
-                    <img src="{{ asset('images/values-new-img.png') }}" alt="Hero Image">
+            <div class="col-xl-6 col-lg-6">
+                <!--=== Hero Content ===-->
+                <div class="vm-text text-center">
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Values</h2>
+                    <p class="wow fadeInDown" data-wow-delay=".6s">Integrity, Quality, Trust, Transparency,<br/>
+                    Commitment, Relationship and Innovation.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-
-<section class="features-section" style="margin:20px;">
-    <div class="container">
-        <div class="row align-items-xl-center  vision-row">
-            <div class="col-xl-4 col-lg-12">
-                <!--=== Hero Image Box ===-->
-                <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">
-                    <img src="{{ asset('images/motto-new-img.png') }}" alt="Hero Image">
-                </div>
-            </div>
-            <div class="col-xl-8 col-lg-12">
-                <!--=== Hero Content ===-->
-                <div class="vm-text">
-                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Our Motto</h2>
-                    <p class="wow fadeInDown" data-wow-delay=".6s">Multiplex Farmer, Happy Farmer</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--====== End Features Section ======-->
+<!--====== End VM Section ======-->
 <br/>
-
-
+<br/>
+<br/>
         
 
 
