@@ -121,7 +121,7 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form_group">
-                                            <input type="text" class="form_control" placeholder="Qualification"
+                                            <input type="text" class="form_control" onkeypress="return /[a-zA-Z,' ']/i.test(event.key)" placeholder="Qualification"
                                                 name="qualification" required>
                                         </div>
                                     </div>

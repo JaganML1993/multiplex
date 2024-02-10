@@ -469,17 +469,18 @@
     <section class="service-details-section pt-30">
     <div class="container text-center">
         <div class="row">
-
+            @if (!empty($product->video_link))
             <div class="col-xl-6 col-lg-6">
-                @if (!empty($product->video_link))
+               
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="{{ $product->video_link }}"
                             allowfullscreen></iframe>
                     </div>
-                @endif
+                
             </div>
+            @endif
 
-            <div class="col-xl-6 col-lg-6 prod-cta-bn">
+            <div class="@if (!empty($product->video_link)) col-xl-6 col-lg-6 @else col-xl-12 col-lg-12 @endif prod-cta-bn">
                 @if (!empty($product->catelog_link))
                     <div class="menu-button d-xl-block mb-3">
                         <a href="{{ url($product->catelog_link) }}" target="_blank"
@@ -533,17 +534,17 @@
 @section('scripts')
     @parent
     <script>
-        function validateDomain() {
-            var emailInput = document.getElementById('emailField');
-            var emailValue = emailInput.value;
+        function validateDomainProduct() {
+            var emailInput2 = document.getElementById('emailField2');
+            var emailValue2 = emailInput2.value;
 
             // Simplified regular expression for email validation
             var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org)$/;
 
-            if (!emailRegex.test(emailValue)) {
-                emailInput.setCustomValidity("Please enter a valid email address.");
+            if (!emailRegex.test(emailValue2)) {
+                emailInput2.setCustomValidity("Please enter a valid email address.");
             } else {
-                emailInput.setCustomValidity('');
+                emailInput2.setCustomValidity('');
             }
         }   
     </script>

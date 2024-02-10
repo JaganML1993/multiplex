@@ -53,6 +53,14 @@
         .page-title-area {
             margin-top: 0 !important;
         }
+        .nice-select {
+            display: none !important;
+        }
+        select{
+            background:#ffffff;
+            color:currentColor;
+            display:block !important;
+        }
     </style>
 </head>
 
@@ -97,7 +105,7 @@
                                     <!--=== Review Form ===-->
                                     <div class="review-form-area wow fadeInUp mt-10 mb-10">
 
-                                        <form class="review-form general-form" method="post"
+                                        <form class="review-form general-form" id="review-form" method="post"
                                             action="{{ route('home.save_enquiry') }}">
                                             @csrf
                                             {{-- <div class="my-3 d-none success-message" style="width: 100%">
@@ -137,9 +145,9 @@
 
                                                 @endphp
                                                 <div class="col-lg-4">
-                                                    <div class="form_group">
-                                                        <select class="form_control" name="department" required>
-                                                            <option selected disabled>Select Department</option>
+                                                    <div class="form_group" >
+                                                        <select class="form_control" id="department" name="department" style="border: 1px solid rgb(11 61 44);" required>
+                                                            <option value="" selected disabled>Select Department</option>
                                                             @foreach ($departments as $department)
                                                                 <option value="{{ $department->id }}">
                                                                     {{ $department->name }}
@@ -617,6 +625,7 @@
         $(document).ready(function() {
             $('.product-form').submit(function(e) {
                 e.preventDefault();
+                
 
                 var form = $(this);
 
@@ -692,7 +701,13 @@
         $(document).ready(function() {
             $('.general-form').submit(function(e) {
                 e.preventDefault();
-
+                
+                var selectElement = document.getElementById('department');
+                if (!selectElement.value) {
+                    
+                  alert('Please select the department');
+                  return false;
+                } 
                 var form = $(this);
 
                 $.ajax({

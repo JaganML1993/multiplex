@@ -106,8 +106,10 @@ class IndexController extends Controller
             ->select('openings.*', 'locations.location as job_location')
             ->join('locations', 'openings.location', '=', 'locations.id')
             ->where('openings.deleted_at', NULL)
+            ->orderBy('id','desc')
             ->get();
 
+        //  exit;
         return view('client.current-openings')->with('openings', $openings);
     }
 
@@ -158,6 +160,8 @@ class IndexController extends Controller
         }
 
         $openings = $careers->get();
+
+        $openings = $careers->orderBy('openings.id','desc')->get();
 
         $view = view('client.opening-result', compact('openings'))->render();
 
@@ -211,12 +215,12 @@ class IndexController extends Controller
             'jobloc' => $location->location, // Assuming you have this value available
         ];
 
-        $attachmentPath = $image_path; // Use the saved file path as attachment
-        $attachmentName = basename($image_path);
+        // $attachmentPath = $image_path; // Use the saved file path as attachment
+        // $attachmentName = basename($image_path);
 
-        Mail::to($departmentEmail)
-            ->cc('recruitment@multiplexgroup.com')
-            ->send(new \App\Mail\JobApplication($data, $attachmentPath, $attachmentName));
+        // Mail::to($departmentEmail)
+        //     ->cc('recruitment@multiplexgroup.com')
+        //     ->send(new \App\Mail\JobApplication($data, $attachmentPath, $attachmentName));
 
         // Return a response or redirect as needed
         return redirect('current_openings')->with('status', 'Job Application submitted successfully');
@@ -474,7 +478,7 @@ class IndexController extends Controller
         // Your existing product retrieval logic
         $products = Product::when($sub_category_id != 'all' && $sub_category_id != 0, function ($q) use ($sub_category_id) {
             $q->where('sub_category_id', $sub_category_id);
-        })->where('category_id', $category_id)->get();
+        })->where('category_id', $category_id)->orderBy('id', 'desc')->get();
 
         // Render the Blade view
         $view = view('client.product-result', compact('products'))->render();

@@ -33,7 +33,7 @@
                                             <div class="col-lg-6">
                                                 <div class="form_group">
                                                     <input type="text" class="form_control" placeholder="Email Address"
-                                                         name="email" id="emailField" required oninput="validateDomain()">
+                                                         name="email" id="emailField2"  oninput="validateDomainProduct()" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">

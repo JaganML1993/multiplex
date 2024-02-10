@@ -159,7 +159,7 @@
 
         function loadResults(page, subCategoryId) {
             var category = $('#category').val();
-
+            $("#content_port").css('height','auto');
             // Check if the subCategoryId is 'all'
             if (subCategoryId === 'all') {
                 subCategoryId = 0; // Set to 0 for the "All" option
@@ -182,7 +182,7 @@
                         $('.ajax-load').html("No more careers available");
                     } else {
                         $('.ajax-load').hide();
-                        $("#content_port").empty().html(data.html);
+                        $("#content_port").empty().html(data.html).css('height','auto');
                     }
                 },
                 complete: function() {

@@ -11,6 +11,7 @@ class ProductCategoryController extends Controller
     public function categoryProducts($id)
     {
         $products = Product::where('category_id', $id)
+        ->orderBy('id', 'desc')
         ->get();
 
         $category = Category::where('id', $id)->first();
