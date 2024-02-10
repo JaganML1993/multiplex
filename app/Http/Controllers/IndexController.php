@@ -106,7 +106,7 @@ class IndexController extends Controller
             ->select('openings.*', 'locations.location as job_location')
             ->join('locations', 'openings.location', '=', 'locations.id')
             ->where('openings.deleted_at', NULL)
-            ->orderBy('id','desc')
+            ->orderBy('id', 'desc')
             ->get();
 
         //  exit;
@@ -159,9 +159,11 @@ class IndexController extends Controller
             $careers = $careers->where('openings.position', 'LIKE', '%' . $request->position . '%');
         }
 
-        $openings = $careers->get();
+        $openings = $careers->toSql();
 
-        $openings = $careers->orderBy('openings.id','desc')->get();
+        dd($openings);
+
+        $openings = $careers->orderBy('openings.id', 'desc')->get();
 
         $view = view('client.opening-result', compact('openings'))->render();
 
@@ -215,12 +217,12 @@ class IndexController extends Controller
             'jobloc' => $location->location, // Assuming you have this value available
         ];
 
-        // $attachmentPath = $image_path; // Use the saved file path as attachment
-        // $attachmentName = basename($image_path);
+        $attachmentPath = $image_path; // Use the saved file path as attachment
+        $attachmentName = basename($image_path);
 
-        // Mail::to($departmentEmail)
-        //     ->cc('recruitment@multiplexgroup.com')
-        //     ->send(new \App\Mail\JobApplication($data, $attachmentPath, $attachmentName));
+        Mail::to($departmentEmail)
+            ->cc('jobs@multiplexgroup.com')
+            ->send(new \App\Mail\JobApplication($data, $attachmentPath, $attachmentName));
 
         // Return a response or redirect as needed
         return redirect('current_openings')->with('status', 'Job Application submitted successfully');
@@ -462,7 +464,7 @@ class IndexController extends Controller
     public function autocompletePosition(Request $request)
     {
         $query = $request->get('query');
-        $filterResult = Openings::where('position', 'LIKE', '%' . $query . '%')->get();
+        $filterResult = Openings::select('position')->where('position', 'LIKE', '%' . $query . '%')->distinct()->groupBy('position')->get();
         return response()->json($filterResult);
     }
 

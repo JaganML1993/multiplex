@@ -21,6 +21,7 @@
                         <th>Remarks</th>
                         <th>Status</th>
                         <th>Created on</th>
+                        <th class="exclude">Action</th>
                     </tr>
                 </thead>
                 <tbody class="table-border-bottom-0">
@@ -35,6 +36,11 @@
                         <td>{{$enquiry->email}}</td>
                         <td>{{$enquiry->location}}</td>
                         <td>{{$enquiry->message}}</td>
+                        <td>{{$enquiry->remarks}}</td>
+                        <td style="color: {{ $enquiry->status ? 'red' : 'green' }}">
+                            {{ $enquiry->status ? 'closed' : 'open' }}
+                        </td>
+                        <td>{{date('d-m-Y h:i A', strtotime($enquiry->created_at))}}</td>
                         <td>
                             <!-- Button trigger modal -->
                             <a href="{{ route('update.remark', ['id' => $enquiry->id]) }}" class="btn btn-primary" >
@@ -42,10 +48,6 @@
                             </a>
                 
                         </td>
-                        <td style="color: {{ $enquiry->status ? 'red' : 'green' }}">
-                            {{ $enquiry->status ? 'closed' : 'open' }}
-                        </td>
-                        <td>{{date('d-m-Y h:i A', strtotime($enquiry->created_at))}}</td>
                     </tr>
                     @php 
                         $i++;
@@ -66,8 +68,30 @@
     $(document).ready(function() {
         $('#tablePagination').DataTable({
             dom: 'Bfrtip',
-            buttons: [
-                'csv', 'excel', 'pdf', 'print'
+            buttons: [{
+                    extend: 'csv',
+                    exportOptions: {
+                        columns: ':not(.exclude)'
+                    }
+                },
+                {
+                    extend: 'excel',
+                    exportOptions: {
+                        columns: ':not(.exclude)'
+                    }
+                },
+                {
+                    extend: 'pdf',
+                    exportOptions: {
+                        columns: ':not(.exclude)'
+                    }
+                },
+                {
+                    extend: 'print',
+                    exportOptions: {
+                        columns: ':not(.exclude)'
+                    }
+                }
             ]
         });
     });
