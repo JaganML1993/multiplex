@@ -61,6 +61,8 @@
             color:currentColor;
             display:block !important;
         }
+
+        
     </style>
 </head>
 
@@ -145,8 +147,8 @@
 
                                                 @endphp
                                                 <div class="col-lg-4">
-                                                    <div class="form_group" >
-                                                        <select class="form_control" id="department" name="department" style="border: 1px solid rgb(11 61 44);" required>
+                                                    <div class="form_group dept-style">
+                                                        <select class="form_control" id="department" name="department" required>
                                                             <option value="" selected disabled>Select Department</option>
                                                             @foreach ($departments as $department)
                                                                 <option value="{{ $department->id }}">
