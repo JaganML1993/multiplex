@@ -4,7 +4,7 @@
 <!-- Content -->
 <div class="container-xxl flex-grow-1 container-p-y">
 
-    <h4 class="fw-bold py-3 mb-4">Enquries</h4>
+    <h4 class="fw-bold py-3 mb-4">Service Enquiries</h4>
     <!-- Basic Bootstrap Table -->
     <div class="card">
 
@@ -70,24 +70,28 @@
             dom: 'Bfrtip',
             buttons: [{
                     extend: 'csv',
+                    filename: 'Multiplex-Service-Enquiries',
                     exportOptions: {
                         columns: ':not(.exclude)'
                     }
                 },
                 {
                     extend: 'excel',
+                    filename: 'Multiplex-Service-Enquiries',
                     exportOptions: {
                         columns: ':not(.exclude)'
                     }
                 },
                 {
                     extend: 'pdf',
+                    filename: 'Multiplex-Service-Enquiries',
                     exportOptions: {
                         columns: ':not(.exclude)'
                     }
                 },
                 {
                     extend: 'print',
+                    filename: 'Multiplex-Service-Enquiries',
                     exportOptions: {
                         columns: ':not(.exclude)'
                     }

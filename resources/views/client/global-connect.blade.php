@@ -35,16 +35,28 @@ margin-bottom:20px !important;}}
         }
 
         .mobile-view .gd-breadcrumb {
-            background: #dee2e6;
+            background: #2a7d2e;
             text-align: center;
-            font-size: 16px !important;
-            color: #1a9f53 !important;
+            font-size: 15px !important;
+            color: #e3e3e3 !important;
             font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
         }
 
         .mobile-view .bg_cover {
             background-size: 100% 100% !important;
 
+        }
+        .ptbmob-30 {
+            padding-top:30px;
+            padding-bottom:20px;
+        }
+        
+        .ptbmob-10 {
+            padding-top:10px;
+            padding-bottom:20px;
         }
 
     }
@@ -84,7 +96,7 @@ margin-bottom:20px !important;}}
 <!--====== End Page-title-area section ======-->
 
 <!--====== Start Skills Section  ======-->
-<section class="skills-section pt-60 pb-50">
+<section class="skills-section pt-50 pb-50 ptbmob-30">
     <div class="container">
         <div class="row align-items-lg-center">
             <div class="col-xl-12 col-lg-12">
@@ -100,10 +112,6 @@ margin-bottom:20px !important;}}
                     <p class="mb-30">Our continuous efforts have significantly strengthened global relations. A prime example of this commitment is the Memorandum of Understanding (MoU) signed between the Republic of Djibouti in Africa and Multiplex Group, leading to a joint venture. </p>
                 </div>
             </div>
-            <!--<div class="col-xl-6 col-lg-12 rad10">-->
-            <!--    <img class="mb-10" src="assets/images/global-img3.jpg" class="skill-img-one" alt="Skill Image">-->
-            <!--    <img src="assets/images/global-img4.jpg" class="skill-img-one" alt="Skill Image">-->
-            <!--</div>-->
         </div>
         
         <div class="row align-items-lg-center">
@@ -118,7 +126,7 @@ margin-bottom:20px !important;}}
 </section>
 <!--====== End Skills Section  ======-->
 
-<section class="shop-details-section pb-60 services-img-round bg-dark-home">
+<section class="shop-details-section pb-50 ptbmob-10 services-img-round bg-dark-home">
     <div class="container">
         <div class="product-details-wrapper">
             <div class="row">
@@ -138,20 +146,13 @@ margin-bottom:20px !important;}}
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-xl-4 col-lg-5"> -->
-                <!-- <div class="sidebar-widget-area mt-30"> -->
-                <!-- <img src="assets/images/global3.jpg" alt="Banner Image"> -->
-                <!-- <br/><br/><br/><br/> -->
-                <!-- <img src="assets/images/global2.jpg" alt="Banner Image"> -->
-                <!-- </div> -->
-                <!-- </div> -->
+
             </div>
         </div>
     </div>
 </section>
 <!--====== End Shop Details Section ======-->
 
-<br />
 
 @endsection
 @section('scripts')

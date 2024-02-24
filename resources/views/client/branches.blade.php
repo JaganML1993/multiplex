@@ -3,34 +3,37 @@
 
 
 <style>
-       .address-sec{
-        border:2px solid #0000001a;border-radius: 10px; padding: 30px 20px;margin-right: 1.5rem;
-       
+       .address-sec {
+            border:2px solid #0000001a;
+            border-radius: 10px;
+            padding: 30px 20px;
+            margin-right: 1.5rem;
        }
-       .tab{   height: 370px;
-    overflow-y: auto;
-    padding-right: 2rem;
-}
+       
+       .tab {
+            height: 370px;
+            overflow-y: auto;
+            padding-right: 2rem;
+       }
+       
        .tab::-webkit-scrollbar
-{
-	width: 6px;
-	background-color: 
-#D9D9D9;
-}
-.tab::-webkit-scrollbar-thumb
-{
-    border-radius: 10px;
-	background-color: #118442;
-}
-.heading-add{
-    
-    margin: 0;
-    padding-bottom: 7px;
-                        position: relative;
-                        border-bottom: 3px solid #0000004D;
-                        width: 100%;
-                        font-weight: 600; font-size:18px;
-}
+        {
+        	width: 6px;
+        	background-color: #D9D9D9;
+        }
+        .tab::-webkit-scrollbar-thumb
+        {
+            border-radius: 10px;
+        	background-color: #118442;
+        }
+        .heading-add {
+            margin: 0;
+            padding-bottom: 7px;
+            position: relative;
+            border-bottom: 3px solid #0000004D;
+            width: 100%;
+            font-weight: 600; font-size:18px;
+        }
 .heading-add:before {
                         position: absolute;
                         background: #118442;
@@ -156,16 +159,22 @@
         }
 
         .mobile-view .gd-breadcrumb {
-            background: #dee2e6;
+            background: #2a7d2e;
             text-align: center;
-            font-size: 16px !important;
-            color: #1a9f53 !important;
+            font-size: 15px !important;
+            color: #e3e3e3 !important;
             font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
         }
 
         .mobile-view .bg_cover {
             background-size: 100% 100% !important;
-
+        }
+        
+        .ptbmob-30 {
+            padding-bottom:10px
         }
 
     }
@@ -207,7 +216,7 @@
 <!--====== End Page-title-area section ======-->
 
 <!--====== Start Farmers First Choice Section  ======-->
-        <section class="skills-section pt-50 pb-50 ">
+        <section class="skills-section pt-50 pb-10 ptbmob-30">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-5 col-lg-12">

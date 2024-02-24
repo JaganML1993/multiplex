@@ -44,7 +44,7 @@ Route::get('/timeline', [IndexController::class, 'timeline'])->name('timeline');
 /** corporate */
 Route::get('/branches', [IndexController::class, 'branches'])->name('branches');
 Route::get('/global-connect', [IndexController::class, 'global_connect'])->name('global-connect');
-Route::get('/r-and-d', [IndexController::class, 'r_and_d'])->name('r-and-d');
+Route::get('/research-and-development', [IndexController::class, 'research_and_development'])->name('research-and-development');
 Route::get('/infrastructure', [IndexController::class, 'infrastructure'])->name('infrastructure');
 
 /** products */

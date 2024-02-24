@@ -74,7 +74,7 @@
                     <img src="assets/images/pink-boll-worm.jpg" alt="Blog Image">
                 </div>
                 <div class="project-content-box mb-50 wow fadeInRight">
-                    <p class="mb-15">In recent years, pink ball worm attack on cotton has emerged as a major problem in many areas in India. Due to whose attack, about 30 to 50 percent of the crop is damaged.</p>
+                    <p class="mb-15">In recent years, pink bollworm attack on cotton has emerged as a major problem in many areas in India. Due to whose attack, about 30 to 50 percent of the crop is damaged.</p>
                     <p class="mb-15">Infestation of pink bollworm occurs in the middle and late stages of the crop. Pink caterpillars cause damage by hiding inside the pod parts and staying away from light, due to which it is difficult to identify the damage caused by this insect, and the crop suffers more damage.</p>
                 </div>
 
@@ -123,31 +123,31 @@
             <div class="col-lg-12">
             <!--====== Section-title ======-->
                     <div class="section-title mb-25 text-center">
-                        <h2>Related Blogs</h2>
+                        <h2>Recent Blogs</h2>
                     </div>
 
                 <div class="row">
                 <div class="col-md-4">
                     <div class="block-image wow fadeInDown">
-                        <img src="assets/images/soil1.jpg" alt="Project Image">
-                        <h6 class="mt-15">Related blog post 1</h6>
-                        <a href="#" class="btn-link">Read more <i class="fa fa-arrow-right"></i></a>
+                        <img src="assets/images/blog-thumb.jpg" alt="Project Image">
+                        <h6 class="mt-15">Micronutrients in Crop Production</h6>
+                        <a href="{{ route('micronutrients-in-crop-production') }}" class="btn-link">Read more <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="block-image wow fadeInUp">
-                        <img src="assets/images/soil2.jpg" alt="Project Image">
-                        <h6 class="mt-15">Related blog post 2</h6>
-                        <a href="#" class="btn-link">Read more <i class="fa fa-arrow-right"></i></a>
+                        <img src="assets/images/blog-three-new-thumb.jpg" alt="Project Image">
+                        <h6 class="mt-15">मिट्टी परीक्षण क्या है?</h6>
+                        <a href="{{ route('what-is-soil-testing') }}" class="btn-link">Read more <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="block-image wow fadeInUp">
-                        <img src="assets/images/soil3.jpg" alt="Project Image">
-                        <h6 class="mt-15">Related blog post 3</h6>
-                        <a href="#" class="btn-link">Read more <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
+                <!--<div class="col-md-4">-->
+                <!--    <div class="block-image wow fadeInUp">-->
+                <!--        <img src="assets/images/soil3.jpg" alt="Project Image">-->
+                <!--        <h6 class="mt-15">Related blog post 3</h6>-->
+                <!--        <a href="#" class="btn-link">Read more <i class="fa fa-arrow-right"></i></a>-->
+                <!--    </div>-->
+                <!--</div>-->
             </div>
                 
             </div>

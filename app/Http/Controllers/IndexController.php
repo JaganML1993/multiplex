@@ -80,7 +80,7 @@ class IndexController extends Controller
 
             $serialId = "MULT/PROD/" . $tokenid;
             $data['serialIdSub'] = $serialId;
-
+            unset($data['department']);
             Mail::to('mco@multiplexgroup.com')
                 ->cc('analysis@multiplexgroup.com')
                 ->send(new \App\Mail\Enquiry($data));
@@ -88,7 +88,7 @@ class IndexController extends Controller
 
             $serialId = "MULT/SERV/" . $tokenid;
             $data['serialIdSub'] = $serialId;
-
+            unset($data['department']);
             Mail::to('analysis@multiplexgroup.com')
                 ->cc('analysis@multiplexgroup.com')
                 ->send(new \App\Mail\Enquiry($data));
@@ -161,7 +161,7 @@ class IndexController extends Controller
 
         $openings = $careers->toSql();
 
-        dd($openings);
+        // dd($openings);
 
         $openings = $careers->orderBy('openings.id', 'desc')->get();
 
@@ -217,7 +217,7 @@ class IndexController extends Controller
             'jobloc' => $location->location, // Assuming you have this value available
         ];
 
-        $attachmentPath = $image_path; // Use the saved file path as attachment
+        $attachmentPath = public_path($image_path); // Use the saved file path as attachment
         $attachmentName = basename($image_path);
 
         Mail::to($departmentEmail)
@@ -285,9 +285,9 @@ class IndexController extends Controller
         return view('client.quality-testing');
     }
 
-    public function r_and_d()
+    public function research_and_development()
     {
-        return view('client.r-and-d');
+        return view('client.research-and-development');
     }
 
     public function infrastructure()

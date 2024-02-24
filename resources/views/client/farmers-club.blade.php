@@ -40,11 +40,14 @@
         }
 
         .mobile-view .gd-breadcrumb {
-            background: #dee2e6;
+            background: #2a7d2e;
             text-align: center;
-            font-size: 16px !important;
-            color: #1a9f53 !important;
+            font-size: 15px !important;
+            color: #e3e3e3 !important;
             font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
         }
 
         .mobile-view .bg_cover {
@@ -53,6 +56,16 @@
         }
 
     }
+    
+    ul.check-style-one li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        /* display: flex; */
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font: 400 15px "Roboto", sans-serif;
+}
 </style>
 
 <style>
@@ -65,7 +78,6 @@
   top: 50%;
   text-align:center;
   line-height:2.5;
-
   transform: translateY(-42%);
   cursor: pointer;
   z-index: 1;
@@ -76,17 +88,17 @@
   /* border: 1px solid rgba(0, 0, 0, 0.1); */
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
-  background-color: #ffffff;
+  background-color: #2a7d2e;
       box-shadow: 1px 1px 10px 0px #99999954;
 }
 .slick-arrow i{
-    color:#000;
+    color:#fff;
 }
 .slick-arrow.prev {
-  left: 5%;
+  left: 4%;
 }
  .slick-arrow.next {
-  right: 5%;
+  right: 4%;
 }
 @media only screen and (max-width: 600px) {
  .slick-arrow {
@@ -96,10 +108,10 @@
      width:280px;
  }
     .projects-slider-one .slick-arrow.prev {
-    left:70px;
+    left:25px;
 }
 .projects-slider-one .slick-arrow.next {
-    right: 70px;
+    right: 25px;
 }
 .projects-slider-one .slick-arrow {
     width: 35px;
@@ -145,7 +157,7 @@
     </section>
     <!--====== End Page-title-area section ======-->
 
-    <section class="shop-details-section pt-60 pb-30 services-img-round">
+    <section class="shop-details-section pt-50 pb-30 ptbmob-30 services-img-round">
         <div class="container">
             <div class="product-details-wrapper">
                 <div class="row">
@@ -157,16 +169,16 @@
                                     <div class="content-box">
                                         <p>At Multiplex, we've launched the Multiplex Farmers Club to unite farmers across India and provide them with valuable resources and knowledge. Our club serves as a platform for farmers to access scientific information on crop management, all from the comfort of their doorstep.
                                         </p>
-                                        <p>Empowering Farmers: The Multiplex Farmers Club is dedicated to empowering farmers. We understand that farmers are the backbone of our nation, and their success is crucial for our food security and economic prosperity.</p>
+                                        <p><strong>Empowering Farmers:</strong>&nbsp; The Multiplex Farmers Club is dedicated to empowering farmers. We understand that farmers are the backbone of our nation, and their success is crucial for our food security and economic prosperity.</p>
                                         
                                         <h3 class="mb-20 pt-30 text-a">Benefits for Members</h3>
                                         <ul class="check-style-one">
-                                            <li><i class="fa fa-check"></i>Priority Service: Members receive priority delivery for their farming requirements, ensuring they get what they need when they need it.</li>
-                                            <li><i class="fa fa-check"></i>Expert Guidance: Our experienced executives provide precise technical information, helping farmers make informed decisions.</li>
-                                            <li><i class="fa fa-check"></i>On-Field Product Demonstrations: We offer free on-field product demonstrations, allowing members to see our products in action.</li>
-                                            <li><i class="fa fa-check"></i>Farmers Kit: Members receive a farmers kit filled with products worth more than the registration fee, providing essential tools for their farming needs.</li>
-                                            <li><i class="fa fa-check"></i>Insurance Coverage: We provide Accidental Death insurance coverage of Rs 50,000/-, offering financial security to our members.</li>
-                                            <li><i class="fa fa-check"></i>Lucky Draw: Members are eligible to participate in a lucky draw for a chance to win exciting prizes.</li>
+                                            <li><i class="fa fa-check"></i><strong>Priority Service:</strong>&nbsp; Members receive priority delivery for their farming requirements, ensuring they get what they need when they need it.</li>
+                                            <li><i class="fa fa-check"></i><strong>Expert Guidance:</strong>&nbsp; Our experienced executives provide precise technical information, helping farmers make informed decisions.</li>
+                                            <li><i class="fa fa-check"></i><strong>On-Field Product Demonstrations:</strong>&nbsp; We offer free on-field product demonstrations, allowing members to see our products in action.</li>
+                                            <li><i class="fa fa-check"></i><strong>Farmers Kit:</strong>&nbsp; Members receive a farmers kit filled with products worth more than the registration fee, providing essential tools for their farming needs.</li>
+                                            <li><i class="fa fa-check"></i><strong>Insurance Coverage:</strong>&nbsp; We provide Accidental Death insurance coverage of Rs 50,000/-, offering financial security to our members.</li>
+                                            <li><i class="fa fa-check"></i><strong>Lucky Draw:</strong>&nbsp; Members are eligible to participate in a lucky draw for a chance to win exciting prizes.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -308,7 +320,7 @@
         <div class="product-details-wrapper">
             <div class="row justify-content-center">
                 <div class="col-lg-12 col-md-12 col-sm-12">
-                    <p>For more information and to join Multiplex Farmers Club, please contact your nearest <a href="#" style="color:#1a9f53;text-decoration:underline;">branch</a>. Together, we can empower Indian agriculture and promote prosperity among our farming community. Join us in building a brighter future for our farmers and our nation.</p>
+                    <p>For more information and to join Multiplex Farmers Club, please contact your nearest <a href="{{ route('branches') }}" style="color:#1a9f53;text-decoration:underline;">Branch</a>. Together, we can empower Indian agriculture and promote prosperity among our farming community. Join us in building a brighter future for our farmers and our nation.</p>
                 </div>
             </div>
         </div>

@@ -8,6 +8,11 @@
     .mobile-view {
         display: none !important;
     }
+    
+    .testimonial-slider-one .slick-dots {
+        text-align: center;
+        margin-top: 5px;
+    }
 
     @media (max-width:567px) {
 
@@ -32,11 +37,14 @@
         }
 
         .mobile-view .gd-breadcrumb {
-            background: #dee2e6;
+            background: #2a7d2e;
             text-align: center;
-            font-size: 16px !important;
-            color: #1a9f53 !important;
+            font-size: 15px !important;
+            color: #e3e3e3 !important;
             font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
         }
 
         .mobile-view .bg_cover {
@@ -116,14 +124,14 @@
 
 </style>
 
-<section class="gallery-section-minus1 pt-50 pb-20 bg-dark-infra">
+<section class="gallery-section-minus1 pt-20 pb-20 ptbmob-30 bg-dark-infra">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                     <div class="section-title mb-15">
                         <h2>Multiplex Group: Five Decades of Transforming Agriculture and Nurturing Sustainability</h2>
                     </div>
-                <div class="project-content-box mb-50 wow fadeInRight">
+                <div class="project-content-box mb-20 wow fadeInRight">
                     <p class="mb-30">For fifty years, Multiplex Group has been a trailblazer in balanced crop nutrition management, sustainable agriculture, and food production. Our steadfast dedication to these ideals has not only gained recognition but has also inspired widespread adoption by government authorities, agricultural organizations, and universities, establishing us as a leading force in advanced agricultural manufacturing.</p>
                     
                  <div class="section-title mb-15">
@@ -146,14 +154,7 @@
 <!--====== Start timeline Section  ======-->
 <section class="testimonial-section pt-50 pb-10">
     <div class="container-fluid">
-        <!--<div class="row justify-content-center">-->
-        <!--    <div class="col-xl-6 col-lg-12">-->
-        <!--        <div class="section-title text-center mb-30 wow fadeInDown">-->
-        <!--            <span class="sub-title"><img src="assets/images/leaf-svgrepo-com-new.svg" height="35" width="35" alt=""></span>-->
-        <!--            <h2>Our 50 Years Journey</h2>-->
-        <!--        </div>-->
-        <!--    </div>-->
-        <!--</div>-->
+
         <!--====== timeline Slider  ======-->
         <div class="testimonial-slider-one wow fadeInUp">
             <!--====== timeline Item  ======-->
@@ -258,7 +259,7 @@
                     <div class="section-title mb-15">
                         <h2>Leading in Advanced Agricultural Manufacturing</h2>
                     </div>
-                <div class="project-content-box mb-50 wow fadeInRight">
+                <div class="project-content-box mb-30 wow fadeInRight">
                     <p class="mb-15">Multiplex Group takes immense pride in its strategically located manufacturing units in Bengaluru, Tumkur, Hubli, and Ghaziabad, unwavering in its commitment to producing top-quality agricultural inputs.</p>
                     <p class="mb-15">Our state-of-the-art infrastructure is meticulously designed, equipped with advanced technology, and adheres to stringent quality assurance protocols. We aim to innovate exceptional crop nutrition and plant protection solutions, meeting modern agriculture's evolving needs.</p>
                     <p class="mb-30">Our production units span vast acres, boasting pharmaceutical-grade equipment, ensuring optimal production while maintaining the highest quality standards.</p>

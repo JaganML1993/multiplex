@@ -33,11 +33,14 @@
         }
 
         .mobile-view .gd-breadcrumb {
-            background: #dee2e6;
+            background: #2a7d2e;
             text-align: center;
-            font-size: 16px !important;
-            color: #1a9f53 !important;
+            font-size: 15px !important;
+            color: #e3e3e3 !important;
             font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
         }
 
         .mobile-view .bg_cover {
@@ -81,25 +84,11 @@
 </section>
 <!--====== End Page-title-area section ======-->
 
-<!--====== Start Project-Details section ======-->
-<!--<section class="project-details-section pt-60 pb-60 services-img-round">-->
-<!--    <div class="container">-->
-<!--        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">-->
-
-<!--            <div class="carousel-inner">-->
-<!--                <div class="carousel-item active">-->
-<!--                    <img class="d-block w-100" src="assets/images/jobs.jpg" alt="First slide">-->
-<!--                </div>-->
-
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-<!--====== End Project-Details section ======-->
 
 <!--====== Start Info Section ======-->
-<section class="info-section pt-60 pb-10">
+<section class="info-section pt-50 ptbmob-30 pb-10">
     <div class="container">
+<<<<<<< HEAD
                             <!--<form class="review-form" method="post">-->
                             <!--    <div class="row">-->
                             <!--        <div class="col-lg-3">-->
@@ -144,17 +133,27 @@
                             <form class="contact-form">
                                 <div class="row">
                                     <div class="col-lg-3">
+=======
+                            <form class="contact-form">
+                                <div class="row">
+                                    <div class="col-lg-4">
+>>>>>>> 4c60907 (live changes)
                                         <div class="form_group">
                                             <label><i class="fa-solid fa-location-dot"></i></label>
                                             <input type="text" class="form_control" placeholder="Job location" id="location" name="location" required>
                                         </div>
                                     </div>
+<<<<<<< HEAD
                                     <div class="col-lg-3">
+=======
+                                    <div class="col-lg-4">
+>>>>>>> 4c60907 (live changes)
                                         <div class="form_group">
                                             <label><i class="fa fa-user"></i></label>
                                             <input type="text" class="form_control" placeholder="Position" id="position" name="position" required>
                                         </div>
                                     </div>
+<<<<<<< HEAD
                                     <div class="col-lg-3">
                                         <div class="form_group">
                                             <label><i class="fa-solid fa-briefcase"></i></label>
@@ -162,6 +161,15 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-3">
+=======
+                                    <!--<div class="col-lg-3">-->
+                                    <!--    <div class="form_group">-->
+                                    <!--        <label><i class="fa-solid fa-briefcase"></i></label>-->
+                                    <!--        <input type="text" class="form_control" placeholder="Department" id="department" name="department" required>-->
+                                    <!--    </div>-->
+                                    <!--</div>-->
+                                    <div class="col-lg-4">
+>>>>>>> 4c60907 (live changes)
                                         <div class="form_group">
                                             <button class="main-btn primary-btn" id="searchBtn" type="button">Find Jobs</button>
                                         </div>
@@ -195,7 +203,6 @@
 </section>
 <!--====== End Info Section ======-->
 
-<br />
 
 @endsection
 @section('scripts')
@@ -304,4 +311,8 @@
     });
 </script>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4c60907 (live changes)
 @endsection

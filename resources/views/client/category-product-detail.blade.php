@@ -1,18 +1,43 @@
 @extends('client.header')
 @section('content')
     @include('client.product-enquiry')
+    
+    <style>
+        @media (max-width:567px) {
+         .prod-main-title h3 {
+            font-size:20px;
+            font-weight:700;
+            text-align:center;
+        }
+        
+        .prod-cta-bn {
+            padding-top: 30px;
+            text-align: center;
+        }
+    }
+    
+    .prod-main-title h3 {
+            font-size:25px;
+            font-weight:700;
+        }
+        
+        .cta-image-box1 img{
+            border-top-right-radius:20px;
+            border-top-left-radius:20px;
+        }
+    </style>
 
     <!--====== Start CTA Section  ======-->
-    <section class="cta-bg-section bg_cover pt-100 p-r z-1"
+    <section class="cta-bg-section bg_cover pt-50 p-r z-1"
         style="background-image: url({{ url('assets/images/bg33.jpg') }});">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <!--======  CTA Content Box  ======-->
-                    <div class="cta-content-box text-white mb-50 wow fadeInLeft">
+                    <div class="cta-content-box text-white mb-50 prod-main-title wow fadeInLeft">
                         <!--====== Section-title ======-->
                         <div class="section-title mb-20">
-                            <h2>{{ $product->name }}</h2>
+                            <h3>{{ $product->name }}</h3>
                         </div>
 
                     </div>
@@ -88,7 +113,7 @@
         }
 
         .pricing-section li:before {
-            content: "\f058";
+            content: "\f06c"; /* Unicode leaf character */
             font-family: FontAwesome;
             display: inline-block;
             margin-left: calc(1em * -1);
@@ -180,7 +205,7 @@
 
     <!--====== Start Special Features Section ======-->
     @if (!empty($product->special_features))
-        <section class="pricing-section pt-30 pb-20">
+        <section class="pricing-section pt-10 pb-10">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-12 col-md-12 col-sm-12">
@@ -205,12 +230,12 @@
 
 
     <!--====== Start Specification Section ======-->
-    <section class="pricing-section pt-30 pb-30">
+    <section class="pricing-section pt-10 pb-30">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <!--====== Pricing Item ======-->
-                    <div class="single-pricing-item mb-40 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="single-pricing-item mb-10 wow fadeInUp" data-wow-delay=".2s">
                         <div class="pricing-body sub-head">
                             <div class="pricing-title mb-10">
                                 <h2 class="title" style="border-bottom: none;">Specification</h2>
@@ -466,7 +491,7 @@
     @endif
     <br>
 
-    <section class="service-details-section pt-30">
+    <section class="service-details-section pt-10">
     <div class="container text-center">
         <div class="row">
             @if (!empty($product->video_link))
@@ -499,7 +524,7 @@
 </section>
 
 
-    {{-- <section class="service-details-section pt-30">
+    {{-- <section class="service-details-section pt-10">
         <div class="container">
             <div class="row">
 
@@ -529,7 +554,7 @@
     </section> --}}
 
 
-    <br /><br /><br />
+    <br />
 @endsection
 @section('scripts')
     @parent
@@ -539,7 +564,7 @@
             var emailValue2 = emailInput2.value;
 
             // Simplified regular expression for email validation
-            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org)$/;
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net|gov|edu|co)$/;
 
             if (!emailRegex.test(emailValue2)) {
                 emailInput2.setCustomValidity("Please enter a valid email address.");

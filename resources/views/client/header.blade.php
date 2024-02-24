@@ -10,7 +10,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
     <!--====== Title ======-->
     <title>Multiplex Group</title>
     <!--====== Favicon Icon ======-->
@@ -61,6 +63,41 @@
             color:currentColor;
             display:block !important;
         }
+<<<<<<< HEAD
+=======
+        
+     @media (max-width:567px) {
+        .ptbmob-30 {
+                padding-top:30px;
+            }
+            
+            .copyright-text p {
+             font-size:15px;
+        }
+        
+        .form-main-title-style h3 {
+            font-size:18px;
+        }
+        
+        @media (max-width: 1199px){
+            .sidebar-panel-wrapper .sidebar-wrapper {
+                overflow-y: auto;
+                padding: 60px 20px 40px;
+            }
+            
+        .main-btn.primary-btn, .main-bg {
+                background-color: #1a9f53;
+                width: 100%;
+            }
+            
+        .main-btn.filled-btn {
+                padding: 17px 40px;
+                background-color: transparent;
+                border: 2px solid #008448;
+                width: 100%;
+            }
+     }
+>>>>>>> 4c60907 (live changes)
 
         
     </style>
@@ -105,7 +142,7 @@
                                     <h3 class="title" style="color:#000;">Drop us a message</h3>
                                     <!--<p style="color:#000;">Our team will get back to you shortly.</p>-->
                                     <!--=== Review Form ===-->
-                                    <div class="review-form-area wow fadeInUp mt-10 mb-10">
+                                    <div class="review-form-area mt-10 mb-10">
 
                                         <form class="review-form general-form" id="review-form" method="post"
                                             action="{{ route('home.save_enquiry') }}">
@@ -164,14 +201,14 @@
                                                         <textarea name="message" class="form_control" placeholder="Message" required></textarea>
                                                     </div>
                                                 </div>
+                                                <!--success message-->
+                                                <div class="d-none review-message" style="width: 100%">
+                                                    <h4>Thank you, we will get back to you.</h4>
+                                                </div>
                                                 <div class="col-lg-12">
                                                     <div class="form_group success-below">
                                                         <button type="submit"
                                                             class="main-btn primary-btn">Submit</button>
-                                                    </div>
-                                                    <br />
-                                                    <div class="my-3 d-none review-message" style="width: 100%">
-                                                        <h4>Thank you, we will get back to you.</h4>
                                                     </div>
                                                 </div>
 
@@ -188,28 +225,8 @@
     </div>
     <!--====== Enquiry Wrapper ======-->
 
-    <!--====== Enquiry Wrapper ======-->
-    <!--<div class="modal fade sidebar-panel-wrapper" id="sidebar-modal-upi">-->
-    <!--    <div class="modal-dialog modal-dialog-scrollable">-->
-    <!--        <div class="modal-content">-->
-    <!--            <button class="close" data-dismiss="modal" style="color:#000;"><i class="fa fa-times"></i></button>-->
-    <!--            <div class="sidebar-wrapper">-->
-    <!--                <div class="sidebar-information-area">-->
-    <!--                    <div class="row no-gutters">-->
-    <!--                        <div class="col-xl-3 col-lg-3 sidebar-widget">-->
-    <!--                            <div class="description-wrapper mt-30">-->
-    <!--                                <img src="{{ asset('/images/upi_payment.jpg') }}" alt="">-->
-    <!--                            </div>-->
-    <!--                        </div>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--</div>-->
-    <!--====== Enquiry Wrapper ======-->
 
-    <!-- The Modal -->
+    <!-- UPI Modal -->
     <div class="modal" id="myModal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -224,11 +241,6 @@
                 <div class="modal-body">
                     <img src="{{ asset('/images/upi_payment.jpg') }}" alt="">
                 </div>
-
-                <!-- Modal footer -->
-                <!--<div class="modal-footer">-->
-                <!--  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>-->
-                <!--</div>-->
 
             </div>
         </div>
@@ -322,7 +334,7 @@
                                 </li>
                                 <li class="menu-item has-children"><a href="#">Corporate</a>
                                     <ul class="sub-menu">
-                                        <li><a href="{{ route('r-and-d') }}">R & D</a></li>
+                                        <li><a href="{{ route('research-and-development') }}">R & D</a></li>
                                         <li><a href="{{ route('infrastructure') }}">Infrastructure</a></li>
                                         <li><a href="{{ route('branches') }}">Branches </a></li>
                                         <li><a href="{{ route('global-connect') }}">Global/International Connect</a>
@@ -394,7 +406,7 @@
     <footer class="footer-area text-white main-bg">
         <div class="container">
             <!--====== Footer Widget ======-->
-            <div class="footer-widget-area pt-80 pb-40">
+            <div class="footer-widget-area pt-80 pb-10 ptbmob-30">
                 <div class="row">
 
                     <div class="col-lg-4 col-md-6 col-sm-12">
@@ -423,7 +435,7 @@
                                 <ul class="footer-nav">
                                     <li><a href="{{ route('gallery') }}">Gallery</a></li>
                                     <li><a href="{{ route('success-stories') }}">Success Stories</a></li>
-                                    <li><a href="#">News & Media</a></li>
+                                    <!--<li><a href="#">News & Media</a></li>-->
                                     <li><a href="#" data-toggle="modal" data-target="#myModal">Digital
                                             Payment</a></li>
                                     <!-- <li><a href="#">FAQs</a></li> -->
@@ -531,7 +543,7 @@
             var emailValue = emailInput.value;
 
             // Simplified regular expression for email validation
-            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org)$/;
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net|gov|edu|co)$/;
 
             if (!emailRegex.test(emailValue)) {
                 emailInput.setCustomValidity("Please enter a valid email address.");
@@ -630,7 +642,7 @@
                 
 
                 var form = $(this);
-
+                form.find(':submit').prop('disabled', true);
                 $.ajax({
                     type: 'POST',
                     url: form.attr('action'),
@@ -671,7 +683,7 @@
                 e.preventDefault();
 
                 var form = $(this);
-
+                form.find(':submit').prop('disabled', true);
                 $.ajax({
                     type: 'POST',
                     url: form.attr('action'),
@@ -711,7 +723,7 @@
                   return false;
                 } 
                 var form = $(this);
-
+                    form.find(':submit').prop('disabled', true);
                 $.ajax({
                     type: 'POST',
                     url: form.attr('action'),
