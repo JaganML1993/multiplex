@@ -48,7 +48,7 @@ Route::get('/research-and-development', [IndexController::class, 'research_and_d
 Route::get('/infrastructure', [IndexController::class, 'infrastructure'])->name('infrastructure');
 
 /** products */
-Route::get('/products-index', [IndexController::class, 'products'])->name('products.index');
+Route::get('/products', [IndexController::class, 'products'])->name('products.index');
 Route::get('/fertilizers', [IndexController::class, 'fertilizers'])->name('fertilizers');
 Route::get('/multi-pk', [IndexController::class, 'multi_pk'])->name('multi-pk');
 

@@ -10,22 +10,23 @@ class ProductCategoryController extends Controller
 {
     public function categoryProducts($id)
     {
-        $products = Product::where('category_id', $id)
-        ->orderBy('id', 'desc')
-        ->get();
+        $category = Category::where('name', $id)->first();
 
-        $category = Category::where('id', $id)->first();
-        $subCategories = SubCategory::where('category_id', $id)->get();
+        $products = Product::where('category_id', $category->id)
+            ->orderBy('id', 'desc')
+            ->get();
 
-        return view('client.category-products')->with('products', $products)->with('subCategories', $subCategories ?? [])->with('category', $category)->with('category_id', $id);
+        $subCategories = SubCategory::where('category_id', $category->id)->get();
+
+        return view('client.category-products')->with('products', $products)->with('subCategories', $subCategories ?? [])->with('category', $category)->with('category_id', $category->id);
     }
 
-    public function categoryProductDetail($productId){
-        $product = Product::find($productId);
-        $category = Category::where('id',$product->category_id)->first();
+    public function categoryProductDetail($productId)
+    {
+        $product = Product::where('slug', $productId)->first();
+        
+        $category = Category::where('id', $product->category_id)->first();
 
         return view('client.category-product-detail', compact('product', 'category'));
     }
-
-    
 }

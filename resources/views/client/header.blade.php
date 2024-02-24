@@ -343,7 +343,7 @@
                                     <ul class="sub-menu">
                                         @foreach ($categories as $category)
                                             <li><a
-                                                    href="{{ route('category.products', ['id' => $category->id]) }}">{{ $category->name }}</a>
+                                                    href="{{ route('category.products', ['id' => $category->name]) }}">{{ $category->name }}</a>
                                             </li>
                                         @endforeach
                                     </ul>
