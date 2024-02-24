@@ -32,11 +32,14 @@
         }
 
         .mobile-view .gd-breadcrumb {
-            background: #dee2e6;
+            background: #2a7d2e;
             text-align: center;
-            font-size: 16px !important;
-            color: #1a9f53 !important;
+            font-size: 15px !important;
+            color: #e3e3e3 !important;
             font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
         }
 
         .mobile-view .bg_cover {
@@ -79,7 +82,7 @@
 		
 		
 		<!--====== Start Testimonial Section ======-->
-        <section class="testimonial-section1 bg-dark-home">
+        <section class="testimonial-section1 ptbmob-10 bg-dark-home">
             <div class="container">
                 <!--=== Testimonial Wrapper ===-->
                 <div class="testimonial-quote-area p-r z-1">
@@ -164,7 +167,7 @@
             </div>
         </section><!--====== End Testimonial Section ======-->
 
-        <section class="service-details-section pt-60 pb-60">
+        <section class="service-details-section pt-50">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-6 col-lg-12">

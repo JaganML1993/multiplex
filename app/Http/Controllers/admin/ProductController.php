@@ -45,6 +45,15 @@ class ProductController extends Controller
     public function store(CreateProductReq $request)
     {
         $data = $request->validated();
+        
+        if ($request->hasFile('catelog_link')) {
+            $folder = 'uploads/products';
+            $catalogPdf = $request->file('catelog_link');
+            $slug = strtolower(preg_replace('/[^A-Za-z0-9-]+/', '-', $request->name));
+            $fileName = $slug . '.' . $catalogPdf->extension();
+            $catalogPdf->move(public_path($folder), $fileName);
+            $data['catelog_link'] = "$folder/$fileName";
+        }
      
         CreateProductAct::run($data);
         return redirect('admin/products')->with('status', 'Product created successfully');
@@ -109,7 +118,8 @@ class ProductController extends Controller
         }    
         if ($request->hasFile('catelog_link')) {
             $catalogPdf = $request->file('catelog_link');
-            $fileName = time() . '.' . $catalogPdf->extension();
+            $slug = strtolower(preg_replace('/[^A-Za-z0-9-]+/', '-', $request->name));
+            $fileName = $slug . '.' . $catalogPdf->extension();
             $catalogPdf->move(public_path($folder), $fileName);
         
             $data['catelog_link'] = "$folder/$fileName";

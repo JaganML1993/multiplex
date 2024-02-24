@@ -20,11 +20,22 @@
   margin-left: calc(1em * -1 );
   color: #2a7d2e !important;
   margin-right: 0.5rem;
- 
 }
 
+
+
+@media (max-width:567px) {
+  .job-open h3 {
+      font-size:18px;
+  }
+  .job-open h6 {
+      font-size:16px;
+  }
+}
+
+
 </style>
-<section class="faq-section pt-95 bg-dark-goc job-open">
+<section class="faq-section pt-50 ptbmob-30 bg-dark-goc job-open">
     <div class="container">
         <div class="accordion" id="accordionOne">
             <div class="row">
@@ -81,7 +92,7 @@
 
 
 <!--====== Start Shop Details Section ======-->
-<section class="shop-details-section pt-30 pb-10">
+<section class="shop-details-section pt-10 pb-10">
     <div class="container">
         <div class="product-details-wrapper">
             <div class="row">
@@ -177,7 +188,7 @@
    }
 </style>
 
-<br />
+
 
 @endsection
 @section('scripts')

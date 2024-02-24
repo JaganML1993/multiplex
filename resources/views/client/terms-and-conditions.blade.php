@@ -1,31 +1,24 @@
 @extends('client.header')
 @section('content')
 
-<!--====== Start Page-title-area section ======-->
-<!--<section class="page-title-area text-white bg_cover"-->
-<!--    style="background-image: url(assets/images/r-and-d-header-img.jpg);">-->
-<!--    <div class="container">-->
-        <!--======  Page-title-Inner ======-->
-<!--        <div class="page-title-inner text-center">-->
-<!--            <h1 class="page-title">Terms & Conditions </h1>-->
-<!--            <div class="gd-breadcrumb">-->
-<!--                <span class="breadcrumb-entry"><a href="index.html">Home</a></span>-->
-<!--                <span class="separator"></span>-->
-<!--                <span class="breadcrumb-entry active">Terms & Conditions </span>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-<!--====== End Page-title-area section ======-->
 
 <style>
     .project-details-wrapper p {
         margin-bottom: 15px;
+    }
+    
+    @media (max-width: 575px){
+     .project-details-wrapper h3.title {
+       font-size: 20px !important;
+    }
+    .term-sub-head h3 {
+        font-size: 16px !important;
+    }
 }
 </style>
 
 <!--====== Start Project-Details section ======-->
-<section class="project-details-section pt-60 services-img-round">
+<section class="project-details-section pt-50 ptbmob-30 services-img-round">
     <div class="container">
         <div class="project-details-wrapper pb-30"> 
             <div class="row">
@@ -35,7 +28,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center term-sub-head">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <h3 class="mb-10">Terms of Use</h3>
                     <p>Please read these terms carefully before using the online payment facility. Using the online payment facility on this website indicates that you accept these terms. If you do not accept these terms do not use this facility.</p>
@@ -50,7 +43,7 @@
             </div>
             <hr />
             <br/>
-             <div class="row justify-content-center">
+             <div class="row justify-content-center term-sub-head">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <h3 class="mb-10">Privacy Policy</h3>
                     <p>This Privacy Policy applies to all of the products, services and websites offered by KARNATAKA AGRO CHEMICALS. Sometimes, we may post product specific privacy notices or Help Centre materials to explain our products in more detail.</p>
@@ -60,7 +53,7 @@
             </div>
             <hr />
             <br/>
-             <div class="row justify-content-center">
+             <div class="row justify-content-center term-sub-head">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <h3 class="mb-10">Refund Policy</h3>
                     <p>No refunds will be processed through the website. In case of any dispute, you would need to contact the concerned in KARNATAKA AGRO CHEMICALS for redressal.</p>
@@ -70,7 +63,7 @@
             
             <hr />
             <br/>
-             <div class="row justify-content-center">
+             <div class="row justify-content-center term-sub-head">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <h3 class="mb-10">Shipping Policy</h3>
                     <p><strong>Online Payments</strong></p>
@@ -94,15 +87,13 @@
                     <p>If you wish to stop any further sms/email alerts/contacts from our side, all you need to do is to send an email to <a style="color:#1a9f53;" href="mailto:multiplex@multiplexgroup.com">multiplex@multiplexgroup.com</a> with your mobile numbers and you will be excluded from the alerts list. However, please note that by doing so, you are solely responsible for any risks arising out of missing any crucial information/alerts.</p>
                 </div>
             </div>
-            <hr />
-            <br/>
+            
 
         </div>
     </div>
 </section>
 <!--====== End Project-Details section ======-->
 
-<br />
 
 @endsection
 @section('scripts')

@@ -16,8 +16,8 @@ class LocationSeeder extends Seeder
     public function run()
     {
         $locations = [
-            ['id' => 1, 'location' => 'Karnataka', 'email' => 'test'],
-            ['id' => 2, 'location' => 'Maharashtra', 'email' => 'test'],
+            ['id' => 1, 'location' => 'Andhra Pradesh-Kurnool', 'email' => 'kurnool@multiplexgroup.com'],
+            ['id' => 2, 'location' => 'Andhra Pradesh-Guntur', 'email' => 'guntur@multiplexgroup.com'],
             ['id' => 3, 'location' => 'Haryana', 'email' => 'test'],
             ['id' => 4, 'location' => 'Jharkhand', 'email' => 'test'],
             ['id' => 5, 'location' => 'Gujarat', 'email' => 'test'],

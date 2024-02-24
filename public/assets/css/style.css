@@ -63,7 +63,7 @@ h4.entry-title:hover, .single-blog-post-three .entry-content h3.title:hover, .si
  ul.ratings li a:hover, .single-product-item .product-info h4:hover, .single-pricing-item-two .pricing-body ul li i, 
  .single-pricing-item .pricing-body ul li i, .team-details-wrapper .member-info .member-meta .member-contact-info p a:hover, 
  .single-team-item .member-info h3.title:hover, .single-project-item-four .project-img .project-content .text h3.title:hover, 
- .project-filter li:hover, .project-filter li.active, .navigation-item .text h3.title:hover, .single-service-item .service-info h4.title:hover,
+ .project-filter li:hover, .navigation-item .text h3.title:hover, .single-service-item .service-info h4.title:hover,
  .cta-two_content-box h4, .single-process-item .icon, .fancy-icon-box-two .icon i, .fancy-icon-box .icon i, .experience-box-two h6, 
  .experience-box .btn-link, .fancy-about-item .text h5 i, .about-two_content-box .about-inner-content .experience-box-two h2.number, 
  .hero-play .video-popup, .navigation-white.header-navigation .main-menu ul > li:hover > a, .header-three .header-navigation .nav-right-item 
@@ -73,6 +73,10 @@ h4.entry-title:hover, .single-blog-post-three .entry-content h3.title:hover, .si
  .header-top-bar .top-right ul.social-link li a:hover, .header-navigation .main-menu ul > li:hover > a, .header-navigation 
  .main-menu ul > li .sub-menu li:hover > a, .header-navigation .main-menu ul > li .sub-menu li a:hover {
   color: #0c410e;
+}
+
+.project-filter li.active {
+    color:#009f5a;
 }
 
 .footer-experience-widget .experience-box-two h6, .single-information-item .info span, .single-blog-post .entry-content .author-meta .author h6 span, .single-pricing-item-two .pricing-body .pricing-title h2.price span.duration, .single-pricing-item .pricing-body h2.price span.duration, .single-team-item .member-img .icon-btn, .project-details-wrapper .project-info-widget .info-content h6, .single-counter-item p, .single-process-item .step, .features-thumb-item .content h5.title, .choose-content-box .thumb-content .check-style-one li, .header-two .header-navigation .nav-right-item .lang-dropdown .nice-select .list li, .header-middle .menu-right-item span, .header-navigation .main-menu ul > li > a, .main-btn.golden-btn {
@@ -530,6 +534,8 @@ h6 {
 .sambrama-app img {
 	border-radius:10px;	
 }
+
+
 
 
 
@@ -1412,7 +1418,7 @@ button {
   position: fixed;
   top: 0;
   left: -290px;
-  z-index: 9999;
+  z-index: 1000;
   width: 290px;
   height: 100%;
   -webkit-transition-duration: 500ms;
@@ -3281,7 +3287,7 @@ ul.check-style-one li i {
   margin-bottom: 10px;
 }
 .single-counter-item-two p {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 /*--==== Features Content Css ====--*/
@@ -3808,7 +3814,7 @@ ul.check-style-one li i {
 .project-filter li {
   position: relative;
   display: inline-block;
-  font: 600 18px "Montserrat", sans-serif;
+  font: 600 17px "Montserrat", sans-serif;
   cursor: pointer;
   -webkit-margin-end: 43px;
           margin-inline-end: 43px;
@@ -4305,7 +4311,7 @@ ul.check-style-one li i {
     padding: 45px 20px;
   }
   .project-details-wrapper h3.title, .section-title h2  {
-      font-size:17px !important;
+      font-size:15px !important;
   }
  
 }
@@ -8020,6 +8026,8 @@ ul.slick-dots li.slick-active {
         .vision-row{
             flex-direction: column-reverse !important;
         }
+        
+
     }
 .single-pricing-item:hover{
 background-color: #d1d1d13b !important;

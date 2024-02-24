@@ -12,6 +12,11 @@
     .management-image img {
         border-radius:20px;
     }
+    
+    .pad-top-150 {
+            padding-top: 0px !important;
+            padding-bottom: 60px !important;
+        }
 
     @media (max-width:567px) {
         .pt-100 {
@@ -20,15 +25,18 @@
 
         .pad-top-150 {
             padding-top: 0px !important;
+            padding-bottom: 50px !important;
         }
 
         .mangmnt-name h2 {
-            font-size: 18px;
-            text-align: center;
+            font-size: 17px;
+            /* text-align: center; */
+            line-height: 27px;
+            margin-top: 15px;
         }
 
         .sub-title {
-            font-size: 18px;
+            font-size: 16px;
         }
 
         .desktop-view {
@@ -51,11 +59,14 @@
         }
 
         .mobile-view .gd-breadcrumb {
-            background: #dee2e6;
+            background: #2a7d2e;
             text-align: center;
-            font-size: 16px !important;
-            color: #1a9f53 !important;
+            font-size: 15px !important;
+            color: #e3e3e3 !important;
             font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
         }
 
         .mobile-view .bg_cover {
@@ -100,14 +111,14 @@
 
 
 <!--====== Start Features Section ======-->
-<section class="features-section pt-100">
+<section class="features-section pt-50">
 
-    <div class="container ">
+    <div class="container pad-top-150">
         <div class="row align-items-xl-center">
             <div class="col-xl-6 col-lg-12">
                 <!--=== Hero Image Box ===-->
-                <div class="hero-image-box d-xl-block wow fadeInRight" data-wow-delay=".75s">
-                    <img src="{{ asset('images/gp-shetty-4.png') }}" alt="Hero Image">
+                <div class="hero-image-box d-xl-block wow fadeInRight management-image" data-wow-delay=".75s">
+                    <img src="{{ asset('images/nm-shetty-new33.jpg') }}" alt="Hero Image">
                 </div>
             </div>
 
@@ -182,7 +193,7 @@
 </section>
 
 <!--====== End Features Section ======-->
-<br /><br /><br />
+
 
 @endsection
 @section('scripts')
