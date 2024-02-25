@@ -17,7 +17,8 @@ class Category extends Model
         'image',
         'description',
         'status',
-        'catelog_link'
+        'catelog_link',
+        'slug'
     ];
 
     public function sub_categories(){

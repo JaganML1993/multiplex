@@ -5,12 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\admin\Category;
 use App\Models\admin\SubCategory;
 use App\Models\Product;
+use Illuminate\Support\Facades\Route;
 
 class ProductCategoryController extends Controller
 {
-    public function categoryProducts($id)
+    public function categoryProducts()
     {
-        $category = Category::where('name', $id)->first();
+        $id = Route::currentRouteName();
+
+        $category = Category::where('slug', $id)->first();
 
         $products = Product::where('category_id', $category->id)
             ->orderBy('id', 'desc')
@@ -24,7 +27,7 @@ class ProductCategoryController extends Controller
     public function categoryProductDetail($productId)
     {
         $product = Product::where('slug', $productId)->first();
-        
+
         $category = Category::where('id', $product->category_id)->first();
 
         return view('client.category-product-detail', compact('product', 'category'));

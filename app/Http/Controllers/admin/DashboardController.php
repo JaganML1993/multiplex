@@ -9,6 +9,7 @@ use App\Models\admin\Category;
 use App\Models\admin\SubCategory;
 use App\Models\Index;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class DashboardController extends Controller
 {
@@ -37,7 +38,10 @@ class DashboardController extends Controller
         }else{
             $catelog_link = null;
         }
-        Category::create(['name' => $request->name, 'status' => $request->status, 'image' => $file_name, 'description' => $request->description,'catelog_link' => $catelog_link]);
+
+        $slug = Str::slug($request->name);
+
+        Category::create(['name' => $request->name, 'status' => $request->status, 'image' => $file_name, 'description' => $request->description,'catelog_link' => $catelog_link, 'slug' => $slug]);
         return redirect('admin/category')->with('status', 'Category saved successfully');
     }
 

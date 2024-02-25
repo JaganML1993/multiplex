@@ -130,16 +130,16 @@
                     <div class="col-xl-3 col-md-6 col-sm-12">
                         <div class="features-thumb-item-two mb-40 wow fadeInDown" data-wow-delay=".2s">
                             <div class="thumb">
-                               <a href="{{ route('category.products',['id' => $category->name, 'sub_id' => 0]) }}"> <img src="{{ url('').'/'.$category->image }}" alt="Image"></a>
+                               <a href="{{ route($category->slug) }}"> <img src="{{ url('').'/'.$category->image }}" alt="Image"></a>
                             </div>
                             <br/>
 							<div class="padc01">
-                                <a href="{{ route('category.products',['id' => $category->name, 'sub_id' => 0]) }}"><h5 class="title">{{$category->name}}</h5></a>
+                                <a href="{{ route($category->slug) }}"><h5 class="title">{{$category->name}}</h5></a>
                                 <p>{{$category->description}}</p>
                             </div>
 							<br/>
 							<div class="menu-button d-xl-block">
-                                <a href="{{ route('category.products',['id' => $category->name, 'sub_id' => 0]) }}" class="main-btn primary-btn">Know More</a>
+                                <a href="{{ route($category->slug) }}" class="main-btn primary-btn">Know More</a>
                             </div>
                         </div>
                     </div>

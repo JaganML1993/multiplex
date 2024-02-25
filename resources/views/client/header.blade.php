@@ -1,6 +1,6 @@
 @php
-    use App\Actions\CategoryAct;
-    $categories = CategoryAct::run();
+use App\Actions\CategoryAct;
+$categories = CategoryAct::run();
 @endphp
 <!DOCTYPE html>
 <html lang="zxx">
@@ -18,9 +18,7 @@
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/png">
     <!--====== Google Fonts ======-->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <!--====== Flaticon css ======-->
     <link rel="stylesheet" href="{{ asset('fonts/flaticon/flaticon_gadden.css') }}">
@@ -55,48 +53,49 @@
         .page-title-area {
             margin-top: 0 !important;
         }
+
         .nice-select {
             display: none !important;
         }
-        select{
-            background:#ffffff;
-            color:currentColor;
-            display:block !important;
-        }
-        
-     @media (max-width:567px) {
-        .ptbmob-30 {
-                padding-top:30px;
-            }
-            
-            .copyright-text p {
-             font-size:15px;
-        }
-        
-        .form-main-title-style h3 {
-            font-size:18px;
-        }
-        
-        @media (max-width: 1199px){
-            .sidebar-panel-wrapper .sidebar-wrapper {
-                overflow-y: auto;
-                padding: 60px 20px 40px;
-            }
-            
-        .main-btn.primary-btn, .main-bg {
-                background-color: #1a9f53;
-                width: 100%;
-            }
-            
-        .main-btn.filled-btn {
-                padding: 17px 40px;
-                background-color: transparent;
-                border: 2px solid #008448;
-                width: 100%;
-            }
-     }
 
-        
+        select {
+            background: #ffffff;
+            color: currentColor;
+            display: block !important;
+        }
+
+        @media (max-width:567px) {
+            .ptbmob-30 {
+                padding-top: 30px;
+            }
+
+            .copyright-text p {
+                font-size: 15px;
+            }
+
+            .form-main-title-style h3 {
+                font-size: 18px;
+            }
+
+            @media (max-width: 1199px) {
+                .sidebar-panel-wrapper .sidebar-wrapper {
+                    overflow-y: auto;
+                    padding: 60px 20px 40px;
+                }
+
+                .main-btn.primary-btn,
+                .main-bg {
+                    background-color: #1a9f53;
+                    width: 100%;
+                }
+
+                .main-btn.filled-btn {
+                    padding: 17px 40px;
+                    background-color: transparent;
+                    border: 2px solid #008448;
+                    width: 100%;
+                }
+            }
     </style>
 </head>
 
@@ -116,8 +115,7 @@
             <div class="modal-content">
                 <form>
                     <div class="form_group">
-                        <input type="search" class="form_control search-input" placeholder="Search here" name="search"
-                            id="search">
+                        <input type="search" class="form_control search-input" placeholder="Search here" name="search" id="search">
                         <label><i class="fa fa-search"></i></label>
                     </div>
                 </form>
@@ -141,8 +139,7 @@
                                     <!--=== Review Form ===-->
                                     <div class="review-form-area mt-10 mb-10">
 
-                                        <form class="review-form general-form" id="review-form" method="post"
-                                            action="{{ route('home.save_enquiry') }}">
+                                        <form class="review-form general-form" id="review-form" method="post" action="{{ route('home.save_enquiry') }}">
                                             @csrf
                                             {{-- <div class="my-3 d-none success-message" style="width: 100%">
                                                 <div class="btn btn-success">Form Submitted Successfully</div>
@@ -151,33 +148,27 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form_group">
-                                                        <input type="text" class="form_control"
-                                                            onkeypress="return /[a-zA-Z,' ']/i.test(event.key)"
-                                                            placeholder="Your Name" name="name" required>
+                                                        <input type="text" class="form_control" onkeypress="return /[a-zA-Z,' ']/i.test(event.key)" placeholder="Your Name" name="name" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form_group">
-                                                        <input type="text" class="form_control" onkeypress="num_validate(event)"
-                                                         oninput="maxLengthCheck(this)" maxlength="10" minlength="10" 
-                                                         placeholder="Phone Number" name="phone" required>
+                                                        <input type="text" class="form_control" onkeypress="num_validate(event)" oninput="maxLengthCheck(this)" maxlength="10" minlength="10" placeholder="Phone Number" name="phone" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="form_group">
-                                                        <input type="text" class="form_control" placeholder="Email Address"
-                                                         name="email" id="emailField" required oninput="validateDomain()">
+                                                        <input type="text" class="form_control" placeholder="Email Address" name="email" id="emailField" required oninput="validateDomain()">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="form_group">
-                                                        <input type="text" class="form_control"
-                                                            placeholder="Location" name="loc" required>
+                                                        <input type="text" class="form_control" placeholder="Location" name="loc" required>
                                                     </div>
                                                 </div>
                                                 @php
 
-                                                    $departments = \App\Models\Department::where('type', 1)->get();
+                                                $departments = \App\Models\Department::where('type', 1)->get();
 
                                                 @endphp
                                                 <div class="col-lg-4">
@@ -185,9 +176,9 @@
                                                         <select class="form_control" id="department" name="department" required>
                                                             <option value="" selected disabled>Select Department</option>
                                                             @foreach ($departments as $department)
-                                                                <option value="{{ $department->id }}">
-                                                                    {{ $department->name }}
-                                                                </option>
+                                                            <option value="{{ $department->id }}">
+                                                                {{ $department->name }}
+                                                            </option>
                                                             @endforeach
                                                         </select>
 
@@ -204,8 +195,7 @@
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="form_group success-below">
-                                                        <button type="submit"
-                                                            class="main-btn primary-btn">Submit</button>
+                                                        <button type="submit" class="main-btn primary-btn">Submit</button>
                                                     </div>
                                                 </div>
 
@@ -248,12 +238,12 @@
     <!--====== Header Area ======-->
     <header class="header-area header-one transparent-header1">
         @if (session('status'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin: 10px;">
-                {{ session('status') }}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+        <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin: 10px;">
+            {{ session('status') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
         @endif
         <!--<div id="google_translate_element"></div>-->
         <div class="container-fluid">
@@ -270,14 +260,10 @@
                         <!--====== Top Right ======-->
                         <div class="top-right float-lg-right">
                             <ul class="social-link">
-                                <li><a href="https://www.facebook.com/MultiplexGroupofCompanies" target="_blank"><i
-                                            class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="https://www.instagram.com/multiplexgroup/" target="_blank"><i
-                                            class="fab fa-instagram"></i></a></li>
-                                <li><a href="https://www.linkedin.com/company/multiplex-group-of-companies"
-                                        target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href="https://www.youtube.com/@MultiplexFarmer/videos" target="_blank"><i
-                                            class="fab fa-youtube"></i></a></li>
+                                <li><a href="https://www.facebook.com/MultiplexGroupofCompanies" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/multiplexgroup/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/multiplex-group-of-companies" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="https://www.youtube.com/@MultiplexFarmer/videos" target="_blank"><i class="fab fa-youtube"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -292,22 +278,19 @@
                 <div class="primary-menu">
                     <!--====== Site Branding ======-->
                     <div class="site-branding">
-                        <a href="{{ url('/') }}" class="brand-logo"><img
-                                src="{{ asset('/images/logo/multiplex-logo2.png') }}" alt="Site Logo"></a>
+                        <a href="{{ url('/') }}" class="brand-logo"><img src="{{ asset('/images/logo/multiplex-logo2.png') }}" alt="Site Logo"></a>
                     </div>
                     <!--====== Nav Menu ======-->
                     <div class="nav-menu">
                         <!--====== Site Branding ======-->
                         <div class="mobile-logo mb-30 d-block d-xl-none">
-                            <a href="{{ url('/') }}" class="brand-logo"><img
-                                    src="{{ asset('/images/logo/multiplex-logo.png') }}" alt="Site Logo"></a>
+                            <a href="{{ url('/') }}" class="brand-logo"><img src="{{ asset('/images/logo/multiplex-logo.png') }}" alt="Site Logo"></a>
                         </div>
                         <!--=== Nav Search ===-->
                         <div class="nav-search mb-30 d-block d-xl-none ">
                             <form>
                                 <div class="form_group">
-                                    <input type="search" class="form_control search-input" placeholder="Search Here"
-                                        name="search" required>
+                                    <input type="search" class="form_control search-input" placeholder="Search Here" name="search" required>
                                     <button class="search-btn"><i class="fas fa-search"></i></button>
                                 </div>
                             </form>
@@ -338,52 +321,48 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="menu-item has-children"><a
-                                        href="{{ route('products.index') }}">Products</a>
+                                <li class="menu-item has-children"><a href="{{ route('products.index') }}">Products</a>
                                     <ul class="sub-menu">
                                         @foreach ($categories as $category)
-                                            <li><a
-                                                    href="{{ route('category.products', ['id' => $category->name]) }}">{{ $category->name }}</a>
-                                            </li>
+                                        <li><a href="{{ route($category->slug) }}">{{ $category->name }}</a></li>
                                         @endforeach
+
                                     </ul>
                                 </li>
                                 <li class="menu-item has-children"><a href="#">Services</a>
                                     <ul class="sub-menu">
                                         <li><a href="{{ route('quality-testing') }}">Quality Testing</a></li>
                                         {{-- <li><a href="{{ route('microbial-analysis-laboratory') }}">Microbial Analysis
-                                                Laboratory</a></li> --}}
-                                        <li><a href="{{ route('drone-services') }}">Drone Services</a></li>
-                                        <li><a href="{{ route('gardening-services') }}">Gardening Services</a></li>
+                                        Laboratory</a>
+                                </li> --}}
+                                <li><a href="{{ route('drone-services') }}">Drone Services</a></li>
+                                <li><a href="{{ route('gardening-services') }}">Gardening Services</a></li>
 
-                                    </ul>
-                                </li>
-                                <li class="menu-item has-children"><a href="#">Community</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="{{ route('farmers-club') }}">Farmers Club</a></li>
-                                        <li><a href="{{ route('dealers-meet') }}">Dealers Meet</a></li>
-                                        <li><a href="{{ route('farmers-meet') }}">Farmers Meet</a></li>
-                                        <li><a href="{{ route('multiplex-vaahini') }}">Multiplex Vaahini</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item">
-                                    <div class="search-btn" data-toggle="modal" data-target="#search-modal"><i
-                                            class="fa-solid fa-magnifying-glass"></i></div>
-                                </li>
+                            </ul>
+                            </li>
+                            <li class="menu-item has-children"><a href="#">Community</a>
+                                <ul class="sub-menu">
+                                    <li><a href="{{ route('farmers-club') }}">Farmers Club</a></li>
+                                    <li><a href="{{ route('dealers-meet') }}">Dealers Meet</a></li>
+                                    <li><a href="{{ route('farmers-meet') }}">Farmers Meet</a></li>
+                                    <li><a href="{{ route('multiplex-vaahini') }}">Multiplex Vaahini</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <div class="search-btn" data-toggle="modal" data-target="#search-modal"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            </li>
                             </ul>
                         </nav>
                         <!--====== Menu Button ======-->
                         <!-- mobile button -->
                         <div class="menu-button mt-40 d-xl-none">
-                            <a href="{{ route('contact') }}" data-toggle="modal" data-target="#sidebar-modal"
-                                class="main-btn secondary-btn">Quick Enquiry</a>
+                            <a href="{{ route('contact') }}" data-toggle="modal" data-target="#sidebar-modal" class="main-btn secondary-btn">Quick Enquiry</a>
                         </div>
                     </div>
                     <!--====== Nav Right Item ======-->
                     <div class="nav-right-item">
                         <div class="menu-button d-xl-block d-none">
-                            <a href="{{ route('contact') }}" data-toggle="modal" data-target="#sidebar-modal"
-                                class="main-btn primary-btn">Quick Enquiry</a>
+                            <a href="{{ route('contact') }}" data-toggle="modal" data-target="#sidebar-modal" class="main-btn primary-btn">Quick Enquiry</a>
                         </div>
                         <div class="navbar-toggler">
                             <span></span>
@@ -449,8 +428,7 @@
 
                                     <li><a href="{{ route('home.life_at_multiplex') }}">Life @ Multiplex</a></li>
                                     <div class="hero-button wow fadeInUp" data-wow-delay=".7s">
-                                        <a href="{{ route('home.current_openings') }}"
-                                            class="main-btn golden-btn mb-10">Current Openings</a>
+                                        <a href="{{ route('home.current_openings') }}" class="main-btn golden-btn mb-10">Current Openings</a>
                                     </div>
                                 </ul>
                             </div>
@@ -463,10 +441,8 @@
                             <div class="widget-content">
                                 <ul class="footer-nav">
                                     <li><a href="{{ route('terms-and-conditions') }}">Terms & Conditions</a></li>
-                                    <li><a href="assets/doc/one-brand-total-solution-brochure.pdf"
-                                            target="_blank">Fertilizers & Micro-Nutrients</a></li>
-                                    <li><a href="assets/doc/bio-products-brochure.pdf"
-                                            target="_blank">Bio-Products</a></li>
+                                    <li><a href="assets/doc/one-brand-total-solution-brochure.pdf" target="_blank">Fertilizers & Micro-Nutrients</a></li>
+                                    <li><a href="assets/doc/bio-products-brochure.pdf" target="_blank">Bio-Products</a></li>
                                     <li><a href="assets/doc/pesticides-brochure.pdf" target="_blank">Pesticides</a>
                                     </li>
 
@@ -547,7 +523,7 @@
             } else {
                 emailInput.setCustomValidity('');
             }
-        }   
+        }
     </script>
 
     <script>
@@ -636,7 +612,7 @@
         $(document).ready(function() {
             $('.product-form').submit(function(e) {
                 e.preventDefault();
-                
+
 
                 var form = $(this);
                 form.find(':submit').prop('disabled', true);
@@ -712,15 +688,15 @@
         $(document).ready(function() {
             $('.general-form').submit(function(e) {
                 e.preventDefault();
-                
+
                 var selectElement = document.getElementById('department');
                 if (!selectElement.value) {
-                    
-                  alert('Please select the department');
-                  return false;
-                } 
+
+                    alert('Please select the department');
+                    return false;
+                }
                 var form = $(this);
-                    form.find(':submit').prop('disabled', true);
+                form.find(':submit').prop('disabled', true);
                 $.ajax({
                     type: 'POST',
                     url: form.attr('action'),
@@ -748,7 +724,7 @@
         });
     </script>
 
-    
+
 
 
 

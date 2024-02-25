@@ -9,6 +9,7 @@ use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProductCategoryController;
+use App\Models\admin\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,11 +50,15 @@ Route::get('/infrastructure', [IndexController::class, 'infrastructure'])->name(
 
 /** products */
 Route::get('/products', [IndexController::class, 'products'])->name('products.index');
-Route::get('/fertilizers', [IndexController::class, 'fertilizers'])->name('fertilizers');
+// Route::get('/fertilizers', [IndexController::class, 'fertilizers'])->name('fertilizers');
 Route::get('/multi-pk', [IndexController::class, 'multi_pk'])->name('multi-pk');
 
-Route::get('/category-products/{id}', [ProductCategoryController::class, 'categoryProducts'])->name('category.products');
-Route::get('/category-product-detail/{id}', [ProductCategoryController::class, 'categoryProductDetail'])->name('category.product.detail');
+$categories = Category::where('slug', '!=', '')->where('status', '1')->get();
+foreach($categories as $cat) {
+    Route::get($cat->slug, [ProductCategoryController::class, 'categoryProducts'])->name($cat->slug);
+    Route::get($cat->slug.'/{id}', [ProductCategoryController::class, 'categoryProductDetail'])->name('category.product.detail'.$cat->slug);
+}
+
 
 
 /** services */
