@@ -79,7 +79,7 @@
     }
      
     </style>   
-</style>
+
 		
          <!--====== Start Page-title-area section ======-->
         <section class="page-title-area text-white bg_cover desktop-view" style="background-image: url(assets/images/pr-page-header-img.jpg);">
