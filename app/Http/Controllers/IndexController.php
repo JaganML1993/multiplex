@@ -492,14 +492,20 @@ class IndexController extends Controller
     public function showGlobal(Request $request)
     {
         $query = $request->get('query');
-        $filterResult = Product::where('name', 'LIKE', '%' . $query . '%')
-            ->orWhereHas('category', function ($categoryQuery) use ($query) {
-                $categoryQuery->where('name', 'LIKE', '%' . $query . '%');
-            })
-            ->orWhereHas('sub_category', function ($subCategoryQuery) use ($query) {
-                $subCategoryQuery->where('name', 'LIKE', '%' . $query . '%');
-            })
-            ->get();
+        // $filterResult = Product::where('name', 'LIKE', '%' . $query)->get();
+        if(empty($query)){
+            $filterResult = [];
+        }else{
+            $filterResult = Product::where('name', 'LIKE', $query . '%')->get();
+        }
+
+            // ->orWhereHas('category', function ($categoryQuery) use ($query) {
+            //     $categoryQuery->where('name', 'LIKE', '%' . $query . '%');
+            // })
+            // ->orWhereHas('sub_category', function ($subCategoryQuery) use ($query) {
+            //     $subCategoryQuery->where('name', 'LIKE', '%' . $query . '%');
+            // })
+            // ->get();
 
 
         return response()->json($filterResult);

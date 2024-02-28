@@ -561,8 +561,6 @@ $categories = CategoryAct::run();
                         };
                     });
 
-                    console.log(suggestions);
-
                     // Remove the existing suggestions list before creating a new one
                     $('.suggestions-list').remove();
 
