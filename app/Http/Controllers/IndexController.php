@@ -483,7 +483,7 @@ class IndexController extends Controller
         })->where('category_id', $category_id)->orderBy('id', 'desc')->get();
 
         // Render the Blade view
-        $view = view('client.product-result', compact('products'))->render();
+        $view = view('client.product-result', compact('products', 'category'))->render();
 
         // Return the HTML as a JSON response
         return response()->json(['html' => $view]);

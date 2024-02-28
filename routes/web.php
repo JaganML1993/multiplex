@@ -59,7 +59,7 @@ foreach($categories as $cat) {
     Route::get($cat->slug.'/{id}', [ProductCategoryController::class, 'categoryProductDetail'])->name('category.product.detail'.$cat->slug);
 }
 
-
+Route::get('product/{id}', [ProductCategoryController::class, 'categoryProductDetail']);
 
 /** services */
 Route::get('/quality-testing', [IndexController::class, 'quality_testing'])->name('quality-testing');

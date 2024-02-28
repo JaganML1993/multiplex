@@ -556,7 +556,7 @@ $categories = CategoryAct::run();
                 }, function(data) {
                     var suggestions = data.map(function(item) {
                         return {
-                            id: item.id,
+                            id: item.slug,
                             name: item.name
                         };
                     });
@@ -585,7 +585,7 @@ $categories = CategoryAct::run();
             var selectedId = $(this).data('id');
 
             // Navigate to the URL using the item.id
-            window.location.href = "{{ url('category-product-detail') }}/" + selectedId;
+            window.location.href = "{{ url('product') }}/" + selectedId;
 
             // Remove the suggestions list
             $('.suggestions-list').remove();
