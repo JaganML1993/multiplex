@@ -96,6 +96,7 @@ $categories = CategoryAct::run();
                     width: 100%;
                 }
             }
+        }
     </style>
 </head>
 
