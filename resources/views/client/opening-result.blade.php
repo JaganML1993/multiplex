@@ -10,7 +10,7 @@
             <h4 class="title" style="font-size:17px;">{{$item->position}}</h4>
             <span>Vacancies: {{$item->vacancies}}</span>
             <br />
-            <a href="{{route('home.job_application',['id'=>$item->id])}}" class="main-btn primary-btn">View Details</a>
+            <a href="{{route('home.job_application',['id'=>$item->position])}}" class="main-btn primary-btn">View Details</a>
         </div>
     </div>
 </div>

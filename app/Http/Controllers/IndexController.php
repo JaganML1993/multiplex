@@ -172,7 +172,7 @@ class IndexController extends Controller
 
     public function job_application($id)
     {
-        $openings = Openings::find($id) ?? [];
+        $openings = Openings::where('position', $id)->first();
         $location = Location::where('id', $openings->location)->first();
 
         return view('client.job-application')->with('openings', $openings)->with('location', $location);
@@ -450,7 +450,8 @@ class IndexController extends Controller
     public function autocompleteSearch(Request $request)
     {
         $query = $request->get('query');
-        $filterResult = Location::where('location', 'LIKE', '%' . $query . '%')->get();
+        $filterResult = Location::where('location', 'LIKE', $query . '%')->get();
+
         return response()->json($filterResult);
     }
 
@@ -464,7 +465,7 @@ class IndexController extends Controller
     public function autocompletePosition(Request $request)
     {
         $query = $request->get('query');
-        $filterResult = Openings::select('position')->where('position', 'LIKE', '%' . $query . '%')->distinct()->groupBy('position')->get();
+        $filterResult = Openings::select('position')->where('position', 'LIKE', $query . '%')->distinct()->groupBy('position')->get();
         return response()->json($filterResult);
     }
 
