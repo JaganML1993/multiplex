@@ -149,6 +149,22 @@
 
 
 <script type="text/javascript">
+
+var location_route = "{{ url('autocomplete-location') }}";
+    $('#location').typeahead({
+        source: function (query, process) {
+            return $.get(location_route, {
+                query: query
+            }, function (data) {
+                  // Extract 'location' field from the response
+                  var locati = data.map(function(item) {
+                    return item.location;
+                });
+                return process(locati);
+            });
+        }
+    });
+
     var position_route = "{{ url('autocomplete-position') }}";
     $('#position').typeahead({
         source: function (query, process) {
