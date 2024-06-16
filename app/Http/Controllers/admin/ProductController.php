@@ -45,7 +45,7 @@ class ProductController extends Controller
     public function store(CreateProductReq $request)
     {
         $data = $request->validated();
-        
+
         if ($request->hasFile('catelog_link')) {
             $folder = 'uploads/products';
             $catalogPdf = $request->file('catelog_link');
@@ -54,7 +54,7 @@ class ProductController extends Controller
             $catalogPdf->move(public_path($folder), $fileName);
             $data['catelog_link'] = "$folder/$fileName";
         }
-     
+
         CreateProductAct::run($data);
         return redirect('admin/products')->with('status', 'Product created successfully');
     }
@@ -80,7 +80,7 @@ class ProductController extends Controller
     {
         $data = Product::find($product_id);
         $category = Category::get();
-        $subCategory = SubCategory::get();
+        $subCategory = SubCategory::where('category_id', $data->category_id)->get();
         return view('admin.products.edit')->with('page', 'products')->with('data', $data ?? [])->with('category', $category ?? [])->with('subCategory', $subCategory ?? []);
     }
 
@@ -99,46 +99,46 @@ class ProductController extends Controller
         $folder = 'uploads/products';
 
         if ($request->hasFile('image')) {
-            if(isset($request->image)){
+            if (isset($request->image)) {
                 $data['image'] = UploadImageAct::run($folder, $request->image);
             }
         }
 
         if ($request->hasFile('front_image')) {
-            if(isset($request->front_image)){
+            if (isset($request->front_image)) {
                 $data['front_image'] = UploadImageAct::run($folder, $request->front_image);
             }
         }
 
         if ($request->hasFile('back_image')) {
 
-            if(isset($request->back_image) && !empty($request->back_image)){
+            if (isset($request->back_image) && !empty($request->back_image)) {
                 $data['back_image'] = UploadImageAct::run($folder, $request->back_image);
             }
-        }    
+        }
         if ($request->hasFile('catelog_link')) {
             $catalogPdf = $request->file('catelog_link');
             $slug = strtolower(preg_replace('/[^A-Za-z0-9-]+/', '-', $request->name));
             $fileName = $slug . '.' . $catalogPdf->extension();
             $catalogPdf->move(public_path($folder), $fileName);
-        
+
             $data['catelog_link'] = "$folder/$fileName";
         }
 
         if ($request->hasFile('image1')) {
-            if(isset($request->image1)){
+            if (isset($request->image1)) {
                 $data['image1'] = UploadImageAct::run($folder, $request->image1);
             }
         }
         if ($request->hasFile('image2')) {
-            if(isset($request->image2)){
+            if (isset($request->image2)) {
                 $data['image2'] = UploadImageAct::run($folder, $request->image2);
             }
         }
 
         $product->update($data);
-       
-        
+
+
 
         return redirect('admin/products')->with('status', 'Product updated successfully');
     }
@@ -153,11 +153,12 @@ class ProductController extends Controller
     {
         $product = Product::find($product_id);
         $product->delete();
-        
+
         return redirect('admin/products')->with('status', 'Product deleted successfully');
     }
 
-    public function ajaxSubcategory(Request $request){
+    public function ajaxSubcategory(Request $request)
+    {
         $subCategory = SubCategory::where('category_id', $request->id)->get();
         echo json_encode($subCategory);
     }

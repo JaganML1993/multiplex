@@ -233,7 +233,7 @@
 @parent
 <script type="text/javascript">
     $(document).ready(function() {
-        getSubCategory($('#category').val());
+        // getSubCategory($('#category').val());
         $('#category').on('change', function(e) {
             var cat_id = e.target.value;
             getSubCategory(cat_id);
