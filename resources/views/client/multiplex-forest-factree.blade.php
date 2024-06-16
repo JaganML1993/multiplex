@@ -54,18 +54,31 @@
             }
 
             .mobile-view .gd-breadcrumb {
-                background: #dee2e6;
-                text-align: center;
-                font-size: 16px !important;
-                color: #1a9f53 !important;
-                font-weight: 500;
-            }
+            background: #2a7d2e;
+            text-align: center;
+            font-size: 13px !important;
+            color: #e3e3e3 !important;
+            font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
+        }
 
             .mobile-view .bg_cover {
                 background-size: 100% 100% !important;
 
             }
         }
+        
+        ul.check-style-one li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        /* display: flex; */
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font: 400 15px "Roboto", sans-serif;
+}
     </style>
     <!--====== Start Page-title-area section ======-->
     <section class="page-title-area text-white bg_cover desktop-view"
@@ -120,24 +133,24 @@
                                 <div class="tab-pane fade show active">
                                     <div class="content-box">
                                         <h3 class="mb-10 mt-30">Objectives</h3>
-                                        <p>Quality Planting Material Production:
+                                        <p><strong>Quality Planting Material Production:</strong>
                                             Our primary objective is to produce uniform, healthy, and disease-free planting
                                             materials through seeds or vegetative methods. These materials play a crucial
                                             role in enhancing productivity for various stakeholders.
                                         </p>
-                                        <p>Supporting Afforestation and Agroforestry:
+                                        <p><strong>Supporting Afforestation and Agroforestry:</strong>
                                             We aim to address the inadequacy of Quality Planting Material (QPM) recognized
                                             by the National Forest Policy. By providing high-quality saplings, we contribute
                                             to afforestation, agroforestry, and plantation programs, aligning with national
                                             policies.
                                         </p>
-                                        <p>Good Nursery Practices:
+                                        <p><strong>Good Nursery Practices:</strong>
                                             We prioritize Good Nursery Practices and Sustainable Agroforestry, ensuring the
                                             responsible management of our nursery operations. Our commitment to sustainable
                                             practices is evident through our collaboration with leading research
                                             institutions.
                                         </p>
-                                        <p>Agroforestry Training:
+                                        <p><strong>Agroforestry Training:</strong>
                                             We offer Agroforestry training to farmers, emphasizing the selection of suitable
                                             species based on socio-economic factors and adaptability to specific
                                             Agro-climatic zones and rainfall patterns.
@@ -146,28 +159,28 @@
                                         <h3  class="mb-10 mt-30">Environmental Benefits</h3>
 
                                         <ul class="check-style-one mt-30 mb-30">
-                                            <li><i class="fa fa-check"></i>Conservation: Reduced pressure on natural forests and the conservation of indigenous tree species.</li>
-                                            <li><i class="fa fa-check"></i>Nutrient Recycling: Effective recycling of nutrients facilitated by deep-rooted trees.</li>
-                                            <li><i class="fa fa-check"></i>Ecological Protection: Enhanced protection of ecological systems through reduced surface run-off, nutrient leaching, and soil erosion.</li>
-                                            <li><i class="fa fa-check"></i>Carbon Sequestration: Improved carbon sequestration potential and microclimate, contributing to climate change mitigation.</li>
-                                            <li><i class="fa fa-check"></i>Soil Health: Enriched soil nutrients and improved soil structure through the addition and decomposition of litter fall.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>Conservation:</strong> Reduced pressure on natural forests and the conservation of indigenous tree species.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>Nutrient Recycling:</strong> Effective recycling of nutrients facilitated by deep-rooted trees.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>Ecological Protection:</strong> Enhanced protection of ecological systems through reduced surface run-off, nutrient leaching, and soil erosion.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>Carbon Sequestration:</strong> Improved carbon sequestration potential and microclimate, contributing to climate change mitigation.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>Soil Health:</strong> Enriched soil nutrients and improved soil structure through the addition and decomposition of litter fall.</li>
                                         </ul>
 
                                         <h3  class="mb-10 mt-30">Economic Benefits</h3>
 
                                          <ul class="check-style-one mt-30 mb-30">
-                                            <li><i class="fa fa-check"></i>Higher Output: Increased food, fuelwood, fodder, fertilizer, and timber production.</li>
-                                            <li><i class="fa fa-check"></i>Risk Mitigation: Mitigation of total crop failure risks often associated with monoculture systems.</li>
-                                            <li><i class="fa fa-check"></i>Income Generation: Enhanced farm income through improved and sustained productivity.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>Higher Output:</strong> Increased food, fuelwood, fodder, fertilizer, and timber production.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>Risk Mitigation:</strong> Mitigation of total crop failure risks often associated with monoculture systems.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>Income Generation:</strong> Enhanced farm income through improved and sustained productivity.</li>
                                         </ul>
 
                                         <h3  class="mb-10 mt-30">Social Benefits</h3>
 
                                          <ul class="check-style-one mt-30 mb-30">
-                                            <li><i class="fa fa-check"></i>Rural Livelihood Improvement: Elevated living standards in rural areas through sustained employment and higher income.</li>
-                                            <li><i class="fa fa-check"></i>Nutrition and Health: Improved nutrition and health outcomes due to increased food quality and diversity.</li>
-                                            <li><i class="fa fa-check"></i>Community Stabilization: Stabilization of community habitats with permanent sites for farm activities.</li>
-                                            <li><i class="fa fa-check"></i>Poverty Alleviation: Poverty reduction through enhanced food security and economic opportunities.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>Rural Livelihood Improvement:</strong> Elevated living standards in rural areas through sustained employment and higher income.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>Nutrition and Health:</strong> Improved nutrition and health outcomes due to increased food quality and diversity.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>Community Stabilization:</strong> Stabilization of community habitats with permanent sites for farm activities.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>Poverty Alleviation:</strong> Poverty reduction through enhanced food security and economic opportunities.</li>
                                         </ul>
 
                                         <p>In summary, Multiplex Forest Factree is dedicated to promoting sustainable agroforestry practices and providing high-quality planting materials, aligning with national policies, and contributing to environmental, economic, and social well-being.</p>

@@ -10,7 +10,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
     <!--====== Title ======-->
     <title>Multiplex Group</title>
     <!--====== Favicon Icon ======-->
@@ -48,20 +50,76 @@
     <!-- Include jQuery UI -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <style>
         .page-title-area {
             margin-top: 0 !important;
         }
+
         .nice-select {
             display: none !important;
         }
-        select{
-            background:#ffffff;
-            color:currentColor;
-            display:block !important;
+
+        select {
+            background: #ffffff;
+            color: currentColor;
+            display: block !important;
         }
 
+        @media (max-width:567px) {
+            .ptbmob-30 {
+                padding-top: 30px;
+            }
+
+            .copyright-text p {
+                font-size: 15px;
+            }
+
+            .form-main-title-style h3 {
+                font-size: 18px;
+            }
+
+            @media (max-width: 1199px) {
+                .sidebar-panel-wrapper .sidebar-wrapper {
+                    overflow-y: auto;
+                    padding: 60px 20px 40px;
+                }
+
+                .main-btn.primary-btn,
+                .main-bg {
+                    background-color: #1a9f53;
+                    width: 100%;
+                }
+
+                .main-btn.filled-btn {
+                    padding: 17px 40px;
+                    background-color: transparent;
+                    border: 2px solid #008448;
+                    width: 100%;
+                }
+            }
+        }
+
+        #random_number {
+            margin-top: -42px;
+            margin-left: 15px;
+            background: #2a7d2e30;
+            padding: 14px;
+            border-radius: 10px;
+        }
+        
+        .whatsapp-chat img {
+           position:fixed;
+           z-index:9999;
+           float:right
+          }
+
+        .whatsapp-chat img {
+           top:80%;
+           right:2%
+          }
         
     </style>
 </head>
@@ -103,9 +161,8 @@
                             <div class="col-xl-12 col-lg-12 sidebar-widget">
                                 <div class="description-wrapper mt-30">
                                     <h3 class="title" style="color:#000;">Drop us a message</h3>
-                                    <!--<p style="color:#000;">Our team will get back to you shortly.</p>-->
-                                    <!--=== Review Form ===-->
-                                    <div class="review-form-area wow fadeInUp mt-10 mb-10">
+
+                                    <div class="review-form-area mt-10 mb-10">
 
                                         <form class="review-form general-form" id="review-form" method="post"
                                             action="{{ route('home.save_enquiry') }}">
@@ -124,15 +181,16 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form_group">
-                                                        <input type="text" class="form_control" onkeypress="num_validate(event)"
-                                                         oninput="maxLengthCheck(this)" maxlength="10" minlength="10" 
-                                                         placeholder="Phone Number" name="phone" required>
+                                                        <input type="text" class="form_control" onkeypress="num_validate(event)" 
+                                                        oninput="maxLengthCheck(this)" onpaste="stripSpacesOnPaste(event)"
+                                                        maxlength="10" minlength="10" placeholder="Phone Number" name="phone" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="form_group">
-                                                        <input type="text" class="form_control" placeholder="Email Address"
-                                                         name="email" id="emailField" required oninput="validateDomain()">
+                                                        <input type="email" class="form_control"
+                                                            placeholder="Email Address" name="email"
+                                                            id="emailField" required oninput="validateDomain()">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
@@ -148,8 +206,10 @@
                                                 @endphp
                                                 <div class="col-lg-4">
                                                     <div class="form_group dept-style">
-                                                        <select class="form_control" id="department" name="department" required>
-                                                            <option value="" selected disabled>Select Department</option>
+                                                        <select class="form_control" id="department"
+                                                            name="department" required>
+                                                            <option value="" selected disabled>Select Department
+                                                            </option>
                                                             @foreach ($departments as $department)
                                                                 <option value="{{ $department->id }}">
                                                                     {{ $department->name }}
@@ -164,14 +224,18 @@
                                                         <textarea name="message" class="form_control" placeholder="Message" required></textarea>
                                                     </div>
                                                 </div>
+                                                <!--success message-->
+                                                <div class="d-none review-message" style="width: 100%">
+                                                    <h4>Thank you, we will get back to you.</h4>
+                                                </div>
+
+                                                
+                                                <!-- Add the reCAPTCHA widget -->
+                                                <div class="g-recaptcha" data-sitekey="6Lenl4MpAAAAAEfTqadLxml4QXrAYov6coa3AE8V"></div>
+
                                                 <div class="col-lg-12">
                                                     <div class="form_group success-below">
-                                                        <button type="submit"
-                                                            class="main-btn primary-btn">Submit</button>
-                                                    </div>
-                                                    <br />
-                                                    <div class="my-3 d-none review-message" style="width: 100%">
-                                                        <h4>Thank you, we will get back to you.</h4>
+                                                        <button type="submit" class="main-btn primary-btn">Submit</button>
                                                     </div>
                                                 </div>
 
@@ -188,28 +252,8 @@
     </div>
     <!--====== Enquiry Wrapper ======-->
 
-    <!--====== Enquiry Wrapper ======-->
-    <!--<div class="modal fade sidebar-panel-wrapper" id="sidebar-modal-upi">-->
-    <!--    <div class="modal-dialog modal-dialog-scrollable">-->
-    <!--        <div class="modal-content">-->
-    <!--            <button class="close" data-dismiss="modal" style="color:#000;"><i class="fa fa-times"></i></button>-->
-    <!--            <div class="sidebar-wrapper">-->
-    <!--                <div class="sidebar-information-area">-->
-    <!--                    <div class="row no-gutters">-->
-    <!--                        <div class="col-xl-3 col-lg-3 sidebar-widget">-->
-    <!--                            <div class="description-wrapper mt-30">-->
-    <!--                                <img src="{{ asset('/images/upi_payment.jpg') }}" alt="">-->
-    <!--                            </div>-->
-    <!--                        </div>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--</div>-->
-    <!--====== Enquiry Wrapper ======-->
 
-    <!-- The Modal -->
+    <!-- UPI Modal -->
     <div class="modal" id="myModal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -225,16 +269,11 @@
                     <img src="{{ asset('/images/upi_payment.jpg') }}" alt="">
                 </div>
 
-                <!-- Modal footer -->
-                <!--<div class="modal-footer">-->
-                <!--  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>-->
-                <!--</div>-->
-
             </div>
         </div>
     </div>
-
-
+    
+    
 
     <!--====== Header Area ======-->
     <header class="header-area header-one transparent-header1">
@@ -322,7 +361,7 @@
                                 </li>
                                 <li class="menu-item has-children"><a href="#">Corporate</a>
                                     <ul class="sub-menu">
-                                        <li><a href="{{ route('r-and-d') }}">R & D</a></li>
+                                        <li><a href="{{ route('research-and-development') }}">R & D</a></li>
                                         <li><a href="{{ route('infrastructure') }}">Infrastructure</a></li>
                                         <li><a href="{{ route('branches') }}">Branches </a></li>
                                         <li><a href="{{ route('global-connect') }}">Global/International Connect</a>
@@ -333,17 +372,17 @@
                                         href="{{ route('products.index') }}">Products</a>
                                     <ul class="sub-menu">
                                         @foreach ($categories as $category)
-                                            <li><a
-                                                    href="{{ route('category.products', ['id' => $category->id]) }}">{{ $category->name }}</a>
-                                            </li>
+                                            <li><a href="{{ route($category->slug) }}">{{ $category->name }}</a></li>
                                         @endforeach
+
                                     </ul>
                                 </li>
                                 <li class="menu-item has-children"><a href="#">Services</a>
                                     <ul class="sub-menu">
                                         <li><a href="{{ route('quality-testing') }}">Quality Testing</a></li>
                                         {{-- <li><a href="{{ route('microbial-analysis-laboratory') }}">Microbial Analysis
-                                                Laboratory</a></li> --}}
+                                        Laboratory</a>
+                                </li> --}}
                                         <li><a href="{{ route('drone-services') }}">Drone Services</a></li>
                                         <li><a href="{{ route('gardening-services') }}">Gardening Services</a></li>
 
@@ -394,7 +433,7 @@
     <footer class="footer-area text-white main-bg">
         <div class="container">
             <!--====== Footer Widget ======-->
-            <div class="footer-widget-area pt-80 pb-40">
+            <div class="footer-widget-area pt-80 pb-10 ptbmob-30">
                 <div class="row">
 
                     <div class="col-lg-4 col-md-6 col-sm-12">
@@ -423,10 +462,8 @@
                                 <ul class="footer-nav">
                                     <li><a href="{{ route('gallery') }}">Gallery</a></li>
                                     <li><a href="{{ route('success-stories') }}">Success Stories</a></li>
-                                    <li><a href="#">News & Media</a></li>
-                                    <li><a href="#" data-toggle="modal" data-target="#myModal">Digital
-                                            Payment</a></li>
-                                    <!-- <li><a href="#">FAQs</a></li> -->
+                                    <li><a href="{{ route('blogs') }}">Blog Articles</a></li>
+                                    <li><a href="#" data-toggle="modal" data-target="#myModal">Digital Payment</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -438,9 +475,9 @@
                             <div class="widget-content">
                                 <ul class="footer-nav">
 
-                                    <li><a href="{{ route('home.life_at_multiplex') }}">Life @ Multiplex</a></li>
+                                    <li><a href="{{ route('home.life-at-multiplex') }}">Life @ Multiplex</a></li>
                                     <div class="hero-button wow fadeInUp" data-wow-delay=".7s">
-                                        <a href="{{ route('home.current_openings') }}"
+                                        <a href="{{ route('home.current-openings') }}"
                                             class="main-btn golden-btn mb-10">Current Openings</a>
                                     </div>
                                 </ul>
@@ -454,11 +491,11 @@
                             <div class="widget-content">
                                 <ul class="footer-nav">
                                     <li><a href="{{ route('terms-and-conditions') }}">Terms & Conditions</a></li>
-                                    <li><a href="assets/doc/one-brand-total-solution-brochure.pdf"
+                                    <li><a href="/assets/doc/one-brand-total-solution-brochure.pdf"
                                             target="_blank">Fertilizers & Micro-Nutrients</a></li>
-                                    <li><a href="assets/doc/bio-products-brochure.pdf"
+                                    <li><a href="/assets/doc/bio-products-brochure.pdf"
                                             target="_blank">Bio-Products</a></li>
-                                    <li><a href="assets/doc/pesticides-brochure.pdf" target="_blank">Pesticides</a>
+                                    <li><a href="/assets/doc/pesticides-brochure.pdf" target="_blank">Pesticides</a>
                                     </li>
 
                                 </ul>
@@ -479,6 +516,12 @@
                 </div>
             </div>
         </div>
+        
+        
+        <div class="whatsapp-chat">
+            <a href="https://web.whatsapp.com/send?phone=917760003049&text=Hello%20Multiplex" target="_blank"><img src="{{ asset('/images/whatsapp64.png') }}" alt="Multiplex Group"></a>
+        </div>
+        
     </footer>
     <style>
         .nice-select:after {
@@ -519,49 +562,64 @@
     <script src="{{ asset('/vendor/wow.min.js') }}"></script>
     <!--====== Main js ======-->
     <script src="{{ asset('/js/theme.js') }}"></script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-    </script>
+   
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
+    
+    <!--<script src="https://www.google.com/recaptcha/api.js" async defer></script>-->
 
     <script>
         function validateDomain() {
             var emailInput = document.getElementById('emailField');
             var emailValue = emailInput.value;
-
-            // Simplified regular expression for email validation
-            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org)$/;
-
+    
+            // Regular expression for email validation excluding .ru, .site, and .store extensions
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|net|org|gov|edu|co|in)(?<!\.ru)(?<!\.site)(?<!\.store)$/;
+    
             if (!emailRegex.test(emailValue)) {
                 emailInput.setCustomValidity("Please enter a valid email address.");
             } else {
                 emailInput.setCustomValidity('');
             }
-        }   
+        }
     </script>
 
     <script>
+    
         function num_validate(event) {
-            // Ensure only numeric characters are allowed
-            var charCode = event.which ? event.which : event.keyCode;
-            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-                event.preventDefault();
-            }
+        // Ensure only numeric characters are allowed
+        var charCode = event.which ? event.which : event.keyCode;
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            event.preventDefault();
         }
+     }
 
         function maxLengthCheck(object) {
-            // Ensure the entered value does not exceed the maximum length (10 digits)
-            if (object.value.length > object.maxLength) {
-                object.value = object.value.slice(0, object.maxLength);
-            }
+        // Ensure the entered value has exactly 10 digits
+        if (object.value.length !== 10) {
+            object.setCustomValidity("Phone number must be 10 digits long.");
+        } else {
+            object.setCustomValidity("");
         }
+    }
+    
+        function stripSpacesOnPaste(event) {
+        // Prevent default paste behavior
+        event.preventDefault();
+        
+        // Get pasted data from clipboard
+        var clipboardData = event.clipboardData || window.clipboardData;
+        var pastedData = clipboardData.getData('text');
+        
+        // Remove spaces from the pasted data
+        pastedData = pastedData.replace(/\s/g, '');
 
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en'
-            }, 'google_translate_element');
-        }
+        // Insert modified data into the input field
+        document.execCommand('insertText', false, pastedData);
+    }
+
+        
         var route = "{{ url('autocomplete-global') }}";
 
         $('.search-input').typeahead({
@@ -571,12 +629,10 @@
                 }, function(data) {
                     var suggestions = data.map(function(item) {
                         return {
-                            id: item.id,
+                            id: item.slug,
                             name: item.name
                         };
                     });
-
-                    console.log(suggestions);
 
                     // Remove the existing suggestions list before creating a new one
                     $('.suggestions-list').remove();
@@ -600,7 +656,7 @@
             var selectedId = $(this).data('id');
 
             // Navigate to the URL using the item.id
-            window.location.href = "{{ url('category-product-detail') }}/" + selectedId;
+            window.location.href = "{{ url('product') }}/" + selectedId;
 
             // Remove the suggestions list
             $('.suggestions-list').remove();
@@ -627,10 +683,10 @@
         $(document).ready(function() {
             $('.product-form').submit(function(e) {
                 e.preventDefault();
-                
+
 
                 var form = $(this);
-
+                form.find(':submit').prop('disabled', true);
                 $.ajax({
                     type: 'POST',
                     url: form.attr('action'),
@@ -671,7 +727,7 @@
                 e.preventDefault();
 
                 var form = $(this);
-
+                form.find(':submit').prop('disabled', true);
                 $.ajax({
                     type: 'POST',
                     url: form.attr('action'),
@@ -700,47 +756,111 @@
     </script>
 
     <script>
-        $(document).ready(function() {
-            $('.general-form').submit(function(e) {
-                e.preventDefault();
-                
-                var selectElement = document.getElementById('department');
-                if (!selectElement.value) {
-                    
-                  alert('Please select the department');
-                  return false;
-                } 
-                var form = $(this);
-
-                $.ajax({
-                    type: 'POST',
-                    url: form.attr('action'),
-                    data: form.serialize(),
-                    success: function(response) {
-                        // Handle the success response here
-                        console.log(response);
-
-                        // Show the success message
-                        form.find('.review-message').removeClass('d-none').addClass('d-block');
-
-                        // Reset the form and hide the review message after 5 seconds
-                        setTimeout(function() {
-                            form.find('.review-message').removeClass('d-block')
-                                .addClass('d-none');
-                            form[0].reset();
-                        }, 5000);
-                    },
-                    error: function(error) {
-                        // Handle the error response here
-                        console.log(error);
-                    }
-                });
-            });
-        });
-    </script>
-
+    $(document).ready(function() {
+    $('.general-form').submit(function (e) {
+        var response = grecaptcha.getResponse();
+        var form = $(this);
     
+        if (response.length == 0) {
+            // reCAPTCHA not selected, prevent form submission
+            e.preventDefault();
+            alert('Please complete the reCAPTCHA.');
+        } else {
+            // reCAPTCHA selected, prevent default form submission
+            e.preventDefault();
+    
+            // Your existing form submission logic here
+            form.find(':submit').prop('disabled', true);
+            $.ajax({
+                type: 'POST',
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function (response) {
+                    // Handle the success response here
+                    // console.log(response);
+    
+                    // Show the success message
+                    form.find('.review-message').removeClass('d-none').addClass('d-block');
+    
+                    // Reset the form and hide the review message after 5 seconds
+                    setTimeout(function () {
+                        form.find('.review-message').removeClass('d-block')
+                            .addClass('d-none');
+                        form[0].reset();
+                        form.find(':submit').prop('disabled', false); // Enable the submit button again
+                        $('.g-recaptcha').hide();
+                        document.getElementById('sidebar-modal').style.display = 'none';
+                        document.body.classList.remove('modal-open');
+                        document.getElementsByClassName('modal-backdrop')[0].style.display = 'none';
+                        location.reload(); // Reload the page
+                        
+                    }, 4000);
+                },
+                error: function (error) {
+                    // Handle the error response here
+                    console.log(error);
+                    form.find(':submit').prop('disabled', false); // Enable the submit button again
+                }
+            });
+        }
+    });
 
+});
+
+        // $(document).ready(function() {
+
+        //     var randomCode = Math.floor(1000 + Math.random() * 9000);
+        //     document.getElementById('random_number').innerText = randomCode; // Removed brackets
+
+        //     $('.general-form').submit(function(e) {
+        //         e.preventDefault();
+                
+        //         // Check if reCAPTCHA is selected
+        //         if (!$('.g-recaptcha-response').val()) {
+        //             alert('Please complete the reCAPTCHA verification.');
+        //             return false;
+        //         }
+
+        //         // var enteredCode = $('#verification_code').val();
+        //         // if (enteredCode != randomCode) {
+        //         //     alert('Verification code does not match. Please try again.');
+        //         //     return false;
+        //         // }
+
+        //         var selectElement = document.getElementById('department');
+        //         if (!selectElement.value) {
+        //             alert('Please select the department');
+        //             return false;
+        //         }
+
+        //         var form = $(this);
+        //         form.find(':submit').prop('disabled', true);
+        //         $.ajax({
+        //             type: 'POST',
+        //             url: form.attr('action'),
+        //             data: form.serialize(),
+        //             success: function(response) {
+        //                 // Handle the success response here
+        //                 console.log(response);
+
+        //                 // Show the success message
+        //                 form.find('.review-message').removeClass('d-none').addClass('d-block');
+
+        //                 // Reset the form and hide the review message after 5 seconds
+        //                 setTimeout(function() {
+        //                     form.find('.review-message').removeClass('d-block')
+        //                         .addClass('d-none');
+        //                     form[0].reset();
+        //                 }, 5000);
+        //             },
+        //             error: function(error) {
+        //                 // Handle the error response here
+        //                 console.log(error);
+        //             }
+        //         });
+        //     });
+        // });
+    </script>
 
 
     <!-- Content -->

@@ -33,11 +33,14 @@
         }
 
         .mobile-view .gd-breadcrumb {
-            background: #dee2e6;
+            background: #2a7d2e;
             text-align: center;
-            font-size: 16px !important;
-            color: #1a9f53 !important;
+            font-size: 15px !important;
+            color: #e3e3e3 !important;
             font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
         }
 
         .mobile-view .bg_cover {
@@ -69,11 +72,11 @@
   /* border: 1px solid rgba(0, 0, 0, 0.1); */
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
-  background-color: #ffffff;
+  background-color: #2a7d2e;
       box-shadow: 1px 1px 10px 0px #99999954;
 }
 .slick-arrow i{
-    color:#000;
+    color:#fff;
 }
 .slick-arrow.prev {
   left: 5%;
@@ -89,10 +92,10 @@
      width:280px;
  }
     .projects-slider-one .slick-arrow.prev {
-    left:70px;
+    left:40px;
 }
 .projects-slider-one .slick-arrow.next {
-    right: 70px;
+    right: 40px;
 }
 .projects-slider-one .slick-arrow {
     width: 35px;
@@ -139,7 +142,7 @@
 </section>
 <!--====== End Page-title-area section ======-->
 
-<section class="shop-details-section pt-60 pb-30 services-img-round">
+<section class="shop-details-section pt-50 ptbmob-30 services-img-round">
     <div class="container">
         <div class="product-details-wrapper">
             <div class="row">
@@ -337,8 +340,6 @@
 </section>
 <!--====== End Project-Details section ======-->
 
-
-<br />
 
 @endsection
 @section('scripts')

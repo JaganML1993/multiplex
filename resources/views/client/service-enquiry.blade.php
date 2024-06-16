@@ -8,11 +8,11 @@
                 <div class="sidebar-information-area">
                     <div class="row no-gutters">
                         <div class="col-xl-12 col-lg-12 sidebar-widget">
-                            <div class="description-wrapper mt-30">
+                            <div class="description-wrapper mt-30 form-main-title-style">
                                 <h3 class="title" style="color:#000;">Drop us a message</h3>
                                 <!--<p style="color:#000;">Our team will get back to you shortly.</p>-->
                                 <!--=== Review Form ===-->
-                                <div class="review-form-area wow fadeInUp mt-10 mb-10">
+                                <div class="review-form-area mt-10 mb-10">
                                     <form class="review-form service-form" method="post" id="service-form"
                                         action="{{ route('home.save_enquiry') }}">
                                         @csrf
@@ -27,7 +27,9 @@
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form_group">
-                                                    <input type="text" class="form_control" onkeypress="num_validate(event)" oninput="maxLengthCheck(this)" maxlength="10" placeholder="Phone Number" name="phone" required>
+                                                    <input type="text" class="form_control" onkeypress="num_validate(event)"
+                                                         oninput="maxLengthCheck(this)" maxlength="10" minlength="10" 
+                                                         placeholder="Phone Number" name="phone" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
@@ -49,17 +51,17 @@
                                                         placeholder="Message" required></textarea>
                                                 </div>
                                             </div>
+                                            <div class="my-1 d-none service-message" style="width: 100%">
+                                                <h4>Thank you, we will get back to you.</h4>
+                                            </div>
                                             <div class="col-lg-12">
                                                 <div class="form_group">
+                                                    <input type="hidden" name="submitted-from" value="{{ request()->segment(count(request()->segments())) }}">
                                                     <button type="submit"
                                                         class="main-btn primary-btn">Submit</button>
                                                 </div>
-                                                <br/>
-                                                <div class="my-3 d-none service-message" style="width: 100%">
-                                                     <h4>Thank you, we will get back to you.</h4>
-                                                </div>
-                                                
                                             </div>
+                                            
                                         </div>
                                     </form>
                                 </div>

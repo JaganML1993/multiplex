@@ -1,6 +1,16 @@
 @extends('admin.loginHeader')
 @section('content')
-<div class="container-xxl" style="margin-left: 30%; margin-right: 30%; margin-top:5%; width: 40%; background-image: url(http://localhost/multiplex/public/assets/images/vision-mission-header-three.jpg);">
+
+<style>
+    body {
+
+            background-image: url('../assets/images/login-bg-new.jpg'); /* Replace 'your-image.jpg' with the path to your background image */
+            background-size: cover;
+            background-position: center;
+    }
+</style>
+
+<div class="container-xxl login-bg-banner" style="margin-left: 30%; margin-right: 30%; margin-top:5%; width: 40%;">
       <div class="authentication-wrapper authentication-basic container-p-y">
         <div class="authentication-inner">
           <!-- Register -->
@@ -30,7 +40,7 @@
                     class="form-control"
                     id="email"
                     name="email"
-                    placeholder="Enter your email"
+                    placeholder="Email"
                     required
                   />
                 </div>
@@ -42,7 +52,7 @@
                       id="password"
                       class="form-control"
                       name="password"
-                      placeholder="Enter your password"
+                      placeholder="Password"
                       aria-describedby="password"
                       required
                     />

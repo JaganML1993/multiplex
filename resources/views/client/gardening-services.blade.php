@@ -4,7 +4,6 @@
 
 <style>
 
-
      @media (max-width:567px){
 .menu-button-1{
    margin-top:-1rem !important;
@@ -17,6 +16,7 @@
              font-size:17px !important;
          }
      }
+     
      .desktop-view {
         display: block !important;
     }
@@ -48,11 +48,14 @@
         }
 
         .mobile-view .gd-breadcrumb {
-            background: #dee2e6;
+            background: #2a7d2e;
             text-align: center;
-            font-size: 16px !important;
-            color: #1a9f53 !important;
+            font-size: 15px !important;
+            color: #e3e3e3 !important;
             font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
         }
 
         .mobile-view .bg_cover {
@@ -99,7 +102,7 @@
 <!--====== End Page-title-area section ======-->
 
 <!--====== Start Project-Details section ======-->
-<section class="project-details-section pt-60 services-img-round">
+<section class="project-details-section pt-50 ptbmob-30 services-img-round">
     <div class="container">
         <div class="project-details-wrapper pb-30">
             <div class="row">
@@ -180,7 +183,7 @@
         var emailValue = emailInput1.value;
 
         // Simplified regular expression for email validation
-        var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org)$/;
+        var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net|gov|edu|co)$/;
 
         if (!emailRegex.test(emailValue)) {
             emailInput1.setCustomValidity("Please enter a valid email address.");

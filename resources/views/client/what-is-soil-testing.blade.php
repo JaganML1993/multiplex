@@ -71,7 +71,7 @@
                     <p class="mb-15">फसल की अधिक उत्पादन एवं स्वस्थ विकास के लिए  आवश्यक पोषक तत्वों की मिटटी में  उपलब्ध मात्राओं का रासायनिक परीक्षणों द्वारा आंकलन करना ही मृदा परीक्षण कहलाता है। इस परीक्षण द्वारा  मृदा के भौतिक और रासायनिक विशेषताओं जैसे सूक्ष्म पोषक तत्त्व, आर्गेनिक कार्बन, मुख्य पोषक तत्व की प्रतिशत मात्रा एवं मृदा का pH मान इत्यादि पता चलता है</p>
                 </div>
                 <div class="block-image blog-image wow fadeInDown">
-                    <img src="assets/images/soil-testing-blog.jpg" alt="Blog Image">
+                    <img src="assets/images/blog-three-new-fi.jpg" alt="Blog Image">
                 </div>
                 {{-- <div class="project-content-box mb-50 wow fadeInRight">
                     <p class="mb-15">In recent years, pink ball worm attack on cotton has emerged as a major problem in many areas in India. Due to whose attack, about 30 to 50 percent of the crop is damaged.</p>
@@ -102,6 +102,10 @@
                     <li><i class="fa fa-check"></i>चित्रानुसार दो हिस्से चुनें तथा दो हिस्से छोड़े।</li>
                     <li><i class="fa fa-check"></i>फिर इन दो हिस्सों को मिलाए</li>
                 </ul>
+                
+                <div class="block-image blog-image wow fadeInDown">
+                    <img src="assets/images/soil-sampling.png" alt="Blog Image">
+                </div>
 
                 <p class="mb-15">3. इस प्रकार मिट्टी का नमूना जाँच के लिए तैयार हो जाता है। उस नमूना को मिट्टी परीक्षण प्रयोगशाला में भेजकर जाँच करा लें और मृदा स्वास्थ्य कार्ड के आधार पर ही अगली फसलों में उर्वरकों का प्रयोग करें।और दुबारा चार हिस्सों में बांटे</p>
                 
@@ -121,31 +125,32 @@
             <div class="col-lg-12">
             <!--====== Section-title ======-->
                     <div class="section-title mb-25 text-center">
-                        <h2>Related Blogs</h2>
+                        <h2>Recent Blogs</h2>
                     </div>
 
                 <div class="row">
                 <div class="col-md-4">
                     <div class="block-image wow fadeInDown">
-                        <img src="assets/images/soil1.jpg" alt="Project Image">
-                        <h6 class="mt-15">Related blog post 1</h6>
-                        <a href="#" class="btn-link">Read more <i class="fa fa-arrow-right"></i></a>
+                        <img src="assets/images/Red-Spider-Mite-Thumbnail.webp" alt="Project Image">
+                        <h6 class="mt-15">The Red Spider Mite</h6>
+                        <a href="{{ route('the-red-spider-mite') }}" class="btn-link">Read more <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="block-image wow fadeInUp">
-                        <img src="assets/images/soil2.jpg" alt="Project Image">
-                        <h6 class="mt-15">Related blog post 2</h6>
-                        <a href="#" class="btn-link">Read more <i class="fa fa-arrow-right"></i></a>
+                    <div class="block-image wow fadeInDown">
+                        <img src="assets/images/blog-thumb.jpg" alt="Project Image">
+                        <h6 class="mt-15">Micronutrients in Crop Production</h6>
+                        <a href="{{ route('micronutrients-in-crop-production') }}" class="btn-link">Read more <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="block-image wow fadeInUp">
-                        <img src="assets/images/soil3.jpg" alt="Project Image">
-                        <h6 class="mt-15">Related blog post 3</h6>
-                        <a href="#" class="btn-link">Read more <i class="fa fa-arrow-right"></i></a>
+                    <div class="block-image wow fadeInDown">
+                        <img src="assets/images/minchuplusthumbnail.png" alt="Project Image">
+                        <h6 class="mt-15">Minchu Plus for Pink Boll Worm</h6>
+                        <a href="{{ route('minchu-plus-for-pink-boll-worm') }}" class="btn-link">Read more <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
+                
             </div>
                 
             </div>

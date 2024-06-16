@@ -57,11 +57,14 @@
         }
 
         .mobile-view .gd-breadcrumb {
-            background: #dee2e6;
+            background: #2a7d2e;
             text-align: center;
-            font-size: 16px !important;
-            color: #1a9f53 !important;
+            font-size: 13px !important;
+            color: #e3e3e3 !important;
             font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
         }
 
         .mobile-view .bg_cover {
@@ -127,10 +130,10 @@
                                         
                                         <h3  class="mb-10 mt-30">Key Achievements</h3>
                                         <ul class="check-style-one mt-30 mb-30">
-                                            <li><i class="fa fa-check"></i>ISO 9001:2015 Certification: Multiplex Fertilizers Private Limited's commitment to quality is underscored by its ISO 9001:2015 certification, signifying adherence to stringent international standards in seed production.</li>
-                                            <li><i class="fa fa-check"></i>Zone-Specific Seeds: Our seeds are meticulously designed to thrive in specific agro-climatic zones, maximizing their adaptability and performance in diverse farming environments.</li>
-                                            <li><i class="fa fa-check"></i>Biotic and Abiotic Stress Tolerance: Through rigorous research and development, we've cultivated seeds that exhibit remarkable resilience against both biotic factors like pests and diseases and abiotic factors such as environmental stressors.</li>
-                                            <li><i class="fa fa-check"></i>Sustainability Focus: Our dedication to producing high-quality seeds contributes not only to better crop yields but also to sustainable agriculture practices, ensuring a greener and more productive future.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i>ISO 9001:2015 Certification: Multiplex Fertilizers Private Limited's commitment to quality is underscored by its ISO 9001:2015 certification, signifying adherence to stringent international standards in seed production.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i>Zone-Specific Seeds: Our seeds are meticulously designed to thrive in specific agro-climatic zones, maximizing their adaptability and performance in diverse farming environments.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i>Biotic and Abiotic Stress Tolerance: Through rigorous research and development, we've cultivated seeds that exhibit remarkable resilience against both biotic factors like pests and diseases and abiotic factors such as environmental stressors.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i>Sustainability Focus: Our dedication to producing high-quality seeds contributes not only to better crop yields but also to sustainable agriculture practices, ensuring a greener and more productive future.</li>
                                         </ul>
                                         <p>At Multiplex Fertilizers Private Limited, we are committed to providing farmers with top-tier seeds that enhance crop quality and yield while promoting sustainability in agriculture. Our mission is to empower farmers with the best resources for a thriving and resilient agricultural sector.</p>
                                     </div>

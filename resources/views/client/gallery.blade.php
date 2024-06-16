@@ -266,11 +266,14 @@
         }
 
         .mobile-view .gd-breadcrumb {
-            background: #dee2e6;
+            background: #2a7d2e;
             text-align: center;
-            font-size: 16px !important;
-            color: #1a9f53 !important;
+            font-size: 15px !important;
+            color: #e3e3e3 !important;
             font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
         }
 
         .mobile-view .bg_cover {
@@ -341,16 +344,24 @@
 
 
 @endsection
+
 @section('scripts')
     @parent
     <script type="text/javascript">
+    
     $(".filter a").click(function (e) {
         e.preventDefault();
         var a = $(this).attr("href");
         a = a.substr(1);
         $(".sets a").each(function () {
-          if (!$(this).hasClass(a) && a != "") $(this).addClass("hide");
-          else $(this).removeClass("hide");
+          if (!$(this).hasClass(a) && a != ""){ 
+          $(this).addClass("hide");
+          }
+          else 
+          {
+          $(this).removeClass("hide");
+          }
+          
         });
 
     
@@ -366,11 +377,15 @@
     }
 });
 
+  var imgs = document.querySelectorAll(".imgs");
+    
+    console.log(imgs);
 
-let imgs = document.querySelectorAll(".imgs");
       let count;
       imgs.forEach((img, index) => {
         img.addEventListener("click", function (e) {
+            imgs = document.querySelectorAll(".gallery.sets > a:not(.hide) .imgs");
+          console.log('after filtering',imgs);
           if (e.target == this) {
             count = index;
             let openDiv = document.createElement("div");

@@ -3,6 +3,12 @@
 @section('content')
 <!-- Content -->
 <div class="container-xxl flex-grow-1 container-p-y">
+     @if (session('status'))
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        {{ session('status') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
 
     <h4 class="fw-bold py-3 mb-4">Galleries<a href="{{ url('admin/galleries/create') }}" type="button" class="btn btn-success btn-lg" style="float: right;">Add Gallery</a></h4>
     <!-- Basic Bootstrap Table -->

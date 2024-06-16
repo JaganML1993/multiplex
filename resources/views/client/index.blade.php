@@ -13,11 +13,11 @@
             .banner-section-home .hero-wrapper-one .hero-content h1 {
                 font-size: 18px !important;
                 margin-bottom: 0% !important;
-                text-align: center !important;
+                text-align: left !important;
             }
 
             .banner-section-home .hero-wrapper-one {
-                padding: 75px 0 !important;
+                padding: 66px 0 !important;
             }
 
             .skills-section.pt-80 {
@@ -46,8 +46,10 @@
             line-height: 1.5;
         }
 
-        .popup-content img{
-           border-radius:10px;
+        .popup-content img {
+            /* border-radius: 5px; */
+            border: 8px solid #fff;
+            box-shadow: 0 2px 5px #000;
         }
 
         .close {
@@ -57,11 +59,12 @@
             right: 10px;
             font-size: 18px;
             color: #333;
+            opacity: 1;
         }
 
         .cnt223 a {
             text-decoration: none;
-            background-color: green;
+            background-color: #00954d;
             padding: 5px;
             border-radius: 0px;
         }
@@ -73,21 +76,21 @@
             z-index: 101;
             top: 50%;
             left: 50%;
-            margin-top: -300px;
-            margin-left: -300px;
+            margin-top: -375px;
+            margin-left: -292px;
         }
 
         .cnt223 {
-            min-width: 600px;
-            width: 600px;
+            min-width: 540px;
+            width: 540px;
             min-height: 150px;
             margin: 100px auto;
-            background: #f3f3f3;
+            background: #f3f3f300;
             position: relative;
             z-index: 103;
-            padding: 15px 35px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px #000;
+            /* padding: 15px 35px; */
+            /* border-radius: 5px; */
+            /* box-shadow: 0 2px 5px #000; */
         }
 
         .cnt223 p {
@@ -106,18 +109,38 @@
         
 
         @media only screen and (max-width: 767px) {
+        
+        .popup-onload {
+            margin: 0 auto;
+            display: none;
+            position: fixed;
+            z-index: 101;
+            top: 50%;
+            left: 50%;
+            margin-top: -227px;
+            margin-left: -311px;
+        }
+        
+        
         .cnt223 {
-            min-width: 300px;
-            width: 300px;
+            min-width: 330px;
+            width: 330px;
             min-height: 150px;
             margin: 100px 0px 0px 146px;
-            background: #f3f3f3;
+            /*background: #f3f3f3;*/
             position: relative;
             z-index: 103;
-            padding: 10px 7px;
-            border-radius: 5px;
+            /*padding: 10px 7px;*/
+            /*border-radius: 5px;*/
+            /*box-shadow: 0 2px 5px #000;*/
+        }
+        
+        .popup-content img {
+            /* border-radius: 5px; */
+            border: 5px solid #fff;
             box-shadow: 0 2px 5px #000;
         }
+        
         .popup-content {
             padding: 40px 10px;
             line-height: 1.5;
@@ -126,18 +149,18 @@
 
         
         @media (min-width:1679px){
-.skill-two_image-boxss {
-width: 100% !important;
-}
-.features-wrapper-two {
-    max-width: 100% !important;
-}
-.about-two_image-box{
-margin-inline-start: -115px !important;}
-.in-img{
-    margin-left: 7rem !important;
-}
-}
+        .skill-two_image-boxss {
+            width: 100% !important;
+        }
+        .features-wrapper-two {
+            max-width: 100% !important;
+        }
+        .about-two_image-box{
+        margin-inline-start: -115px !important;}
+        .in-img{
+            margin-left: 7rem !important;
+        }
+        }
     </style>
 
 
@@ -145,16 +168,15 @@ margin-inline-start: -115px !important;}
         <div class='cnt223'>
             <div class="popup-content">
                 <a href='' class='close cls'>X</a>
-                <img src="{{ asset('images/welcome-banner.jpg') }}">
+                <img src="{{ asset('images/ALLBORICH-900x900.webp') }}">
             </div>
         </div>
     </div>
 
 
-    <!--====== Start Banner Section ======-->
-    <section class="banner-section banner-section-home"
-        style="background-image: url({{ asset('images/home-banner-1920x929-new.webp') }});background-repeat: no-repeat; background-size: cover; background-position: center;
-    min-height:565px;">
+    <!--====== Start Banner Section - desktop ======-->
+    <section class="banner-section banner-section-home home-banner-desktop"
+        style="background-image: url({{ asset('images/home-banner-1920x929-new.webp') }});background-repeat: no-repeat; background-size: cover; background-position: center; min-height:565px;">
         <!--=== Hero Wrapper ===-->
         <div class="hero-wrapper-one gray-bg1">
             <div class="container">
@@ -162,12 +184,9 @@ margin-inline-start: -115px !important;}
                     <div class="col-xl-6 col-lg-12">
                         <!--=== Hero Content ===-->
                         <div class="hero-content">
-                            <!--<p class="wow fadeInDown" data-wow-delay=".6s">Integrity, Quality and Trust, Transparency, <br/>Commitment, Relationship, Innovation.</p>-->
                             <h1 class="wow fadeInUp" data-wow-delay=".4s" style="color:#fff;">Innovators in Agricultural
-                                Sector</h1>
-                            <!--<div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">-->
-                            <!--    <a href="{{ route('vision-and-misssion') }}" class="main-btn golden-btn mb-10">Know More</a>-->
-                            <!--</div>-->
+                                Sector
+                            </h1>
                         </div>
                     </div>
 
@@ -175,8 +194,34 @@ margin-inline-start: -115px !important;}
             </div>
         </div>
     </section>
+    <!--====== End Banner Section - desktop ======-->
+    
+    
+    <!--====== Start Banner Section - mobile ======-->
+    <section class="banner-section banner-section-home home-banner-mobile"
+        style="background-image: url({{ asset('images/home-banner-1920x929-new.webp') }});background-repeat: no-repeat; background-size: cover; background-position: center; min-height:565px;">
+        <!--=== Hero Wrapper ===-->
+        <div class="hero-wrapper-one gray-bg1">
+            <div class="container">
+                <div class="row align-items-lg-center">
+                    <div class="col-xl-6 col-lg-12">
+                        <!--=== Hero Content ===-->
+                        <div class="hero-content">
+                            <h1 class="wow fadeInUp" data-wow-delay=".4s" style="color:#fff;">Innovators in <br/>Agricultural
+                                Sector
+                            </h1>
+                        </div>
+                    </div>
 
-    <!--====== End Banner Section ======-->
+                </div>
+            </div>
+        </div>
+    </section>
+     <!--====== End Banner Section - mobile ======-->
+    
+    
+    
+    
 
     <!--====== Start About Section  ======-->
     <section class="skills-section pt-80 pb-50">
@@ -191,7 +236,7 @@ margin-inline-start: -115px !important;}
                                     width="35" alt=""></span>
                             <h2 style="display:flex;">About <span style="color:#ee282a;"><img style="max-width: 25%;margin-top: -8px;margin-left: 10px;" src="{{ asset('images/multiplex-text-logo-1.svg') }}"></span></h2>
                         </div>
-                        <p class="mb-20">The Multiplex Group of Companies has been at the forefront of the agricultural
+                        <p class="mb-20">The Multiplex Group has been at the forefront of the agricultural
                             sector since its inception in 1974. As industry leaders,
                             we specialize in manufacturing and distribution of a comprehensive range of agricultural inputs.
                             Our portfolio encompasses fertilizers, pesticides, nutrients
@@ -204,8 +249,8 @@ margin-inline-start: -115px !important;}
                             Dedicated to the pursuit of the highest quality in agricultural yields, our devoted team of
                             scientists leverage cutting-edge technologies to develop innovative
                             crop nutrition and plant protection solutions at our facility. To know more about our advanced
-                            R & D facilities,
-                            <a class="link_a" href="{{ route('r-and-d') }}" target="_blank">click here.</a>
+                            Research-and-Development facilities,
+                            <a class="link_a" href="{{ route('research-and-development') }}" target="_blank">click here.</a>
                         </p>
                     </div>
                 </div>
@@ -348,7 +393,7 @@ margin-inline-start: -115px !important;}
         }
 
         .fas {
-            color: #96bd0b;
+            color: #2a7d2e;
         }
 
         .slick-prev {
@@ -375,6 +420,35 @@ margin-inline-start: -115px !important;}
             background: #faead7;
         }
 
+        .silver-jub {
+
+            border-radius: 300px;
+        }
+        
+        .golden h6 {
+            font-size:50px;
+            font-weight:700;
+        }
+        
+        
+        .testimonial-slider-one .slick-dots {
+            text-align: center;
+            margin-top: 2px; 
+        }
+        
+        .copyright-text p {
+             font-size:15px;
+        }
+        
+       .home-banner-desktop {
+            display:block;
+        }
+        
+        .home-banner-mobile {
+            display:none;
+        }
+        
+
         @media (max-width:567px) {
             .counter-area .col-sm-6 {
                 width: 50% !important;
@@ -388,7 +462,7 @@ margin-inline-start: -115px !important;}
             }
 
             .features-wrapper-two {
-                padding: 50px 20px !important;
+                padding: 10px 10px !important;
             }
 
             .testimonial-slider-one .slick-arrow.prev {
@@ -403,6 +477,41 @@ margin-inline-start: -115px !important;}
                 width: 35px;
                 height: 35px;
             }
+            
+            .ptbmob-10 {
+                padding-top:10px;
+                padding-bottom:10px;
+            }
+            
+            .ptbmob-30 {
+                padding-top:30px;
+            }
+            
+            .silver-jub {
+                border-radius: 20px;
+            }
+            
+            .about-wrapper .about-three_content-box {
+                padding-top: 10px;
+            }
+            
+            .golden h6 {
+                font-size:34px;
+            }
+            
+            .sambhrama-text p {
+                font-size:15px;
+            }
+            
+            .home-banner-desktop {
+                display:none;
+           }
+        
+            .home-banner-mobile {
+               display:block;
+           }
+            
+            
         }
     </style>
 
@@ -459,7 +568,7 @@ margin-inline-start: -115px !important;}
     </style>
 
     <!--====== Start Farmers First Choice Section  ======-->
-    <section class="skills-section pt-50 pb-50 mt-60 fchoice-bg">
+    <section class="skills-section pt-50 pb-50 ptbmob-10 mt-60 fchoice-bg">
         <div class="container">
             <div class="row align-items-lg-center">
                 <div class="col-xl-6 col-lg-12">
@@ -488,9 +597,9 @@ margin-inline-start: -115px !important;}
                         <p class="mb-20">We are India's leading manufacturer and exporter of agriculture inputs and
                             provide exceptional solutions for crop nutrition and plant protection.</p>
                     </div>
-                    <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
-                        <a href="{{ url('/') }}" class="main-btn filled-btn mb-10">Download Brochure </a>
-                    </div>
+                    <!--<div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">-->
+                    <!--    <a href="{{ url('/') }}" class="main-btn filled-btn mb-10">Download Brochure </a>-->
+                    <!--</div>-->
                 </div>
 
             </div>
@@ -502,8 +611,6 @@ margin-inline-start: -115px !important;}
     <section class="features-section-two p-r z-1">
         <!--=== Features Wrapper ===-->
         <div class="features-wrapper-two main-bg wow fadeInDown">
-
-
             <!--=== Counter Area ===-->
             <div class="counter-area">
                 <div class="row pt-20">
@@ -576,26 +683,27 @@ margin-inline-start: -115px !important;}
     </section>
     <!--====== End counters Section ======-->
 
-    <br /><br />
+    
 
     <!--====== Start 50years Section ======-->
-    <section class="about-section years silver-jub">
+    <section class="about-section years mt-50 mb-50 ptbmob-10 silver-jub">
         <div class="container-fluid">
             <!--=== About Wrapper ===-->
             <div class="about-wrapper wow fadeInUp">
                 <div class="container">
                     <div class="row align-items-xl-center">
-
                         <div class="col-xl-7 col-lg-12">
                             <!--=== About Content Box ===-->
                             <div class="about-three_content-box wow fadeInRight">
                                 <!--=== Section Title ===-->
-                                <div class="section-title mb-25 wow fadeInUp years-size">
+                                <div class="section-title mb-25 golden">
                                     <span class="sub-title"><img src="{{ asset('images/leaf-svgrepo-com-new.svg') }}"
-                                            height="35" width="35" alt="">We are fast approaching the
-                                        milestone of</span>
-                                    <h2 style="font-size: 50px;">Multiplex <br />Golden Jubilee <br />Celebration</h2>
+                                            height="35" width="35" alt=""></span>
+                                    <h3>We are fast approaching the milestone of</h3>
+                                    <br/>
+                                    <h6>Multiplex <br />Golden Jubilee <br />Celebration</h6>
                                 </div>
+                                
                                 <!--  <p class="mb-40 wow fadeInDown">Sed ut perspiciatis unde omnis iste natus voluptatem accusan inventore</p> -->
                                 <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
                                     <!-- <a href="about.html" class="main-btn golden-btn mb-10">Explore More</a> -->
@@ -616,15 +724,6 @@ margin-inline-start: -115px !important;}
     </section>
     <!--====== End years Section ======-->
 
-    <style>
-        .silver-jub {
-
-            border-radius: 300px;
-        }
-    </style>
-
-
-    <br /><br />
 
     <style>
         .slick-dots li {
@@ -633,11 +732,11 @@ margin-inline-start: -115px !important;}
     </style>
 
     <!--====== Start timeline Section  ======-->
-    <section class="testimonial-section pt-90 pb-20">
+    <section class="testimonial-section pt-50 mt-50">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-12">
-                    <div class="section-title text-center mb-30 wow fadeInDown">
+                    <div class="section-title text-center mb-20 wow fadeInDown">
                         <span class="sub-title"><img src="{{ asset('images/leaf-svgrepo-com-new.svg') }}" height="35"
                                 width="35" alt=""></span>
                         <h2>Our 50 Years Journey</h2>
@@ -798,7 +897,7 @@ margin-inline-start: -115px !important;}
 
 
     <!--====== Start Blog Section  ======-->
-    <section class="blog-section pt-60 pb-30">
+    <section class="blog-section pt-60 pb-10">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-12">
@@ -810,6 +909,24 @@ margin-inline-start: -115px !important;}
                 </div>
             </div>
             <div class="row justify-content-center">
+                
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <!--====== Single Blog Post  ======-->
+                    <div class="single-blog-post mb-40 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="post-thumbnail">
+                            <img src="{{ asset('images/Red-Spider-Mite-Thumbnail.webp') }}" alt="Post Thumbnail">
+                        </div>
+                        <div class="entry-content">
+                            <a href="javascript:void(0);" class="cat-link"></a>
+                            <h4 class="entry-title"><a href="{{ route('the-red-spider-mite') }}">The Red Spider Mite</a></h4>
+                            <p>The Tetranychidae family, also known as "Spider Mites," are among the most significant phytophagous mite pests of agriculture worldwide.</p>
+                            <div class="post-meta">
+                                <span class="date"><a href="{{ route('the-red-spider-mite') }}">Read More</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="col-xl-4 col-md-6 col-sm-12">
                     <!--====== Single Blog Post  ======-->
                     <div class="single-blog-post mb-40 wow fadeInUp" data-wow-delay=".2s">
@@ -826,15 +943,16 @@ margin-inline-start: -115px !important;}
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-xl-4 col-md-6 col-sm-12">
                     <!--====== Single Blog Post  ======-->
                     <div class="single-blog-post mb-40 wow fadeInUp" data-wow-delay=".2s">
                         <div class="post-thumbnail">
-                            <img src="{{ asset('images/pink-boll-worm-thumb.jpg') }}" alt="Post Thumbnail">
+                            <img src="{{ asset('images/minchuplusthumbnail.png') }}" alt="Post Thumbnail">
                         </div>
                         <div class="entry-content">
                             <a href="javascript:void(0);" class="cat-link"></a>
-                            <h4 class="entry-title"><a href="{{ route('minchu-plus-for-pink-boll-worm') }}">Minchu Plus for Pink Boll Worm</a></h4>
+                            <h4 class="entry-title"><a href="{{ route('minchu-plus-for-pink-boll-worm') }}">Minchu Plus for Pink Bollworm</a></h4>
                             <p>Cotton is the most important commercial crop globally, often referred to as "white gold".</p>
                             <div class="post-meta">
                                 <span class="date"><a href="{{ route('minchu-plus-for-pink-boll-worm') }}">Read More</a></span>
@@ -842,29 +960,14 @@ margin-inline-start: -115px !important;}
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-6 col-sm-12">
-                    <!--====== Single Blog Post  ======-->
-                    <div class="single-blog-post mb-40 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="post-thumbnail">
-                            <img src="{{ asset('images/soil-testing-blog-thumb.jpg') }}" alt="Post Thumbnail">
-                        </div>
-                        <div class="entry-content">
-                            <a href="javascript:void(0);" class="cat-link"></a>
-                            <h4 class="entry-title"><a href="{{ route('what-is-soil-testing') }}">मिट्टी परीक्षण क्या है?</a></h4>
-                            <p>फसल की अधिक उत्पादन एवं स्वस्थ विकास के लिए  आवश्यक पोषक तत्वों की मिटटी में  उपलब्ध मात्राओं का रासायनिक परीक्षणों द्वारा आंकलन करना ही मृदा परीक्षण कहलाता है।</p>
-                            <div class="post-meta">
-                                <span class="date"><a href="{{ route('what-is-soil-testing') }}">Read More</a></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
     <!--====== End Blog Section  ======-->
 
-    <!--====== Start 50years Section ======-->
-    <section class="about-section pt-30 pb-40">
+    <!--====== Start SAMBRAMA Section ======-->
+    <section class="about-section pt-10 pb-40">
         <div class="container-fluid">
             <!--=== About Wrapper ===-->
             <div class="about-wrapper app-section wow fadeInUp">
@@ -878,16 +981,16 @@ margin-inline-start: -115px !important;}
                         </div>
                         <div class="col-xl-7 col-lg-12">
                             <!--=== About Content Box ===-->
-                            <div class="about-three_content-box wow fadeInRight">
+                            <div class="about-three_content-box wow fadeInRight sambhrama-text">
                                 <!--=== Section Title ===-->
-                                <div class="section-title mb-9 wow text-white fadeInUp">
-                                    <h2 style="font-size: 31px; color:#0A4824">SAMBRAMA by Multiplex</h2>
+                                <div class="section-title mb-15 wow text-white fadeInUp">
+                                    <h2 style="font-size: 31px; color:#0A4824;">SAMBRAMA by Multiplex</h2>
                                 </div>
-                                <p class="mb-55 wow text-dark fadeInDown">In the continuous process of finding new avenues
+                                <p class="wow text-dark fadeInDown">In the continuous process of finding new avenues
                                     of making a strong & valuable relationship with our esteemed retailers &
                                     farmers, Multiplex is presenting the Sambrama App.
-                                    <br />
-                                    A fast & convenient way for authorised retailers & farmers to earn reward points and
+                                </p>
+                                <p class="mb-15 wow text-dark fadeInDown">A fast & convenient way for authorised retailers & farmers to earn reward points and
                                     redeem exciting gifts!
                                 </p>
                             </div>
@@ -908,7 +1011,8 @@ margin-inline-start: -115px !important;}
             </div>
         </div>
     </section>
-    <!--====== End years Section ======-->
+    <!--====== End SAMBRAMA Section ======-->
+    
 @endsection
 @section('scripts')
     @parent

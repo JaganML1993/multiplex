@@ -54,12 +54,15 @@
             }
 
             .mobile-view .gd-breadcrumb {
-                background: #dee2e6;
-                text-align: center;
-                font-size: 16px !important;
-                color: #1a9f53 !important;
-                font-weight: 500;
-            }
+            background: #2a7d2e;
+            text-align: center;
+            font-size: 13px !important;
+            color: #e3e3e3 !important;
+            font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
+        }
 
             .mobile-view .bg_cover {
                 background-size: 100% 100% !important;
@@ -137,8 +140,8 @@
                                             Under the brand name Multiplex, </p>
 
                                         <ul class="check-style-one mb-30">
-                                            <li><i class="fa fa-check"></i>We manufacture and export a wide range of products, including micro-nutrients, bio-stimulants, and bio-activators. </li>
-                                            <li><i class="fa fa-check"></i>Our commitment to quality has driven us to export our products to more than 17 countries, including Japan, Korea, Ethiopia, and Djibouti. </li>
+                                            <li><i class="fa-brands fa-pagelines"></i>We manufacture and export a wide range of products, including micro-nutrients, bio-stimulants, and bio-activators. </li>
+                                            <li><i class="fa-brands fa-pagelines"></i>Our commitment to quality has driven us to export our products to more than 17 countries, including Japan, Korea, Ethiopia, and Djibouti. </li>
                                         </ul>
 
                                         <p>We are passionate about innovation and regularly introduce concept products that cater to various sectors, from agriculture and horticulture to animal husbandry and FMCG (Cleaning & Disinfection). Presently, we are fully engaged in developing and manufacturing organic products to benefit farming communities further.</p>

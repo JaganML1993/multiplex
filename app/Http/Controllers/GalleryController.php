@@ -35,7 +35,7 @@ class GalleryController extends Controller
             'image' => $imageName,
         ]);
 
-        return redirect()->route('galleries.index')->with('page', 'galleries')->with('success', 'Gallery item created successfully.');
+        return redirect()->route('galleries.index')->with('page', 'galleries')->with('status', 'Gallery item created successfully.');
     }
 
     public function show(Gallery $gallery)
@@ -64,14 +64,13 @@ class GalleryController extends Controller
         $gallery->update([
             'category' => $request->category,
         ]);
-
-        return redirect()->route('galleries.index')->with('page', 'galleries')->with('success', 'Gallery item updated successfully.');
+        return redirect()->route('galleries.index')->with('page', 'galleries')->with('status', 'Gallery item updated successfully.');
     }
 
     public function destroy(Gallery $gallery)
     {
         $gallery->delete();
 
-        return redirect()->route('galleries.index')->with('page', 'galleries')->with('success', 'Gallery item deleted successfully.');
+        return redirect()->route('galleries.index')->with('page', 'galleries')->with('status', 'Gallery item deleted successfully.');
     }
 }

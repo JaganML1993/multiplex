@@ -9,6 +9,7 @@ use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProductCategoryController;
+use App\Models\admin\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,9 +28,9 @@ use App\Http\Controllers\ProductCategoryController;
 
 Route::get('/', [IndexController::class, 'index']);
 Route::post('/save_enquiry', [IndexController::class, 'save_enquiry'])->name('home.save_enquiry');
-Route::get('/current_openings', [IndexController::class, 'current_openings'])->name('home.current_openings');
+Route::get('/current-openings', [IndexController::class, 'current_openings'])->name('home.current-openings');
 Route::get('/search-openings', [IndexController::class, 'searchOpenings']);
-Route::get('/life_at_multiplex', [IndexController::class, 'life_at_multiplex'])->name('home.life_at_multiplex');
+Route::get('/life-at-multiplex', [IndexController::class, 'life_at_multiplex'])->name('home.life-at-multiplex');
 Route::get('/job_application/{id}', [IndexController::class, 'job_application'])->name('home.job_application');
 Route::post('/save_job', [IndexController::class, 'save_job'])->name('home.save_job');
 
@@ -44,17 +45,21 @@ Route::get('/timeline', [IndexController::class, 'timeline'])->name('timeline');
 /** corporate */
 Route::get('/branches', [IndexController::class, 'branches'])->name('branches');
 Route::get('/global-connect', [IndexController::class, 'global_connect'])->name('global-connect');
-Route::get('/r-and-d', [IndexController::class, 'r_and_d'])->name('r-and-d');
+Route::get('/research-and-development', [IndexController::class, 'research_and_development'])->name('research-and-development');
 Route::get('/infrastructure', [IndexController::class, 'infrastructure'])->name('infrastructure');
 
 /** products */
-Route::get('/products-index', [IndexController::class, 'products'])->name('products.index');
-Route::get('/fertilizers', [IndexController::class, 'fertilizers'])->name('fertilizers');
+Route::get('/products', [IndexController::class, 'products'])->name('products.index');
+// Route::get('/fertilizers', [IndexController::class, 'fertilizers'])->name('fertilizers');
 Route::get('/multi-pk', [IndexController::class, 'multi_pk'])->name('multi-pk');
 
-Route::get('/category-products/{id}', [ProductCategoryController::class, 'categoryProducts'])->name('category.products');
-Route::get('/category-product-detail/{id}', [ProductCategoryController::class, 'categoryProductDetail'])->name('category.product.detail');
+$categories = Category::where('slug', '!=', '')->where('status', '1')->get();
+foreach($categories as $cat) {
+    Route::get($cat->slug, [ProductCategoryController::class, 'categoryProducts'])->name($cat->slug);
+    Route::get($cat->slug.'/{id}', [ProductCategoryController::class, 'categoryProductDetail'])->name('category.product.detail'.$cat->slug);
+}
 
+Route::get('product/{id}', [ProductCategoryController::class, 'categoryProductDetail']);
 
 /** services */
 Route::get('/quality-testing', [IndexController::class, 'quality_testing'])->name('quality-testing');
@@ -82,10 +87,12 @@ Route::get('/multiplex-agricare-pvt-ltd', [IndexController::class, 'multiplex_ag
 Route::get('/multiplex-movers', [IndexController::class, 'multiplex_movers'])->name('multiplex-movers');
 Route::get('/multiplex-safe-and-farm-fresh', [IndexController::class, 'multiplex_safe_and_farm_fresh'])->name('multiplex-safe-and-farm-fresh');
 
-/** Blog */
+/** Blogs */
+Route::get('/blogs', [IndexController::class, 'blogs'])->name('blogs');
 Route::get('/micronutrients-in-crop-production', [IndexController::class, 'micronutrients_in_crop_production'])->name('micronutrients-in-crop-production');
 Route::get('/minchu-plus-for-pink-boll-worm', [IndexController::class, 'minchu_plus_for_pink_boll_worm'])->name('minchu-plus-for-pink-boll-worm');
 Route::get('/what-is-soil-testing', [IndexController::class, 'what_is_soil_testing'])->name('what-is-soil-testing');
+Route::get('/the-red-spider-mite', [IndexController::class, 'the_red_spider_mite'])->name('the-red-spider-mite');
 
 
 /** footer */
@@ -94,7 +101,8 @@ Route::get('/success-stories', [IndexController::class, 'success_stories'])->nam
 Route::get('/terms-and-conditions', [IndexController::class, 'terms_and_conditions'])->name('terms-and-conditions');
 
 
-Route::get('/autocomplete-search', [IndexController::class, 'autocompleteSearch']);
+// Route::get('/autocomplete-search', [IndexController::class, 'autocompleteSearch']);
+Route::get('/autocomplete-location', [IndexController::class, 'autocompleteSearch']);
 Route::get('/autocomplete-department', [IndexController::class, 'autocompleteDepartment']);
 Route::get('/autocomplete-position', [IndexController::class, 'autocompletePosition']);
 Route::get('/search-products', [IndexController::class, 'showProducts'])->name('search.products');

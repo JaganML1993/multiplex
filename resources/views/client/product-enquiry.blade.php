@@ -10,7 +10,7 @@
                                 <h3 class="title" style="color:#000;">Drop us a message</h3>
                                 <!--<p style="color:#000;">Our team will get back to you shortly.</p>-->
                                 <!--=== Review Form ===-->
-                                <div class="review-form-area wow fadeInUp mt-10 mb-10">
+                                <div class="review-form-area mt-10 mb-10">
                                     <form class="review-form product-form" method="post" id="product-form"
                                         action="{{ route('home.save_enquiry') }}">
                                         @csrf
@@ -49,17 +49,16 @@
                                                         placeholder="Message" required></textarea>
                                                 </div>
                                             </div>
+                                            <div class="d-none success-message" style="width: 100%">
+                                                <h4>Thank you, we will get back to you.</h4>
+                                            </div>
                                             <div class="col-lg-12">
                                                 <div class="form_group">
                                                     <button type="submit"
                                                         class="main-btn primary-btn">Submit</button>
                                                 </div>
-                                                <br/>
-                                                <div class="my-3 d-none success-message" style="width: 100%">
-                                                   <h4>Thank you, we will get back to you.</h4>
-                                                </div>
-                                                
                                             </div>
+                                            
                                         </div>
                                     </form>
                                 </div>

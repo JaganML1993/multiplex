@@ -32,11 +32,14 @@
         }
 
         .mobile-view .gd-breadcrumb {
-            background: #dee2e6;
+            background: #2a7d2e;
             text-align: center;
-            font-size: 16px !important;
-            color: #1a9f53 !important;
+            font-size: 15px !important;
+            color: #e3e3e3 !important;
             font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
         }
 
         .mobile-view .bg_cover {
@@ -90,7 +93,6 @@
   top: 50%;
   text-align:center;
   line-height:2.5;
-
   transform: translateY(-42%);
   cursor: pointer;
   z-index: 1;
@@ -101,16 +103,16 @@
   /* border: 1px solid rgba(0, 0, 0, 0.1); */
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
-  background-color: #ffffff;
+  background-color: #2a7d2e;
 }
 .slick-arrow i{
-    color:#000;
+    color:#fff;
 }
 .slick-arrow.prev {
-  left: 5%;
+  left: 22%;
 }
  .slick-arrow.next {
-  right: 5%;
+  right: 22%;
 }
 @media only screen and (max-width: 600px) {
  .slick-arrow {
@@ -120,10 +122,10 @@
      width:280px;
  }
     .projects-slider-one .slick-arrow.prev {
-    left:70px;
+    left:55px;
 }
 .projects-slider-one .slick-arrow.next {
-    right: 70px;
+    right: 55px;
 }
 .projects-slider-one .slick-arrow {
     width: 35px;
@@ -136,7 +138,7 @@
 </style>
 
 <!--====== Start Gallery Section ======-->
-<section class="gallery-section-minus1 pt-50 pb-50 bg-dark-infra">
+<section class="gallery-section-minus1 pt-50 pb-50 ptbmob-30 bg-dark-infra">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

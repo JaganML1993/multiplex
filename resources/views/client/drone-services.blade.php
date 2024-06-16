@@ -45,17 +45,23 @@
         }
 
         .mobile-view .gd-breadcrumb {
-            background: #dee2e6;
+            background: #2a7d2e;
             text-align: center;
-            font-size: 16px !important;
-            color: #1a9f53 !important;
+            font-size: 15px !important;
+            color: #e3e3e3 !important;
             font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
         }
 
         .mobile-view .bg_cover {
             background-size: 100% 100% !important;
 
         }
+        
+        .services-title-style h3 {
+            font-size:18px;
 
     }
 </style>
@@ -93,31 +99,24 @@
 <!--====== End Page-title-area section ======-->
 
 <!--====== Start Project-Details section ======-->
-<section class="project-details-section pt-60 services-img-round">
+<section class="project-details-section pt-50 ptbmob-30 services-title-style services-img-round">
     <div class="container">
         <div class="project-details-wrapper pb-30">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="project-info mb-30 wow fadeInLeft">
-                        <h3 class="title">Drone Spray Services</h3>
-                        <!--<h3 class="mb-10"></h3>-->
-                        <!--<p>Agricultural spraying drone takes 8 to 10 min to spray inputs for an acre. Ten liters of agricultural input will be sprayed for field crops and Twenty liters will be sprayed for plantation crops. By taking spray through drones, farmers can save agricultural input consumption by 30 to 35% and water consumption by 90 to 95%.</p>-->
-                        <!--<p>We have experience in spraying over 20,000 acres on 56 crops in 8 states.</p>-->
+                        <h3 class="mb-20 pt-10">Drone Spray Services</h3>
+
                         <p>Multiplex Drone Services offer a cutting-edge range of over 8 agricultural drone models meticulously crafted with high-strength carbon fibers and aerospace-grade aluminum.
                             These drones, equipped with advanced flight controllers and GPS modules, efficiently cover one acre in 8 to 10 minutes, using 10 liters of inputs for field crops and 20 liters
                             for plantation crops. Harnessing drone technology, farmers benefit from significant reductions: 30-35% in input consumption, 90-95% in water usage, and a remarkable 90% in time
                             savings. Operator safety sees a substantial boost to 99% compared to traditional methods. These versatile drones handle crops from cauliflower to towering Areca trees, showcasing
                             their effectiveness over 20,000 acres across 8 Indian states. Multiplex Drone Services delivers a complete "Total Solution" for agricultural spraying, ensuring heightened efficiency
                             and productivity in farming.</p>
-                        <!--<ul class="check-style-one mb-60">-->
-                        <!--    <li><i class="fa fa-check"></i>We’re Experience Gardening</li>-->
-                        <!--    <li><i class="fa fa-check"></i>Awards Winning & Professional Team Member</li>-->
-                        <!--</ul>-->
+
                     </div>
                 </div>
-                <!--<div class="col-lg-5">-->
-                <!--    <img src="assets/images/gl-3.jpg" alt="Project Image">-->
-                <!--</div>-->
+
             </div>
             <!--<hr />-->
             <div class="row">
@@ -167,7 +166,7 @@
         var emailValue = emailInput1.value;
 
         // Simplified regular expression for email validation
-        var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org)$/;
+        var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net|gov|edu|co)$/;
 
         if (!emailRegex.test(emailValue)) {
             emailInput1.setCustomValidity("Please enter a valid email address.");

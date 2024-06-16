@@ -9,7 +9,7 @@
 </style>
 <!-- Content -->
 <div class="container-xxl flex-grow-1 container-p-y">
-    <h4 class="fw-bold py-3 mb-4">Create Openings</h4>
+    <h4 class="fw-bold py-3 mb-4">Create New Job Openings</h4>
 
     <!-- Basic Layout & Basic with Icons -->
     <div class="row">

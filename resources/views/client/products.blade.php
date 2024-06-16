@@ -26,6 +26,11 @@
     .mobile-view {
         display: none !important;
     }
+    
+    .prod-range-title h3 {
+            font-size:24px;
+            font-weight:700;
+        }
 
     @media (max-width:567px) {
 
@@ -50,22 +55,51 @@
         }
 
         .mobile-view .gd-breadcrumb {
-            background: #dee2e6;
+            background: #2a7d2e;
             text-align: center;
-            font-size: 16px !important;
-            color: #1a9f53 !important;
+            font-size: 15px !important;
+            color: #e3e3e3 !important;
             font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
         }
 
         .mobile-view .bg_cover {
             background-size: 100% 100% !important;
 
         }
+        
+        .prod-range-title h3 {
+            font-size:20px;
+            font-weight:700;
+            text-align:center;
+        }
 
     }
+    .padc01 h5 {
+        font-size:18px;
+    }
+    
+    .features-thumb-item-two {
+        position: relative;
+    }
+
+    .padc01 {
+        height: 225px; /* Set a fixed height for the description container */
+        overflow: hidden; /* Hide overflow if the description is longer */
+    }
+
+    .menu-button {
+        position: relative;
+        bottom: 0;
+    }
+    
+
+    
      
     </style>   
-</style>
+
 		
          <!--====== Start Page-title-area section ======-->
         <section class="page-title-area text-white bg_cover desktop-view" style="background-image: url(assets/images/pr-page-header-img.jpg);">
@@ -99,38 +133,35 @@
 		
 		
 		<!--====== Start Features Section ======-->
-        <section class="features-section pt-60">
+        <section class="features-section pt-60 ptbmob-30 prod-range-title">
             <div class="container">
                 <div class="row align-items-xl-center">
                     <div class="col-lg-6">
-                        <div class="section-title mb-55 wow fadeInLeft">
+                        <div class="section-title mb-35 wow fadeInLeft">
                             <!-- <span class="sub-title"><img src="assets/images/grass.svg" alt=""> What We Do For Gardening</span> -->
-                            <h2>Our Range of Products</h2>
+                            <h3>Our Range of Products</h3>
                         </div>
                     </div>
-                    <!--<div class="col-lg-6">-->
-                    <!--    <div class="features-content-box mb-55 wow fadeInRight">-->
-                    <!--        <p>Sed perspiciatis unde omnis isnatu volunteer accusantium doloremque laudantium totam rem apeira eaque ipsa quae ab eillo inventore veritatis et quasi architecto beatae vitae</p>-->
-                            <!-- <a href="about.html" class="btn-link">Learn More<i class="far fa-angle-double-right"></i></a> -->
-                    <!--    </div>-->
-                    <!--</div>-->
+
                 </div>
                 <div class="row">
-
+                    
                     @foreach($categories as $category)
                     <div class="col-xl-3 col-md-6 col-sm-12">
                         <div class="features-thumb-item-two mb-40 wow fadeInDown" data-wow-delay=".2s">
                             <div class="thumb">
-                               <a href="{{ route('category.products',['id' => $category->id, 'sub_id' => 0]) }}"> <img src="{{ url('').'/'.$category->image }}" alt="Image"></a>
+                               <a href="{{ route($category->slug) }}"> <img src="{{ url('').'/'.$category->image }}" alt="Image"></a>
                             </div>
                             <br/>
 							<div class="padc01">
-                                <a href="{{ route('category.products',['id' => $category->id, 'sub_id' => 0]) }}"><h5 class="title">{{$category->name}}</h5></a>
+                                <a href="{{ route($category->slug) }}">
+                                    <h5 class="title">{{$category->name}}</h5>
+                                </a>
                                 <p>{{$category->description}}</p>
                             </div>
-							<br/><br/><br/>
+							<br/>
 							<div class="menu-button d-xl-block">
-                                <a href="{{ route('category.products',['id' => $category->id, 'sub_id' => 0]) }}" class="main-btn primary-btn">Know More</a>
+                                <a href="{{ route($category->slug) }}" class="main-btn primary-btn">Know More</a>
                             </div>
                         </div>
                     </div>
@@ -140,7 +171,7 @@
 
             </div>
         </section><!--====== End Features Section ======-->
-		<br/><br/><br/>
+		<!--<br/><br/><br/>-->
 
 		
         @endsection

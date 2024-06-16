@@ -57,11 +57,14 @@
         }
 
         .mobile-view .gd-breadcrumb {
-            background: #dee2e6;
+            background: #2a7d2e;
             text-align: center;
-            font-size: 16px !important;
-            color: #1a9f53 !important;
+            font-size: 15px !important;
+            color: #e3e3e3 !important;
             font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
         }
 
         .mobile-view .bg_cover {
@@ -105,7 +108,7 @@
 </section>
 <!--====== End Page-title-area section ======-->
 
-<section class="shop-details-section pt-60 pb-60 services-img-round">
+<section class="shop-details-section pt-50 ptbmob-30 services-img-round">
     <div class="container">
         <div class="product-details-wrapper">
             <div class="row">
@@ -133,7 +136,7 @@
                     <div class="sidebar-widget-area mt-30">
                         <img src="assets/images/magazine-main-cover.jpg" alt="Banner Image">
                     </div>
-                    <div class="hero-button mb-30 mt-15 wow fadeInUp text-center" data-wow-delay=".7s">
+                    <div class="hero-button mb-30 mt-15 wow fadeInUp" data-wow-delay=".7s">
                         <a href="assets/doc/vaahini_05_Dec2023-Jan2024.pdf" target="_blank" class="main-btn filled-btn mb-10">Download Magazine </a>
                     </div>
                 </div>
@@ -160,7 +163,7 @@
 </section>
 <!--====== End Shop Details Section ======-->
 
-<section class="shop-details-section pt-30 pb-30 services-img-round bg-dark-home">
+<section class="shop-details-section pt-30 pb-30 ptbmob-30 services-img-round bg-dark-home">
     <div class="container">
         <div class="product-details-wrapper">
             <div class="row justify-content-center">
@@ -177,8 +180,6 @@
 <!--====== End Shop Details Section ======-->
 
 
-
-<br />
 
 @endsection
 @section('scripts')

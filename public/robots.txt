@@ -1,2 +1,24 @@
 User-agent: *
-Disallow:
+User-agent:  *
+Disallow: /cgi-bin/
+Disallow: /page/
+Disallow: /blog/page/*
+Disallow: /amp/page/*
+Disallow: /dgd_scrollbox/
+Disallow: /?s=*
+Disallow: /go/
+Disallow: /recommended/
+Disallow: /comments/feed/
+Disallow: /trackback/
+Disallow: /index.php
+Disallow: /xmlrpc.php
+Disallow: ?comments=*
+Disallow: /search?
+Disallow: /?p=*
+Disallow: *?replytocom
+Disallow: */trackback 
+Disallow: */feed 
+Disallow: */comments 
+Disallow: /tag/
+Disallow: /author/
+Disallow: /admin/

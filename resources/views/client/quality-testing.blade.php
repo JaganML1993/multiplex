@@ -48,11 +48,14 @@
         }
 
         .mobile-view .gd-breadcrumb {
-            background: #dee2e6;
+            background: #2a7d2e;
             text-align: center;
-            font-size: 16px !important;
-            color: #1a9f53 !important;
+            font-size: 15px !important;
+            color: #e3e3e3 !important;
             font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
         }
 
         .mobile-view .bg_cover {
@@ -98,7 +101,7 @@
 
 
 		<!--====== Start Features Section ======-->
-        <section class="features-section pt-60">
+        <section class="features-section pt-50 ptbmob-30">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 col-md-6 col-sm-12">

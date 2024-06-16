@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 use File;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
+use GuzzleHttp\Client;
 
 
 class IndexController extends Controller
@@ -31,10 +32,30 @@ class IndexController extends Controller
 
     public function save_enquiry(Request $request)
     {
-
-        $department = Department::where('id', $request->input('department'))->first();
-        // dd($department);
-
+        // Validate reCAPTCHA
+        $response = $request->input('g-recaptcha-response');
+        $url = 'https://www.google.com/recaptcha/api/siteverify';
+        $data = [
+            'secret' => '6Lenl4MpAAAAAKVvilj5hEqh2e-hUOXcpNuJ-z2x',
+            'response' => $response
+        ];
+        $options = [
+            'http' => [
+                'header' => "Content-Type: application/x-www-form-urlencoded\r\n",
+                'method' => 'POST',
+                'content' => http_build_query($data)
+            ]
+        ];
+        $context = stream_context_create($options);
+        $verify = file_get_contents($url, false, $context);
+        $captcha_success = json_decode($verify);
+    
+        if (!$captcha_success->success) {
+            // reCAPTCHA validation failed, handle accordingly
+            // return redirect()->back()->with('status', 'reCAPTCHA validation failed.');
+            return response()->json(['status' => 'error', 'message' => 'reCAPTCHA validation failed.']);
+        }
+        $department = Department::find($request->department);
 
         $enquiry =  Index::create(
             [
@@ -49,12 +70,10 @@ class IndexController extends Controller
         );
 
         // Generate serial ID and update the record
-
-
+        
         $departmentEmail = $department->email ?? '';
 
         $tokenid = str_pad($enquiry->id, 3, '0', STR_PAD_LEFT);
-
         // Send email
         $data = [
             'id' => $enquiry->id,
@@ -80,7 +99,7 @@ class IndexController extends Controller
 
             $serialId = "MULT/PROD/" . $tokenid;
             $data['serialIdSub'] = $serialId;
-
+            unset($data['department']);
             Mail::to('mco@multiplexgroup.com')
                 ->cc('analysis@multiplexgroup.com')
                 ->send(new \App\Mail\Enquiry($data));
@@ -88,7 +107,7 @@ class IndexController extends Controller
 
             $serialId = "MULT/SERV/" . $tokenid;
             $data['serialIdSub'] = $serialId;
-
+            unset($data['department']);
             Mail::to('analysis@multiplexgroup.com')
                 ->cc('analysis@multiplexgroup.com')
                 ->send(new \App\Mail\Enquiry($data));
@@ -97,7 +116,11 @@ class IndexController extends Controller
         $enquiry->update(['serial_id' => $serialId]);
 
         // Return a response or redirect as needed
-        return redirect()->back()->with('status', 'Enquiry submitted successfully');
+        // return redirect()->back()->with('status', 'Enquiry submitted successfully');
+        return response()->json(['status' => 'error', 'message' => 'Enquiry submitted successfully.']);
+        // } else {
+        //     return redirect()->back();
+        // }
     }
 
     public function current_openings()
@@ -161,7 +184,7 @@ class IndexController extends Controller
 
         $openings = $careers->toSql();
 
-        dd($openings);
+        // dd($openings);
 
         $openings = $careers->orderBy('openings.id', 'desc')->get();
 
@@ -172,7 +195,7 @@ class IndexController extends Controller
 
     public function job_application($id)
     {
-        $openings = Openings::find($id) ?? [];
+        $openings = Openings::where('position', $id)->first();
         $location = Location::where('id', $openings->location)->first();
 
         return view('client.job-application')->with('openings', $openings)->with('location', $location);
@@ -217,7 +240,7 @@ class IndexController extends Controller
             'jobloc' => $location->location, // Assuming you have this value available
         ];
 
-        $attachmentPath = $image_path; // Use the saved file path as attachment
+        $attachmentPath = public_path($image_path); // Use the saved file path as attachment
         $attachmentName = basename($image_path);
 
         Mail::to($departmentEmail)
@@ -285,9 +308,9 @@ class IndexController extends Controller
         return view('client.quality-testing');
     }
 
-    public function r_and_d()
+    public function research_and_development()
     {
-        return view('client.r-and-d');
+        return view('client.research-and-development');
     }
 
     public function infrastructure()
@@ -410,7 +433,16 @@ class IndexController extends Controller
     {
         return view('client.what-is-soil-testing');
     }
-
+    
+    public function the_red_spider_mite()
+    {
+        return view('client.the-red-spider-mite');
+    }
+    
+    public function blogs()
+    {
+        return view('client.blogs');
+    }
 
 
 
@@ -450,7 +482,8 @@ class IndexController extends Controller
     public function autocompleteSearch(Request $request)
     {
         $query = $request->get('query');
-        $filterResult = Location::where('location', 'LIKE', '%' . $query . '%')->get();
+        $filterResult = Location::where('location', 'LIKE', $query . '%')->get();
+
         return response()->json($filterResult);
     }
 
@@ -464,7 +497,7 @@ class IndexController extends Controller
     public function autocompletePosition(Request $request)
     {
         $query = $request->get('query');
-        $filterResult = Openings::select('position')->where('position', 'LIKE', '%' . $query . '%')->distinct()->groupBy('position')->get();
+        $filterResult = Openings::select('position')->where('position', 'LIKE', $query . '%')->distinct()->groupBy('position')->get();
         return response()->json($filterResult);
     }
 
@@ -483,7 +516,7 @@ class IndexController extends Controller
         })->where('category_id', $category_id)->orderBy('id', 'desc')->get();
 
         // Render the Blade view
-        $view = view('client.product-result', compact('products'))->render();
+        $view = view('client.product-result', compact('products', 'category'))->render();
 
         // Return the HTML as a JSON response
         return response()->json(['html' => $view]);
@@ -492,14 +525,20 @@ class IndexController extends Controller
     public function showGlobal(Request $request)
     {
         $query = $request->get('query');
-        $filterResult = Product::where('name', 'LIKE', '%' . $query . '%')
-            ->orWhereHas('category', function ($categoryQuery) use ($query) {
-                $categoryQuery->where('name', 'LIKE', '%' . $query . '%');
-            })
-            ->orWhereHas('sub_category', function ($subCategoryQuery) use ($query) {
-                $subCategoryQuery->where('name', 'LIKE', '%' . $query . '%');
-            })
-            ->get();
+        // $filterResult = Product::where('name', 'LIKE', '%' . $query)->get();
+        if(empty($query)){
+            $filterResult = [];
+        }else{
+            $filterResult = Product::where('name', 'LIKE', $query . '%')->get();
+        }
+
+            // ->orWhereHas('category', function ($categoryQuery) use ($query) {
+            //     $categoryQuery->where('name', 'LIKE', '%' . $query . '%');
+            // })
+            // ->orWhereHas('sub_category', function ($subCategoryQuery) use ($query) {
+            //     $subCategoryQuery->where('name', 'LIKE', '%' . $query . '%');
+            // })
+            // ->get();
 
 
         return response()->json($filterResult);

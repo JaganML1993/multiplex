@@ -57,11 +57,14 @@
         }
 
         .mobile-view .gd-breadcrumb {
-            background: #dee2e6;
+            background: #2a7d2e;
             text-align: center;
-            font-size: 16px !important;
-            color: #1a9f53 !important;
+            font-size: 13px !important;
+            color: #e3e3e3 !important;
             font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
         }
 
         .mobile-view .bg_cover {
@@ -69,6 +72,16 @@
 
         }
     }
+    
+    ul.check-style-one li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        /* display: flex; */
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font: 400 15px "Roboto", sans-serif;
+}
 
 </style>
 <!--====== Start Page-title-area section ======-->
@@ -126,13 +139,13 @@
                                         <p>Our commitment to agricultural innovation is bolstered by cutting-edge facilities and technologies, enabling us to conduct groundbreaking research, innovate, manufacture, and supply a wide range of bio-organic products. Our world-class facilities include:</p>
 
                                         <ul class="check-style-one mb-30">
-                                            <li><i class="fa fa-check"></i>Bio-Organic Product Manufacturing: We are leading manufacturers of bio-organic manures, bio-fertilizers, bio-pesticides, and plant growth promoters.</li>
-                                            <li><i class="fa fa-check"></i>Insect Virus-Based Bio-Pesticides: Scientifically produced to combat pests like cotton bollworm and tobacco leaf-eating caterpillar, replacing chemical pesticides.</li>
-                                            <li><i class="fa fa-check"></i>EPN Technology: Introduced in India in 2010 under the brand name Soldier, successfully controlling soil-borne pests.</li>
-                                            <li><i class="fa fa-check"></i>Powder Formulation: Developed in 2010 to increase shelf life and field efficacy.</li>
-                                            <li><i class="fa fa-check"></i>Chirayu Seed Treatment: Microorganism-based seed dressing formulation proven effective for improving germination and plant growth.</li>
-                                            <li><i class="fa fa-check"></i>Consortium-Based Products: Utilized for controlling plant parasitic nematodes and various soil and foliar diseases.</li>
-                                            <li><i class="fa fa-check"></i>Shuddi - A Cleaning, Sanitizer, and Bio-remediation Product: Certified with Green Seal USA, offering eco-friendly solutions.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>Bio-Organic Product Manufacturing:</strong> We are leading manufacturers of bio-organic manures, bio-fertilizers, bio-pesticides, and plant growth promoters.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>Insect Virus-Based Bio-Pesticides:</strong> Scientifically produced to combat pests like cotton bollworm and tobacco leaf-eating caterpillar, replacing chemical pesticides.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>EPN Technology:</strong> Introduced in India in 2010 under the brand name Soldier, successfully controlling soil-borne pests.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>Powder Formulation:</strong> Developed in 2010 to increase shelf life and field efficacy.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>Chirayu Seed Treatment:</strong> Microorganism-based seed dressing formulation proven effective for improving germination and plant growth.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>Consortium-Based Products:</strong> Utilized for controlling plant parasitic nematodes and various soil and foliar diseases.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i><strong>Shuddi - A Cleaning, Sanitizer, and Bio-remediation Product:</strong> Certified with Green Seal USA, offering eco-friendly solutions.</li>
                                         </ul>
 
                                         <p>Fully Automated Bio-tech Unit (September 2021): Equipped with advanced technologies, capable of producing substantial quantities of bio-fertilizers, bio-pesticides, and bio-decomposers with precision and quality. Features commercial walk-in cold rooms for product preservation and automated packing for utmost accuracy.</p>
@@ -140,12 +153,12 @@
                                         <p>Our journey has been marked by significant achievements, including:</p>
 
                                         <ul class="check-style-one mb-30">
-                                            <li><i class="fa fa-check"></i>Pioneer in insect virus-based bio-pesticides, such as Multiplex Helimar & Multiplex Spodomar, which replaced chemical pesticides.</li>
-                                            <li><i class="fa fa-check"></i>Introduction of EPN Technology as an excellent soil pest controller against various pests.</li>
-                                            <li><i class="fa fa-check"></i>Production of Nisarga W. P powder formulation using innovative technology.</li>
-                                            <li><i class="fa fa-check"></i>Manufacturing the highly effective seed treatment product, Chirayu, under license agreement.</li>
-                                            <li><i class="fa fa-check"></i>Pioneering the use of consortia for products to control nematodes and diseases.</li>
-                                            <li><i class="fa fa-check"></i>Development of Shuddi, a certified cleaning, sanitizer, and bio-remediation product.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i>Pioneer in insect virus-based bio-pesticides, such as Multiplex Helimar & Multiplex Spodomar, which replaced chemical pesticides.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i>Introduction of EPN Technology as an excellent soil pest controller against various pests.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i>Production of Nisarga W. P powder formulation using innovative technology.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i>Manufacturing the highly effective seed treatment product, Chirayu, under license agreement.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i>Pioneering the use of consortia for products to control nematodes and diseases.</li>
+                                            <li><i class="fa-brands fa-pagelines"></i>Development of Shuddi, a certified cleaning, sanitizer, and bio-remediation product.</li>
                                         </ul>
 
                                         <p>Establishment of a fully automated world-class bio-tech unit in September 2021, setting new standards in quality, preservation, and precision.</p>

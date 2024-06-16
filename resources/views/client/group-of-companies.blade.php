@@ -38,11 +38,14 @@
         }
 
         .mobile-view .gd-breadcrumb {
-            background: #dee2e6;
+            background: #2a7d2e;
             text-align: center;
-            font-size: 16px !important;
-            color: #1a9f53 !important;
+            font-size: 15px !important;
+            color: #e3e3e3 !important;
             font-weight: 500;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            font-family: "Roboto", sans-serif;
         }
 
         .mobile-view .bg_cover {
@@ -323,7 +326,7 @@
                     <!-- <a href="about.html" class="main-btn primary-btn">Learn More Us</a> -->
                 </div>
                 <div class="hero-button mb-30 wow fadeInUp" data-wow-delay=".7s">
-                    <a href="https://www.multiplexurbangreen.com/" target="_blank" class="main-btn filled-btn mb-10">Know More </a>
+                    <a href="https://murbangreen.com/" target="_blank" class="main-btn filled-btn mb-10">Know More </a>
                 </div>
             </div>
             <div class="col-lg-6">
