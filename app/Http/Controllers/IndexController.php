@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\admin\Category;
 use App\Models\admin\SubCategory;
+use App\Models\Banner;
 use App\Models\Department;
 use App\Models\Index;
 use App\Models\Openings;
@@ -27,7 +28,9 @@ class IndexController extends Controller
     public function index()
     {
         $categories = Category::orderBy('id', 'desc')->get();
-        return view('client.index')->with('categories', $categories);
+        $banner = Banner::first();
+    
+        return view('client.index')->with('categories', $categories)->with('banner', $banner);
     }
 
     public function save_enquiry(Request $request)

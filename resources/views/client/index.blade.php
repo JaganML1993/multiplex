@@ -168,7 +168,7 @@
         <div class='cnt223'>
             <div class="popup-content">
                 <a href='' class='close cls'>X</a>
-                <img src="{{ asset('images/ALLBORICH-900x900.webp') }}">
+                <img src="{{ asset('images/' . $banner->image) }}">
             </div>
         </div>
     </div>

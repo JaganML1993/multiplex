@@ -22,10 +22,10 @@ class BannerController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
         ]);
 
-        $imageName = time() . '.' . $request->image->extension();
+        $imageName = 'banner_image_multi_2024' . '.' . $request->image->extension();
         $request->image->move(public_path('assets/images'), $imageName);
 
         $banner = Banner::first();
