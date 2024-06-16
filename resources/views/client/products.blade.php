@@ -154,9 +154,13 @@
                             </div>
                             <br/>
 							<div class="padc01">
+<<<<<<< HEAD
                                 <a href="{{ route($category->slug) }}">
                                     <h5 class="title">{{$category->name}}</h5>
                                 </a>
+=======
+                                <a href="{{ route($category->slug) }}"><h5 class="title">{{$category->name}}</h5></a>
+>>>>>>> b98541034009a1de1c9c8b7339ba381e79a30171
                                 <p>{{$category->description}}</p>
                             </div>
 							<br/>

@@ -173,12 +173,21 @@
                                         
                                         <h3 class="mb-20 pt-30 text-a">Benefits for Members</h3>
                                         <ul class="check-style-one">
+<<<<<<< HEAD
                                             <li><i class="fa-brands fa-pagelines"></i><strong>Priority Service:</strong>&nbsp; Members receive priority delivery for their farming requirements, ensuring they get what they need when they need it.</li>
                                             <li><i class="fa-brands fa-pagelines"></i><strong>Expert Guidance:</strong>&nbsp; Our experienced executives provide precise technical information, helping farmers make informed decisions.</li>
                                             <li><i class="fa-brands fa-pagelines"></i><strong>On-Field Product Demonstrations:</strong>&nbsp; We offer free on-field product demonstrations, allowing members to see our products in action.</li>
                                             <li><i class="fa-brands fa-pagelines"></i><strong>Farmers Kit:</strong>&nbsp; Members receive a farmers kit filled with products worth more than the registration fee, providing essential tools for their farming needs.</li>
                                             <li><i class="fa-brands fa-pagelines"></i><strong>Insurance Coverage:</strong>&nbsp; We provide Accidental Death insurance coverage of Rs 50,000/-, offering financial security to our members.</li>
                                             <li><i class="fa-brands fa-pagelines"></i><strong>Lucky Draw:</strong>&nbsp; Members are eligible to participate in a lucky draw for a chance to win exciting prizes.</li>
+=======
+                                            <li><i class="fa fa-check"></i><strong>Priority Service:</strong>&nbsp; Members receive priority delivery for their farming requirements, ensuring they get what they need when they need it.</li>
+                                            <li><i class="fa fa-check"></i><strong>Expert Guidance:</strong>&nbsp; Our experienced executives provide precise technical information, helping farmers make informed decisions.</li>
+                                            <li><i class="fa fa-check"></i><strong>On-Field Product Demonstrations:</strong>&nbsp; We offer free on-field product demonstrations, allowing members to see our products in action.</li>
+                                            <li><i class="fa fa-check"></i><strong>Farmers Kit:</strong>&nbsp; Members receive a farmers kit filled with products worth more than the registration fee, providing essential tools for their farming needs.</li>
+                                            <li><i class="fa fa-check"></i><strong>Insurance Coverage:</strong>&nbsp; We provide Accidental Death insurance coverage of Rs 50,000/-, offering financial security to our members.</li>
+                                            <li><i class="fa fa-check"></i><strong>Lucky Draw:</strong>&nbsp; Members are eligible to participate in a lucky draw for a chance to win exciting prizes.</li>
+>>>>>>> b98541034009a1de1c9c8b7339ba381e79a30171
                                         </ul>
                                     </div>
                                 </div>

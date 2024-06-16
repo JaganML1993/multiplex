@@ -124,7 +124,11 @@
 
 </style>
 
+<<<<<<< HEAD
 <section class="gallery-section-minus1 pt-50 pb-20 ptbmob-30 bg-dark-infra">
+=======
+<section class="gallery-section-minus1 pt-20 pb-20 ptbmob-30 bg-dark-infra">
+>>>>>>> b98541034009a1de1c9c8b7339ba381e79a30171
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

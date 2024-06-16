@@ -95,7 +95,11 @@
                 </div>
                 <div class="project-content-box mb-50 wow fadeInRight">
                     <p class="mb-15">In recent years, pink bollworm attack on cotton has emerged as a major problem in many areas in India. Due to whose attack, about 30 to 50 percent of the crop is damaged.</p>
+<<<<<<< HEAD
                     <p class="mb-15">Infestation of pink bollworm occurs in the middle and late stages of the crop. Pink bollworm cause damage by hiding inside the pod parts and staying away from light, due to which it is difficult to identify the damage caused by this insect, and the crop suffers more damage.</p>
+=======
+                    <p class="mb-15">Infestation of pink bollworm occurs in the middle and late stages of the crop. Pink caterpillars cause damage by hiding inside the pod parts and staying away from light, due to which it is difficult to identify the damage caused by this insect, and the crop suffers more damage.</p>
+>>>>>>> b98541034009a1de1c9c8b7339ba381e79a30171
                 </div>
             </div>
         </div>
