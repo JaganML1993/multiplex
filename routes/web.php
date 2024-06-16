@@ -6,6 +6,7 @@ use App\Http\Controllers\admin\AuthController;
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\OpeningController;
 use App\Http\Controllers\admin\ProductController;
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProductCategoryController;
@@ -161,5 +162,6 @@ Route::prefix('admin')->group(function () {
 
     Route::resource('departments', DepartmentController::class);
     Route::resource('galleries', GalleryController::class);
+    Route::resource('banner', BannerController::class);
 
 });

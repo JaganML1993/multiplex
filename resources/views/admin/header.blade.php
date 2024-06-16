@@ -191,6 +191,13 @@ $title = "Admin Dashboard - MULTIPLEX";
             </a>
           </li>
 
+          <li class="menu-item @if ($page == 'banner') active open @endif">
+            <a href="{{ url('admin/banner') }}" class="menu-link">
+              <img src="{{ asset('/images/image-solid.svg') }}" width="20" height="20" alt="logo">
+              <div data-i18n="Analytics">&nbsp;&nbsp;Banner</div>
+            </a>
+          </li>
+
         </ul>
       </aside>
       <!-- / Menu -->
