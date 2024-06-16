@@ -98,7 +98,6 @@
                     
                 <div class="col-md-4">
                     <div class="block-image wow fadeInDown">
-<<<<<<< HEAD
                         <img src="assets/images/Red-Spider-Mite-Thumbnail.webp" alt="Project Image">
                         <h6 class="mt-15">The Red Spider Mite</h6>
                         <a href="{{ route('the-red-spider-mite') }}" class="btn-link">Read more <i class="fa fa-arrow-right"></i></a>
@@ -108,9 +107,6 @@
                 <div class="col-md-4">
                     <div class="block-image wow fadeInDown">
                         <img src="assets/images/minchuplusthumbnail.png" alt="Project Image">
-=======
-                        <img src="assets/images/pink-boll-worm-thumb.jpg" alt="Project Image">
->>>>>>> b98541034009a1de1c9c8b7339ba381e79a30171
                         <h6 class="mt-15">Minchu Plus for Pink Boll Worm</h6>
                         <a href="{{ route('minchu-plus-for-pink-boll-worm') }}" class="btn-link">Read more <i class="fa fa-arrow-right"></i></a>
                     </div>

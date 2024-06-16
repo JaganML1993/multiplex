@@ -117,13 +117,8 @@
                     Our primary objectives to design and develop some technology/product to address the issues, which includes:  </p>
                     <ul class="check-style-one mb-60">
                             <li><i class="fa-brands fa-pagelines"></i>Strengthening bio-intensive agriculture to minimize chemical utilization.</li>
-<<<<<<< HEAD
                             <li><i class="fa-brands fa-pagelines"></i>Improving crop tolerance towards changing climate.</li>
                             <li><i class="fa-brands fa-pagelines"></i>Minimizing post-harvest losses.</li>
-=======
-                            <li><i class="fa fa-check"></i>Improving crop tolerance towards changing climate.</li>
-                            <li><i class="fa fa-check"></i>Minimizing post-harvest losses.</li>
->>>>>>> b98541034009a1de1c9c8b7339ba381e79a30171
                     </ul>
                 </div>
             </div>
@@ -146,7 +141,6 @@
                     <h3 class="mb-10">Facilities</h3>
                     <p>Our state-of-the-art R&D unit is equipped with advanced facilities and laboratories, ensuring comprehensive and innovative research capabilities towards eco-friendly technology for sustainable agriculture. These facilities include: </p>
                     <ul class="check-style-one mb-60">
-<<<<<<< HEAD
                             <li><i class="fa-brands fa-pagelines"></i><strong>Microbiology Lab:</strong> Conducting in-depth basic and applied research to explore the potential of microbial world in agriculture. biological aspects. </li>
                             <li><i class="fa-brands fa-pagelines"></i><strong>Entomology Lab:</strong> Focusing on the importance of insect related issues in crop production and managing them by developing environment friendly technology.  </li>
                             <li><i class="fa-brands fa-pagelines"></i><strong>Biochemistry Lab:</strong> Exploring the potential of safer chemical molecules for agriculture. </li>
@@ -155,16 +149,6 @@
                             <li><i class="fa-brands fa-pagelines"></i><strong>Chemical Synthesis Lab:</strong> Exploring the potential of synthetic chemistry in designing and developing safer chemical alternatives and integrating them with biomolecules. </li>
                             <li><i class="fa-brands fa-pagelines"></i><strong>Analytical Lab:</strong> Providing precise analytical capabilities to deliver quality product. </li>
                             <li><i class="fa-brands fa-pagelines"></i><strong>Quality Control Lab:</strong> Ensuring the highest product standards. </li>
-=======
-                            <li><i class="fa fa-check"></i>Microbiology Lab: Conducting in-depth basic and applied research to explore the potential of microbial world in agriculture. biological aspects. </li>
-                            <li><i class="fa fa-check"></i>Entomology Lab: Focusing on the importance of insect related issues in crop production and managing them by developing environment friendly technology.  </li>
-                            <li><i class="fa fa-check"></i>Biochemistry Lab: Exploring the potential of safer chemical molecules for agriculture. </li>
-                            <li><i class="fa fa-check"></i>Instrumentation Lab: Utilized for advanced innovative research. </li>
-                            <li><i class="fa fa-check"></i>Formulation Lab: Developing innovative agricultural formulations. </li>
-                            <li><i class="fa fa-check"></i>Chemical Synthesis Lab: Exploring the potential of synthetic chemistry in designing and developing safer chemical alternatives and integrating them with biomolecules. </li>
-                            <li><i class="fa fa-check"></i>Analytical Lab: Providing precise analytical capabilities to deliver quality product. </li>
-                            <li><i class="fa fa-check"></i>Quality Control Lab: Ensuring the highest product standards. </li>
->>>>>>> b98541034009a1de1c9c8b7339ba381e79a30171
 
                     </ul>
                 </div>

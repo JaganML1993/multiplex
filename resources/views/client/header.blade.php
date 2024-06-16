@@ -109,7 +109,6 @@
             padding: 14px;
             border-radius: 10px;
         }
-<<<<<<< HEAD
         
         .whatsapp-chat img {
            position:fixed;
@@ -122,8 +121,6 @@
            right:2%
           }
         
-=======
->>>>>>> b98541034009a1de1c9c8b7339ba381e79a30171
     </style>
 </head>
 
@@ -164,12 +161,6 @@
                             <div class="col-xl-12 col-lg-12 sidebar-widget">
                                 <div class="description-wrapper mt-30">
                                     <h3 class="title" style="color:#000;">Drop us a message</h3>
-<<<<<<< HEAD
-
-=======
-                                    <!--<p style="color:#000;">Our team will get back to you shortly.</p>-->
-                                    <!--=== Review Form ===-->
->>>>>>> b98541034009a1de1c9c8b7339ba381e79a30171
                                     <div class="review-form-area mt-10 mb-10">
 
                                         <form class="review-form general-form" id="review-form" method="post"
@@ -189,25 +180,14 @@
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="form_group">
-<<<<<<< HEAD
                                                         <input type="text" class="form_control" onkeypress="num_validate(event)" 
                                                         oninput="maxLengthCheck(this)" onpaste="stripSpacesOnPaste(event)"
                                                         maxlength="10" minlength="10" placeholder="Phone Number" name="phone" required>
-=======
-                                                        <input type="text" class="form_control"
-                                                            onkeypress="num_validate(event)"
-                                                            oninput="maxLengthCheck(this)" maxlength="10" minlength="10"
-                                                            placeholder="Phone Number" name="phone" required>
->>>>>>> b98541034009a1de1c9c8b7339ba381e79a30171
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="form_group">
-<<<<<<< HEAD
                                                         <input type="email" class="form_control"
-=======
-                                                        <input type="text" class="form_control"
->>>>>>> b98541034009a1de1c9c8b7339ba381e79a30171
                                                             placeholder="Email Address" name="email"
                                                             id="emailField" required oninput="validateDomain()">
                                                     </div>
@@ -248,22 +228,9 @@
                                                     <h4>Thank you, we will get back to you.</h4>
                                                 </div>
 
-<<<<<<< HEAD
                                                 
                                                 <!-- Add the reCAPTCHA widget -->
                                                 <div class="g-recaptcha" data-sitekey="6Lenl4MpAAAAAEfTqadLxml4QXrAYov6coa3AE8V"></div>
-=======
-                                                <div class="col-lg-6 captcha-style" style="display: flex; align-items: center;">
-                                                    <div class="form_group" style="flex: 1;">
-                                                        {{-- <label for="verification_code"
-                                                            style="margin-right: 10px;">Enter CAPTCHA Code</label> --}}
-                                                        <input type="text" class="form_control" id="verification_code" placeholder="Enter CAPTCHA Code" name="verification_code"
-                                                            pattern="\d{4}" title="Please enter a 4-digit number"
-                                                            required style="margin-right: 10px;">
-                                                    </div>
-                                                    <h3 id="random_number"></h3>
-                                                </div>
->>>>>>> b98541034009a1de1c9c8b7339ba381e79a30171
 
                                                 <div class="col-lg-12">
                                                     <div class="form_group success-below">
@@ -494,15 +461,8 @@
                                 <ul class="footer-nav">
                                     <li><a href="{{ route('gallery') }}">Gallery</a></li>
                                     <li><a href="{{ route('success-stories') }}">Success Stories</a></li>
-<<<<<<< HEAD
                                     <li><a href="{{ route('blogs') }}">Blog Articles</a></li>
                                     <li><a href="#" data-toggle="modal" data-target="#myModal">Digital Payment</a></li>
-=======
-                                    <!--<li><a href="#">News & Media</a></li>-->
-                                    <li><a href="#" data-toggle="modal" data-target="#myModal">Digital
-                                            Payment</a></li>
-                                    <!-- <li><a href="#">FAQs</a></li> -->
->>>>>>> b98541034009a1de1c9c8b7339ba381e79a30171
                                 </ul>
                             </div>
                         </div>
@@ -612,17 +572,10 @@
         function validateDomain() {
             var emailInput = document.getElementById('emailField');
             var emailValue = emailInput.value;
-<<<<<<< HEAD
     
             // Regular expression for email validation excluding .ru, .site, and .store extensions
             var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|net|org|gov|edu|co|in)(?<!\.ru)(?<!\.site)(?<!\.store)$/;
     
-=======
-
-            // Simplified regular expression for email validation
-            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net|gov|edu|co)$/;
-
->>>>>>> b98541034009a1de1c9c8b7339ba381e79a30171
             if (!emailRegex.test(emailValue)) {
                 emailInput.setCustomValidity("Please enter a valid email address.");
             } else {
@@ -802,7 +755,6 @@
     </script>
 
     <script>
-<<<<<<< HEAD
     $(document).ready(function() {
     $('.general-form').submit(function (e) {
         var response = grecaptcha.getResponse();
@@ -907,55 +859,6 @@
         //         });
         //     });
         // });
-=======
-        $(document).ready(function() {
-
-            var randomCode = Math.floor(1000 + Math.random() * 9000);
-            document.getElementById('random_number').innerText = randomCode; // Remove brackets
-
-            $('.general-form').submit(function(e) {
-                e.preventDefault();
-
-                var enteredCode = $('#verification_code').val();
-                if (enteredCode != randomCode) {
-                    alert('Verification code does not match. Please try again.');
-                    return false;
-                }
-
-                var selectElement = document.getElementById('department');
-                if (!selectElement.value) {
-                    alert('Please select the department');
-                    return false;
-                }
-
-                var form = $(this);
-                form.find(':submit').prop('disabled', true);
-                $.ajax({
-                    type: 'POST',
-                    url: form.attr('action'),
-                    data: form.serialize(),
-                    success: function(response) {
-                        // Handle the success response here
-                        console.log(response);
-
-                        // Show the success message
-                        form.find('.review-message').removeClass('d-none').addClass('d-block');
-
-                        // Reset the form and hide the review message after 5 seconds
-                        setTimeout(function() {
-                            form.find('.review-message').removeClass('d-block')
-                                .addClass('d-none');
-                            form[0].reset();
-                        }, 5000);
-                    },
-                    error: function(error) {
-                        // Handle the error response here
-                        console.log(error);
-                    }
-                });
-            });
-        });
->>>>>>> b98541034009a1de1c9c8b7339ba381e79a30171
     </script>
 
 

@@ -150,11 +150,7 @@
         
         @media (min-width:1679px){
         .skill-two_image-boxss {
-<<<<<<< HEAD
             width: 100% !important;
-=======
-        width: 100% !important;
->>>>>>> b98541034009a1de1c9c8b7339ba381e79a30171
         }
         .features-wrapper-two {
             max-width: 100% !important;
@@ -172,11 +168,7 @@
         <div class='cnt223'>
             <div class="popup-content">
                 <a href='' class='close cls'>X</a>
-<<<<<<< HEAD
                 <img src="{{ asset('images/ALLBORICH-900x900.webp') }}">
-=======
-                <img src="{{ asset('images/ALGARYTHM.jpg') }}">
->>>>>>> b98541034009a1de1c9c8b7339ba381e79a30171
             </div>
         </div>
     </div>
@@ -968,26 +960,7 @@
                         </div>
                     </div>
                 </div>
-<<<<<<< HEAD
                 
-=======
-                <div class="col-xl-4 col-md-6 col-sm-12">
-                    <!--====== Single Blog Post  ======-->
-                    <div class="single-blog-post mb-40 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="post-thumbnail">
-                            <img src="{{ asset('images/blog-three-new-thumb.jpg') }}" alt="Post Thumbnail">
-                        </div>
-                        <div class="entry-content">
-                            <a href="javascript:void(0);" class="cat-link"></a>
-                            <h4 class="entry-title"><a href="{{ route('what-is-soil-testing') }}">मिट्टी परीक्षण क्या है?</a></h4>
-                            <p>फसल की अधिक उत्पादन एवं स्वस्थ विकास के लिए  आवश्यक पोषक तत्वों की मिटटी में  उपलब्ध मात्राओं का रासायनिक परीक्षणों द्वारा आंकलन करना ही मृदा परीक्षण कहलाता है।</p>
-                            <div class="post-meta">
-                                <span class="date"><a href="{{ route('what-is-soil-testing') }}">Read More</a></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
->>>>>>> b98541034009a1de1c9c8b7339ba381e79a30171
             </div>
         </div>
     </section>
