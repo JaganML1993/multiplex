@@ -3,37 +3,36 @@
 
 
 <style>
-      .job-open ul {
-  
-  list-style: none;
-  padding: 0;
-}
+    .job-open ul {
 
-.job-open li {
-  padding-left:1em;
-}
+        list-style: none;
+        padding: 0;
+    }
 
-.job-open li:before {
-  content: "\f18c"; 
-  font-family: FontAwesome;
-  display: inline-block;
-  margin-left: calc(1em * -1 );
-  color: #2a7d2e !important;
-  margin-right: 0.5rem;
-}
+    .job-open li {
+        padding-left: 1em;
+    }
 
-
-
-@media (max-width:567px) {
-  .job-open h3 {
-      font-size:18px;
-  }
-  .job-open h6 {
-      font-size:16px;
-  }
-}
+    .job-open li:before {
+        content: "\f18c";
+        font-family: FontAwesome;
+        display: inline-block;
+        margin-left: calc(1em * -1);
+        color: #2a7d2e !important;
+        margin-right: 0.5rem;
+    }
 
 
+
+    @media (max-width:567px) {
+        .job-open h3 {
+            font-size: 18px;
+        }
+
+        .job-open h6 {
+            font-size: 16px;
+        }
+    }
 </style>
 <section class="faq-section pt-50 ptbmob-30 bg-dark-goc job-open">
     <div class="container">
@@ -44,8 +43,7 @@
                     <div class="faq-content-box wow fadeInLeft">
                         <div class="accordion-card mb-15">
                             <div class="accordion-header">
-                                <h6 class="accordion-title" data-toggle="collapse" data-target="#collapse0"
-                                    aria-expanded="true">
+                                <h6 class="accordion-title" data-toggle="collapse" data-target="#collapse0" aria-expanded="true">
                                     Job Description
                                 </h6>
                             </div>
@@ -59,8 +57,7 @@
                         </div>
                         <div class="accordion-card mb-15">
                             <div class="accordion-header">
-                                <h6 class="accordion-title collapsed" data-toggle="collapse" data-target="#collapse1"
-                                    aria-expanded="false">
+                                <h6 class="accordion-title collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false">
                                     Roles & Responsibilities
                                 </h6>
                             </div>
@@ -72,8 +69,7 @@
                         </div>
                         <div class="accordion-card mb-15">
                             <div class="accordion-header">
-                                <h6 class="accordion-title collapsed" data-toggle="collapse" data-target="#collapse2"
-                                    aria-expanded="false">
+                                <h6 class="accordion-title collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false">
                                     Qualification & Experience
                                 </h6>
                             </div>
@@ -102,10 +98,9 @@
                         <p>All fields are mandatory</p>
                         <!--=== Review Form ===-->
                         <div class="review-form-area wow fadeInUp mt-10 mb-10">
-                            <form class="review-form" method="post"
-                                action="{{ route('home.save_job') }}" enctype="multipart/form-data">
+                            <form class="review-form" method="post" action="{{ route('home.save_job') }}" enctype="multipart/form-data">
                                 @csrf
-                                
+
                                 <input type="hidden" name="id" value="{{ $openings->id }}">
                                 <div class="row">
                                     <div class="col-lg-6">
@@ -125,15 +120,12 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form_group">
-                                            <input type="text" class="form_control" onkeypress="num_validate(event)" 
-                                                    oninput="maxLengthCheck(this)" maxlength="10" minlength="10" 
-                                                    placeholder="Phone Number" name="phone" required>
+                                            <input type="text" class="form_control" onkeypress="num_validate(event)" oninput="maxLengthCheck(this)" maxlength="10" minlength="10" placeholder="Phone Number" name="phone" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form_group">
-                                            <input type="text" class="form_control" onkeypress="return /[a-zA-Z,' ']/i.test(event.key)" placeholder="Qualification"
-                                                name="qualification" required>
+                                            <input type="text" class="form_control" onkeypress="return /[a-zA-Z,' ']/i.test(event.key)" placeholder="Qualification" name="qualification" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -143,33 +135,29 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form_group">
-                                            <input type="text" class="form_control disable-style" placeholder="Position Applying"
-                                                value="{{ $openings->position }}" name="job" required disabled>
+                                            <input type="text" class="form_control disable-style" placeholder="Position Applying" value="{{ $openings->position }}" name="job" required disabled>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form_group">
-                                            <input type="text" class="form_control disable-style" placeholder="Job Location"
-                                                value="{{ $location->location }}" name="jobloc" required disabled>
+                                            <input type="text" class="form_control disable-style" placeholder="Job Location" value="{{ $location->location }}" name="jobloc" required disabled>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form_group">
                                             <label for="resumeFile">Upload Resume</label>
-                                            <input type="file" id="resumeFile" class="form_control"
-                                                accept="application/msword, application/pdf" placeholder="Resume"
-                                                name="resumeFile" required>
+                                            <input type="file" id="resumeFile" class="form_control" accept="application/msword, application/pdf" placeholder="Resume" name="resumeFile" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form_group">
                                             <button type="submit" class="main-btn primary-btn">Submit Application</button>
                                         </div>
-                                        <br/>
+                                        <br />
                                         <div class="my-3 d-none success-message" style="width: 100%">
-                                           <h4>Thank you, we will get back to you.</h4>
+                                            <h4>Thank you, we will get back to you.</h4>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </form>
@@ -183,9 +171,9 @@
 <!--====== End Shop Details Section ======-->
 
 <style>
-   .disable-style {
-       background-color:#2a7d2e21;
-   }
+    .disable-style {
+        background-color: #2a7d2e21;
+    }
 </style>
 
 
@@ -194,33 +182,34 @@
 @section('scripts')
 @parent
 <script>
-    $(document).ready(function () {
-        $('.review-form').submit(function (e) {
+    $(document).ready(function() {
+        $('.review-form').submit(function(e) {
             e.preventDefault();
 
             var form = $(this);
             form.find(':submit').prop('disabled', true);
+            var route = "{{ url('save_job') }}";
 
             $.ajax({
                 type: 'POST',
-                url: form.attr('action'),
+                url: route,
                 data: new FormData(form[0]),
                 contentType: false,
                 processData: false,
-                success: function (response) {
+                success: function(response) {
                     // Handle the success response here
                     console.log(response);
 
-                   // Show the success message
-                   form.find('.success-message').removeClass('d-none').addClass('d-block');
+                    // Show the success message
+                    form.find('.success-message').removeClass('d-none').addClass('d-block');
 
                     // Reset the form and hide the success message after 5 seconds
-                    setTimeout(function () {
+                    setTimeout(function() {
                         form.find('.success-message').removeClass('d-block').addClass('d-none');
                         form[0].reset();
                     }, 5000);
                 },
-                error: function (error) {
+                error: function(error) {
                     // Handle the error response here
                     console.log(error);
                 }
@@ -230,35 +219,35 @@
 </script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    var emailInput = document.getElementById('emailInput');
+    document.addEventListener('DOMContentLoaded', function() {
+        var emailInput = document.getElementById('emailInput');
 
-    emailInput.addEventListener('input', function () {
-        validateEmail();
-    });
+        emailInput.addEventListener('input', function() {
+            validateEmail();
+        });
 
-    function validateEmail() {
-        var email = emailInput.value.trim();
-        var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        function validateEmail() {
+            var email = emailInput.value.trim();
+            var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
-        if (emailRegex.test(email)) {
-            // Valid email format
-            var allowedDomains = ['com', 'in', 'co']; // Add more domain extensions as needed
-            var domain = email.split('.').pop();
+            if (emailRegex.test(email)) {
+                // Valid email format
+                var allowedDomains = ['com', 'in', 'co']; // Add more domain extensions as needed
+                var domain = email.split('.').pop();
 
-            if (allowedDomains.includes(domain)) {
-                // Email is valid with allowed domain extension
-                emailInput.setCustomValidity('');
+                if (allowedDomains.includes(domain)) {
+                    // Email is valid with allowed domain extension
+                    emailInput.setCustomValidity('');
+                } else {
+                    // Invalid domain extension
+                    emailInput.setCustomValidity('Please enter a valid email with allowed domain extension(s).');
+                }
             } else {
-                // Invalid domain extension
-                emailInput.setCustomValidity('Please enter a valid email with allowed domain extension(s).');
+                // Invalid email format
+                emailInput.setCustomValidity('Please enter a valid email address.');
             }
-        } else {
-            // Invalid email format
-            emailInput.setCustomValidity('Please enter a valid email address.');
         }
-    }
-});
+    });
 </script>
 
 @endsection

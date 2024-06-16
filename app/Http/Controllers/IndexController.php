@@ -248,7 +248,7 @@ class IndexController extends Controller
             ->send(new \App\Mail\JobApplication($data, $attachmentPath, $attachmentName));
 
         // Return a response or redirect as needed
-        return redirect('current_openings')->with('status', 'Job Application submitted successfully');
+        return redirect('current-openings')->with('status', 'Job Application submitted successfully');
     }
 
     public function saveFile($folder, $request_image)
